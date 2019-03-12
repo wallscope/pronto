@@ -48,7 +48,12 @@
       //-   .column results
         //- .two.wide.column
       .twelve.wide.left.aligned.column
-        .ui.list(v-for="t in results")
+        h2 Top
+        h2 Secondary
+        .ui.list(
+          v-for="t in results", 
+          v-if="t.souce === 'http://www.w3.org/2000/01/rdf-schema#label'"
+        )
           .item
             .content
               a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }}
@@ -84,6 +89,7 @@ export default {
   },
   computed: {},
   methods: {
+    // TODO: separate top results (search word found in label) from secondary results (found in comments)
     // TODO: compress in a single function
     // TODO: add ability to copy
     // TODO: for the PREDICATE searcher, do not show CLASSES
@@ -100,11 +106,14 @@ export default {
         this.results = labels.map(({ subject, object }) => {
           const [comment] = this.quadstore
             .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment');
+          const [source] = this.quadstore
+            .getObjects(subject.value, 'http://purl.org/dc/terms/source')
 
           return {
             name: subject.value,
             label: object.value,
             comment: comment ? comment.value : '',
+            source: source.value,
           };
         });
       } else {
