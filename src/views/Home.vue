@@ -50,28 +50,21 @@
         .twelve.wide.left.aligned.column
           h2(v-if="topResults.length") Top
           .ui.list(v-for="t in topResults")
-            .item
-              .content
-                a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }} 
-                  i.icon.copy.outline.link(
-                    @click.stop.prevent="copy(t.name)",
-                    title="Copy"
-                  )
-                .description {{ t.comment }}
-                .description {{ t.definition ? `Definition: ${ t.definition }` : '' }}
+            search-result(
+              :name="t.name",
+              :label="t.label",
+              :comment="t.comment",
+              :definition="t.definition",
+            )
 
           h2(v-if="secondaryResults.length") Secondary
           .ui.list(v-for="t in secondaryResults")
-            .item
-              .content
-                a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }}
-                  i.icon.copy.outline(
-                    @click.stop.prevent="copy(t.name)",
-                    title="Copy"
-                  )
-                .description {{ t.comment }}
-                .description {{ t.definition ? `Definition: ${ t.definition }` : '' }}
-
+            search-result(
+              :name="t.name",
+              :label="t.label",
+              :comment="t.comment",
+              :definition="t.definition",
+            )
 
 </template>
 
@@ -81,6 +74,7 @@ import axios from 'axios';
 import N3 from 'n3';
 import Toasted from 'vue-toasted';
 import { api } from '@/utils';
+import SearchResult from '@/components/SearchResult.vue';
 
 Vue.use(Toasted, {
   position: 'top-center',
@@ -90,7 +84,9 @@ Vue.use(Toasted, {
 
 export default {
   name: 'home',
-  components: {},
+  components: {
+    SearchResult,
+  },
   data() {
     return {
       loadingPred: false,
@@ -98,57 +94,55 @@ export default {
       quadstore: null,
       results: [],
       predSearched: '',
-      classSearched: ''
+      classSearched: '',
     };
   },
   computed: {
-    topResults(){
-      return this.results.filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#label')
+    topResults() {
+      return this.results
+        .filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#label');
     },
-    secondaryResults(){
-      return this.results.filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#comment')
-    }
+    secondaryResults() {
+      return this.results
+        .filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#comment');
+    },
   },
   methods: {
-    // TODO: add ability to copy and link to
-    async copy(text){
-      try {
-        await navigator.clipboard.writeText(text);
-        this.$toasted.show('copied to clipboard');
-      } catch (_) {
-        this.$toasted.show('could not copy (browser might be incompatible)');
-      }
-    },
     async sendPredicateQuery() {
       // Style before searching
       this.loadingPred = true;
       this.classSearched = '';
 
       // Get data
-      const { data } = await axios.get(`${api}/predicate?search=${this.predSearched}`);
-      if (data) {
-        const quads = N3.Parser().parse(data);
-        // Reset store and add quads
-        this.quadstore = N3.Store();
-        this.quadstore.addQuads(quads);
+      try {
+        const { data } = await axios.get(`${api}/predicate?search=${this.predSearched}`);
+        if (data) {
+          const quads = N3.Parser().parse(data);
+          // Reset store and add quads
+          this.quadstore = N3.Store();
+          this.quadstore.addQuads(quads);
 
-        const labels = this.quadstore.getQuads(null, 'http://www.w3.org/2000/01/rdf-schema#label', null);
-        this.results = labels.map(({ subject, object }) => {
-          const [comment] = this.quadstore
-            .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment');
-          const [source] = this.quadstore
-            .getObjects(subject.value, 'http://purl.org/dc/terms/source')
+          const labels = this.quadstore.getQuads(null, 'http://www.w3.org/2000/01/rdf-schema#label', null);
+          this.results = labels.map(({ subject, object }) => {
+            const [comment] = this.quadstore
+              .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment');
+            const [source] = this.quadstore
+              .getObjects(subject.value, 'http://purl.org/dc/terms/source');
 
-          return {
-            name: subject.value,
-            label: object.value,
-            comment: comment ? comment.value : '',
-            source: source.value,
-          };
-        });
-      } else {
-        this.$toasted.show('no result');
+            return {
+              name: subject.value,
+              label: object.value,
+              comment: comment ? comment.value : '',
+              source: source.value,
+            };
+          });
+        } else {
+          this.$toasted.show('no result');
+        }
+      } catch (e) {
+        this.$toasted.show(e);
       }
+
       this.loadingPred = false;
     },
     async sendTypeQuery() {
@@ -157,33 +151,38 @@ export default {
       this.predSearched = '';
 
       // Get data
-      const { data } = await axios.get(`${api}/type?search=${this.classSearched}`);
-      if (data) {
-        const quads = N3.Parser().parse(data);
-        // Reset store and add quads
-        this.quadstore = N3.Store();
-        this.quadstore.addQuads(quads);
+      try {
+        const { data } = await axios.get(`${api}/type?search=${this.classSearched}`);
+        if (data) {
+          const quads = N3.Parser().parse(data);
+          // Reset store and add quads
+          this.quadstore = N3.Store();
+          this.quadstore.addQuads(quads);
 
-        const labels = this.quadstore.getQuads(null, 'http://www.w3.org/2000/01/rdf-schema#label', null);
-        this.results = labels.map(({ subject, object }) => {
-          const [comment] = this.quadstore
-            .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment');
-          const [definition] = this.quadstore
-            .getObjects(subject.value, 'http://www.w3.org/2004/02/skos/core#definition');
-          const [source] = this.quadstore
-            .getObjects(subject.value, 'http://purl.org/dc/terms/source');
+          const labels = this.quadstore.getQuads(null, 'http://www.w3.org/2000/01/rdf-schema#label', null);
+          this.results = labels.map(({ subject, object }) => {
+            const [comment] = this.quadstore
+              .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment');
+            const [definition] = this.quadstore
+              .getObjects(subject.value, 'http://www.w3.org/2004/02/skos/core#definition');
+            const [source] = this.quadstore
+              .getObjects(subject.value, 'http://purl.org/dc/terms/source');
 
-          return {
-            name: subject.value,
-            label: object.value,
-            comment: comment ? comment.value : '',
-            definition: definition ? definition.value : '',
-            source: source.value,
-          };
-        });
-      } else {
-        this.$toasted.show('no result');
+            return {
+              name: subject.value,
+              label: object.value,
+              comment: comment ? comment.value : '',
+              definition: definition ? definition.value : '',
+              source: source.value,
+            };
+          });
+        } else {
+          this.$toasted.show('no result');
+        }
+      } catch (e) {
+        this.$toasted.show(e);
       }
+
       this.loadingType = false;
     },
   },
@@ -198,21 +197,4 @@ export default {
    font-size: 1.1em;
    padding-top: 0.5em!important;
 }
-i.copy {
-  // padding: 0.5em 1.2em 1.1em 0.5em;
-  // margin: 0;
-  // width: 2em;
-  // height: 1.8em;
-  // border: 1px solid black !important;    
-
-  z-index: 1;     
-  padding: 1em 2em 2em 0.8em;     
-  margin: -2em -0.2em; 
-}
-// .header.subject {
-//   margin: 0!important; 
-//   border: 0!important; 
-//   padding: 0!important;
-  
-// }
 </style>
