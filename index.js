@@ -65,7 +65,6 @@ server.get('/predicate', async (req, res, next) => {
 });
 
 server.get('/type', async (req, res, next) => {
-  // TODO: the search word is only searched in the label. It should be searched also in the comment and definition
   try {
     const search = escape(req.query.search);
 
@@ -142,8 +141,6 @@ server.post('/foo', function (req, res, next) {
   }
 );
 
-
-
 // server.all('/*', function(req, res, next) {
 //   // CORS headers
 //   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
@@ -156,7 +153,6 @@ server.post('/foo', function (req, res, next) {
 //     next();
 //   }
 // });
-
 
 
 server.listen(8082, function () {
