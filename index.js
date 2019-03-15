@@ -2,17 +2,12 @@ var restify = require('restify');
 var axios = require('axios');
 var qs = require('qs')
 
-function respond(req, res, next) {
-  res.send('hello ' + req.params.name);
-  next();
-}
-
 var server = restify.createServer();
 server.use(restify.plugins.queryParser());
 
 server.get('/predicate', async (req, res, next) => {
   try {
-    const search = req.query.search;
+    const search = escape(req.query.search);
 
     let result = await axios.post('http://192.168.36.59:7200/repositories/ontologySearcher',
       qs.stringify({
@@ -72,7 +67,7 @@ server.get('/predicate', async (req, res, next) => {
 server.get('/type', async (req, res, next) => {
   // TODO: the search word is only searched in the label. It should be searched also in the comment and definition
   try {
-    const search = req.query.search;
+    const search = escape(req.query.search);
 
     let result = await axios.post('http://192.168.36.59:7200/repositories/ontologySearcher',
       qs.stringify({
