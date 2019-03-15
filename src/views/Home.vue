@@ -52,14 +52,23 @@
           .ui.list(v-for="t in topResults")
             .item
               .content
-                a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }}
+                a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }} 
+                  i.icon.copy.outline.link(
+                    @click.stop.prevent="copy(t.name)",
+                    title="Copy"
+                  )
                 .description {{ t.comment }}
                 .description {{ t.definition ? `Definition: ${ t.definition }` : '' }}
+
           h2(v-if="secondaryResults.length") Secondary
           .ui.list(v-for="t in secondaryResults")
             .item
               .content
                 a.header.subject(:href="t.name") {{ t.label }} - {{ t.name }}
+                  i.icon.copy.outline(
+                    @click.stop.prevent="copy(t.name)",
+                    title="Copy"
+                  )
                 .description {{ t.comment }}
                 .description {{ t.definition ? `Definition: ${ t.definition }` : '' }}
 
@@ -102,7 +111,14 @@ export default {
   },
   methods: {
     // TODO: add ability to copy and link to
-
+    async copy(text){
+      try {
+        await navigator.clipboard.writeText(text);
+        this.$toasted.show('copied to clipboard');
+      } catch (_) {
+        this.$toasted.show('could not copy (browser might be incompatible)');
+      }
+    },
     async sendPredicateQuery() {
       // Style before searching
       this.loadingPred = true;
@@ -131,7 +147,7 @@ export default {
           };
         });
       } else {
-        this.$toasted.show('No result');
+        this.$toasted.show('no result');
       }
       this.loadingPred = false;
     },
@@ -166,7 +182,7 @@ export default {
           };
         });
       } else {
-        this.$toasted.show('No result');
+        this.$toasted.show('no result');
       }
       this.loadingType = false;
     },
@@ -182,4 +198,21 @@ export default {
    font-size: 1.1em;
    padding-top: 0.5em!important;
 }
+i.copy {
+  // padding: 0.5em 1.2em 1.1em 0.5em;
+  // margin: 0;
+  // width: 2em;
+  // height: 1.8em;
+  // border: 1px solid black !important;    
+
+  z-index: 1;     
+  padding: 1em 2em 2em 0.8em;     
+  margin: -2em -0.2em; 
+}
+// .header.subject {
+//   margin: 0!important; 
+//   border: 0!important; 
+//   padding: 0!important;
+  
+// }
 </style>
