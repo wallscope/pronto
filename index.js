@@ -5,11 +5,11 @@ var qs = require('qs')
 var server = restify.createServer();
 server.use(restify.plugins.queryParser());
 
-server.get('/predicate', async (req, res, next) => {
+server.get('/api/predicate', async (req, res, next) => {
   try {
     const search = escape(req.query.search);
 
-    let result = await axios.post('http://192.168.36.59:7200/repositories/ontologySearcher',
+    let result = await axios.post(process.env.TRIPLESTORE,
       qs.stringify({
         query: `
           PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
@@ -64,11 +64,11 @@ server.get('/predicate', async (req, res, next) => {
   next();
 });
 
-server.get('/type', async (req, res, next) => {
+server.get('/api/type', async (req, res, next) => {
   try {
     const search = escape(req.query.search);
 
-    let result = await axios.post('http://192.168.36.59:7200/repositories/ontologySearcher',
+    let result = await axios.post(process.env.TRIPLESTORE,
       qs.stringify({
         query: `
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -130,16 +130,6 @@ server.get('/type', async (req, res, next) => {
 
   next();
 });
-
-server.post('/foo', function (req, res, next) {
-  req.someData = 'foo';
-  return next();
-},
-  function (req, res, next) {
-    res.send(req.someData);
-    return next();
-  }
-);
 
 // server.all('/*', function(req, res, next) {
 //   // CORS headers
