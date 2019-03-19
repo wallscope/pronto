@@ -1,11 +1,12 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(:href="name") {{ label }} - {{ name }}
+      a.header.subject(:href="name") {{ label }}
         i.icon.copy.outline.link(
           @click.stop.prevent="copy(name)",
           title="Copy"
         )
+      .label {{ name }}
       .description {{ comment }}
       .description {{ definition ? `Definition: ${ definition }` : '' }}
 

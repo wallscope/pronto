@@ -3,7 +3,7 @@
     .ui.grid.container
       .row
         .ten.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
-          h2.ui.centered.header Ontology Searcher
+          h1.ui.centered.header OntoSearch
           .ui.placeholder.segment
             .ui.stackable.two.column.center.aligned.grid
               .ui.vertical.divider Or

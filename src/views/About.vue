@@ -2,11 +2,11 @@
   .about
     .ui.grid.container
       .row.centered
-        h2 Ontology Searcher
+        h2 OntoSearch
       .row
         .ten.wide.tablet.ten.wide.computer.sixteen.wide.mobile.centered.column
           p#about-text.
-            This Ontology Searcher was created to fight against the boring and time-consuming task of 
+            OntoSearch was created to fight against the boring and time-consuming task of 
             searching for predicate and classes among a large number of ontologies. 
 </template>
 
