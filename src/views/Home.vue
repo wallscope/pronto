@@ -48,17 +48,7 @@
 
       .row.centered
         .twelve.wide.left.aligned.column
-          h2(v-if="topResults.length") Top
           .ui.list(v-for="t in topResults")
-            search-result(
-              :name="t.name",
-              :label="t.label",
-              :comment="t.comment",
-              :definition="t.definition",
-            )
-
-          h2(v-if="secondaryResults.length") Secondary
-          .ui.list(v-for="t in secondaryResults")
             search-result(
               :name="t.name",
               :label="t.label",
@@ -100,11 +90,7 @@ export default {
   computed: {
     topResults() {
       return this.results
-        .filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#label');
-    },
-    secondaryResults() {
-      return this.results
-        .filter(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#comment');
+        .sort(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0);
     },
   },
   methods: {
