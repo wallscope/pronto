@@ -1,11 +1,12 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+  #app
+    #nav
+      router-link(to='/') Home
+      |  |
+      router-link(to='/about') About
+    keep-alive
+      router-view
+
 </template>
 
 <style lang="scss">
@@ -22,7 +23,7 @@
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #4183c4;
     }
   }
 }
