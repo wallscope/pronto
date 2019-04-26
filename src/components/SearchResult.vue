@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { copyToClipboard } from '@/utils';
+
 export default {
   name: 'SearchResult',
   props: {
@@ -34,7 +36,7 @@ export default {
   methods: {
     async copy(text) {
       try {
-        await navigator.clipboard.writeText(text);
+        await copyToClipboard(text);
         this.$toasted.show('copied to clipboard');
       } catch (_) {
         this.$toasted.show('could not copy (browser might be incompatible)');
