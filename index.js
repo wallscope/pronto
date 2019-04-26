@@ -29,25 +29,33 @@ server.get('/api/predicate', async (req, res, next) => {
               {
                   BIND( rdfs:label as ?src )
                   ?preds	rdfs:label ?label ;
-                          rdf:type rdf:Property .
+                        rdf:type rdf:Property .
           
                   ?label	luc:myIndex	"*${ search }*" .
           
                   OPTIONAL {
                       ?preds rdfs:comment ?comment .
+                      FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
                   }
+                  
+                  FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
+                  
               }
               UNION
               {
                   BIND( rdfs:comment as ?src )
                   
                   ?preds	rdfs:label ?label ;
-                          rdf:type rdf:Property ;
-                      rdfs:comment ?comment .
-                  
+                        rdf:type rdf:Property ;
+                        rdfs:comment ?comment .
+          
                   ?comment luc:myIndex "*${ search }*" .
+                  
+                  ?s a owl:Ontology .
+                  
+                  FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
               }
-          } 
+          }
         `
       }),
       {
@@ -56,9 +64,9 @@ server.get('/api/predicate', async (req, res, next) => {
 
     res.send(result.data)
 
-  } catch (_) {
-    console.error('error in getting the triples')
-    res.send('error in getting the triples')
+  } catch (e) {
+    console.error('error in getting the triples: ', e)
+    res.send('error in getting the triples: ', e)
   }
 
   next();
@@ -80,38 +88,42 @@ server.get('/api/type', async (req, res, next) => {
           
           CONSTRUCT {
               ?s rdf:type ?type ;
-                rdfs:label ?label ;
-                rdfs:comment ?comment ;
-                skos:definition ?definition ;
-                dct:source ?src .
+                  rdfs:label ?label ;
+                  rdfs:comment ?comment ;
+                  skos:definition ?definition ;
+                  dct:source ?src .
           }
           WHERE { 
               {
                   BIND( rdfs:label as ?src )
                   ?s rdfs:label ?label ;
                     rdf:type ?type .
-                  
+          
                   FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
-                  
+                  FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
+          
                   ?label luc:myIndex	"*${ search }*" .
           
                   OPTIONAL {
                       ?s rdfs:comment ?comment .
+                      FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
                   }
                   OPTIONAL {
                       ?s skos:definition ?definition .
+                      FILTER(langMatches(lang(?definition), "EN") || lang(?definition) = '' )
                   }
               }
               UNION
               {
                   BIND( rdfs:comment as ?src )
-                  
+          
                   ?s      rdfs:label ?label ;
                           rdf:type ?type ;
-                      rdfs:comment ?comment .
-                  
+                          rdfs:comment ?comment .
+          
                   FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
-                  
+                  FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
+          
                   ?comment luc:myIndex "*${ search }*" .
               }
           }        
@@ -123,9 +135,9 @@ server.get('/api/type', async (req, res, next) => {
 
     res.send(result.data)
 
-  } catch (_) {
-    console.error('error in getting the triples')
-    res.send('error in getting the triples')
+  } catch (e) {
+    console.error('error in getting the triples: ', e)
+    res.send('error in getting the triples: ', e)
   }
 
   next();
