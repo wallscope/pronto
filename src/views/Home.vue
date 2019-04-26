@@ -51,12 +51,16 @@
 
       .row.centered
         .twelve.wide.left.aligned.column
-          .ui.list(v-for="t in topResults")
+          .ui.list(
+            v-for="r in sortedResults",
+            :key="r.name"
+          )
             search-result(
-              :name="t.name",
-              :label="t.label",
-              :comment="t.comment",
-              :definition="t.definition",
+              :searchedTerm="searchedTerm",
+              :name="r.name",
+              :label="r.label",
+              :comment="r.comment",
+              :definition="r.definition",
             )
 
 </template>
@@ -91,10 +95,13 @@ export default {
     };
   },
   computed: {
-    topResults() {
+    sortedResults() {
       return this.results
         .sort(({ source }) => source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0);
     },
+    searchedTerm(){
+      return this.predSearched ? this.predSearched : this.classSearched;
+    }
   },
   methods: {
     async sendPredicateQuery() {
