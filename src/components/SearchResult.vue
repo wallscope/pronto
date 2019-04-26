@@ -1,7 +1,7 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(:href="name") {{ label }}
+      a.header.subject(@click="navigateTo(name)") {{ label }}
         i.icon.copy.outline.link(
           @click.stop.prevent="copy(name)",
           title="Copy"
@@ -40,6 +40,10 @@ export default {
         this.$toasted.show('could not copy (browser might be incompatible)');
       }
     },
+    navigateTo(url) {
+      // TODO: Persist results if user navigates away and goes back to the website
+      window.location.href = url;
+    }
   },
 };
 </script>
