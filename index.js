@@ -51,6 +51,7 @@ server.get('/api/predicate', async (req, res, next) => {
           
                   ?comment luc:myIndex "*${ search }*" .
                   
+                  FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
                   FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
               }
           }
@@ -60,7 +61,6 @@ server.get('/api/predicate', async (req, res, next) => {
         headers: { 'Accept': 'application/n-triples' }
       })
 
-    console.log(result)
     res.send(result.data)
 
   } catch (e) {
@@ -122,6 +122,7 @@ server.get('/api/type', async (req, res, next) => {
                           rdfs:comment ?comment .
           
                   FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
+                  FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
                   FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
           
                   ?comment luc:myIndex "*${ search }*" .
