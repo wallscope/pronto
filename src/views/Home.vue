@@ -11,11 +11,11 @@
             .ui.stackable.two.column.center.aligned.grid
               .ui.vertical.divider.hide-mobile OR
               .middle.aligned.row
+
                 .column
                   .ui.icon.header
                     i.search.icon
                     | Find Predicate
-                  //- .field
                   .ui.search
                     .ui.icon.input(:class='{ loading: loadingPred }')
                       input.prompt(
@@ -25,7 +25,7 @@
                         @keyup.enter="sendPredicateQuery()"
                       )
                       i.search.icon
-                    //- .results
+
                 .column
                   .ui.icon.header
                     i.search.icon
@@ -40,7 +40,6 @@
                           @keyup.enter="sendTypeQuery()"
                         )
                         i.search.icon
-                      //- .results
 
 
       .row
@@ -52,7 +51,7 @@
       .row.centered
         .twelve.wide.left.aligned.column
           .ui.list(
-            v-for="r in sortedResults",
+            v-for="r in paginatedResults",
             :key="r.name"
           )
             search-result(
@@ -63,6 +62,22 @@
               :definition="r.definition",
             )
 
+      .row.centered
+        paginate(
+          v-if="results.length"
+          :page-count='slicedResults.length',
+          :page-range="3"
+          :margin-pages="2"
+          :click-handler='paginateClick',
+          :prev-text="'Prev'",
+          :next-text="'Next'",
+          :container-class="'ui pagination menu'",
+          :page-class="'item'",
+          :prev-class="'item'",
+          :next-class="'item'",
+        )
+
+
 </template>
 
 <script>
@@ -70,6 +85,7 @@ import Vue from 'vue';
 import axios from 'axios';
 import N3 from 'n3';
 import Toasted from 'vue-toasted';
+import Paginate from 'vuejs-paginate';
 import { api } from '@/utils';
 import SearchResult from '@/components/SearchResult.vue';
 
@@ -83,11 +99,13 @@ export default {
   name: 'home',
   components: {
     SearchResult,
+    Paginate,
   },
   data() {
     return {
       loadingPred: false,
       loadingType: false,
+      currPage: 1,
       quadstore: null,
       results: [],
       predSearched: '',
@@ -95,6 +113,18 @@ export default {
     };
   },
   computed: {
+    paginatedResults() {
+      return this.slicedResults[this.currPage - 1];
+    },
+    slicedResults() {
+      const chunkSize = 20;
+      const R = [];
+
+      for (let i = 0; i < this.sortedResults.length; i += chunkSize) {
+        R.push(this.sortedResults.slice(i, i + chunkSize));
+      }
+      return R;
+    },
     sortedResults() {
       return [...this.results].sort(({ source }) => (source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0));
     },
@@ -103,6 +133,10 @@ export default {
     },
   },
   methods: {
+    paginateClick(pageNum) {
+      console.log(pageNum);
+      this.currPage = pageNum;
+    },
     async sendPredicateQuery() {
       // Style before searching
       this.loadingPred = true;
@@ -211,6 +245,10 @@ export default {
   .hide-mobile {
     display: none!important;
   }
+}
+.pagination {
+  padding: 0;
+  margin-top: 1em!important;
 }
 .results {
   margin-top: 0.2em !important;
