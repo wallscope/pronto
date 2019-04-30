@@ -3,10 +3,6 @@
     .ui.grid.container
       .row
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
-          h1.ui.centered.header
-            | PR
-            span.blue O
-            | NTO
           .ui.placeholder.segment.fourteen.wide
             .ui.stackable.two.column.center.aligned.grid
               .ui.vertical.divider.hide-mobile OR
@@ -257,8 +253,4 @@ export default {
   font-size: 1.1em;
   padding-top: 0.5em !important;
 }
-.blue {
-  color: #4183c4;
-}
-// show-mobile
 </style>

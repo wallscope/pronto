@@ -1,16 +1,35 @@
 <template lang="pug">
   #app
-    #nav
-      router-link(to='/') Home
-      |  |&nbsp
-      router-link(to='/about') About
-    keep-alive
-      router-view
+    Header
+    #main
+      #nav
+        router-link(to='/') Home
+        |  |&nbsp
+        router-link(to='/about') About
+      keep-alive
+        router-view
+
+    Footer
 
 </template>
+<script>
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+
 
 <style lang="scss">
 #app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,5 +45,12 @@
       color: #4183c4;
     }
   }
+}
+#main {
+  margin-top: 2.5em;
+  flex: 1;
+}
+#Footer {
+  margin-top: 2em;
 }
 </style>
