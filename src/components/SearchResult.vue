@@ -1,7 +1,7 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(@click="navigateTo(name)") 
+      a.header.subject(@click="navigateTo(name)")
         text-highlight(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
 import { copyToClipboard } from '@/utils';
 import TextHighlight from 'vue-text-highlight';
 
@@ -49,12 +48,12 @@ export default {
   components: {
     TextHighlight,
   },
-  data (){
+  data() {
     return {
       styleHighlight: {
         'background-color': 'rgba(204, 228, 249, 0.55)',
-      }
-    }
+      },
+    };
   },
   methods: {
     async copy(text) {
@@ -68,7 +67,7 @@ export default {
     navigateTo(url) {
       // TODO: Persist results if user navigates away and goes back to the website
       window.location.href = url;
-    }
+    },
   },
 };
 </script>

@@ -6,8 +6,8 @@
       .row
         .ten.wide.tablet.ten.wide.computer.sixteen.wide.mobile.centered.column
           p#about-text.
-            OntoSearch was created to fight against the boring and time-consuming task of 
-            searching for predicate and classes among a large number of ontologies. 
+            OntoSearch was created to fight against the boring and time-consuming task of
+            searching for predicate and classes among a large number of ontologies.
 </template>
 
 <style lang="scss" scoped>
@@ -15,4 +15,3 @@
   margin-top: 1.5em;
 }
 </style>
-

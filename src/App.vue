@@ -2,7 +2,7 @@
   #app
     #nav
       router-link(to='/') Home
-      |  |  
+      |  |&nbsp
       router-link(to='/about') About
     keep-alive
       router-view
