@@ -1,3 +1,9 @@
+## For local development
+```
+TRIPLESTORE="http://192.168.36.230:5070/repositories/ontologySearcher" nodemon index.js
+```
+And select the right endpoint from `utils.js`
+
 ## Run via Docker-compose
 ```
 docker-compose up -d
