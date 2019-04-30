@@ -51,8 +51,6 @@ server.get('/api/predicate', async (req, res, next) => {
           
                   ?comment luc:myIndex "*${ search }*" .
                   
-                  ?s a owl:Ontology .
-                  
                   FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
               }
           }
@@ -62,6 +60,7 @@ server.get('/api/predicate', async (req, res, next) => {
         headers: { 'Accept': 'application/n-triples' }
       })
 
+    console.log(result)
     res.send(result.data)
 
   } catch (e) {
@@ -75,6 +74,7 @@ server.get('/api/predicate', async (req, res, next) => {
 server.get('/api/type', async (req, res, next) => {
   try {
     const search = escape(req.query.search);
+    console.log(search )
 
     let result = await axios.post(process.env.TRIPLESTORE,
       qs.stringify({
