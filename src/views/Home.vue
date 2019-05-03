@@ -20,7 +20,7 @@
                         v-model="predSearched"
                         @keyup.enter="sendPredicateQuery()"
                       )
-                      i.search.icon
+                      i.search.icon.link(@click.prevent="sendPredicateQuery()")
 
                 .column
                   .ui.icon.header
@@ -35,7 +35,7 @@
                           placeholder='Search type...',
                           @keyup.enter="sendTypeQuery()"
                         )
-                        i.search.icon
+                        i.search.icon.link(@click="sendPredicateQuery()")
 
 
       .row
