@@ -10,13 +10,13 @@
 
                 .column
                   .ui.icon.header
-                    i.search.icon
-                    | Find Predicate
+                    icon.icon(:icon="['fal', 'long-arrow-right']")
+                    | Predicates
                   .ui.search
                     .ui.icon.input(:class='{ loading: loadingPred }')
                       input.prompt(
                         type='text',
-                        placeholder='Search predicate...',
+                        placeholder='Search...',
                         v-model="predSearched"
                         @keyup.enter="sendPredicateQuery()"
                       )
@@ -24,15 +24,15 @@
 
                 .column
                   .ui.icon.header
-                    i.search.icon
-                    | Find Type
+                    icon.icon.cubes(:icon="['fal', 'cubes']")
+                    | Types
                   .field
                     .ui.search
                       .ui.icon.input(:class='{ loading: loadingType }')
                         input.prompt(
                           type='text',
                           v-model="classSearched",
-                          placeholder='Search type...',
+                          placeholder='Search...',
                           @keyup.enter="sendTypeQuery()"
                         )
                         i.search.icon.link(@click="sendPredicateQuery()")
@@ -252,5 +252,15 @@ export default {
 .subject {
   font-size: 1.1em;
   padding-top: 0.5em !important;
+}
+.ui.icon.header {
+  width: 5em!important;
+};
+input::placeholder {
+  color: rgba(0, 0, 0, 0.466)!important;
+  // font-size: 1.2em!important;
+}
+.cubes {
+  margin-bottom: 19px!important;
 }
 </style>
