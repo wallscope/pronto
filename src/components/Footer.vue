@@ -8,7 +8,7 @@
               | from any number of diverse sources.
             p Use our tools to discover, explore and reveal new connections within texts.
             p Wallscope: for innovation with semantic web techniques,
-              | linked data principles and unifying vocabularies.
+              |  linked data principles and unifying vocabularies.
           div.address
             p
               span Wallscope
@@ -41,7 +41,7 @@ section#Footer {
   background-color: rgb(16, 18, 25);
   display: flex;
   color: #aba1a1;
-  min-height: 250px;
+  /* min-height: 200px; */
 }
 .address{
   justify-self: center;
@@ -49,7 +49,7 @@ section#Footer {
 }
 .address p span{
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #15bce3;
 }
 .divBlack p {
@@ -64,14 +64,14 @@ section#Footer {
   grid-template-columns:2fr 1fr;
 }
 .textInside div{
-  padding:20px;
+  padding:16px;
 }
 .wrapperFooter {
   display: grid;
   grid-template-columns: 15% 5fr 1fr 15%;
 }
 #Footer {
-  padding-top: 25px;
+  padding-top: 10px;
   border-top: 10px solid #3e42508f;
 }
 .Additional{
@@ -80,19 +80,19 @@ section#Footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:20px 0;
+  padding:6px 0;
 }
 .Additional  p {
-  font-size: 12px;
+  font-size: 10px;
 }
 .textInside p {
-  font-size:14px;
+  font-size:12px;
   color:white;
 }
 #Footer  a {
   text-decoration: none;
   color:white;
-  font-size:14px;
+  font-size:11px;
 }
 #Footer  a:hover {
   color: #15bce3;
