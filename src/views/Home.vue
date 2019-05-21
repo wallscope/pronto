@@ -130,7 +130,6 @@ export default {
   },
   methods: {
     paginateClick(pageNum) {
-      console.log(pageNum);
       this.currPage = pageNum;
     },
     async sendPredicateQuery() {
@@ -179,6 +178,7 @@ export default {
       }
 
       this.loadingPred = false;
+      this.currPage = 1;
     },
     async sendTypeQuery() {
       // Style before searching
@@ -231,6 +231,7 @@ export default {
       }
 
       this.loadingType = false;
+      this.currPage = 1;
     },
   },
 };
