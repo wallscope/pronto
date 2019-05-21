@@ -5,6 +5,7 @@ TRIPLESTORE="http://192.168.36.230:5070/repositories/ontologySearcher" nodemon i
 And select the right endpoint from `utils.js`
 
 ## Run via Docker-compose
+To relaunch all the components of the app in one go, use docker compose:
 ```
 docker-compose up -d
 ```
