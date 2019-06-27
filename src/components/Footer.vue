@@ -5,7 +5,7 @@
         .textInside
           div
             p Our platform quickly connects you with the most contextually relevant information
-              | from any number of diverse sources.
+              |  from any number of diverse sources.
             p Use our tools to discover, explore and reveal new connections within texts.
             p Wallscope: for innovation with semantic web techniques,
               |  linked data principles and unifying vocabularies.
