@@ -1,4 +1,5 @@
 # ontology-searcher-frontend
+! Choose the right backend endpoint from the `utils.js` file for development or deployment !
 
 ## Project setup
 ```
