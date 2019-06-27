@@ -50,9 +50,6 @@ img {
 .topmenu {
   background: #4d4d4d!important;
   height: 50px;
-  display: grid;
-  grid-template-columns: 50px 130px 1px auto auto auto auto auto 1fr auto auto;
-  grid-gap: 22px;
   color: #d0cece;
   padding: 0 20px;
   .web-name {
