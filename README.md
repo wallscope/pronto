@@ -2,7 +2,7 @@
 ```
 TRIPLESTORE="http://192.168.36.230:5070/repositories/ontologySearcher" nodemon index.js
 ```
-And select the right endpoint from `utils.js`
+! Make sure to select the right endpoint from `utils.js` for development or deployment !
 
 ## Run via Docker-compose
 To relaunch all the components of the app in one go, use docker compose:
