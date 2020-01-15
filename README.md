@@ -1,8 +1,8 @@
 ## For local development
+Set the right DB endpoint from `.env`
 ```
-TRIPLESTORE="http://192.168.36.230:5070/repositories/ontologySearcher" nodemon index.js
+yarn start
 ```
-And select the right endpoint from `utils.js`
 
 ## Run via Docker-compose
 ```
