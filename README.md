@@ -1,12 +1,17 @@
 ## For local development
 
-Set an environment variable in `.env` called `TRIPLESTORE` which points to a graph DB instance, then:
+Set an environment variable in `.env` called `TRIPLESTORE` which points to a graph DB instance
+(default is at http://192.168.36.230:5070/repositories/ontologySearcher).
+
+Run with:
 
 ```
 yarn start
 ```
 
 ## Run via Docker-compose
+
+To relaunch all the components of the app in one go, use docker compose:
 
 ```
 docker-compose up -d
