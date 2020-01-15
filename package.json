@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "qs": "^6.6.0",
     "restify": "^7.7.0"

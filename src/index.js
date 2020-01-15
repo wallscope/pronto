@@ -1,6 +1,7 @@
+require('dotenv').config();
 var restify = require('restify');
 var axios = require('axios');
-var qs = require('qs')
+var qs = require('qs');
 
 var server = restify.createServer();
 server.use(restify.plugins.queryParser());
@@ -9,7 +10,8 @@ server.get('/api/predicate', async (req, res, next) => {
   try {
     const search = escape(req.query.search);
 
-    let result = await axios.post(process.env.TRIPLESTORE,
+    let result = await axios.post(
+      process.env.TRIPLESTORE,
       qs.stringify({
         query: `
           PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
@@ -31,7 +33,7 @@ server.get('/api/predicate', async (req, res, next) => {
                   ?preds	rdfs:label ?label ;
                         rdf:type rdf:Property .
           
-                  ?label	luc:myIndex	"*${ search }*" .
+                  ?label	luc:myIndex	"*${search}*" .
           
                   OPTIONAL {
                       ?preds rdfs:comment ?comment .
@@ -49,23 +51,23 @@ server.get('/api/predicate', async (req, res, next) => {
                         rdf:type rdf:Property ;
                         rdfs:comment ?comment .
           
-                  ?comment luc:myIndex "*${ search }*" .
+                  ?comment luc:myIndex "*${search}*" .
                   
                   FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
                   FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
               }
           }
-        `
+        `,
       }),
       {
-        headers: { 'Accept': 'application/n-triples' }
-      })
+        headers: { Accept: 'application/n-triples' },
+      },
+    );
 
-    res.send(result.data)
-
+    res.send(result.data);
   } catch (e) {
-    console.error('error in getting the triples: ', e)
-    res.send('error in getting the triples: ', e)
+    console.error('error in getting the triples: ', e);
+    res.send('error in getting the triples: ', e);
   }
 
   next();
@@ -74,9 +76,10 @@ server.get('/api/predicate', async (req, res, next) => {
 server.get('/api/type', async (req, res, next) => {
   try {
     const search = escape(req.query.search);
-    console.log(search )
+    console.log(search);
 
-    let result = await axios.post(process.env.TRIPLESTORE,
+    let result = await axios.post(
+      process.env.TRIPLESTORE,
       qs.stringify({
         query: `
           PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -102,7 +105,7 @@ server.get('/api/type', async (req, res, next) => {
                   FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
                   FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
           
-                  ?label luc:myIndex	"*${ search }*" .
+                  ?label luc:myIndex	"*${search}*" .
           
                   OPTIONAL {
                       ?s rdfs:comment ?comment .
@@ -125,20 +128,20 @@ server.get('/api/type', async (req, res, next) => {
                   FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
                   FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
           
-                  ?comment luc:myIndex "*${ search }*" .
+                  ?comment luc:myIndex "*${search}*" .
               }
           }        
-        `
+        `,
       }),
       {
-        headers: { 'Accept': 'application/n-triples' }
-      })
+        headers: { Accept: 'application/n-triples' },
+      },
+    );
 
-    res.send(result.data)
-
+    res.send(result.data);
   } catch (e) {
-    console.error('error in getting the triples: ', e)
-    res.send('error in getting the triples: ', e)
+    console.error('error in getting the triples: ', e);
+    res.send('error in getting the triples: ', e);
   }
 
   next();
@@ -157,7 +160,6 @@ server.get('/api/type', async (req, res, next) => {
 //   }
 // });
 
-
-server.listen(5050, function () {
+server.listen(5050, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
