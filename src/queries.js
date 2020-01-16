@@ -6,39 +6,36 @@ const predQuery = searchTerm =>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX dct: <http://purl.org/dc/terms/>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    
+
     CONSTRUCT {
-        ?preds	rdfs:label ?label ;
-            rdfs:comment ?comment ;
-            rdf:type rdf:Property ;
-            dct:source ?src . 
+        ?preds 	dct:source ?src ;
+            ?otherPreds ?otherObjs .
     } 
     WHERE { 
         {
             BIND( rdfs:label as ?src )
             ?preds	rdfs:label ?label ;
-                  rdf:type rdf:Property .
-    
+                  ?otherPreds ?otherObjs .
+
             ?label	luc:myIndex	"*${searchTerm}*" .
-    
+
             OPTIONAL {
                 ?preds rdfs:comment ?comment .
                 FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
             }
-            
+
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
-            
         }
         UNION
         {
             BIND( rdfs:comment as ?src )
-            
+
             ?preds	rdfs:label ?label ;
-                  rdf:type rdf:Property ;
-                  rdfs:comment ?comment .
-    
+                  rdfs:comment ?comment ;
+                  ?otherPreds ?otherObjs .
+
             ?comment luc:myIndex "*${searchTerm}*" .
-            
+
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
             FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
         }
@@ -55,17 +52,15 @@ const typeQuery = searchTerm =>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     
     CONSTRUCT {
-        ?s rdf:type ?type ;
-            rdfs:label ?label ;
-            rdfs:comment ?comment ;
-            skos:definition ?definition ;
-            dct:source ?src .
+        ?s  dct:source ?src ;
+            ?otherPreds ?otherObjs .
     }
     WHERE { 
         {
             BIND( rdfs:label as ?src )
-            ?s rdfs:label ?label ;
-              rdf:type ?type .
+            ?s  rdfs:label ?label ;
+                rdf:type ?type ;
+                ?otherPreds ?otherObjs .
     
             FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
@@ -85,9 +80,10 @@ const typeQuery = searchTerm =>
         {
             BIND( rdfs:comment as ?src )
     
-            ?s      rdfs:label ?label ;
-                    rdf:type ?type ;
-                    rdfs:comment ?comment .
+            ?s  rdfs:label ?label ;
+                rdf:type ?type ;
+                rdfs:comment ?comment ;
+                ?otherPreds ?otherObjs .
     
             FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
@@ -95,7 +91,7 @@ const typeQuery = searchTerm =>
     
             ?comment luc:myIndex "*${searchTerm}*" .
         }
-    }        
+    }
   `;
 
 module.exports = {
