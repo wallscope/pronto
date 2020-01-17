@@ -19,57 +19,40 @@
 
 </template>
 
-<script>
-import { copyToClipboard } from '@/utils';
+<script lang="ts">
+import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
+import { copyToClipboard } from '@/utils';
 
-export default {
-  name: 'SearchResult',
-  props: {
-    searchedTerm: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    label: {
-      type: String,
-      required: true,
-    },
-    comment: {
-      type: String,
-    },
-    definition: {
-      type: String,
-    },
-  },
+@Component({
   components: {
     TextHighlight,
   },
-  data() {
-    return {
-      styleHighlight: {
-        'background-color': 'rgba(204, 228, 249, 0.55)',
-      },
-    };
-  },
-  methods: {
-    async copy(text) {
-      try {
-        await copyToClipboard(text);
-        this.$toasted.show('copied to clipboard');
-      } catch (_) {
-        this.$toasted.show('could not copy (browser might be incompatible)');
-      }
-    },
-    navigateTo(url) {
-      // TODO: Persist results if user navigates away and goes back to the website
-      window.open(url, '_blank');
-    },
-  },
-};
+})
+export default class SearchResult extends Vue {
+  @Prop({ required: true }) readonly searchedTerm!: string;
+  @Prop({ required: true }) name!: string;
+  @Prop({ required: true }) label!: string;
+  @Prop() comment!: string;
+  @Prop() definition!: string;
+
+  styleHighlight = {
+    'background-color': 'rgba(204, 228, 249, 0.55)',
+  };
+
+  async copy(text: string) {
+    try {
+      await copyToClipboard(text);
+      this.$toasted.show('copied to clipboard');
+    } catch (_) {
+      this.$toasted.show('could not copy (browser might be incompatible)');
+    }
+  }
+  navigateTo(url: string) {
+    // TODO: Persist results if user navigates away and goes back to the website
+    window.open(url, '_blank');
+  }
+}
 </script>
 
 <style lang="scss" scoped>

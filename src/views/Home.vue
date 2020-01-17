@@ -76,13 +76,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store } from 'n3';
 import Toasted from 'vue-toasted';
 import Paginate from 'vuejs-paginate';
-import { api } from '@/utils';
 import SearchResult from '@/components/SearchResult.vue';
 
 Vue.use(Toasted, {
@@ -150,7 +148,7 @@ export default class Home extends Vue {
     // Get data
     try {
       const { data } = await axios.get(
-        `${api}/${searchType}?search=${this.search[searchType]}`,
+        `${process.env.VUE_APP_SERVER_ADDRESS}/${searchType}?search=${this.search[searchType]}`,
       );
       if (data) {
         const quads = this.parser.parse(data);
