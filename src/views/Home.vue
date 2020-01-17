@@ -18,9 +18,9 @@
                         type='text',
                         placeholder='Search...',
                         v-model="predSearched"
-                        @keyup.enter="sendPredicateQuery()"
+                        @keyup.enter="sendQuery('predicate')"
                       )
-                      i.search.icon.link(@click.prevent="sendPredicateQuery()")
+                      i.search.icon.link(@click.prevent="sendQuery('predicate')")
 
                 .column
                   .ui.icon.header
@@ -33,13 +33,13 @@
                           type='text',
                           v-model="classSearched",
                           placeholder='Search...',
-                          @keyup.enter="sendTypeQuery()"
+                          @keyup.enter="sendQuery('type')"
                         )
-                        i.search.icon.link(@click="sendPredicateQuery()")
+                        i.search.icon.link(@click="sendQuery('type')")
 
 
       .row
-        .center.aligned.column
+        .center.aligned.column(v-if="results.length")
           h2.ui.horizontal.divider.header.results
             i.bar.chart.icon
             | Results
@@ -76,10 +76,11 @@
 
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue';
+import Component from 'vue-class-component';
 import axios from 'axios';
-import N3 from 'n3';
+import N3, { Parser, Store } from 'n3';
 import Toasted from 'vue-toasted';
 import Paginate from 'vuejs-paginate';
 import { api } from '@/utils';
@@ -91,161 +92,122 @@ Vue.use(Toasted, {
   duration: 3000,
 });
 
-export default {
-  name: 'home',
+interface OntologyResult {
+  name: string;
+  label: string;
+  comment: string;
+  source: string;
+}
+
+@Component({
   components: {
     SearchResult,
     Paginate,
   },
-  data() {
-    return {
-      loadingPred: false,
-      loadingType: false,
-      currPage: 1,
-      quadstore: null,
-      results: [],
-      predSearched: '',
-      classSearched: '',
-    };
-  },
-  computed: {
-    paginatedResults() {
-      return this.slicedResults[this.currPage - 1];
-    },
-    slicedResults() {
-      const chunkSize = 20;
-      const R = [];
+})
+export default class Home extends Vue {
+  loadingPred = false;
+  loadingType = false;
+  currPage = 1;
+  results: Array<OntologyResult> = [];
+  predSearched = '';
+  classSearched = '';
 
-      for (let i = 0; i < this.sortedResults.length; i += chunkSize) {
-        R.push(this.sortedResults.slice(i, i + chunkSize));
-      }
-      return R;
-    },
-    sortedResults() {
-      return [...this.results].sort(({ source }) => (source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0));
-    },
-    searchedTerm() {
-      return this.predSearched ? this.predSearched : this.classSearched;
-    },
-  },
-  methods: {
-    paginateClick(pageNum) {
-      this.currPage = pageNum;
-    },
-    async sendPredicateQuery() {
-      // Style before searching
-      this.loadingPred = true;
-      this.classSearched = '';
+  get sortedResults() {
+    return [...this.results].sort(({ source }) =>
+      source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0,
+    );
+  }
+  get slicedResults() {
+    const chunkSize = 20;
+    const R = [];
 
-      // Get data
-      try {
-        const { data } = await axios.get(
-          `${api}/predicate?search=${this.predSearched}`,
+    for (let i = 0; i < this.sortedResults.length; i += chunkSize) {
+      R.push(this.sortedResults.slice(i, i + chunkSize));
+    }
+    return R;
+  }
+  get paginatedResults() {
+    return this.slicedResults[this.currPage - 1];
+  }
+  get searchedTerm() {
+    return this.predSearched ? this.predSearched : this.classSearched;
+  }
+
+  paginateClick(pageNum: number) {
+    this.currPage = pageNum;
+  }
+  async sendQuery(searchType: 'predicate' | 'type') {
+    // Style before searching
+    this.loadingPred = true;
+    searchType === 'predicate' ? (this.classSearched = '') : (this.predSearched = '');
+
+    const termSearched = searchType === 'predicate' ? this.predSearched : this.classSearched;
+    // Get data
+    try {
+      const { data } = await axios.get(`${api}/${searchType}?search=${termSearched}`);
+      if (data) {
+        const quads = new Parser().parse(data);
+        // Reset store and add quads
+        const quadstore = new Store();
+        quadstore.addQuads(quads);
+
+        const labels = quadstore.getQuads(
+          null,
+          'http://www.w3.org/2000/01/rdf-schema#label',
+          null,
+          null,
         );
-        if (data) {
-          const quads = N3.Parser().parse(data);
-          // Reset store and add quads
-          this.quadstore = N3.Store();
-          this.quadstore.addQuads(quads);
-
-          const labels = this.quadstore.getQuads(
-            null,
-            'http://www.w3.org/2000/01/rdf-schema#label',
+        this.results = labels.map(({ subject, object }) => {
+          const [comment] = quadstore.getObjects(
+            subject.value,
+            'http://www.w3.org/2000/01/rdf-schema#comment',
             null,
           );
-          this.results = labels.map(({ subject, object }) => {
-            const [comment] = this.quadstore.getObjects(
-              subject.value,
-              'http://www.w3.org/2000/01/rdf-schema#comment',
-            );
-            const [source] = this.quadstore.getObjects(
-              subject.value,
-              'http://purl.org/dc/terms/source',
-            );
-
-            return {
-              name: subject.value,
-              label: object.value,
-              comment: comment ? comment.value : '',
-              source: source.value,
-            };
-          });
-        } else {
-          this.$toasted.show('no result');
-        }
-      } catch (e) {
-        this.$toasted.show(e);
-      }
-
-      this.loadingPred = false;
-      this.currPage = 1;
-    },
-    async sendTypeQuery() {
-      // Style before searching
-      this.loadingType = true;
-      this.predSearched = '';
-
-      // Get data
-      try {
-        const { data } = await axios.get(
-          `${api}/type?search=${this.classSearched}`,
-        );
-        if (data) {
-          const quads = N3.Parser().parse(data);
-          // Reset store and add quads
-          this.quadstore = N3.Store();
-          this.quadstore.addQuads(quads);
-
-          const labels = this.quadstore.getQuads(
-            null,
-            'http://www.w3.org/2000/01/rdf-schema#label',
+          const [source] = quadstore.getObjects(
+            subject.value,
+            'http://purl.org/dc/terms/source',
             null,
           );
-          this.results = labels.map(({ subject, object }) => {
-            const [comment] = this.quadstore.getObjects(
-              subject.value,
-              'http://www.w3.org/2000/01/rdf-schema#comment',
-            );
-            const [definition] = this.quadstore.getObjects(
-              subject.value,
-              'http://www.w3.org/2004/02/skos/core#definition',
-            );
-            const [source] = this.quadstore.getObjects(
-              subject.value,
-              'http://purl.org/dc/terms/source',
-            );
-
-            return {
-              name: subject.value,
-              label: object.value,
-              comment: comment ? comment.value : '',
-              definition: definition ? definition.value : '',
-              source: source.value,
-            };
-          });
-        } else {
-          this.$toasted.show('no result');
-        }
-      } catch (e) {
-        this.$toasted.show(e);
+          const [definition] =
+            searchType === 'type'
+              ? quadstore.getObjects(
+                  subject.value,
+                  'http://www.w3.org/2004/02/skos/core#definition',
+                  null,
+                )
+              : [];
+          return {
+            name: subject.value,
+            label: object.value,
+            comment: comment ? comment.value : '',
+            definition: definition ? definition.value : '',
+            source: source ? source.value : '',
+          };
+        });
+      } else {
+        this.$toasted.show('no result');
       }
+    } catch (e) {
+      this.$toasted.show(e);
+      throw e;
+    }
 
-      this.loadingType = false;
-      this.currPage = 1;
-    },
-  },
-};
+    this.loadingPred = false;
+    this.currPage = 1;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 @media (max-width: 767px) {
   .hide-mobile {
-    display: none!important;
+    display: none !important;
   }
 }
 .pagination {
   padding: 0;
-  margin-top: 1em!important;
+  margin-top: 1em !important;
 }
 .results {
   margin-top: 0.2em !important;
@@ -255,13 +217,13 @@ export default {
   padding-top: 0.5em !important;
 }
 .ui.icon.header {
-  width: 5em!important;
-};
+  width: 5em !important;
+}
 input::placeholder {
-  color: rgba(0, 0, 0, 0.466)!important;
+  color: rgba(0, 0, 0, 0.466) !important;
   // font-size: 1.2em!important;
 }
 .cubes {
-  margin-bottom: 19px!important;
+  margin-bottom: 19px !important;
 }
 </style>

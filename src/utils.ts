@@ -1,16 +1,13 @@
-export const api = '/api'; // For production
-// export const api = 'http://localhost:5050/api'; // For development
+// export const api = '/api'; // For production
+export const api = 'http://localhost:5050/api'; // For development
 
 // export const api = 'http://192.168.36.230:5050/api';
 // export const api = 'http://dev.verinote.net:5050/api';
 
-
-// eslint-disable-next-line consistent-return
-export function copyToClipboard(text) {
+export function copyToClipboard(text: string) {
   if (window.clipboardData && window.clipboardData.setData) {
     // IE specific code path to prevent textarea being shown while dialog is visible.
-    // eslint-disable-next-line no-undef
-    return clipboardData.setData('Text', text);
+    return window.clipboardData.setData('Text', text);
   }
 
   if (document.queryCommandSupported && document.queryCommandSupported('copy')) {

@@ -43,11 +43,11 @@ section#Footer {
   color: #aba1a1;
   /* min-height: 200px; */
 }
-.address{
+.address {
   justify-self: center;
   color: #dadada;
 }
-.address p span{
+.address p span {
   font-weight: bold;
   font-size: 14px;
   color: #15bce3;
@@ -55,16 +55,16 @@ section#Footer {
 .divBlack p {
   text-align: left;
 }
-.divBlack{
+.divBlack {
   width: 100%;
 }
 .textInside {
   grid-column: 2/3;
-  display:grid;
-  grid-template-columns:2fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
-.textInside div{
-  padding:16px;
+.textInside div {
+  padding: 16px;
 }
 .wrapperFooter {
   display: grid;
@@ -74,30 +74,30 @@ section#Footer {
   padding-top: 10px;
   border-top: 10px solid #3e42508f;
 }
-.Additional{
+.Additional {
   background: #07080b;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:6px 0;
+  padding: 6px 0;
 }
-.Additional  p {
+.Additional p {
   font-size: 10px;
 }
 .textInside p {
-  font-size:12px;
-  color:white;
+  font-size: 12px;
+  color: white;
 }
-#Footer  a {
+#Footer a {
   text-decoration: none;
-  color:white;
-  font-size:11px;
+  color: white;
+  font-size: 11px;
 }
-#Footer  a:hover {
+#Footer a:hover {
   color: #15bce3;
 }
-#Footer img{
+#Footer img {
   max-width: 180px;
 }
 .logo {

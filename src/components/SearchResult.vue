@@ -66,10 +66,7 @@ export default {
     },
     navigateTo(url) {
       // TODO: Persist results if user navigates away and goes back to the website
-      window.open(
-        url,
-        '_blank',
-      );
+      window.open(url, '_blank');
     },
   },
 };
