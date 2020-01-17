@@ -15,7 +15,7 @@
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
       ) {{ comment }}
-      .description {{ definition ? `Definition: ${ definition }` : '' }}
+      .definition {{ definition }}
 
 </template>
 
@@ -73,6 +73,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.definition {
+  font-style: italic;
+}
 i.copy {
   z-index: 1;
   padding: 1em 2em 2em 0.8em;

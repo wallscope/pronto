@@ -13,11 +13,11 @@
                     icon.icon(:icon="['fal', 'long-arrow-right']")
                     | Predicates
                   .ui.search
-                    .ui.icon.input(:class='{ loading: loadingPred }')
+                    .ui.icon.input(:class='{ loading: loading.predicate }')
                       input.prompt(
                         type='text',
                         placeholder='Search...',
-                        v-model="predSearched"
+                        v-model="search['predicate']"
                         @keyup.enter="sendQuery('predicate')"
                       )
                       i.search.icon.link(@click.prevent="sendQuery('predicate')")
@@ -28,10 +28,10 @@
                     | Types
                   .field
                     .ui.search
-                      .ui.icon.input(:class='{ loading: loadingType }')
+                      .ui.icon.input(:class='{ loading: loading.type }')
                         input.prompt(
                           type='text',
-                          v-model="classSearched",
+                          v-model="search['type']",
                           placeholder='Search...',
                           @keyup.enter="sendQuery('type')"
                         )
@@ -51,7 +51,7 @@
             :key="r.name"
           )
             search-result(
-              :searchedTerm="searchedTerm",
+              :searchedTerm="search['predicate'] || search['type']",
               :name="r.name",
               :label="r.label",
               :comment="r.comment",
@@ -73,14 +73,13 @@
           :next-class="'item'",
         )
 
-
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import axios from 'axios';
-import N3, { Parser, Store } from 'n3';
+import { Parser, Store } from 'n3';
 import Toasted from 'vue-toasted';
 import Paginate from 'vuejs-paginate';
 import { api } from '@/utils';
@@ -106,12 +105,20 @@ interface OntologyResult {
   },
 })
 export default class Home extends Vue {
-  loadingPred = false;
-  loadingType = false;
+  // Style vars
+  loading = {
+    predicate: false,
+    type: false,
+  };
   currPage = 1;
+
+  search = {
+    predicate: '',
+    type: '',
+  };
   results: Array<OntologyResult> = [];
-  predSearched = '';
-  classSearched = '';
+  parser = new Parser();
+  quadstore = new Store();
 
   get sortedResults() {
     return [...this.results].sort(({ source }) =>
@@ -120,7 +127,7 @@ export default class Home extends Vue {
   }
   get slicedResults() {
     const chunkSize = 20;
-    const R = [];
+    const R: OntologyResult[][] = [];
 
     for (let i = 0; i < this.sortedResults.length; i += chunkSize) {
       R.push(this.sortedResults.slice(i, i + chunkSize));
@@ -130,53 +137,49 @@ export default class Home extends Vue {
   get paginatedResults() {
     return this.slicedResults[this.currPage - 1];
   }
-  get searchedTerm() {
-    return this.predSearched ? this.predSearched : this.classSearched;
-  }
 
   paginateClick(pageNum: number) {
     this.currPage = pageNum;
   }
   async sendQuery(searchType: 'predicate' | 'type') {
-    // Style before searching
-    this.loadingPred = true;
-    searchType === 'predicate' ? (this.classSearched = '') : (this.predSearched = '');
+    this.loading[searchType] = true;
+    // Clear the other input field
+    if (searchType === 'predicate') this.search['type'] = '';
+    else this.search['predicate'] = '';
 
-    const termSearched = searchType === 'predicate' ? this.predSearched : this.classSearched;
     // Get data
     try {
-      const { data } = await axios.get(`${api}/${searchType}?search=${termSearched}`);
+      const { data } = await axios.get(
+        `${api}/${searchType}?search=${this.search[searchType]}`,
+      );
       if (data) {
-        const quads = new Parser().parse(data);
+        const quads = this.parser.parse(data);
         // Reset store and add quads
-        const quadstore = new Store();
-        quadstore.addQuads(quads);
+        this.quadstore.deleteGraph('');
+        this.quadstore.addQuads(quads);
 
-        const labels = quadstore.getQuads(
+        const labels = this.quadstore.getQuads(
           null,
           'http://www.w3.org/2000/01/rdf-schema#label',
           null,
           null,
         );
         this.results = labels.map(({ subject, object }) => {
-          const [comment] = quadstore.getObjects(
+          const [comment] = this.quadstore.getObjects(
             subject.value,
             'http://www.w3.org/2000/01/rdf-schema#comment',
             null,
           );
-          const [source] = quadstore.getObjects(
+          const [source] = this.quadstore.getObjects(
             subject.value,
             'http://purl.org/dc/terms/source',
             null,
           );
-          const [definition] =
-            searchType === 'type'
-              ? quadstore.getObjects(
-                  subject.value,
-                  'http://www.w3.org/2004/02/skos/core#definition',
-                  null,
-                )
-              : [];
+          const [definition] = this.quadstore.getObjects(
+            subject.value,
+            'http://www.w3.org/2004/02/skos/core#definition',
+            null,
+          );
           return {
             name: subject.value,
             label: object.value,
@@ -193,7 +196,7 @@ export default class Home extends Vue {
       throw e;
     }
 
-    this.loadingPred = false;
+    this.loading[searchType] = false;
     this.currPage = 1;
   }
 }
