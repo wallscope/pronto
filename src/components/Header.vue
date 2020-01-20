@@ -1,7 +1,7 @@
 <template lang="pug">
   section.main-nav-section
     .ui.top.fixed.menu.topmenu
-      .item
+      .item(@click="$router.push('/')")
         .ui.tiny.image
           img(src='@/assets/logo-small.png')
         .middle.aligned.content
@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.item {
+  cursor: pointer;
+}
 .white {
   color: white;
 }

@@ -3,24 +3,27 @@
     .ui.grid.container
       .row
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
+          h1 {{ result.label }}
+          p {{ result.name }}
+          br 
           table.ui.very.basic.collapsing.celled.table
             thead
               tr
-                th Employee
-                th Correct Guesses
+                th Predicate
+                th Object
             tbody
-              tr
+              tr(v-for="[k, vArr] in Object.entries(groupedResults)")
                 td
                   h4.ui.image.header
-                    img.ui.mini.rounded.image(src='/images/avatar2/small/lena.png')
                     .content
-                      | Lena
+                      | {{ k.split(/#|\//).pop() }}
                       .sub.header
-                        | Human Resources
+                        | {{ k }}
                 td
-                  | 22
+                  tr.object-row(v-for="obj in vArr")
+                    td 
+                      p {{ obj }}
 
-          p {{ result.name }}
 </template>
 
 <script lang="ts">
@@ -39,5 +42,20 @@ import { OntologyResult } from '@/types';
 })
 export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
+
+  get groupedResults() {
+    console.log(this.result);
+    return this.result.rest.reduce((prev, curr) => {
+      if (!prev[curr.predicate.id]) prev[curr.predicate.id] = [];
+      prev[curr.predicate.id] = [...prev[curr.predicate.id], curr.object.id];
+      return prev;
+    }, {} as { [key: string]: Array<string> });
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+table.ui {
+  margin-bottom: 100px !important;
+}
+</style>
