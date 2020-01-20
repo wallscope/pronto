@@ -36,6 +36,7 @@ export default {
   color: #2c3e50;
 }
 #nav {
+  margin-top: 15px;
   padding: 30px;
   a {
     font-weight: bold;
