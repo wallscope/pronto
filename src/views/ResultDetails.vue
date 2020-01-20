@@ -2,11 +2,12 @@
   .results
     .ui.grid.container
       .row
+        .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
           h1 {{ result.label }}
           p {{ result.name }}
           br 
-          table.ui.very.basic.collapsing.celled.table
+          table.ui.very.basic.celled.structured.table
             thead
               tr
                 th Predicate
@@ -23,6 +24,16 @@
                   tr.object-row(v-for="obj in vArr")
                     td 
                       p {{ obj }}
+
+        .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
+          .ui.animated.button(
+            tabindex='0'
+            @click="$router.go(-1)"
+          )
+            .visible.content Go back
+            .hidden.content
+              i.left.arrow.icon
+
 
 </template>
 
@@ -44,7 +55,6 @@ export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
 
   get groupedResults() {
-    console.log(this.result);
     return this.result.rest.reduce((prev, curr) => {
       if (!prev[curr.predicate.id]) prev[curr.predicate.id] = [];
       prev[curr.predicate.id] = [...prev[curr.predicate.id], curr.object.id];
