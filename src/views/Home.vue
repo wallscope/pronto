@@ -132,6 +132,12 @@ export default class Home extends Vue {
     this.currPage = pageNum;
   }
   async sendQuery(searchType: 'predicate' | 'type') {
+    // Check for null searches
+    if (!this.search[searchType]) {
+      this.$toasted.show('type the keyword you want to search');
+      return;
+    }
+
     this.loading[searchType] = true;
     // Clear the other input field
     if (searchType === 'predicate') this.search['type'] = '';
@@ -142,52 +148,55 @@ export default class Home extends Vue {
       const { data } = await axios.get(
         `${process.env.VUE_APP_SERVER_ADDRESS}/${searchType}?search=${this.search[searchType]}`,
       );
-      if (data) {
-        const quads = this.parser.parse(data);
-        // Reset store and add quads
-        this.quadstore.deleteGraph('');
-        this.quadstore.addQuads(quads);
+      if (!data) {
+        this.$toasted.show('no result');
+        return;
+      }
+      const quads = this.parser.parse(data);
+      // Reset store and add quads
+      this.quadstore.deleteGraph('');
+      this.quadstore.addQuads(quads);
 
-        const labels = this.quadstore.getQuads(
-          null,
-          'http://www.w3.org/2000/01/rdf-schema#label',
-          null,
+      const labels = this.quadstore.getQuads(
+        null,
+        'http://www.w3.org/2000/01/rdf-schema#label',
+        null,
+        null,
+      );
+      this.results = labels.map(({ subject, object }) => {
+        const [comment] = this.quadstore.getObjects(
+          subject.value,
+          'http://www.w3.org/2000/01/rdf-schema#comment',
           null,
         );
-        this.results = labels.map(({ subject, object }) => {
-          const [comment] = this.quadstore.getObjects(
-            subject.value,
-            'http://www.w3.org/2000/01/rdf-schema#comment',
-            null,
-          );
-          const [source] = this.quadstore.getObjects(
-            subject.value,
-            'http://purl.org/dc/terms/source',
-            null,
-          );
-          const [definition] = this.quadstore.getObjects(
-            subject.value,
-            'http://www.w3.org/2004/02/skos/core#definition',
-            null,
-          );
-          return {
-            name: subject.value,
-            label: object.value,
-            comment: comment ? comment.value : '',
-            definition: definition ? definition.value : '',
-            source: source ? source.value : '',
-          };
-        });
-      } else {
-        this.$toasted.show('no result');
-      }
+        const [source] = this.quadstore.getObjects(
+          subject.value,
+          'http://purl.org/dc/terms/source',
+          null,
+        );
+        const [definition] = this.quadstore.getObjects(
+          subject.value,
+          'http://www.w3.org/2004/02/skos/core#definition',
+          null,
+        );
+        const rest = this.quadstore.getQuads(subject.value, null, null, null);
+
+        return {
+          name: subject.value,
+          label: object.value,
+          comment: comment ? comment.value : '',
+          definition: definition ? definition.value : '',
+          source: source ? source.value : '',
+          rest,
+        };
+      });
     } catch (e) {
       this.$toasted.show(e);
       throw e;
+    } finally {
+      this.loading[searchType] = false;
+      this.currPage = 1;
     }
-
-    this.loading[searchType] = false;
-    this.currPage = 1;
   }
 }
 </script>

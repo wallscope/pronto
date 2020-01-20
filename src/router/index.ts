@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
-import Results from '@/views/Results.vue';
+import ResultDetails from '@/views/ResultDetails.vue';
 
 Vue.use(VueRouter);
 
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: '/results/:id',
-    name: 'Results',
-    component: Results,
+    name: 'ResultDetails',
+    component: ResultDetails,
     props: true,
   },
   {

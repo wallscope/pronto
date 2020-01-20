@@ -58,7 +58,7 @@ export default class SearchResult extends Vue {
   navigateToResult() {
     // @ts-ignore
     this.$router.push({
-      name: 'Results',
+      name: 'ResultDetails',
       params: { id: this.result.name, result: this.result },
     });
   }
