@@ -1,27 +1,33 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(@click="navigateTo(name)")
+      a.header.subject(@click="navigateToResult()")
         text-highlight(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-        ) {{ label }}
+        ) {{ result.label }}
+
+      .label {{ result.name }}
         i.icon.copy.outline.link(
-          @click.stop.prevent="copy(name)",
+          @click.stop.prevent="copy(result.name)",
           title="Copy"
         )
-      .label {{ name }}
+        i.icon.external.alternate.link(
+          @click.stop.prevent="navigateToExternal(result.name)",
+          title="Open definition in own ontology"
+        )
       text-highlight.description(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-      ) {{ comment }}
-      .definition {{ definition }}
+      ) {{ result.comment }}
+      .definition {{ result.definition }}
 
 </template>
 
 <script lang="ts">
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
+import { OntologyResult } from '@/types';
 import { copyToClipboard } from '@/utils';
 
 @Component({
@@ -31,10 +37,7 @@ import { copyToClipboard } from '@/utils';
 })
 export default class SearchResult extends Vue {
   @Prop({ required: true }) readonly searchedTerm!: string;
-  @Prop({ required: true }) name!: string;
-  @Prop({ required: true }) label!: string;
-  @Prop() comment!: string;
-  @Prop() definition!: string;
+  @Prop({ required: true }) result!: OntologyResult;
 
   styleHighlight = {
     'background-color': 'rgba(204, 228, 249, 0.55)',
@@ -48,9 +51,16 @@ export default class SearchResult extends Vue {
       this.$toasted.show('could not copy (browser might be incompatible)');
     }
   }
-  navigateTo(url: string) {
+  navigateToExternal(url: string) {
     // TODO: Persist results if user navigates away and goes back to the website
     window.open(url, '_blank');
+  }
+  navigateToResult() {
+    // @ts-ignore
+    this.$router.push({
+      name: 'Results',
+      params: { id: this.result.name, result: this.result },
+    });
   }
 }
 </script>

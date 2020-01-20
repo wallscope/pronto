@@ -11,22 +11,23 @@
                 .column
                   .ui.icon.header
                     icon.icon(:icon="['fal', 'long-arrow-right']")
-                    | Predicates
-                  .ui.search
-                    .ui.icon.input(:class='{ loading: loading.predicate }')
-                      input.prompt(
-                        type='text',
-                        placeholder='Search...',
-                        v-model="search['predicate']"
-                        @keyup.enter="sendQuery('predicate')"
-                      )
-                      i.search.icon.link(@click.prevent="sendQuery('predicate')")
+                    h2 Predicates
+                  .field
+                    .ui.search
+                      .ui.icon.input(:class='{ loading: loading.predicate }')
+                        input.prompt(
+                          type='text',
+                          placeholder='Search...',
+                          v-model="search['predicate']"
+                          @keyup.enter="sendQuery('predicate')"
+                        )
+                        i.search.icon.link(@click.prevent="sendQuery('predicate')")
 
                 .column
                   .ui.icon.header
                     icon.icon.cubes(:icon="['fal', 'cubes']")
-                    | Types
-                  .field
+                    h2 Types
+                  .field.types
                     .ui.search
                       .ui.icon.input(:class='{ loading: loading.type }')
                         input.prompt(
@@ -44,7 +45,7 @@
             i.bar.chart.icon
             | Results
 
-      .row.centered
+      .row.centered.high-column
         .twelve.wide.left.aligned.column
           .ui.list(
             v-for="r in paginatedResults",
@@ -52,10 +53,7 @@
           )
             search-result(
               :searchedTerm="search['predicate'] || search['type']",
-              :name="r.name",
-              :label="r.label",
-              :comment="r.comment",
-              :definition="r.definition",
+              :result="r"
             )
 
       .row.centered
@@ -81,6 +79,7 @@ import axios from 'axios';
 import { Parser, Store } from 'n3';
 import Toasted from 'vue-toasted';
 import Paginate from 'vuejs-paginate';
+import { OntologyResult } from '@/types';
 import SearchResult from '@/components/SearchResult.vue';
 
 Vue.use(Toasted, {
@@ -88,13 +87,6 @@ Vue.use(Toasted, {
   theme: 'outline',
   duration: 3000,
 });
-
-interface OntologyResult {
-  name: string;
-  label: string;
-  comment: string;
-  source: string;
-}
 
 @Component({
   components: {
@@ -206,6 +198,17 @@ export default class Home extends Vue {
     display: none !important;
   }
 }
+@media (min-width: 768px) {
+  .field {
+    margin-top: 20px;
+  }
+  .field.types {
+    margin-bottom: -18px;
+  }
+}
+.high-column {
+  min-height: 250px;
+}
 .pagination {
   padding: 0;
   margin-top: 1em !important;
@@ -218,7 +221,7 @@ export default class Home extends Vue {
   padding-top: 0.5em !important;
 }
 .ui.icon.header {
-  width: 5em !important;
+  width: 7em !important;
 }
 input::placeholder {
   color: rgba(0, 0, 0, 0.466) !important;
