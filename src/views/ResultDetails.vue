@@ -69,8 +69,8 @@ export default class ResultDetails extends Vue {
   prettyProp(prop: string) {
     if (prop.indexOf('@') > 0) {
       const s = prop.split('@');
+      // TODO: DB only contains data in English. Include `<span>lang:${s[1]}</span>` when adding more languages
       return `
-        <span>lang:${s[1]}</span>
         <p>${s[0].slice(1, -1)}</p>
       `;
     }

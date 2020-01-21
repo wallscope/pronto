@@ -71,7 +71,7 @@ export default class SearchResult extends Vue {
 }
 i.copy {
   z-index: 1;
-  padding: 1em 2em 2em 0.8em;
+  padding: 1em 1.5em 2em 0.8em;
   margin: -2em -0.2em;
 }
 </style>
