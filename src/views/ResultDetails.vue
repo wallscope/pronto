@@ -7,23 +7,27 @@
           h1 {{ result.label }}
           p {{ result.name }}
           br 
-          table.ui.very.basic.celled.structured.table
+          table.ui.very.basic.celled.table
             thead
               tr
                 th Predicate
                 th Object
             tbody
-              tr(v-for="[k, vArr] in Object.entries(groupedResults)")
-                td
-                  h4.ui.image.header
-                    .content
-                      | {{ k.split(/#|\//).pop() }}
-                      .sub.header
-                        | {{ k }}
-                td
-                  tr.object-row(v-for="obj in vArr")
-                    td 
-                      p {{ obj }}
+              template(v-for="[k, vArr] in Object.entries(groupedResults)")
+                tr
+                  td.preds(:rowspan="vArr.length")
+                    h4.ui.header
+                      .content
+                        | {{ k.split(/#|\//).pop() }}
+                        .sub.header
+                          | {{ k }}
+                  td
+                    span(v-html="prettyProp(vArr[0])")
+
+                  
+                tr(v-for="(obj, idx) in vArr", v-if="idx > 0")
+                  td.result-cell
+                    span(v-html="prettyProp(obj)")
 
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
           .ui.animated.button(
@@ -61,11 +65,34 @@ export default class ResultDetails extends Vue {
       return prev;
     }, {} as { [key: string]: Array<string> });
   }
+
+  prettyProp(prop: string) {
+    if (prop.indexOf('@') > 0) {
+      const s = prop.split('@');
+      return `
+        <span>lang:${s[1]}</span>
+        <p>${s[0].slice(1, -1)}</p>
+      `;
+    }
+    return prop;
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.preds {
+  vertical-align: top;
+}
 table.ui {
   margin-bottom: 100px !important;
+}
+.result-cell {
+  padding-left: 0.78571429em !important;
+  border-left: 1px solid rgba(34, 36, 38, 0.1) !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.table:not(.unstackable) td:first-child {
+    font-weight: 400;
+  }
 }
 </style>
