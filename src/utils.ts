@@ -13,8 +13,8 @@ export function copyToClipboard(text: string) {
     try {
       return document.execCommand('copy'); // Security exception may be thrown by some browsers.
     } catch (ex) {
-      console.warn('Copy to clipboard failed.', ex);
-      return false;
+      // @ts-ignore
+      throw Error('Copy to clipboard failed.', ex);
     } finally {
       document.body.removeChild(textarea);
     }
