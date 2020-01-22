@@ -18,7 +18,7 @@
                   td.preds(:rowspan="vArr.length")
                     h4.ui.header
                       .content
-                        | {{ k.split(/#|\//).pop() }}
+                        | {{ prefix(k) }}
                         .sub.header
                           | {{ k }}
                   td
@@ -43,6 +43,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
+import { prefixes } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -58,12 +59,31 @@ import { OntologyResult } from '@/types';
 export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
 
+  // swap uri with prefixes
+  prefixes = Object.entries(prefixes).reduce((acc, entry) => {
+    const [key, value] = entry;
+    acc[value] = key;
+    return acc;
+  }, {} as { [root: string]: string });
+
   get groupedResults() {
     return this.result.rest.reduce((prev, curr) => {
       if (!prev[curr.predicate.id]) prev[curr.predicate.id] = [];
       prev[curr.predicate.id] = [...prev[curr.predicate.id], curr.object.id];
       return prev;
     }, {} as { [key: string]: Array<string> });
+  }
+
+  prefix(s: string) {
+    try {
+      const re = s.match(/(\/|#)(?:.(?!\/|#))+$/);
+      if (!re) return s;
+      const [root, prop] = [s.slice(0, re['index']! + 1), s.slice(re['index']! + 1)];
+      if (!this.prefixes[root]) return s;
+      return `${this.prefixes[root]}:${prop}`;
+    } catch {
+      return s;
+    }
   }
 
   prettyProp(prop: string) {
@@ -74,7 +94,7 @@ export default class ResultDetails extends Vue {
         <p>${s[0].slice(1, -1)}</p>
       `;
     }
-    return prop;
+    return this.prefix(prop);
   }
 }
 </script>

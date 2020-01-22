@@ -16,6 +16,7 @@ export const prefixes = {
   ov: 'http://open.vocab.org/terms/',
   grddl: 'http://www.w3.org/2003/g/data-view#',
   prov: 'http://www.w3.org/ns/prov#',
+  vcard: 'http://www.w3.org/2006/vcard/ns#',
 };
 
 export function copyToClipboard(text: string) {
