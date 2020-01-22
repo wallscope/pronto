@@ -22,13 +22,19 @@
                         .sub.header
                           | {{ k }}
                   td
-                    span(v-html="prettyProp(vArr[0])")
+                    p(
+                      v-html="prettyProp(vArr[0])",
+                      :title="vArr[0]", 
+                    )
 
                   
                 tr(v-for="(obj, idx) in vArr", v-if="idx > 0")
                   td.result-cell
-                    span(v-html="prettyProp(obj)")
-
+                    p(
+                      v-html="prettyProp(obj)", 
+                      :title="obj", 
+                    )
+                  
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
           .ui.animated.button(
             tabindex='0'
@@ -85,14 +91,11 @@ export default class ResultDetails extends Vue {
       return s;
     }
   }
-
   prettyProp(prop: string) {
     if (prop.indexOf('@') > 0) {
       const s = prop.split('@');
       // TODO: DB only contains data in English. Include `<span>lang:${s[1]}</span>` when adding more languages
-      return `
-        <p>${s[0].slice(1, -1)}</p>
-      `;
+      return s[0].slice(1, -1);
     }
     return this.prefix(prop);
   }
