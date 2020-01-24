@@ -9,7 +9,7 @@
 
       .label {{ result.name }}
         i.icon.copy.outline.link(
-          @click.stop.prevent="copy(result.name)",
+          @click.stop.prevent="copyToClipboard(result.name)",
           title="Copy"
         )
         i.icon.external.alternate.link(
@@ -28,11 +28,15 @@
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
 import { OntologyResult } from '@/types';
-import { copyToClipboard } from '@/utils';
+import { copyToClipboard, navigateToExternal } from '@/utils';
 
 @Component({
   components: {
     TextHighlight,
+  },
+  methods: {
+    copyToClipboard,
+    navigateToExternal,
   },
 })
 export default class SearchResult extends Vue {
@@ -43,18 +47,6 @@ export default class SearchResult extends Vue {
     'background-color': 'rgba(204, 228, 249, 0.55)',
   };
 
-  async copy(text: string) {
-    try {
-      await copyToClipboard(text);
-      this.$toasted.show('copied to clipboard');
-    } catch (_) {
-      this.$toasted.show('could not copy (browser might be incompatible)');
-    }
-  }
-  navigateToExternal(url: string) {
-    // TODO: Persist results if user navigates away and goes back to the website
-    window.open(url, '_blank');
-  }
   navigateToResult() {
     // @ts-ignore
     this.$router.push({

@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 export const prefixes = {
   rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
   rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
@@ -19,7 +21,20 @@ export const prefixes = {
   vcard: 'http://www.w3.org/2006/vcard/ns#',
 };
 
-export function copyToClipboard(text: string) {
+export const navigateToExternal = (url: string) => {
+  // TODO: Persist results if user navigates away and goes back to the website
+  window.open(url, '_blank');
+};
+
+export async function copyToClipboard(text: string) {
+  try {
+    await copyToClipboardInternals(text);
+    Vue.toasted.show('copied to clipboard');
+  } catch (_) {
+    Vue.toasted.show('could not copy (browser might be incompatible)');
+  }
+}
+export function copyToClipboardInternals(text: string) {
   if (window.clipboardData && window.clipboardData.setData) {
     // IE specific code path to prevent textarea being shown while dialog is visible.
     return window.clipboardData.setData('Text', text);

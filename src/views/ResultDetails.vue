@@ -6,6 +6,14 @@
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
           h1 {{ result.label }}
           p {{ result.name }}
+            i.icon.copy.outline.link(
+              @click.stop.prevent="copyToClipboard(result.name)",
+              title="Copy"
+            )
+            i.icon.external.alternate.link(
+              @click.stop.prevent="navigateToExternal(result.name)",
+              title="Open definition in own ontology"
+            )
           br 
           table.ui.very.basic.celled.table
             thead
@@ -49,7 +57,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { prefixes } from '@/utils';
+import { prefixes, copyToClipboard, navigateToExternal } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -60,6 +68,10 @@ import { OntologyResult } from '@/types';
         vm.$router.go(-1);
       }
     });
+  },
+  methods: {
+    copyToClipboard,
+    navigateToExternal,
   },
 })
 export default class ResultDetails extends Vue {

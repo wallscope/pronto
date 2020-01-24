@@ -77,16 +77,9 @@
 import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store } from 'n3';
-import Toasted from 'vue-toasted';
 import Paginate from 'vuejs-paginate';
 import { OntologyResult } from '@/types';
 import SearchResult from '@/components/SearchResult.vue';
-
-Vue.use(Toasted, {
-  position: 'top-center',
-  theme: 'outline',
-  duration: 3000,
-});
 
 @Component({
   components: {
