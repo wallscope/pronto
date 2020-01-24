@@ -12,10 +12,13 @@
           @click.stop.prevent="copyToClipboard(result.name)",
           title="Copy"
         )
-        i.icon.external.alternate.link(
-          @click.stop.prevent="navigateToExternal(result.name)",
-          title="Open definition in own ontology"
+        a(
+          :href="result.name", 
+          target="_blank"
         )
+          i.icon.external.alternate.link(
+            title="Open definition in own ontology"
+          )
       text-highlight.description(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
@@ -28,7 +31,7 @@
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
 import { OntologyResult } from '@/types';
-import { copyToClipboard, navigateToExternal } from '@/utils';
+import { copyToClipboard } from '@/utils';
 
 @Component({
   components: {
@@ -36,7 +39,6 @@ import { copyToClipboard, navigateToExternal } from '@/utils';
   },
   methods: {
     copyToClipboard,
-    navigateToExternal,
   },
 })
 export default class SearchResult extends Vue {
@@ -58,6 +60,9 @@ export default class SearchResult extends Vue {
 </script>
 
 <style lang="scss" scoped>
+a > i {
+  color: #2c3e50 !important;
+}
 .definition {
   font-style: italic;
 }

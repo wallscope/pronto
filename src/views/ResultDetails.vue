@@ -10,10 +10,13 @@
               @click.stop.prevent="copyToClipboard(result.name)",
               title="Copy"
             )
-            i.icon.external.alternate.link(
-              @click.stop.prevent="navigateToExternal(result.name)",
-              title="Open definition in own ontology"
+            a(
+              :href="result.name", 
+              target="_blank"
             )
+              i.icon.external.alternate.link(
+                title="Open definition in own ontology"
+              )
           br 
           table.ui.very.basic.celled.table
             thead
@@ -30,17 +33,21 @@
                         .sub.header
                           | {{ k }}
                   td
-                    p(
+                    a(
                       v-html="prettyProp(vArr[0])",
-                      :title="vArr[0]", 
+                      :title="vArr[0]",
+                      :href="vArr[0]",
+                      target="_blank"
                     )
 
                   
                 tr(v-for="(obj, idx) in vArr", v-if="idx > 0")
                   td.result-cell
-                    p(
+                    a(
                       v-html="prettyProp(obj)", 
-                      :title="obj", 
+                      :title="obj",
+                      :href="obj",
+                      target="_blank"
                     )
                   
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
@@ -57,7 +64,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { prefixes, copyToClipboard, navigateToExternal } from '@/utils';
+import { prefixes, copyToClipboard } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -71,7 +78,6 @@ import { OntologyResult } from '@/types';
   },
   methods: {
     copyToClipboard,
-    navigateToExternal,
   },
 })
 export default class ResultDetails extends Vue {
@@ -115,6 +121,9 @@ export default class ResultDetails extends Vue {
 </script>
 
 <style lang="scss" scoped>
+a > i {
+  color: #2c3e50 !important;
+}
 .preds {
   vertical-align: top;
 }

@@ -21,11 +21,6 @@ export const prefixes = {
   vcard: 'http://www.w3.org/2006/vcard/ns#',
 };
 
-export const navigateToExternal = (url: string) => {
-  // TODO: Persist results if user navigates away and goes back to the website
-  window.open(url, '_blank');
-};
-
 export async function copyToClipboard(text: string) {
   try {
     await copyToClipboardInternals(text);
