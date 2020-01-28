@@ -1,7 +1,7 @@
 version: '2'
 services:
   backend:
-    image: wallscope/pronto-api:latest
+    image: wallscope/pronto:1:0.0
     ports:
       - '5050:5050'
     environment:

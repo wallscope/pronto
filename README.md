@@ -9,22 +9,22 @@ Run with:
 yarn start
 ```
 
-## Run via Docker-compose
-
-To relaunch all the components of the app in one go, use docker compose:
+## To deploy
 
 ```
-docker-compose up -d
+cd /home/pronto/
+git pull
+docker-compose up -d    # relaunch all the components of the app in one go
 ```
 
 ## Start single Docker container
 
 ```
-docker run --name ontology-searcher-api -p 5050:5050  -d wallscope/ontology-searcher-api
+docker run --name pronto-api -p 5050:5050  -d wallscope/pronto
 ```
 
 ## Info
 
-- API is on port 5050
-- GraphDB is on port 5070
-- Front-end is on port 5080
+- API runs on port 5050
+- GraphDB runs on port 5070
+- Front-end runs on port 5080
