@@ -1,33 +1,33 @@
 version: '2'
 services:
   backend:
-    image: wallscope/ontology-searcher-api:latest
-    ports: 
-      - "5050:5050"
+    image: wallscope/pronto-api:latest
+    ports:
+      - '5050:5050'
     environment:
       - TRIPLESTORE=http://triplestore:7200/repositories/ontologySearcher
     networks:
-      - ontology-net
+      - pronto-net
 
   frontend:
     image: nginx:alpine
-    ports: 
-      - "5080:80"
+    ports:
+      - '5080:80'
     volumes:
-      - "${PWD}/data/frontend/html:/usr/share/nginx/html"
-      - "${PWD}/data/frontend/conf:/etc/nginx/conf.d"
+      - '${PWD}/data/frontend/html:/usr/share/nginx/html'
+      - '${PWD}/data/frontend/conf:/etc/nginx/conf.d'
     networks:
-      - ontology-net
+      - pronto-net
 
   triplestore:
     image: dhlabbasel/graphdb-free
     ports:
-      - "5070:7200"
+      - '5070:7200'
     volumes:
-      - "${PWD}/data/triplestore/drop:/root/graphdb-import"
-      - "${PWD}/data/triplestore/data:/graphdb/data"
+      - '${PWD}/data/triplestore/drop:/root/graphdb-import'
+      - '${PWD}/data/triplestore/data:/graphdb/data'
     networks:
-      - ontology-net
+      - pronto-net
 
-networks: 
-  ontology-net:
+networks:
+  pronto-net:
