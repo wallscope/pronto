@@ -1,84 +1,74 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(@click="navigateTo(name)")
+      a.header.subject(@click="navigateToResult()")
         text-highlight(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-        ) {{ label }}
+        ) {{ result.label }}
+
+      .label {{ result.name }}
         i.icon.copy.outline.link(
-          @click.stop.prevent="copy(name)",
+          @click.stop.prevent="copyToClipboard(result.name)",
           title="Copy"
         )
-      .label {{ name }}
+        a(
+          :href="result.name", 
+          target="_blank"
+        )
+          i.icon.external.alternate.link(
+            title="Open definition in own ontology"
+          )
       text-highlight.description(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-      ) {{ comment }}
-      .description {{ definition ? `Definition: ${ definition }` : '' }}
+      ) {{ result.comment }}
+      .definition {{ result.definition }}
 
 </template>
 
-<script>
-import { copyToClipboard } from '@/utils';
+<script lang="ts">
+import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
+import { OntologyResult } from '@/types';
+import { copyToClipboard } from '@/utils';
 
-export default {
-  name: 'SearchResult',
-  props: {
-    searchedTerm: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    label: {
-      type: String,
-      required: true,
-    },
-    comment: {
-      type: String,
-    },
-    definition: {
-      type: String,
-    },
-  },
+@Component({
   components: {
     TextHighlight,
   },
-  data() {
-    return {
-      styleHighlight: {
-        'background-color': 'rgba(204, 228, 249, 0.55)',
-      },
-    };
-  },
   methods: {
-    async copy(text) {
-      try {
-        await copyToClipboard(text);
-        this.$toasted.show('copied to clipboard');
-      } catch (_) {
-        this.$toasted.show('could not copy (browser might be incompatible)');
-      }
-    },
-    navigateTo(url) {
-      // TODO: Persist results if user navigates away and goes back to the website
-      window.open(
-        url,
-        '_blank',
-      );
-    },
+    copyToClipboard,
   },
-};
+})
+export default class SearchResult extends Vue {
+  @Prop({ required: true }) readonly searchedTerm!: string;
+  @Prop({ required: true }) result!: OntologyResult;
+
+  styleHighlight = {
+    'background-color': 'rgba(204, 228, 249, 0.55)',
+  };
+
+  navigateToResult() {
+    // @ts-ignore
+    this.$router.push({
+      name: 'ResultDetails',
+      params: { id: this.result.name, result: this.result },
+    });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
+a > i {
+  color: #2c3e50 !important;
+}
+.definition {
+  font-style: italic;
+}
 i.copy {
   z-index: 1;
-  padding: 1em 2em 2em 0.8em;
+  padding: 1em 1.5em 2em 0.8em;
   margin: -2em -0.2em;
 }
 </style>
