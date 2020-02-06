@@ -7,13 +7,26 @@
     "start": "nodemon src/index.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "express": "^4.16.4",
-    "qs": "^6.6.0",
-    "restify": "^7.7.0"
+    "express": "^4.17.1",
+    "qs": "^6.9.1",
+    "restify": "^8.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "eslint": "^6.8.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,json}": "prettier --write"
   }
 }
