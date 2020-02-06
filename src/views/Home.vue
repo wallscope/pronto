@@ -138,9 +138,7 @@ export default class Home extends Vue {
 
     // Get data
     try {
-      const { data } = await axios.get(
-        `${process.env.VUE_APP_SERVER_ADDRESS}/${searchType}?search=${this.search[searchType]}`,
-      );
+      const { data } = await axios.get(`api/${searchType}?search=${this.search[searchType]}`);
       if (!data) {
         this.$toasted.show('no result');
         return;

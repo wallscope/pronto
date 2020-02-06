@@ -1,7 +1,7 @@
 module.exports = {
   devServer: {
     // Proxy to bypass CORS during development
-    proxy: process.env.VUE_APP_SERVER_ADDRESS,
+    proxy: 'http://localhost:5050',
   },
   css: {
     loaderOptions: {

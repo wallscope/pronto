@@ -76,9 +76,6 @@ import { OntologyResult } from '@/types';
       }
     });
   },
-  methods: {
-    copyToClipboard,
-  },
 })
 export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
@@ -98,6 +95,7 @@ export default class ResultDetails extends Vue {
     }, {} as { [key: string]: Array<string> });
   }
 
+  copyToClipboard = copyToClipboard;
   prefix(s: string) {
     try {
       const re = s.match(/(\/|#)(?:.(?!\/|#))+$/);
