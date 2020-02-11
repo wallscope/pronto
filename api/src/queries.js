@@ -19,12 +19,14 @@ const predQuery = searchTerm =>
 
             ?label	luc:myIndex	"*${searchTerm}*" .
 
+
+            FILTER( ?type IN ( rdf:Property ) )
+            FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
+
             OPTIONAL {
                 ?preds rdfs:comment ?comment .
                 FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
             }
-
-            FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
         }
         UNION
         {
@@ -36,6 +38,7 @@ const predQuery = searchTerm =>
 
             ?comment luc:myIndex "*${searchTerm}*" .
 
+            FILTER( ?type IN ( rdf:Property ) )
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
             FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
         }
@@ -62,7 +65,7 @@ const typeQuery = searchTerm =>
                 rdf:type ?type ;
                 ?otherPreds ?otherObjs .
     
-            FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
+            FILTER( ?type IN ( rdfs:Class, owl:Class ) )
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
     
             ?label luc:myIndex	"*${searchTerm}*" .
@@ -85,7 +88,7 @@ const typeQuery = searchTerm =>
                 rdfs:comment ?comment ;
                 ?otherPreds ?otherObjs .
     
-            FILTER( ?type IN ( rdfs:Class, owl:Class ) ) .
+            FILTER( ?type IN ( rdfs:Class, owl:Class ) )
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
             FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
     
