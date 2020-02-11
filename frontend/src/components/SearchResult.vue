@@ -7,17 +7,17 @@
         :highlightStyle="styleHighlight"
         ) {{ result.label }}
 
-      .label {{ result.name }}
-        i.icon.copy.outline.link(
-          @click.stop.prevent="copyToClipboard(result.name)",
+      .label {{ result.uri }}
+        i.icon.clipboard.outline.link(
+          @click.stop.prevent="copyToClipboard(result.uri)",
           title="Copy"
         )
         a(
-          :href="result.name", 
+          :href="result.uri", 
           target="_blank"
         )
           i.icon.external.alternate.link(
-            title="Open definition in own ontology"
+            title="Open definition in ontology"
           )
       text-highlight.description(
         :queries="searchedTerm",
@@ -53,7 +53,7 @@ export default class SearchResult extends Vue {
     // @ts-ignore
     this.$router.push({
       name: 'ResultDetails',
-      params: { id: this.result.name, result: this.result },
+      params: { id: this.result.uri, result: this.result },
     });
   }
 }

@@ -1,6 +1,6 @@
 import { Quad } from 'n3';
 export interface OntologyResult {
-  name: string;
+  uri: string;
   label: string;
   comment: string;
   source: string;

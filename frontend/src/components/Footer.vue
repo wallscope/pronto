@@ -26,7 +26,7 @@
         //.SocialMedia
           p
       .Additional
-          p Copyright © 2017 Wallscope Limited. All rights reserved.
+          p Copyright © {{ new Date().getFullYear() }} Wallscope Limited. All rights reserved.
           p Registered in Scotland — Company No. SC487045 at 9 Ainslie Place Edinburgh EH3 6AT.
 
 </template>

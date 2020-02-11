@@ -49,7 +49,7 @@
         .twelve.wide.left.aligned.column
           .ui.list(
             v-for="r in paginatedResults",
-            :key="r.name"
+            :key="r.uri"
           )
             search-result(
               :searchedTerm="search['predicate'] || search['type']",
@@ -173,7 +173,7 @@ export default class Home extends Vue {
         const rest = this.quadstore.getQuads(subject.value, null, null, null);
 
         return {
-          name: subject.value,
+          uri: subject.value,
           label: object.value,
           comment: comment ? comment.value : '',
           definition: definition ? definition.value : '',

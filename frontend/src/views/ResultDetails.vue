@@ -5,13 +5,13 @@
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
           h1 {{ result.label }}
-          p {{ result.name }}
-            i.icon.copy.outline.link(
-              @click.stop.prevent="copyToClipboard(result.name)",
+          p {{ result.uri }}
+            i.icon.clipboard.outline.link(
+              @click.stop.prevent="copyToClipboard(result.uri)",
               title="Copy"
             )
             a(
-              :href="result.name", 
+              :href="result.uri", 
               target="_blank"
             )
               i.icon.external.alternate.link(
