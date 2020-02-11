@@ -11,14 +11,16 @@
             label Give us some feedback so we can improve it!
             textarea(
               rows='2', 
-              placeholder='Type your feedback...'
+              placeholder='Type your feedback...',
+              v-model="feedbackText"
             )
-          button.ui.button Send
+          button.ui.button(@click="sendFeedback()") Send
 
 </template>
 
 <script lang="ts">
 import { Vue, Prop, Component } from 'vue-property-decorator';
+import axios from 'axios';
 import TextHighlight from 'vue-text-highlight';
 import { OntologyResult } from '@/types';
 
@@ -26,9 +28,10 @@ import { OntologyResult } from '@/types';
 export default class Feedback extends Vue {
   @Prop({ default: false }) isFeedbackOpen!: boolean;
 
+  feedbackText = '';
+
   showFeedback() {
-    console.log('running');
-    debugger;
+    // return true;
     const lastDismissed = localStorage.getItem('feedbackLastDismissed');
     if (!lastDismissed) return true;
 
@@ -41,8 +44,10 @@ export default class Feedback extends Vue {
   }
   closeFeedback() {
     localStorage.setItem('feedbackLastDismissed', new Date().toString());
-    // localStorage.setItem('wasFeedbackDismissed', 'true');
     this.$emit('close-feedback');
+  }
+  async sendFeedback() {
+    await axios.post('api/feedback', { feedback: this.feedbackText });
   }
 }
 </script>
