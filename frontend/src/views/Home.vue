@@ -10,7 +10,7 @@
 
                 .column
                   .ui.icon.header
-                    icon.icon(:icon="['fal', 'long-arrow-right']")
+                    i.icon.long.arrow.alternate.right 
                     h2 Predicates
                   .field
                     .ui.search
@@ -25,7 +25,7 @@
 
                 .column
                   .ui.icon.header
-                    icon.icon.cubes(:icon="['fal', 'cubes']")
+                    i.icon.cube
                     h2 Types
                   .field.types
                     .ui.search
@@ -200,10 +200,7 @@ export default class Home extends Vue {
 }
 @media (min-width: 768px) {
   .field {
-    margin-top: 20px;
-  }
-  .field.types {
-    margin-bottom: -18px;
+    margin-top: 10px;
   }
 }
 .high-column {
@@ -221,11 +218,10 @@ export default class Home extends Vue {
   padding-top: 0.5em !important;
 }
 .ui.icon.header {
-  width: 7em !important;
+  font-size: 2em !important;
 }
 input::placeholder {
   color: rgba(0, 0, 0, 0.466) !important;
-  // font-size: 1.2em!important;
 }
 .cubes {
   margin-bottom: 19px !important;
