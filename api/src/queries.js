@@ -15,12 +15,11 @@ const predQuery = searchTerm =>
         {
             BIND( rdfs:label as ?src )
             ?preds	rdfs:label ?label ;
-                  ?otherPreds ?otherObjs .
+                    rdf:type  rdf:Property ;
+                    ?otherPreds ?otherObjs .
 
             ?label	luc:myIndex	"*${searchTerm}*" .
 
-
-            FILTER( ?type IN ( rdf:Property ) )
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
 
             OPTIONAL {
@@ -33,12 +32,12 @@ const predQuery = searchTerm =>
             BIND( rdfs:comment as ?src )
 
             ?preds	rdfs:label ?label ;
-                  rdfs:comment ?comment ;
-                  ?otherPreds ?otherObjs .
+                    rdfs:comment ?comment ;
+                    rdf:type  rdf:Property ;
+                    ?otherPreds ?otherObjs .
 
             ?comment luc:myIndex "*${searchTerm}*" .
 
-            FILTER( ?type IN ( rdf:Property ) )
             FILTER(langMatches(lang(?label), "EN") || lang(?label) = '' )
             FILTER(langMatches(lang(?comment), "EN") || lang(?comment) = '' )
         }
