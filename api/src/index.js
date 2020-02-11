@@ -2,10 +2,18 @@ require('dotenv').config();
 const restify = require('restify');
 const axios = require('axios');
 const qs = require('qs');
+const sqlite3 = require('sqlite3').verbose();
 const queries = require('./queries');
 
 const server = restify.createServer();
 server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser({ mapParams: false }));
+
+const feedbackDb = new sqlite3.Database('./db/feedback.db', err => {
+  if (err) {
+    console.error(err.message);
+  }
+});
 
 const getFromDb = async (queryFunction, req, res, next) => {
   try {
@@ -31,9 +39,19 @@ const getFromDb = async (queryFunction, req, res, next) => {
 server.get('/api/predicate', async (req, res, next) => {
   await getFromDb(queries.predQuery, req, res, next);
 });
-
 server.get('/api/type', async (req, res, next) => {
   await getFromDb(queries.typeQuery, req, res, next);
+});
+
+server.post('/api/feedback', async (req, res, next) => {
+  try {
+    const feedback = escape(req.body.feedback);
+    res.send(feedback);
+  } catch (e) {
+    console.error(e);
+    res.send(e);
+  }
+  next();
 });
 
 server.listen(5050, function() {
