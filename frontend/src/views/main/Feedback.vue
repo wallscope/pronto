@@ -27,12 +27,14 @@ export default class Feedback extends Vue {
   @Prop({ default: false }) isFeedbackOpen!: boolean;
 
   showFeedback() {
+    console.log('running');
+    debugger;
     const lastDismissed = localStorage.getItem('feedbackLastDismissed');
     if (!lastDismissed) return true;
 
     // If dismissed more than three days ago return true
     const timeDifference = +new Date() - +new Date(lastDismissed);
-    if (timeDifference > 3 * 24 * 3600) return true;
+    if (timeDifference > 3 * 24 * 3600 * 1000) return true;
 
     this.$emit('close-feedback');
     return false;
