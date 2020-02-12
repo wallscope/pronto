@@ -31,7 +31,6 @@ export default class Feedback extends Vue {
   feedbackText = '';
 
   showFeedback() {
-    // return true;
     const lastDismissed = localStorage.getItem('feedbackLastDismissed');
     if (!lastDismissed) return true;
 
@@ -48,6 +47,7 @@ export default class Feedback extends Vue {
   }
   async sendFeedback() {
     await axios.post('api/feedback', { feedback: this.feedbackText });
+    this.closeFeedback();
   }
 }
 </script>
