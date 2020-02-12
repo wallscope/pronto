@@ -9,7 +9,7 @@ const server = restify.createServer();
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser({ mapParams: false }));
 
-const feedbackDb = new sqlite3.Database('./db/feedback.db', err => {
+const feedbackDb = new sqlite3.Database('./feedback.db', err => {
   if (err) {
     console.error(err.message);
   }
@@ -32,7 +32,6 @@ const getFromDb = async (queryFunction, req, res, next) => {
     console.error('error in getting the triples: ', e);
     res.send('error in getting the triples: ', e);
   }
-
   next();
 };
 
@@ -45,8 +44,11 @@ server.get('/api/type', async (req, res, next) => {
 
 server.post('/api/feedback', async (req, res, next) => {
   try {
-    const feedback = escape(req.body.feedback);
-    res.send(feedback);
+    feedbackDb.serialize(() => {
+      feedbackDb.run(queries.createFeedbackDb);
+      feedbackDb.run('INSERT INTO Feedback (comment) VALUES(?)', req.body.feedback);
+    });
+    res.send(200);
   } catch (e) {
     console.error(e);
     res.send(e);

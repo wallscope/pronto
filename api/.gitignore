@@ -4,3 +4,4 @@ data/triplestore/
 data/frontend/html/*
 !data/frontend/html/README.md
 .eslintcache
+feedback.db

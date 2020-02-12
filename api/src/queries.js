@@ -96,7 +96,16 @@ const typeQuery = searchTerm =>
     }
   `;
 
+const createFeedbackDb = `
+  CREATE TABLE IF NOT EXISTS Feedback (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    comment TEXT NOT NULL,
+    date DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+  );
+`;
+
 module.exports = {
   predQuery,
   typeQuery,
+  createFeedbackDb,
 };
