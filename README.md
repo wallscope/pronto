@@ -6,11 +6,10 @@ Separately, build the frontend:
 
 ```
 cd frontend
-git checkout master
-git pull
+yarn install
 yarn build
 ```
 
-and place the content of the fronted `dist` folder in the root `data/` folder (e.g. with `rsync -av dist/\* "../data/frontend/html/"`).
+and place the content of `fronted/dist/` in the root `data/` folder (e.g. with `mkdir -p ../data/frontend/html/ && mv dist/* $_`).
 
-Finally, start the docker containers using `docker-compose up -d`.
+Finally, start the docker containers from the root `pronto/` folder using `docker-compose up -d`.
