@@ -10,7 +10,7 @@
 
       .row
         .eight.wide.tablet.six.wide.computer.sixteen.wide.mobile.centered.left.aligned.column
-          h2 List of the included ontologies
+          h2 List of included ontologies
           .ui.list
             a.item(v-for="p in Object.values(prefixes)") 
               | {{ p }}
