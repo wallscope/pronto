@@ -1,7 +1,7 @@
 version: '2'
 services:
   backend:
-    # image: wallscope/pronto:1.0.1
+    image: wallscope/pronto-backend:1.0.1
     build: '${PWD}/api/'
     ports:
       - '5050:5050'
@@ -15,8 +15,8 @@ services:
     ports:
       - '5080:80'
     volumes:
-      - '${PWD}/frontend/dist:/usr/share/nginx/html'
-      - '${PWD}/api/data/frontend/conf:/etc/nginx/conf.d'
+      - '${PWD}/data/frontend/html:/usr/share/nginx/html'
+      - '${PWD}/data/frontend/conf:/etc/nginx/conf.d'
     networks:
       - pronto-net
 
@@ -25,8 +25,8 @@ services:
     ports:
       - '5070:7200'
     volumes:
-      - '${PWD}/api/data/triplestore/drop:/root/graphdb-import'
-      - '${PWD}/api/data/triplestore/data:/graphdb/data'
+      - '${PWD}/data/triplestore/drop:/root/graphdb-import'
+      - '${PWD}/data/triplestore/data:/graphdb/data'
     networks:
       - pronto-net
 
