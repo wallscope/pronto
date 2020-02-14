@@ -6,18 +6,17 @@ Pronto allows developers to search for **concepts** and **predicates** among a n
 
 Check out this [demo](https://pronto.wallscope.co.uk/) to see Pronto in action.
 
-The instructions below will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The instructions below will get you a copy of the project up and running on your local machine for development and testing purposes. See the deployment section for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-- Vue-cli for the frontend. Install with `yarn global add @vue/cli`.
+- Node.js
+- yarn (or swap yarn with npm commands)
 
 ### Installing
 
 1. Clone the repo with `git clone git@github.com:wallscope/pronto.git`
-2. Run the command `yarn install && yarn start` in both the folders `frontend/` and `api/`
-
-### Add More Ontologies to the Graph
+2. From different terminal instances, run the commands `yarn install && yarn start` in the folders `frontend/` and `api/`
 
 ## Deployment
 
@@ -29,17 +28,28 @@ yarn install
 yarn build
 ```
 
-Then, place the content of `fronted/dist/` in the root `data/` folder. From the `frontend/` folder run:
+### Docker
+
+The quickest way to deploy Pronto is through Docker.
+First, place the content of `fronted/dist/` in the folder `data/`, contained in the root folder. From the `frontend/` folder run:
 
 ```
 mkdir -p ../data/frontend/html/ && mv dist/* $_
 ```
 
-A quick way to deploy Pronto is through Docker. Once the above steps are completed, you can start the docker containers from the root `pronto/` folder using `docker-compose up -d`.
+Then, you can start the docker containers from the `pronto/` root folder using:
+
+```
+docker-compose up -d
+```
+
+## Add More Ontologies to the Graph
+
+To be completed.
 
 ## Contributing
 
-PRs are welcome! Please open an issue first to discuss what you would like to change :tada:
+PRs are welcome! :tada: Please open an issue first to discuss what you would like to change.
 
 ## Built With
 
