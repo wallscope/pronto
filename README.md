@@ -6,39 +6,22 @@ Pronto allows developers to search for **concepts** and **predicates** among a n
 
 Check out this [demo](https://pronto.wallscope.co.uk/) to see Pronto in action.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The instructions below will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+- Vue-cli for the frontend. Install with `yarn global add @vue/cli`.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+1. Clone the repo with `git clone git@github.com:wallscope/pronto.git`
+2. Run the command `yarn install && yarn start` in both the folders `frontend/` and `api/`
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+### Add More Ontologies to the Graph
 
 ## Deployment
 
-Clone the repo to your deployment environment and run `git pull`.
-
-Separately, build the frontend:
+Clone the repo to your deployment environment and build the frontend:
 
 ```
 cd frontend
@@ -46,9 +29,13 @@ yarn install
 yarn build
 ```
 
-and place the content of `fronted/dist/` in the root `data/` folder (e.g. with `mkdir -p ../data/frontend/html/ && mv dist/* $_`).
+Then, place the content of `fronted/dist/` in the root `data/` folder. From the `frontend/` folder run:
 
-Finally, start the docker containers from the root `pronto/` folder using `docker-compose up -d`.
+```
+mkdir -p ../data/frontend/html/ && mv dist/* $_
+```
+
+A quick way to deploy Pronto is through Docker. Once the above steps are completed, you can start the docker containers from the root `pronto/` folder using `docker-compose up -d`.
 
 ## Contributing
 

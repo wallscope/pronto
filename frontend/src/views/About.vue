@@ -4,9 +4,11 @@
       .row
         .ten.wide.tablet.ten.wide.computer.sixteen.wide.mobile.centered.column
           p#about-text.
-            Pronto was created by Wallscope to fight against the boring and time-consuming task of
-            searching for predicates and classes in ontologies. Read our
-            #[a(href="https://medium.com/wallscope/pronto-find-predicates-fast-15187f52f516" target="_blank") Wallscope's blog post] for more information.
+            Pronto is an ontology search engine created to fight against the boring and time-consuming task of
+            looking for predicates and classes in ontologies.
+            The included ontologies were selected from the prefix.cc user-curated list "popular", along with some others. 
+            
+            Read the #[a(href="https://medium.com/wallscope/pronto-find-predicates-fast-15187f52f516" target="_blank") Wallscope's blog post] for more information.
 
       .row
         .eight.wide.tablet.six.wide.computer.sixteen.wide.mobile.centered.left.aligned.column
