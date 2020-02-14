@@ -1,7 +1,7 @@
 version: '2'
 services:
   backend:
-    image: wallscope/pronto-backend:1.0.1
+    image: wallscope/pronto-backend:1.1.0
     build: '${PWD}/api/'
     ports:
       - '5050:5050'
