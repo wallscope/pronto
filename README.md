@@ -45,7 +45,14 @@ docker-compose up -d
 
 ## Add More Ontologies to the Graph
 
-To be completed.
+`To be completed`
+
+Update the Lucene index running this query in the database:
+
+```
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+INSERT DATA { luc:myIndex luc:createIndex "true" . }
+```
 
 ## Contributing
 
