@@ -34,7 +34,7 @@ The quickest way to deploy Pronto is through Docker.
 First, place the content of `fronted/dist/` in the folder `data/`, contained in the root folder. From the `frontend/` folder run:
 
 ```
-mkdir -p ../data/frontend/html/ && mv dist/* $_
+mkdir -p ../data/frontend/html/ && cp -r dist/* $_
 ```
 
 Then, you can start the docker containers from the `pronto/` root folder using:
