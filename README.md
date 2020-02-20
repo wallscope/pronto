@@ -11,7 +11,7 @@ The instructions below will get you a copy of the project up and running on your
 ### Prerequisites
 
 - Node.js
-- yarn (or swap yarn with npm commands)
+- Yarn (or swap yarn commands with npm)
 
 ### Installing
 
@@ -53,7 +53,7 @@ PRs are welcome! :tada: Please open an issue first to discuss what you would lik
 
 ## Built With
 
-- [Fomantic UI](https://fomantic-ui.com/) (fork of Semantic UI) - UI framework
+- [Semantic UI](https://semantic-ui.com/) - UI framework
 - [Restify](http://restify.com/) - Node.js REST server based on Express
 
 ## Versioning
@@ -62,7 +62,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **Francesco Belvedere** - _Initial work_ - [Wallscope](https://wallscope.co.uk/)
+- **Francesco Belvedere** - _Ideator and creator_ - [Wallscope](https://wallscope.co.uk/)
 
 See also the list of [contributors](https://github.com/wallscope/pronto/contributors) who participated in this project.
 
