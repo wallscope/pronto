@@ -23,7 +23,7 @@ services:
   triplestore:
     image: dhlabbasel/graphdb-free
     ports:
-      - '5070:7200'
+      - '127.0.0.1:5070:7200'
     volumes:
       - '${PWD}/data/triplestore/drop:/root/graphdb-import'
       - '${PWD}/data/triplestore/data:/graphdb/data'
