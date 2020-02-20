@@ -79,7 +79,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
-import { Parser, Store } from 'n3';
+import { Parser, Store, Quad_Object } from 'n3';
 import Paginate from 'vuejs-paginate';
 import { OntologyResult } from '@/types';
 import SearchResult from './SearchResult.vue';
@@ -166,10 +166,10 @@ export default class Home extends Vue {
       this.results = resources.map(({ subject, object }) => {
         const label = this.quadstore
           .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#label', null)
-          .find(l => l.language === 'en' || l.language === '');
+          .find(l => (l as any).language === 'en' || (l as any).language === '');
         const comment = this.quadstore
           .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment', null)
-          .find(l => l.language === 'en' || l.language === '');
+          .find(l => (l as any).language === 'en' || (l as any).language === '');
         const source = this.quadstore.getObjects(
           subject.value,
           'http://purl.org/dc/terms/source',
