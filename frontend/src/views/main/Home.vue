@@ -154,24 +154,28 @@ export default class Home extends Vue {
       this.quadstore.deleteGraph('');
       this.quadstore.addQuads(quads);
 
-      const labels = this.quadstore.getQuads(
+      // Get all unique resources (predicates or classes)
+      const resources = this.quadstore.getQuads(
         null,
-        'http://www.w3.org/2000/01/rdf-schema#label',
-        null,
+        'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+        'http://www.w3.org/2000/01/rdf-schema#Resource',
         null,
       );
-      this.results = labels.map(({ subject, object }) => {
-        const [comment] = this.quadstore.getObjects(
-          subject.value,
-          'http://www.w3.org/2000/01/rdf-schema#comment',
-          null,
-        );
-        const [source] = this.quadstore.getObjects(
+
+      // For each resource, define explicitely uri, label, comment, definition, and source
+      this.results = resources.map(({ subject, object }) => {
+        const label = this.quadstore
+          .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#label', null)
+          .find(l => l.language === 'en' || l.language === '');
+        const comment = this.quadstore
+          .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment', null)
+          .find(l => l.language === 'en' || l.language === '');
+        const source = this.quadstore.getObjects(
           subject.value,
           'http://purl.org/dc/terms/source',
           null,
         );
-        const [definition] = this.quadstore.getObjects(
+        const definition = this.quadstore.getObjects(
           subject.value,
           'http://www.w3.org/2004/02/skos/core#definition',
           null,
@@ -180,10 +184,10 @@ export default class Home extends Vue {
 
         return {
           uri: subject.value,
-          label: object.value,
+          label: label ? label.value : '',
           comment: comment ? comment.value : '',
-          definition: definition ? definition.value : '',
-          source: source ? source.value : '',
+          definition: definition[0] ? definition[0].value : '',
+          source: source[0] ? source[0].value : '',
           rest,
         };
       });
