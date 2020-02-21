@@ -30,14 +30,8 @@ yarn build
 
 ### Docker
 
-The quickest way to deploy Pronto is through Docker.
-First, place the content of `fronted/dist/` in the folder `data/`, contained in the root folder. From the `frontend/` folder run:
-
-```
-mkdir -p ../data/frontend/html/ && rsync -a dist/* $_
-```
-
-Then, you can start the docker containers from the `pronto/` root folder using:
+The quickest way to deploy Pronto is through Docker and its Compose tool.
+Start the docker containers from the `pronto/` root folder using:
 
 ```
 docker-compose up -d
@@ -45,14 +39,15 @@ docker-compose up -d
 
 ## Add More Ontologies to the Graph
 
-`To be completed`
-
-Update the Lucene index running this query in the database:
+If you are running the project through Docker, you can access the database server on localhost on port `5070`.
+Import more ontologies from the _Import_ tab, then from the _SPARQL_ tab update the Lucene index running this query in the database:
 
 ```
 PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
 INSERT DATA { luc:myIndex luc:createIndex "true" . }
 ```
+
+> If adding an ontology that you think will help other people, consider creating a pull request.
 
 ## Contributing
 
