@@ -15,7 +15,7 @@ services:
     ports:
       - '5080:80'
     volumes:
-      - '${PWD}/data/frontend/html:/usr/share/nginx/html'
+      - '${PWD}/frontend/dist:/usr/share/nginx/html'
       - '${PWD}/data/frontend/conf:/etc/nginx/conf.d'
     networks:
       - pronto-net
