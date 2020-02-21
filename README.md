@@ -37,7 +37,26 @@ Start the docker containers from the `pronto/` root folder using:
 docker-compose up -d
 ```
 
-## Add More Ontologies to the Graph
+## Available Ontologies
+
+- rdf
+- rdfs
+- foaf
+- schema
+- geo
+- dbo
+- dbp
+- owl
+- skos
+- xsd
+- vcard
+- dcat
+- dc
+- dcterms
+- madsrdf
+- bflc
+
+### Add More Ontologies to the Graph
 
 If you are running the project through Docker, you can access the database server on localhost on port `5070`.
 Import more ontologies from the _Import_ tab, then from the _SPARQL_ tab update the Lucene index running this query in the database:
@@ -71,22 +90,3 @@ See also the list of [contributors](https://github.com/wallscope/pronto/contribu
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-### Available ontologies
-
-- rdf
-- rdfs
-- foaf
-- schema
-- geo
-- dbo
-- dbp
-- owl
-- skos
-- xsd
-- vcard
-- dcat
-- dc
-- dcterms
-- madsrdf
-- bflc
