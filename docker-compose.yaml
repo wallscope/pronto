@@ -16,7 +16,7 @@ services:
       - '5080:80'
     volumes:
       - '${PWD}/frontend/dist:/usr/share/nginx/html'
-      - '${PWD}/data/frontend/conf:/etc/nginx/conf.d'
+      - '${PWD}/frontend/conf:/etc/nginx/conf.d'
     networks:
       - pronto-net
 
@@ -25,8 +25,8 @@ services:
     ports:
       - '127.0.0.1:5070:7200'
     volumes:
-      - '${PWD}/data/triplestore/drop:/root/graphdb-import'
-      - '${PWD}/data/triplestore/data:/graphdb/data'
+      - '${PWD}/triplestore/drop:/root/graphdb-import'
+      - '${PWD}/triplestore/data:/graphdb/data'
     networks:
       - pronto-net
 
