@@ -1,0 +1,18 @@
+# Extended config for DEVELOPMENT env
+version: '3.7'
+services:
+  backend:
+    volumes:
+      - '${PWD}/api/src:/home/node/app/src'
+    command: yarn start
+
+  frontend:
+    build:
+      target: base
+    volumes:
+      - '${PWD}/frontend:/app'
+    ports:
+      - '5080:8080'
+    environment:
+      - API=http://backend:5050
+    command: yarn start

@@ -1,7 +1,7 @@
 module.exports = {
   devServer: {
     // Proxy to bypass CORS during development
-    proxy: 'http://localhost:5050',
+    proxy: process.env.API,
   },
   css: {
     loaderOptions: {

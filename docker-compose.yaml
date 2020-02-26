@@ -1,4 +1,4 @@
-version: '2'
+version: '3.7'
 services:
   backend:
     image: wallscope/pronto-backend:1.1.1
@@ -11,12 +11,9 @@ services:
       - pronto-net
 
   frontend:
-    image: nginx:alpine
-    ports:
-      - '5080:80'
-    volumes:
-      - '${PWD}/frontend/dist:/usr/share/nginx/html'
-      - '${PWD}/frontend/conf:/etc/nginx/conf.d'
+    image: wallscope/pronto-frontend:1.0.1
+    build:
+      context: frontend/
     networks:
       - pronto-net
 

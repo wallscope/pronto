@@ -10,7 +10,7 @@ COPY package*.json ./
 # including the contents of the node_modules directory, switch the user to node
 USER node
 
-RUN npm install
+RUN yarn install
 
 # copy the application code with the appropriate permissions to the application directory on the container
 COPY --chown=node:node . .

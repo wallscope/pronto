@@ -1,0 +1,10 @@
+# Extended config for PRODUCTION env
+version: '3.7'
+services:
+  frontend:
+    build:
+      target: production
+    ports:
+      - '5080:80'
+    volumes:
+      - '${PWD}/frontend/conf:/etc/nginx/conf.d'

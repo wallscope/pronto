@@ -8,33 +8,33 @@ Check out this [demo](https://pronto.wallscope.co.uk/) to see Pronto in action.
 
 The instructions below will get you a copy of the project up and running on your local machine for development and testing purposes. See the deployment section for notes on how to deploy the project on a live system.
 
+First of all, clone the repo with `git clone git@github.com:wallscope/pronto.git`
+
 ### Prerequisites
 
 - Node.js
 - Yarn (or swap yarn commands with npm)
+- Docker
 
-### Installing
+## Development
 
-1. Clone the repo with `git clone git@github.com:wallscope/pronto.git`
-2. From different terminal instances, run the commands `yarn install && yarn start` in the folders `frontend/` and `api/`
+To develop with Docker (recommended), run the command:
+
+```
+docker-compose up -d
+```
+
+To develop the individual parts of the stack, from different terminal instances run the commands `yarn install && yarn start` in the folders `frontend/` and `api/`. You will still need to run the database component separately.
 
 ## Deployment
-
-Clone the repo to your deployment environment and build the frontend:
-
-```
-cd frontend
-yarn install
-yarn build
-```
 
 ### Docker
 
 The quickest way to deploy Pronto is through Docker and its Compose tool.
-Start the docker containers from the `pronto/` root folder using:
+From the root folder `pronto/` run:
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up
 ```
 
 ## Available Ontologies
