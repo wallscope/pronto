@@ -1,17 +1,17 @@
-version: '3.7'
+version: "3.7"
 services:
   backend:
-    image: wallscope/pronto-backend:1.1.1
-    build: 'api/'
+    image: ${REGISTRY_HOST}/wallscope/pronto/backend:1.1.1
+    build: "api/"
     ports:
-      - '5050:5050'
+      - "5050:5050"
     environment:
       - TRIPLESTORE=http://triplestore:7200/repositories/ontologySearcher
     networks:
       - pronto-net
 
   frontend:
-    image: wallscope/pronto-frontend:1.0.1
+    image: ${REGISTRY_HOST}/wallscope/pronto/frontend:1.0.1
     build:
       context: frontend/
     networks:
@@ -20,10 +20,10 @@ services:
   triplestore:
     image: dhlabbasel/graphdb-free
     ports:
-      - '127.0.0.1:5070:7200'
+      - "127.0.0.1:5070:7200"
     volumes:
-      - '${PWD}/triplestore/drop:/root/graphdb-import'
-      - '${PWD}/triplestore/data:/graphdb/data'
+      - "${PWD}/triplestore/drop:/root/graphdb-import"
+      - "${PWD}/triplestore/data:/graphdb/data"
     networks:
       - pronto-net
 

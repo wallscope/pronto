@@ -1,18 +1,23 @@
 # Extended config for DEVELOPMENT env
-version: '3.7'
+version: "3.7"
 services:
   backend:
     volumes:
-      - '${PWD}/api/src:/home/node/app/src'
+      - "${PWD}/api/src:/home/node/app/src"
     command: yarn start
 
   frontend:
     build:
       target: base
     volumes:
-      - '${PWD}/frontend:/app'
+      - "${PWD}/frontend:/app"
+      - node_modules:/app/node_modules
     ports:
-      - '5080:8080'
+      - "5080:8080"
     environment:
       - API=http://backend:5050
     command: yarn start
+
+# This avoids mapping the host's node_modules to the container's
+volumes:
+  node_modules:
