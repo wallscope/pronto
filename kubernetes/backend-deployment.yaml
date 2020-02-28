@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  # labels:
+  #   deployment: pronto-backend
+  name: pronto-backend
+spec:
+  selector:
+    matchLabels:
+      app: pronto-backend
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        pronto-net: "true"
+        app: pronto-backend
+    spec:
+      containers:
+        - env:
+            - name: TRIPLESTORE
+              value: http://triplestore:7200/repositories/ontologySearcher
+          image: docker.pkg.github.com/wallscope/pronto-backend:1.1.1
+          imagePullPolicy: IfNotPresent
+          name: pronto-backend
+          ports:
+            - containerPort: 5050
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      restartPolicy: Always

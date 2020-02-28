@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: null
+  name: pronto-net
+spec:
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              pronto-net: "true"
+  podSelector:
+    matchLabels:
+      pronto-net: "true"
