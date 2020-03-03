@@ -3,7 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    service: pronto-triplestore-claim0
+    app: pronto
+    tier: triplestore
   name: pronto-triplestore-claim0
 spec:
   accessModes:

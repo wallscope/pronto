@@ -2,13 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  # labels:
-  #   service: pronto-frontend
+  labels:
+    app: pronto
+    tier: frontend
   name: pronto-frontend
 spec:
   selector:
     matchLabels:
-      app: pronto-frontend
+      app: pronto
+      tier: frontend
   replicas: 2
   minReadySeconds: 15
   strategy:
@@ -21,20 +23,20 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        pronto-net: 'true'
-        app: pronto-frontend
+        pronto-net: "true"
+        app: pronto
+        tier: frontend
     spec:
       containers:
-        - image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.2
+        - image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.3
           imagePullPolicy: IfNotPresent
           name: pronto-frontend
           resources:
             limits:
-              memory: '128Mi'
-              cpu: '500m'
+              memory: "128Mi"
+              cpu: "500m"
           ports:
             - containerPort: 80
-          env:
-            - name: BACKEND
-              value: http://pronto-backend
+      imagePullSecrets:
+        - name: regcred
       restartPolicy: Always

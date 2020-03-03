@@ -3,6 +3,8 @@ kind: NetworkPolicy
 metadata:
   creationTimestamp: null
   name: pronto-net
+  labels:
+    app: pronto
 spec:
   ingress:
     - from:
@@ -11,4 +13,4 @@ spec:
               pronto-net: "true"
   podSelector:
     matchLabels:
-      pronto-net: "true"
+      app: pronto

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  annotations:
+    notes: A load balancer service for the pronto backend.
+  labels:
+    app: pronto
+    tier: backend
+    type: LoadBalancer
+  name: backend # this needs to match with the nginx config file
+spec:
+  type: LoadBalancer
+  selector:
+    app: pronto
+    tier: backend
+  ports:
+    - port: 5050
+      targetPort: 5050

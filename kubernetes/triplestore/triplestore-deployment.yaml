@@ -2,13 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  # labels:
-  #   service: triplestore
+  labels:
+    app: pronto
+    tier: triplestore
   name: pronto-triplestore
 spec:
   selector:
     matchLabels:
-      app: pronto-triplestore
+      app: pronto
+      tier: triplestore
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -21,18 +23,19 @@ spec:
       creationTimestamp: null
       labels:
         pronto-net: "true"
-        app: pronto-triplestore
+        app: pronto
+        tier: triplestore
     spec:
       containers:
         - image: dhlabbasel/graphdb-free
           imagePullPolicy: IfNotPresent
           name: pronto-triplestore
           ports:
-            - containerPort: 7200
+            - containerPort: 5070
           resources:
             limits:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "200m"
           volumeMounts:
             - mountPath: /graphdb/data
               name: triplestore-claim0
@@ -40,4 +43,4 @@ spec:
       volumes:
         - name: triplestore-claim0
           persistentVolumeClaim:
-            claimName: triplestore-claim0
+            claimName: pronto-triplestore-claim0
