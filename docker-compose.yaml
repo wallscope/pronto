@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   backend:
-    image: ${REGISTRY_HOST}/wallscope/pronto/backend:1.1.1
+    image: docker.pkg.github.com/wallscope/pronto-backend:1.1.1
     build: "api/"
     ports:
       - "5050:5050"
@@ -11,7 +11,7 @@ services:
       - pronto-net
 
   frontend:
-    image: ${REGISTRY_HOST}/wallscope/pronto/frontend:1.0.1
+    image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.2
     build:
       context: frontend/
     networks:
@@ -22,7 +22,6 @@ services:
     ports:
       - "127.0.0.1:5070:7200"
     volumes:
-      - "${PWD}/triplestore/drop:/root/graphdb-import"
       - "${PWD}/triplestore/data:/graphdb/data"
     networks:
       - pronto-net

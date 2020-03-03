@@ -21,7 +21,7 @@ First of all, clone the repo with `git clone git@github.com:wallscope/pronto.git
 To develop with Docker (recommended), run the command:
 
 ```
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 To develop the individual parts of the stack, from different terminal instances run the commands `yarn install && yarn start` in the folders `frontend/` and `api/`. You will still need to run the database component separately.
@@ -34,7 +34,7 @@ The quickest way to deploy Pronto is through Docker and its Compose tool.
 From the root folder `pronto/` run:
 
 ```
-docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up
+docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up --build
 ```
 
 ## Available Ontologies

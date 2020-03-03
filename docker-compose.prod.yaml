@@ -8,3 +8,5 @@ services:
       - "5080:80"
     volumes:
       - "${PWD}/frontend/conf:/etc/nginx/conf.d"
+    depends_on:
+      - backend
