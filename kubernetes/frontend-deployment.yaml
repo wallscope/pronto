@@ -21,7 +21,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        pronto-net: "true"
+        pronto-net: 'true'
         app: pronto-frontend
     spec:
       containers:
@@ -30,8 +30,11 @@ spec:
           name: pronto-frontend
           resources:
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: '128Mi'
+              cpu: '500m'
           ports:
             - containerPort: 80
+          env:
+            - name: BACKEND
+              value: http://pronto-backend
       restartPolicy: Always

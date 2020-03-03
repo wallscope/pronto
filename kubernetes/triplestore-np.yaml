@@ -6,7 +6,7 @@ metadata:
   #   io.kompose.service: triplestore
   name: pronto-triplestore-lb
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: pronto-triplestore
   ports:
