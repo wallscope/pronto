@@ -4,7 +4,7 @@ export const prefixes = {
   rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
   rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
   owl: 'http://www.w3.org/2002/07/owl#',
-  a: 'http://proton.semanticweb.org/protonsys#',
+  // a: 'http://proton.semanticweb.org/protonsys#',
   dct: 'http://purl.org/dc/terms/',
   skos: 'http://www.w3.org/2004/02/skos/core#',
   madsrdf: 'http://www.loc.gov/mads/rdf/v1#',
@@ -19,6 +19,11 @@ export const prefixes = {
   grddl: 'http://www.w3.org/2003/g/data-view#',
   prov: 'http://www.w3.org/ns/prov#',
   vcard: 'http://www.w3.org/2006/vcard/ns#',
+  bflc: 'http://id.loc.gov/ontologies/bflc/',
+  dbo: 'http://dbpedia.org/ontology/',
+  geosparql: 'http://www.opengis.net/ont/geosparql#',
+  sioc: 'http://rdfs.org/sioc/ns#',
+  dcat: 'http://www.w3.org/ns/dcat',
 };
 
 export async function copyToClipboard(text: string) {
