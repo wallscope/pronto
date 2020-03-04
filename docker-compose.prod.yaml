@@ -5,7 +5,7 @@ services:
     image: docker.pkg.github.com/wallscope/pronto/backend:1.1.1
 
   frontend:
-    image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.3
+    image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.4
     build:
       target: production
     ports:
