@@ -31,7 +31,7 @@ const getFromDb = async (queryFunction, req, res, next) => {
     res.send(result.data);
   } catch (e) {
     console.error('error in getting the triples: ', e.message);
-    res.send(`error in getting the triples: ${e}`);
+    res.send(500, `error in getting the triples: ${e}`);
   }
   next();
 };
