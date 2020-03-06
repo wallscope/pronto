@@ -27,18 +27,16 @@ spec:
         tier: backend
     spec:
       containers:
-        - image: docker.pkg.github.com/wallscope/pronto/backend:1.1.1
+        - image: docker.pkg.github.com/wallscope/pronto/backend:1.1.3
           imagePullPolicy: IfNotPresent
           name: pronto-backend
-          # ports:
-          #   - containerPort: 5050
           resources:
             limits:
               memory: "128Mi"
               cpu: "500m"
           env:
             - name: TRIPLESTORE
-              value: http://triplestore:5070/repositories/ontologySearcher
+              value: http://triplestore/repositories/ontologySearcher
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always

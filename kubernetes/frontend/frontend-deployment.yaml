@@ -28,15 +28,13 @@ spec:
         tier: frontend
     spec:
       containers:
-        - image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.3
+        - image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.4
           imagePullPolicy: IfNotPresent
           name: pronto-frontend
           resources:
             limits:
               memory: "128Mi"
               cpu: "500m"
-          ports:
-            - containerPort: 80
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always

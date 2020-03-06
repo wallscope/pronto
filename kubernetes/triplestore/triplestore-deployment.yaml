@@ -28,19 +28,17 @@ spec:
     spec:
       containers:
         - image: dhlabbasel/graphdb-free
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: pronto-triplestore
-          ports:
-            - containerPort: 5070
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "200m"
-          volumeMounts:
-            - mountPath: /graphdb/data
-              name: triplestore-claim0
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "300m"
+          # volumeMounts:
+          #   - mountPath: /graphdb/data
+          #     name: triplestore-claim0
       restartPolicy: Always
-      volumes:
-        - name: triplestore-claim0
-          persistentVolumeClaim:
-            claimName: pronto-triplestore-claim0
+      # volumes:
+      #   - name: triplestore-claim0
+      #     persistentVolumeClaim:
+      #       claimName: pronto-triplestore-claim0
