@@ -7,16 +7,17 @@ metadata:
     tier: triplestore
   name: pronto-triplestore
 spec:
+  # serviceName: "triplestore"
   selector:
     matchLabels:
       app: pronto
       tier: triplestore
   replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+  # strategy:
+  #   type: RollingUpdate
+  #   rollingUpdate:
+  #     maxUnavailable: 1
+  #     maxSurge: 1
 
   template:
     metadata:
@@ -36,9 +37,17 @@ spec:
           #     cpu: "300m"
           # volumeMounts:
           #   - mountPath: /graphdb/data
-          #     name: triplestore-claim0
+          #     name: triplestore-data
       restartPolicy: Always
-      # volumes:
-      #   - name: triplestore-claim0
-      #     persistentVolumeClaim:
-      #       claimName: pronto-triplestore-claim0
+  # volumeClaimTemplates:
+  #   - metadata:
+  #       name: triplestore-data
+  #     spec:
+  #       accessModes: ["ReadWriteOnce"]
+  #       resources:
+  #         requests:
+  #           storage: 300Mi
+  # volumes:
+  #   - name: triplestore-claim0
+  #     persistentVolumeClaim:
+  #       claimName: pronto-triplestore-claim0
