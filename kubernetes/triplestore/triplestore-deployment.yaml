@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pronto-triplestore-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 300Mi
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,17 +20,16 @@ metadata:
     tier: triplestore
   name: pronto-triplestore
 spec:
-  # serviceName: "triplestore"
   selector:
     matchLabels:
       app: pronto
       tier: triplestore
   replicas: 1
-  # strategy:
-  #   type: RollingUpdate
-  #   rollingUpdate:
-  #     maxUnavailable: 1
-  #     maxSurge: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
 
   template:
     metadata:
@@ -29,25 +41,17 @@ spec:
     spec:
       containers:
         - image: dhlabbasel/graphdb-free
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           name: pronto-triplestore
-          # resources:
-          #   limits:
-          #     memory: "128Mi"
-          #     cpu: "300m"
-          # volumeMounts:
-          #   - mountPath: /graphdb/data
-          #     name: triplestore-data
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          volumeMounts:
+            - mountPath: /graphdb/data
+              name: pronto-triplestore-storage
       restartPolicy: Always
-  # volumeClaimTemplates:
-  #   - metadata:
-  #       name: triplestore-data
-  #     spec:
-  #       accessModes: ["ReadWriteOnce"]
-  #       resources:
-  #         requests:
-  #           storage: 300Mi
-  # volumes:
-  #   - name: triplestore-claim0
-  #     persistentVolumeClaim:
-  #       claimName: pronto-triplestore-claim0
+      volumes:
+        - name: pronto-triplestore-storage
+          persistentVolumeClaim:
+            claimName: pronto-triplestore-claim
