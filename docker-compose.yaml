@@ -1,8 +1,7 @@
 version: "3.7"
 services:
   backend:
-    image: docker.pkg.github.com/wallscope/pronto-backend:1.1.1
-    build: "api/"
+    build: "backend/"
     ports:
       - "5050:5050"
     environment:
@@ -11,7 +10,6 @@ services:
       - pronto-net
 
   frontend:
-    image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.2
     build:
       context: frontend/
     networks:

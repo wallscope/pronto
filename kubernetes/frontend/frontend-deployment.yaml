@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pronto
+    tier: frontend
+  name: pronto-frontend
+spec:
+  selector:
+    matchLabels:
+      app: pronto
+      tier: frontend
+  replicas: 2
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        pronto-net: "true"
+        app: pronto
+        tier: frontend
+    spec:
+      containers:
+        - image: docker.pkg.github.com/wallscope/pronto/frontend:1.0.4
+          imagePullPolicy: IfNotPresent
+          name: pronto-frontend
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: regcred
+      restartPolicy: Always

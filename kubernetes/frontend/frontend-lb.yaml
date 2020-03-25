@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pronto
+    tier: frontend
+    type: LoadBalancer
+  name: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: pronto
+    tier: frontend
+  ports:
+    - port: 5080
+      targetPort: 80

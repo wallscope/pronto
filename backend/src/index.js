@@ -18,6 +18,7 @@ const feedbackDb = new sqlite3.Database('./feedback.db', err => {
 const getFromDb = async (queryFunction, req, res, next) => {
   try {
     const search = escape(req.query.search);
+    if (!search) throw Error('Search term not defined');
     const result = await axios.post(
       process.env.TRIPLESTORE,
       qs.stringify({
@@ -29,8 +30,8 @@ const getFromDb = async (queryFunction, req, res, next) => {
     );
     res.send(result.data);
   } catch (e) {
-    console.error('error in getting the triples: ', e);
-    res.send('error in getting the triples: ', e);
+    console.error('error in getting the triples: ', e.message);
+    res.send(500, `error in getting the triples: ${e}`);
   }
   next();
 };

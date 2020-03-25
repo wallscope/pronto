@@ -1,4 +1,4 @@
-# The first stage builds the static files which will then be served by nginx
+# The first stage installs the node modules
 FROM node:lts-alpine as base
 
 WORKDIR /app

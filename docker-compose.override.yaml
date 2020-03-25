@@ -3,7 +3,7 @@ version: "3.7"
 services:
   backend:
     volumes:
-      - "${PWD}/api/src:/home/node/app/src"
+      - "${PWD}/backend/src:/home/node/app/src"
     command: yarn start
 
   frontend:
