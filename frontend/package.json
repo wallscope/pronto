@@ -42,9 +42,7 @@
     "sass": "^1.25.0",
     "sass-loader": "^8.0.0",
     "typescript": "~3.7.5",
-    "vue-template-compiler": "^2.6.10",
-    "minimist": "^1.2.3",
-    "acorn": "^7.1.1"
+    "vue-template-compiler": "^2.6.10"
   },
   "husky": {
     "hooks": {
