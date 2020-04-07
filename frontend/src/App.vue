@@ -17,6 +17,7 @@
       transitionName="slideFromBottom"
       @clicked-accept="cookieClickedAccept()"
     )
+      div(slot="acceptContent") Agree
 
     Footer
 
