@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import SuiVue from 'semantic-ui-vue';
 import Toasted from 'vue-toasted';
+import VueGtag from 'vue-gtag';
 
 import App from './App.vue';
 import router from './router';
@@ -15,6 +16,17 @@ Vue.use(Toasted, {
   theme: 'outline',
   duration: 3000,
 });
+Vue.use(
+  VueGtag,
+  {
+    config: {
+      id: process.env.VUE_APP_GTAG_ID,
+    },
+    // only enable after cookie consent
+    bootstrap: localStorage.getItem('vue-cookie-accept-decline-cookie-consent') === 'accept',
+  },
+  router,
+);
 
 new Vue({
   router,

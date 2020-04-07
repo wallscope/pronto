@@ -9,17 +9,35 @@
       keep-alive
         router-view
 
+    vue-cookie-accept-decline(
+      ref="cookie-consent"
+      elementId="cookie-consent"
+      position="bottom-right"
+      type="floating"
+      transitionName="slideFromBottom"
+      @clicked-accept="cookieClickedAccept()"
+    )
+
     Footer
 
 </template>
 <script>
+import VueCookieAcceptDecline from 'vue-cookie-accept-decline';
+import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
+import { setOptions, bootstrap } from 'vue-gtag';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
+    VueCookieAcceptDecline,
     Header,
     Footer,
+  },
+  methods: {
+    async cookieClickedAccept() {
+      await bootstrap();
+    },
   },
 };
 </script>
