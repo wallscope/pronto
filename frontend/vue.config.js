@@ -13,4 +13,9 @@ module.exports = {
       },
     },
   },
+  configureWebpack: {
+    module: {
+      rules: [{ test: /(\.nq)$/, use: 'raw-loader' }],
+    },
+  },
 };

@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "fuse.js": "^6.0.2",
     "n3": "^1.3.7",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",

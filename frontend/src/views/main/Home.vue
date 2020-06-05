@@ -21,7 +21,7 @@
                           v-model="search['predicate']"
                           @keyup.enter="sendQuery('predicate')"
                         )
-                        i.search.icon.link(@click.prevent="sendQuery('predicate')")
+                        i.search.icon.link(@click.prevent="sendQuery2('predicate')")
 
                 .column
                   .ui.icon.header
@@ -34,7 +34,7 @@
                           type='text',
                           v-model="search['type']",
                           placeholder='Search...',
-                          @keyup.enter="sendQuery('type')"
+                          @keyup.enter="sendQuery2('type')"
                         )
                         i.search.icon.link(@click="sendQuery('type')")
 
@@ -81,6 +81,7 @@ import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store, Quad_Object } from 'n3';
 import Paginate from 'vuejs-paginate';
+
 import { OntologyResult } from '@/types';
 import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
@@ -130,6 +131,15 @@ export default class Home extends Vue {
   paginateClick(pageNum: number) {
     this.currPage = pageNum;
   }
+  async sendQuery2(searchType: 'predicate' | 'type') {
+    console.log('serached word', this.search[searchType]);
+
+    const result = await vocabularies();
+
+    Object.entries(result).forEach(([prefix, dataset]) => {
+      console.log(`| \`${prefix}\` | ${dataset.size} |`);
+    });
+  }
   async sendQuery(searchType: 'predicate' | 'type') {
     // Check for null searches
     if (!this.search[searchType]) {
@@ -150,6 +160,7 @@ export default class Home extends Vue {
         return;
       }
       const quads = this.parser.parse(data);
+      console.log(quads.map(q => q.toJSON()));
       // Reset store and add quads
       this.quadstore.deleteGraph('');
       this.quadstore.addQuads(quads);
