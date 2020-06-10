@@ -1,6 +1,6 @@
 # Pronto
 
-Pronto allows developers to search for **concepts** and **predicates** among a number of ontologies, originally selected from the prefix.cc user-curated list "popular", along with some others. The results are ordered by relevance and can be inspected, which drastically reduces the time spent searching ontologies manually.
+Pronto is an open-source ontology search engine. It provides fuzzy search capabilities across a number of popular ontologies, originally selected from the [prefix.cc](https://prefix.cc/) user-curated "popular" list, along with others picked by Wallscope. The results are ordered by relevance and can be inspected, which drastically reduces the time spent searching ontologies manually.
 
 ## Getting Started
 
