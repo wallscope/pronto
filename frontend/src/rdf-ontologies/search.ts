@@ -90,11 +90,63 @@ const fuse = new Fuse(newData, options, myIndex);
 const searchType: 'Property$' | 'Class$' = 'Property$';
 const searchWord = 'agent';
 
-const result = fuse.search({
-  $and: [
-    { '@type': searchType },
-    { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
-  ],
-});
+// const result = fuse.search({
+//   $and: [
+//     { '@type': searchType },
+//     { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
+//   ],
+// });
 
-console.log('result', result);
+// console.log('result', result);
+
+// new tests
+let globalFuse: Fuse<unknown, Fuse.IFuseOptions<unknown>> | null = null;
+
+export const loadOntology = (ontology: unknown) => {
+  // Check if valid json
+  const jsonData = tryParseJSON(ontology);
+  if (!jsonData) {
+    // TODO: implement non-json ontology parsing
+    console.log('not valid json data');
+    return;
+  }
+
+  // Prepare data - Add property names without a dot to enable Fuse to search them
+  const preparedData = jsonData.map((obj: any) => {
+    return {
+      ...obj,
+      comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'],
+      label: obj['http://www.w3.org/2000/01/rdf-schema#label'],
+    };
+  });
+  globalFuse = new Fuse(preparedData, options);
+};
+
+export const search = (searchType: 'predicate' | 'type', searchWord: string) => {
+  const formattedSearchType = searchType === 'predicate' ? 'Property$' : 'Class$';
+
+  if (!globalFuse) return;
+  const result = globalFuse.search({
+    $and: [
+      { '@type': formattedSearchType },
+      { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
+    ],
+  });
+
+  console.log('result', result);
+};
+
+function tryParseJSON(jsonString: unknown) {
+  if (typeof jsonString !== 'string') return false;
+
+  try {
+    const o = JSON.parse(jsonString);
+    if (o && typeof o === 'object') {
+      return o;
+    }
+  } catch (e) {
+    // do nothing
+  }
+
+  return false;
+}

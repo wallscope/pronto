@@ -2,6 +2,18 @@
   .home
     .ui.grid.container
       .row
+        .column
+          .dropzone-container
+            vue-dropzone(
+              ref="myVueDropzone" 
+              id="dropzone"
+              @vdropzone-file-added="ontologyFileAdded"
+              :options="{ url: 'upload-fake-url', autoProcessQueue: false }"
+              :useCustomSlot="true"
+              :includeStyling="false"
+            )
+              button() Upload ontology
+      .row
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
           .ui.placeholder.segment.fourteen.wide
             .ui.stackable.two.column.center.aligned.grid
@@ -81,16 +93,19 @@ import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store, Quad_Object } from 'n3';
 import Paginate from 'vuejs-paginate';
+import vueDropzone from 'vue2-dropzone';
 
 import { OntologyResult } from '@/types';
 import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
+import { loadOntology, search } from '../../rdf-ontologies/search';
 
 @Component({
   components: {
     SearchResult,
     Paginate,
     Feedback,
+    vueDropzone,
   },
 })
 export default class Home extends Vue {
@@ -134,11 +149,12 @@ export default class Home extends Vue {
   async sendQuery2(searchType: 'predicate' | 'type') {
     console.log('serached word', this.search[searchType]);
 
-    const result = await vocabularies();
+    search(searchType, this.search[searchType]);
+    // const result = await vocabularies();
 
-    Object.entries(result).forEach(([prefix, dataset]) => {
-      console.log(`| \`${prefix}\` | ${dataset.size} |`);
-    });
+    // Object.entries(result).forEach(([prefix, dataset]) => {
+    //   console.log(`| \`${prefix}\` | ${dataset.size} |`);
+    // });
   }
   async sendQuery(searchType: 'predicate' | 'type') {
     // Check for null searches
@@ -210,6 +226,24 @@ export default class Home extends Vue {
       this.currPage = 1;
       if (!this.isFeedbackOpen) this.isFeedbackOpen = true;
     }
+  }
+
+  async ontologyFileAdded(file: File) {
+    const fileContent = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        resolve(reader.result);
+      };
+      reader.onerror = () => {
+        reader.abort();
+        reject(new DOMException('Problem uploading input file.'));
+      };
+      reader.readAsText(file);
+    });
+    loadOntology(fileContent);
+    // const configObj = plainToClass(MainConfig, JSON.parse(fileContent as string));
+    // recipeM.ADD_MAIN_CONFIG(configObj);
+    // this.$router.push({ name: 'RecipeList' });
   }
 }
 </script>
