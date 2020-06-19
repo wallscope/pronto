@@ -9,14 +9,14 @@ const prepareData = (ontology: {
   '@id': string; // ontology uri
   '@graph': Array<JsonLdObj>; // ontology triples
 }) => {
-
-  return ontology['@graph'].map((obj: any) => {
-    return {
-      ...obj,
-      comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'],
-      label: obj['http://www.w3.org/2000/01/rdf-schema#label'],
-    };
-  });
+  return ontology['@graph'].map((obj: any) => ({
+    ontology: ontology['@id'],
+    label: obj['http://www.w3.org/2000/01/rdf-schema#label'] as Array<object> | undefined,
+    comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as Array<object> | undefined,
+    // type: obj['@type'] as Array<string>,
+    // originalObject: [obj],
+    ...obj,
+  }));
 };
 
 const fuseOptions: Fuse.IFuseOptions<unknown> = {
@@ -25,11 +25,7 @@ const fuseOptions: Fuse.IFuseOptions<unknown> = {
   // keys to search in
   keys: [
     {
-      name: '@id',
-      weight: 0.5,
-    },
-    {
-      name: '@type',
+      name: 'ontology',
       weight: 1,
     },
     {
@@ -39,6 +35,14 @@ const fuseOptions: Fuse.IFuseOptions<unknown> = {
     {
       name: 'comment.@value',
       weight: 0.5,
+    },
+    {
+      name: '@id',
+      weight: 0.5,
+    },
+    {
+      name: '@type',
+      weight: 1,
     },
   ],
 };
@@ -59,22 +63,14 @@ const mergedOntologies = async () => {
 let fuse: Fuse<unknown, Fuse.IFuseOptions<unknown>> | null = null;
 export const prepareIndex = async () => {
   const jsonLdOntologies = await mergedOntologies();
-  console.log('ontologies merged', jsonLdOntologies[0]);
+  console.log('ontologies merged');
   try {
-    // const jsonLdOntologies = (await jsonld.fromRDF((await mergedOntologies()) as any, {
-    //   format: 'application/n-quads',
-    // })) as Array<{
-    //   '@id': string; // ontology uri
-    //   '@graph': Array<JsonLdObj>; // ontology triples
-    // }>;
-    // console.log('jsonLdOntologies', jsonLdOntologies);
-
     const flatData = jsonLdOntologies.flatMap(o => prepareData(o));
-    console.log('data prepared');
+    console.log('1 data prepared', flatData[400]);
 
-    // Create the Fuse index
+    // // Create the Fuse index
     const myIndex = Fuse.createIndex(
-      ['@id', '@type', 'label.@value', 'comment.@value'],
+      ['ontology', 'label.@value', 'comment.@value', '@id', '@type'],
       flatData,
     );
     console.log('index created');
@@ -85,19 +81,42 @@ export const prepareIndex = async () => {
 };
 
 export const search = (searchType: 'predicate' | 'type', searchWord: string) => {
+  // "$" tells fuse what word the searched "type" needs to end with
   const formattedSearchType = searchType === 'predicate' ? 'Property$' : 'Class$';
 
   if (!fuse) return;
   console.log('custom search', fuse);
-  return fuse.search(
-    {
-      $and: [
-        { '@type': formattedSearchType },
-        { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
-      ],
-    },
-    { limit: 100 },
-  );
+
+  // Object.values(prefixes).map((p, i) => {
+  //         if (i > 60) return { ontology: `'${p}` };
+  //         else return { ontology: `'sdfsadf` };
+  //       }),
+
+  const searchOptions:
+    | string
+    | {
+        [key: string]: string;
+      }
+    | {
+        $and?: Fuse.Expression[] | undefined;
+      }
+    | {
+        $or?: Fuse.Expression[] | undefined;
+      } = {
+    $and: [
+      { '@type': formattedSearchType },
+      { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
+      {
+        $or: [
+          { ontology: 'http://purl.org/goodrelations/v1#' },
+          { ontology: 'http://www.w3.org/ns/activitystreams#' },
+          // { ontology: 'http://dbpedia.org/ontology/' },
+        ],
+      },
+    ],
+  };
+  console.log('options', searchOptions);
+  return fuse.search(searchOptions, { limit: 100 });
 };
 
 // function tryParseJSON(jsonString: unknown) {

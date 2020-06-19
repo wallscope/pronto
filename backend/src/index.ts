@@ -1,6 +1,6 @@
 require('dotenv').config();
 import restify from 'restify';
-import sqlite3 from 'sqlite3';
+// import sqlite3 from 'sqlite3';
 import queries from './queries';
 import { search, prepareIndex } from './search';
 
@@ -10,24 +10,24 @@ const server = restify.createServer();
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser({ mapParams: false }));
 
-const feedbackDb = new sqlite3.Database('./feedback.db', err => {
-  if (err) {
-    console.error(err.message);
-  }
-});
-server.post('/api/feedback', async (req, res, next) => {
-  try {
-    feedbackDb.serialize(() => {
-      feedbackDb.run(queries.createFeedbackDb);
-      feedbackDb.run('INSERT INTO Feedback (comment) VALUES(?)', req.body.feedback);
-    });
-    res.send(200);
-  } catch (e) {
-    console.error(e);
-    res.send(e);
-  }
-  next();
-});
+// const feedbackDb = new sqlite3.Database('./feedback.db', err => {
+//   if (err) {
+//     console.error(err.message);
+//   }
+// });
+// server.post('/api/feedback', async (req, res, next) => {
+//   try {
+//     feedbackDb.serialize(() => {
+//       feedbackDb.run(queries.createFeedbackDb);
+//       feedbackDb.run('INSERT INTO Feedback (comment) VALUES(?)', req.body.feedback);
+//     });
+//     res.send(200);
+//   } catch (e) {
+//     console.error(e);
+//     res.send(e);
+//   }
+//   next();
+// });
 
 server.get('/api/:queryType', async (req, res, next) => {
   try {
