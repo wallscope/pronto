@@ -1,0 +1,2390 @@
+{
+  "@id": "http://purl.org/vocab/frbr/core#",
+  "@graph": [
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#revision" }
+      ]
+    },
+    {
+      "@id": "_:c14n100",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n101",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n102",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n101" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n103",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n104" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n102" }]
+    },
+    {
+      "@id": "_:c14n104",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n47" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n105" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n105",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n106" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n107" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n106",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n107",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n108" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n108",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n109",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n110" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n111" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n11",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#part" }
+      ]
+    },
+    {
+      "@id": "_:c14n110",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n111",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n112" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n112",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n113",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n34" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n109" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n114",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n113" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n115" }]
+    },
+    {
+      "@id": "_:c14n115",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n116" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n116",
+      "@type": ["http://www.w3.org/2003/11/swrl#SameIndividualAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n117",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n118" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n119" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n118",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n119",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n28" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n12",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#embodimentOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ]
+    },
+    {
+      "@id": "_:c14n120",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n121" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n117" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n121",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n122",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n120" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n123" }]
+    },
+    {
+      "@id": "_:c14n123",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n124" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n124",
+      "@type": ["http://www.w3.org/2003/11/swrl#SameIndividualAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n125",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n126" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n127" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n126",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n127",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n10" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n128",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n129" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n125" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n129",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Item" },
+            { "@id": "http://purl.org/vocab/frbr/core#Manifestation" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n130",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n128" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n131" }]
+    },
+    {
+      "@id": "_:c14n131",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n132" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n132",
+      "@type": ["http://www.w3.org/2003/11/swrl#SameIndividualAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n133",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n134" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n135" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n134",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n135",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n136" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n136",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n137",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n15" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n133" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n138",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n137" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n139" }]
+    },
+    {
+      "@id": "_:c14n139",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n140" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n14",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#embodiment" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ]
+    },
+    {
+      "@id": "_:c14n140",
+      "@type": ["http://www.w3.org/2003/11/swrl#SameIndividualAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#arrangement" }
+      ]
+    },
+    {
+      "@id": "_:c14n16",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n170",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n52" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n173",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n11" },
+            { "@id": "_:c14n23" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n179",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n43" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n18",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#transformation" }
+      ]
+    },
+    {
+      "@id": "_:c14n183",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n26" },
+            { "@id": "_:c14n20" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n187",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n14" },
+            { "@id": "_:c14n46" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#AllDisjointClasses"],
+      "http://www.w3.org/2002/07/owl#members": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Concept" },
+            { "@id": "http://purl.org/vocab/frbr/core#Event" },
+            { "@id": "http://purl.org/vocab/frbr/core#Object" },
+            { "@id": "http://purl.org/vocab/frbr/core#Place" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n191",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n40" },
+            { "@id": "_:c14n41" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n195",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n12" },
+            { "@id": "_:c14n29" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n199",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "_:c14n25" },
+            { "@id": "_:c14n4" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Item" },
+            { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#partOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#partOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#part" }
+      ]
+    },
+    {
+      "@id": "_:c14n26",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#part" }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#translation" }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#exemplar" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#adaption" }
+      ]
+    },
+    {
+      "@id": "_:c14n31",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#successor" }
+      ]
+    },
+    {
+      "@id": "_:c14n33",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#imitation" }
+      ]
+    },
+    {
+      "@id": "_:c14n34",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#abridgement" }
+      ]
+    },
+    {
+      "@id": "_:c14n35",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#CorporateBody" },
+            { "@id": "http://purl.org/vocab/frbr/core#Endeavour" },
+            { "@id": "http://purl.org/vocab/frbr/core#Subject" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n36",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n38",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n39",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#partOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n40",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#part" }
+      ]
+    },
+    {
+      "@id": "_:c14n41",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#partOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n43",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#realization" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ]
+    },
+    {
+      "@id": "_:c14n44",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#supplement" }
+      ]
+    },
+    {
+      "@id": "_:c14n46",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ]
+    },
+    {
+      "@id": "_:c14n47",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#complement" }
+      ]
+    },
+    {
+      "@id": "_:c14n48",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n49",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n50",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n51",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Item" },
+            { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n52",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://purl.org/vocab/frbr/core#exemplarOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#someValuesFrom": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ]
+    },
+    {
+      "@id": "_:c14n53",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n54",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n53" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n55",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n56" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n54" }]
+    },
+    {
+      "@id": "_:c14n56",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n57" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n58" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n57",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n58",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n59" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n60" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n59",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#summarization" }
+      ]
+    },
+    {
+      "@id": "_:c14n60",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n44" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n61",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n62",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n61" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n63",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n64" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n62" }]
+    },
+    {
+      "@id": "_:c14n64",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n65" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n66" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n65",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n66",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n67" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n68" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n67",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n68",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n18" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n69",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n70",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n69" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n71",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n72" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n70" }]
+    },
+    {
+      "@id": "_:c14n72",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n73" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n74" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n73",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n74",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n75" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n76" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n75",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n76",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n31" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n77",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n78",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n77" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n79",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n80" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n78" }]
+    },
+    {
+      "@id": "_:c14n8",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n80",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n3" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n81" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n81",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n82" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n83" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n82",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n83",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n84" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n84",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n85",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n86",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n85" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n87",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n88" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n86" }]
+    },
+    {
+      "@id": "_:c14n88",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n89" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n90" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n89",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n9",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://purl.org/vocab/frbr/core#Expression" },
+            { "@id": "http://purl.org/vocab/frbr/core#Work" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n90",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n91" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n92" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n91",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e2" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n92",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n6" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n93",
+      "@type": ["http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w2" }]
+    },
+    {
+      "@id": "_:c14n94",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n93" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n95",
+      "@type": ["http://www.w3.org/2003/11/swrl#Imp"],
+      "http://www.w3.org/2003/11/swrl#body": [{ "@id": "_:c14n96" }],
+      "http://www.w3.org/2003/11/swrl#head": [{ "@id": "_:c14n94" }]
+    },
+    {
+      "@id": "_:c14n96",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n33" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n97" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n97",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n98" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@id": "_:c14n99" }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "_:c14n98",
+      "@type": ["http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"],
+      "http://www.w3.org/2003/11/swrl#argument1": [{ "@id": "urn:swrl#e1" }],
+      "http://www.w3.org/2003/11/swrl#argument2": [{ "@id": "urn:swrl#w1" }],
+      "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n99",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{ "@id": "_:c14n100" }],
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{ "@list": [] }],
+      "@type": ["http://www.w3.org/2003/11/swrl#AtomList"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/contributor",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/creator",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/date",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/rights",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/title",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/spar/frbr",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "David Shotton" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "Paolo Ciccarese" },
+        { "@value": "Silvio Peroni" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [{ "@value": "2018-03-29" }],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "This vocabulary is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis's RDF vocabulary (http://vocab.org/frbr/core).",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/elements/1.1/rights": [
+        {
+          "@value": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/elements/1.1/title": [
+        { "@value": "Essential FRBR in OWL2 DL", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The Essential FRBR in OWL2 DL Ontology (FRBR) is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis's RDF vocabulary.\n\n**URL:** http://purl.org/spar/frbr\n\n**Creators**: [Paolo Ciccarese](http://orcid.org/0000-0002-5156-2703), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**Contributors:**: [David Shotton](http://orcid.org/0000-0001-5506-523X)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/frbr"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#priorVersion": [
+        { "@id": "http://purl.org/spar/frbr/2011-06-29" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionIRI": [
+        { "@id": "http://purl.org/spar/frbr/2018-03-29" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "1.0.1" }]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Concept",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An abstract notion or idea.\n\nThe entity defined as concept encompasses a comprehensive range of abstractions that may be the subject of a work: fields of knowledge, disciplines, schools of thought (philosophies, religions, political ideologies, etc.), theories, processes, techniques, practices, etc.  A concept may be broad in nature or narrowly defined and precise. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "concept", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#Subject" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#CorporateBody",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An organization or group of individuals and/or organizations acting as a unit.\n\nThe entity defined as corporate body encompasses organizations and groups of individuals and/or organizations that are identified by a particular name, including occasional groups and groups that are constituted as meetings, conferences, congresses, expeditions, exhibitions, festivals, fairs, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "corporate body", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#ResponsibleEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://purl.org/vocab/frbr/core#Person" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Endeavour",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It describes different aspects of user interests in the products of intellectual or artistic artifact.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "endeavour", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [{ "@id": "_:c14n13" }]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Event",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An action or occurrence.\n\nThe entity defined as event encompasses a comprehensive range of actions and occurrences that may be the subject of a work: historical events, epochs, periods of time, etc. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "event", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#Subject" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Expression",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.\n\nAn expression is the specific intellectual or artistic form that a work takes each time it is \"realized.\" Expression encompasses, for example, the specific words, sentences, paragraphs, etc. that result from the realization of a work in the form of a text, or the particular sounds, phrasing, etc. resulting from the realization of a musical work.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "expression", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" },
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" },
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "_:c14n187" },
+        { "@id": "_:c14n191" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Item",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A single exemplar of a manifestation.\n\nThe entity defined as item is a concrete entity. It is in many instances a single physical object (e.g., a copy of a one-volume monograph, a single audio cassette, etc.). There are instances, however, where the entity defined as item comprises more than one physical object (e.g., a monograph issued as two separately bound volumes, a recording issued on three separate compact discs, etc.). ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "item", "@language": "en" }],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" },
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "_:c14n170" },
+        { "@id": "_:c14n173" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Manifestation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The physical embodiment of an expression of a work.\n\nThe entity defined as manifestation encompasses a wide range of materials and formats. As an entity, manifestation represents all the physical objects that bear the same characteristics, in respect to both intellectual content and physical form. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "manifestation", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "_:c14n183" },
+        { "@id": "_:c14n195" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Object",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A material thing.\n\nThe entity defined as object encompasses a comprehensive range of material things that may be the subject of a work: animate and inanimate objects occurring in nature; fixed, movable, and moving objects that are the product of human creation; objects that no longer exist. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "object", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#Subject" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Person",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An individual. The entity defined as person encompasses individuals that are deceased as well as those that are living.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "person", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#ResponsibleEntity" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Place",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A location.\n\nThe entity defined as place encompasses a comprehensive range of locations: terrestrial and extra-terrestrial; historical and contemporary; geographic features and geo-political jurisdictions. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "place", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#Subject" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#ResponsibleEntity",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It represents those responsible for the intellectual or artistic content, the physical production and dissemination, or the custodianship of any endeavour.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "responsible entity", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Subject",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It represents an additional set of entities that serve as the subjects of works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "subject", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#Work",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A distinct intellectual or artistic creation.\n\nA work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work. When we speak of Homer's Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "work", "@language": "en" }],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "_:c14n179" },
+        { "@id": "_:c14n199" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#abridgement",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression abridged in another one.\n\nIn the abridged expression some content of the previous expression is removed, but the result does not alter the content to the extent that it becomes a new work. The expressions resulting from such modification are generally autonomous in nature (i.e., they do not normally require reference to the prior expression in order to be used or understood). ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has abridgement", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#abridgementOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#abridgementOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the entire expression of an abridged one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is abridgement of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#adaption",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A work/expression adapted in another one.\n\nThis property describe the modification of an original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, they always refer to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n5" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has adaption", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n48" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#adaptionOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#adaptionOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "It identifies the work/expression of an adapted one.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is adaption of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#alternate",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A manifestation having another one as alternate.\n\nThe alternate relationship involves manifestations that effectively serve as alternates for each other. The alternate relationship obtains, for example, when a publication, sound recording, video, etc. is issued in more than one format or when it is released simultaneously by different publishers in different countries.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has alternate", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#alternateOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#alternateOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the manifestation of an alternative one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is alternate of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#arrangement",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression arranged in another one.\n\nIn the arranged expression some content of the previous expression is changed in some way, but the result does not alter the content to the extent that it becomes a new work. The expressions resulting from such modification are generally autonomous in nature (i.e., they do not normally require reference to the prior expression in order to be used or understood).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has arrangement", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#arrangementOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#arrangementOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the original expression of an arranged one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is arrangement of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#complement",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression work/expression having another one as complement.\n\nThis property describes works that are intended to be combined with or inserted into the related work. In other words, they are intended to be integrated in some way with the other work, but were not part of the original conception of that prior work. If there exists a relation of this kind among two different expressions, then they always refer to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n21" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has complement", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n49" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#complementOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#complementOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the work/expression of that is a complement of another one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is complement of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#creator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A work linked to its creator.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has creator", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#creatorOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#creatorOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The creator of a particular work.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is creator of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#embodiment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An expression embodied in a manifestation.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has embodiment", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#embodimentOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#embodimentOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A manifestation that embodies an expression.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is embodiment of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#exemplar",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A manifestation exemplified in an item.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has exemplar", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#exemplarOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#exemplarOf",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#FunctionalProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An item that exemplifies a manifestation.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is exemplar of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#imitation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An work/expression imitated in another one.\n\nThis property describes works that are intended to be an imitation another original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, then they always refer to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n24" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has imitation", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n17" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#imitationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#imitationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the work/expression of an imitated one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is imitation of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#owner",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An item linked to its owner.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has owner", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#ownerOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#ownerOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The owner of a particular item.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is owner of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#part",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A part of an endeavour.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has part", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#partOf" }
+      ],
+      "http://www.w3.org/2008/05/skos#note": [
+        {
+          "@value": "Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#partOf",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An endeavour incorporating another endeavour.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is part of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2008/05/skos#note": [
+        {
+          "@value": "Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#producer",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A manifestation linked to its prodecer.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Manifestation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has producer", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#producerOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#producerOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The producer of a particular manifestation.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is producer of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#realization",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A work realized through an expression.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has realization", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#realizationOf",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#FunctionalProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An expression that realizes a work.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is realization of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#realizer",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An expression linked to its realizer.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has realizer", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#realizerOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#realizerOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The realizer of a particular expression.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is realizer of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#reconfiguration",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An item reconfigured in another one.\n\nThe reconfiguration relationship is one in which one or more items are changed in such a way that a new item or items result. Most commonly, an item of one manifestation is bound with an item of a different manifestation to make a new item. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has reconfiguration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#reconfigurationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#reconfigurationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the manifestation of a reconfigured one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is reconfiguration of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Endeavour" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has related endeavour", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Endeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#reproduction",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A manifestation/item reproduced in another one.\n\nA reproduction indicates the relationship as it would be drawn from the first manifestation/item in the relationship to the second manifestation/item in the relationship.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n51" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has reproduction", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n2" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#reproductionOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#reproductionOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the manifestation/item of a reproduced one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is reproduction of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#responsibleEntity",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Any endeavour having a particular entity that is responsible of it.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Endeavour" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has responsible entity", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#ResponsibleEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#topObjectProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#responsibleEntityOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An entity that is resposible for a particular endeavour.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is responsible entity of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#topObjectProperty" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#revision",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression revised in another one.\n\nA revision has the intent to alter or update the content of the prior expression, but without changing the content so much that it becomes a new work.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has revision", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#revisionOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#revisionOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the previous expression of a revised one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is revision of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#subject",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A work linked to a particular subject it is talking about.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has subject", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n35" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#topObjectProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#subjectOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#subjectOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A subject a work talks abbout.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is subject of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#topObjectProperty" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#successor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression work/expression having another one as successor.\n\nThe successor type of relationship involves a kind of linear progression of content from one work/expression to the other. In some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. In others, such as with loosely connected parts of a trilogy, the successor will be autonomous. Serial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. If there exists a relation of this kind among two different expressions, then they always refer to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n7" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has successor", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n8" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#successorOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#successorOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the previous work/expression of a succeeded one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is successor of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#summarization",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A work/expression summarized in another one.\n\nThis property describe the summarization of an original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, they always refer to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n36" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has summarization", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n38" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#summarizationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#summarizationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the original work/expression of a summarized one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is summarization of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#supplement",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression work/expression having another one as supplement.\n\nThe supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. Some of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n39" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has supplement", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n9" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#supplementOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#supplementOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the work/expression of a particular supplement of it.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is supplement of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#transformation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An work/expression transformed in another one.\n\nThis property describes the transformation of an original work or expression into another work or expression that is sufficiently different in degree to warrant the product of the transformation being considered as a new work or expression, rather than simply a different expression of the original work. If there exists a frbr:transformation relation between two different expressions, then they always relate to different works.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n16" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has transformation", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n50" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#transformationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#transformationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the original work/expression of a trasformed one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is transformation of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#translation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression translated in another one.\n\nIt allows to refer to a literal translation, in which the intent is to render the intellectual content of the previous expression as accurately as possible.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has translation", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://purl.org/vocab/frbr/core#Expression" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#translationOf" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/frbr/core#translationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "It identifies the original expression of a translated one.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is translation of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/vocab/frbr/core#relatedEndeavour" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos#note",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "skos:note", "@language": "en" }
+      ]
+    },
+    { "@id": "urn:swrl#e1", "@type": ["http://www.w3.org/2003/11/swrl#Variable"] },
+    { "@id": "urn:swrl#e2", "@type": ["http://www.w3.org/2003/11/swrl#Variable"] },
+    { "@id": "urn:swrl#w1", "@type": ["http://www.w3.org/2003/11/swrl#Variable"] },
+    { "@id": "urn:swrl#w2", "@type": ["http://www.w3.org/2003/11/swrl#Variable"] }
+  ]
+}

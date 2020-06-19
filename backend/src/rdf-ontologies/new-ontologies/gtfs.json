@@ -1,0 +1,2525 @@
+{
+  "@id": "http://vocab.gtfs.org/terms#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@value": "Pieter.Colpaert@UGent.be" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Pieter Colpaert" }]
+    },
+    {
+      "@id": "_:c14n1",
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@value": "abyrd@conveyal.com" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Andrew Byrd" }]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms",
+      "http://creativecommons.org/ns#license": [
+        { "@id": "http://creativecommons.org/licenses/by/3.0/" }
+      ],
+      "http://purl.org/dc/terms/hasFormat": [
+        {
+          "@id": "https://raw.githubusercontent.com/OpenTransport/vocabulary/master/gtfs/gtfs.ttl"
+        }
+      ],
+      "http://purl.org/dc/terms/issued": [
+        { "@value": "2014-10-23", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        { "@value": "2014-10-27", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/rights": [
+        { "@value": "Copyright 2014 - Open Transport contributors" }
+      ],
+      "@type": ["http://xmlns.com/foaf/0.1/Document"],
+      "http://xmlns.com/foaf/0.1/primaryTopic": [{ "@id": "http://vocab.gtfs.org/terms#" }]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#",
+      "http://purl.org/dc/terms/creator": [{ "@id": "_:c14n0" }, { "@id": "_:c14n1" }],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "Esta ontologÃ­a es una traducciÃ³n de la EspecificaciÃ³n General de Feeds de Transporte PÃºblico a URIs. El objetivo es crear una plataforma de intercambio donde el modelo Linked GTFS pueda usarse para obtener los datos correctos en el formato adecuado. Para la especificaciÃ³n semÃ¡ntica de clases y propiedades, visite https://developers.google.com/transit/gtfs/reference.",
+          "@language": "es"
+        },
+        {
+          "@value": "This ontology is a translation of the General Transit Feed Specification towards URIs. Its intended use is creating an exchange platform where the Linked GTFS model can be used as a start to get the right data into the right format. For semantics of the classes and properties, see https://developers.google.com/transit/gtfs/reference.",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "gtfs" }],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        { "@value": "http://vocab.gtfs.org/terms#" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "EspecificaciÃ³n General de Feeds de Transporte PÃºblico",
+          "@language": "es"
+        },
+        { "@value": "General Transit Feed Specification", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Agency",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An agency operates a certain schedule based transport mode",
+          "@language": "en"
+        },
+        {
+          "@value": "Una empresa opera un cierto modo de transporte de manera programada",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Agency", "@language": "en" },
+        { "@value": "Empresa", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#agency_fields" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/Agent" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "estable", "@language": "es" },
+        { "@value": "stable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#BeforeBoarding",
+      "@type": ["http://vocab.gtfs.org/terms#PaymentMethod"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "La tarifa se debe pagar antes de subir a bordo", "@language": "es" },
+        { "@value": "Ticket should be bought before boarding", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Antes de subir a bordo", "@language": "es" },
+        { "@value": "Before Boarding", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Bus",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Used for short- and long-distance bus routes.", "@language": "en" },
+        {
+          "@value": "Utilizado para rutas en autobÃºs de corta y larga distancia.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "AutobÃºs", "@language": "es" },
+        { "@value": "Bus", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#CableCar",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used for street-level cable cars where the cable runs beneath the car.",
+          "@language": "en"
+        },
+        {
+          "@value": "Utilizado para funiculares en superficie en donde el cable pasa por debajo del vehÃ­culo.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Cable car", "@language": "en" },
+        { "@value": "Funicular", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#CalendarDateRule",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "a row from calendar_dates.txt", "@language": "en" },
+        { "@value": "una lÃ­nea en calendar_dates.txt", "@language": "es" }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Defines service availability for a specific date", "@language": "en" },
+        {
+          "@value": "Indica la disponibilidad de servicio para una fecha concreta",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Calendar date rule", "@language": "en" },
+        { "@value": "Regla de fecha de calendario", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#calendar_dates_fields" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://vocab.gtfs.org/terms#ServiceRule" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#CalendarRule",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "a row from calendar.txt", "@language": "en" },
+        { "@value": "una lÃ­nea de calendar.txt", "@language": "es" }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Define en quÃ© dÃ­as de la semana el servicio estÃ¡ disponible para un periodo concreto.",
+          "@language": "es"
+        },
+        {
+          "@value": "Defines on which days of the week for a certain period the service is available.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Calendar rule", "@language": "en" },
+        { "@value": "Regla de calendario", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://vocab.gtfs.org/terms#ServiceRule" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#CheckParentStation",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "Corresponde a wheelchair_accessible con valor 0.", "@language": "es" },
+        { "@value": "Corresponds with wheelchair_accessible being 0.", "@language": "en" }
+      ],
+      "@type": ["http://vocab.gtfs.org/terms#WheelchairBoardingStatus"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Check the (parent) station for accessibility information.",
+          "@language": "en"
+        },
+        {
+          "@value": "Compruebe la estaciÃ³n (matriz) para informaciÃ³n de accesibilidad.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Check the parent station", "@language": "en" },
+        { "@value": "Compruebe la estaciÃ³n matriz", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#DropOffType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of this class can be used by gtfs:dropOffType",
+          "@language": "en"
+        },
+        {
+          "@value": "Instancias de esta clase pueden ser usadas por gtfs:dropOffType. Indica si los pasajeros se bajan en una parada como parte del horario normal o si no pueden bajar en esa parada.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Drop Off Type", "@language": "en" },
+        { "@value": "Tipo de bajada", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#EnsuredTransfer",
+      "@type": ["http://vocab.gtfs.org/terms#TransferType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Este es un punto de transbordo sincronizado entre dos rutas. El vehÃ­culo que sale espera al que llega, dejando tiempo suficiente para que un pasajero haga transbordo entre rutas.",
+          "@language": "es"
+        },
+        {
+          "@value": "This is a timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one, with sufficient time for a passenger to transfer between routes.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Ensured Transfer", "@language": "en" },
+        { "@value": "Punto de transbordo sincronizado", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#FareClass",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "A gtfs:FareClass corresponds to a row in the fare_attributes.txt file.",
+          "@language": "en"
+        },
+        {
+          "@value": "Una gtfs:FareClass corresponde a una lÃ­nea en fare_attributes.txt.",
+          "@language": "es"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A class describing how the fare is calculated.", "@language": "en" },
+        { "@value": "Describe como se calcula la tarifa.", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Clase tarifaria", "@language": "es" },
+        { "@value": "Fare Class", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://code.google.com/p/googletransitdatafeed/wiki/FareExamples" },
+        {
+          "@id": "https://developers.google.com/transit/gtfs/reference#fare_attributes_fields"
+        },
+        { "@id": "https://developers.google.com/transit/gtfs/reference#fare_rules_fields" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://schema.org/PriceSpecification" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#FareRule",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A rule which binds a gtfs:FareClass to a part of the network.",
+          "@language": "en"
+        },
+        {
+          "@value": "Una regla que enlaza una clase tarifaria (gtfs:FareClass) a un zona de la red de transporte.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Fare Rule", "@language": "en" },
+        { "@value": "Regla tarifaria", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Feed",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An instance of a gtfs:Feed is a linked GTFS feed that complies to this specification.",
+          "@language": "en"
+        },
+        {
+          "@value": "Una instancia de gtfs:Feed es un feed GTFS enlazado que cumple con esta especificaciÃ³n.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "GTFS Feed", "@language": "en" },
+        { "@value": "GTFS Feed", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#feed_info_fields" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/dcat#Dataset" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "estable", "@language": "es" },
+        { "@value": "stable", "@language": "en" }
+      ],
+      "http://www.w3.org/ns/dcat#theme": [{ "@id": "http://eurovoc.europa.eu/2015" }]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Ferry",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Used for short- and long-distance boat service.", "@language": "en" },
+        {
+          "@value": "Utilizado para servicio de transporte pÃºblico fluvial o marÃ­timo de corta y larga distancia.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Ferry", "@language": "en" },
+        { "@value": "Ferry, transbordador", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Frequency",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An alternative to defining departures and arrivals as StopTimes: define frequencies for transit vehicle",
+          "@language": "en"
+        },
+        {
+          "@value": "Una alternativa a definir salidas y llegadas como StopTimes: definir frecuencias para vehÃ­culos de transporte pÃºblico",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Frecuencia", "@language": "es" },
+        { "@value": "Frequency", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#frequencies_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Funicular",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Any rail system designed for steep inclines.", "@language": "en" },
+        {
+          "@value": "Cualquier sistema por raÃ­l diseÃ±ado para recorridos con una gran inclinaciÃ³n.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Funicular", "@language": "en" },
+        { "@value": "Funicular", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Gondola",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Gondola, Suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable.",
+          "@language": "en"
+        },
+        {
+          "@value": "Normalmente se utiliza para medios de transporte pÃºblico por cable en donde el vehÃ­culo queda suspendido de un cable.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Gondola, Suspended cable car", "@language": "en" },
+        { "@value": "TelefÃ©rico, telecabina", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#LightRail",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Any light rail or street level system within a metropolitan area.",
+          "@language": "en"
+        },
+        {
+          "@value": "Cualquier metro ligero o sistema ferroviario en superficie dentro de un Ã¡rea metropolitana.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tram, Streetcar, Light rail", "@language": "en" },
+        { "@value": "TranvÃ­a, metro ligero", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#MinimumTimeTransfer",
+      "@type": ["http://vocab.gtfs.org/terms#TransferType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Este transbordo requiere una cantidad mÃ­nima de tiempo entre la llegada y la salida para garantizar la conexiÃ³n. El tiempo necesario para el transbordo se especifica mediante min_transfer_time",
+          "@language": "es"
+        },
+        {
+          "@value": "This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by gtfs:minimumTransferTime",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Minimum Time Transfer", "@language": "en" },
+        { "@value": "MÃ­nimo tiempo de transbordo", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#MustCoordinateWithDriver",
+      "@type": [
+        "http://vocab.gtfs.org/terms#DropOffType",
+        "http://vocab.gtfs.org/terms#PickupType"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Must coordinate with driver to arrange pickup or drop off",
+          "@language": "en"
+        },
+        { "@value": "Se debe pedir al conductor que pare.", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#MustPhone",
+      "@type": [
+        "http://vocab.gtfs.org/terms#DropOffType",
+        "http://vocab.gtfs.org/terms#PickupType"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Must phone agency to arrange pickup or drop off", "@language": "en" },
+        {
+          "@value": "Se debe llamar a la empresa para organizar la parada.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#NoTransfer",
+      "@type": ["http://vocab.gtfs.org/terms#TransferType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "No es posible realizar transbordos entre rutas en esta ubicaciÃ³n.",
+          "@language": "es"
+        },
+        {
+          "@value": "Transfers are not possible between routes at this location.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "No Transfer", "@language": "en" },
+        { "@value": "Sin transbordo", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#NoTransfersAllowed",
+      "@type": ["http://vocab.gtfs.org/terms#TransfersAllowedType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que el pasajero debe comprar un nuevo billete para realizar un transbordo",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicate that a passenger should buy a new ticket when transferring",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "No se permiten transbordos", "@language": "es" },
+        { "@value": "No transfers allowed", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#NotAvailable",
+      "@type": [
+        "http://vocab.gtfs.org/terms#DropOffType",
+        "http://vocab.gtfs.org/terms#PickupType"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Pickup or drop off not available", "@language": "en" },
+        { "@value": "Sin parada disponible", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#NotWheelchairAccessible",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "Corresponde a wheelchair_accessible con valor 2", "@language": "es" },
+        {
+          "@value": "Corresponds to a wheelchair_accessible column being 2",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://vocab.gtfs.org/terms#WheelchairBoardingStatus"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "No riders in wheelchairs can be accommodated on this trip or wheelchair boarding is not possible at this stop and/or there exists no accessible path from outside the station to the specific stop.",
+          "@language": "en"
+        },
+        {
+          "@value": "Pasajeros en silla de ruedas no pueden acceder a este viaje o el acceso con silla de ruedas no es posible en esta parada y/o no hay una ruta accesible desde el exterior de la estaciÃ³n hasta la parada.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "No accesible para silla de ruedas", "@language": "es" },
+        { "@value": "Not wheelchair accessible", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#OnBoard",
+      "@type": ["http://vocab.gtfs.org/terms#PaymentMethod"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Fare should be bought on board", "@language": "en" },
+        { "@value": "La tarifa se paga a bordo", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "A bordo", "@language": "es" },
+        { "@value": "On Board", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#OneTransfersAllowed",
+      "@type": ["http://vocab.gtfs.org/terms#TransfersAllowedType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que el pasajero puede hacer un transbordo con su billete",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicate that a passenger should buy a new ticket when transferring a second time",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "One transfer allowed", "@language": "en" },
+        { "@value": "Un transbordo permitido", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#PaymentMethod",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Method to pay for the public transit service", "@language": "en" },
+        {
+          "@value": "MÃ©todo de pago para el servicio de transporte pÃºblico",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "MÃ©todo de pago", "@language": "es" },
+        { "@value": "Payment Method", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#PickupType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of this class can be used by gtfs:pickupType",
+          "@language": "en"
+        },
+        {
+          "@value": "Instancias de esta clase pueden ser usadas por gtfs:pickupType. Indica si se recogen los pasajeros en una parada como parte del horario normal o si su recogida en dicha parada no se encuentra disponible. Este campo tambiÃ©n permite a la empresa de transporte pÃºblico indicar que los pasajeros deben llamar a la empresa o notificar al conductor que es necesario recogerlos en esa parada en concreto. Los valores vÃ¡lidos para este campo son: 0 - recogida programada regularmente; 1 - recogida no disponible; 2 - se debe llamar a la empresa para organizar una recogida; 3 - se debe coordinar con el conductor para organizar una recogida. El valor predeterminado de este campo es 0.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Pickup Type", "@language": "en" },
+        { "@value": "Tipo de recogida", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Rail",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Used for intercity or long-distance travel.", "@language": "en" },
+        {
+          "@value": "Utilizado para viajes de cercanÃ­as, interurbanos o de larga distancia.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Rail", "@language": "en" },
+        { "@value": "Tren", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#RecommendedTransfer",
+      "@type": ["http://vocab.gtfs.org/terms#TransferType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Este es un punto de transbordo recomendado entre dos rutas",
+          "@language": "es"
+        },
+        {
+          "@value": "This is a recommended transfer point between two routes",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Punto de transbordo recomendado", "@language": "es" },
+        { "@value": "Recommended Transfer", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Regular",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "If no pickup_type or drop_off_type given in stop_times.txt, map to this one.",
+          "@language": "en"
+        },
+        {
+          "@value": "Si no se incluye pickup_type o drop_off_type en stop_times.txt, mapee a este concepto.",
+          "@language": "es"
+        }
+      ],
+      "@type": [
+        "http://vocab.gtfs.org/terms#DropOffType",
+        "http://vocab.gtfs.org/terms#PickupType"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parada programada regularmente", "@language": "es" },
+        { "@value": "Regularly scheduled pickup or drop off", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Route",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips",
+          "@language": "en"
+        },
+        {
+          "@value": "Una gtfs:Route es un grupo de viajes (gtfs:Trips) que se muestran a los usuarios como servicio independiente",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Route", "@language": "en" },
+        { "@value": "Ruta", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#routes_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#RouteType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Describe el tipo de transporte usado en una ruta", "@language": "es" },
+        { "@value": "Describes the type of transportation used on a route", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Route type", "@language": "en" },
+        { "@value": "Tipo de ruta", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Service",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "A gtfs:Service is a set of gtfs:ServiceRules which can be found in both calendar.txt as calendar_dates.txt",
+          "@language": "en"
+        },
+        {
+          "@value": "Un gtfs:Service es un conjunto de gtfs:ServiceRules que pueden ser encontradas en calendar.txt y calendar_dates.txt",
+          "@language": "es"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A gtfs:Service identifies a set of dates when a service is available for one or more routes",
+          "@language": "en"
+        },
+        {
+          "@value": "Un gtfs:Service indica el conjunto de fechas en el que el servicio estÃ¡ disponible para una o mÃ¡s rutas",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Service", "@language": "en" },
+        { "@value": "Servicio", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://developers.google.com/transit/gtfs/reference#calendar_dates_fields"
+        },
+        { "@id": "https://developers.google.com/transit/gtfs/reference#calendar_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#ServiceRule",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "One or more service rules define a set of dates", "@language": "en" },
+        {
+          "@value": "Una o mÃ¡s reglas de servicio definen un conjunto de fechas",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Regla de servicio", "@language": "es" },
+        { "@value": "Service rule", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Shape",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A polygon formed by gtfs:ShapePoints", "@language": "en" },
+        { "@value": "Un polÃ­gono o lÃ­nea formado por gtfs:ShapePoints", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Shape", "@language": "en" },
+        { "@value": "forma del recorrido, trayecto, itinerario", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#shapes_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#ShapePoint",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A geographic point within a gtfs:Shape", "@language": "en" },
+        {
+          "@value": "Punto geogrÃ¡fico dentro de un recorrido (gtfs:Shape)",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Punto de recorrido", "@language": "es" },
+        { "@value": "Shape Point", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#shapes_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Station",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Map a row in stops.txt to gtfs:Station when the location_type is 1.",
+          "@language": "en"
+        },
+        {
+          "@value": "Mapee una lÃ­nea en stops.txt a gtfs:Station cuando location_type sea 1.",
+          "@language": "es"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A physical structure or area that contains one or more stop.",
+          "@language": "en"
+        },
+        {
+          "@value": "Estructura fÃ­sica o Ã¡rea que contiene una o mÃ¡s paradas.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "EstaciÃ³n", "@language": "es" },
+        { "@value": "Station", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stops_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Stop",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A location where passengers board or disembark from a transit vehicle.",
+          "@language": "en"
+        },
+        {
+          "@value": "Un lugar donde los pasajeros suben o bajan de un vehÃ­culo de transporte pÃºblico.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parada", "@language": "es" },
+        { "@value": "Stop", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stops_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "estable", "@language": "es" },
+        { "@value": "stable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#StopTime",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Describe una hora de parada como parte de un viaje", "@language": "es" },
+        { "@value": "Describes a stop time as part of a trip", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Hora de parada", "@language": "es" },
+        { "@value": "Stop time", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stop_times_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Subway",
+      "@type": ["http://vocab.gtfs.org/terms#RouteType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Any underground rail system within a metropolitan area.",
+          "@language": "en"
+        },
+        {
+          "@value": "Cualquier sistema ferroviario subterrÃ¡neo dentro de un Ã¡rea metropolitana.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "SubterrÃ¡neo, metro", "@language": "es" },
+        { "@value": "Subway, Metro", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#TransferRule",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Define additional rules for making connections between routes.",
+          "@language": "en"
+        },
+        {
+          "@value": "Define reglas adicionales para transbordos entre rutas.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Regla de transbordo", "@language": "es" },
+        { "@value": "Transfer Rule", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#transfers_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#TransferType",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Si transfer_type en transfers.txt es 0 o vacÃ­o, mapee a gtfs:RecommendedTransfer; si es 1, mapee to gtfs:EnsuredTransfer; si es 2, a gtfs:MinimumTimeTransfer; si es 3, a gtfs:NoTransfer",
+          "@language": "es"
+        },
+        {
+          "@value": "When transfer_type in transfers.txt is 0 or empty, map to gtfs:RecommendedTransfer, when 1, map to gtfs:EnsuredTransfer, when 2, gtfs:MinimumTimeTransfer, when 3: gtfs:NoTransfer.",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of this class can be used to describe how to handle a transfer rule",
+          "@language": "en"
+        },
+        {
+          "@value": "Instancias de esta clase pueden ser usadas para describir cÃ³mo gestionar las reglas de transbordo",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tipo de transbordo", "@language": "es" },
+        { "@value": "Transfer Type", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#TransfersAllowedType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of this class describe whether tickets remain valid when transferring",
+          "@language": "en"
+        },
+        {
+          "@value": "Las instancias de esta clase describen si los billetes son vÃ¡lidos para realizar transbordos",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tipo de transbordo permitido", "@language": "es" },
+        { "@value": "Transfers Allowed Type", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Trip",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A collection of gtfs:StopTimes followed by a transit vehicle",
+          "@language": "en"
+        },
+        {
+          "@value": "Trayecto de dos o mÃ¡s paradas realizadas por un vehÃ­culo que se produce a una gtfs:StopTime",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Trip", "@language": "en" },
+        { "@value": "Viaje", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#trips_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#TwoTransfersAllowed",
+      "@type": ["http://vocab.gtfs.org/terms#TransfersAllowedType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que el pasajero puede hacer dos transbordos con su billete",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicate that a passenger should buy a new ticket when transferring for the third time",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Dos transbordos permitidos", "@language": "es" },
+        { "@value": "Two transfers allowed", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#UnlimitedTransfersAllowed",
+      "@type": ["http://vocab.gtfs.org/terms#TransfersAllowedType"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que el billete permite una cantidad de transbordos ilimitada",
+          "@language": "es"
+        },
+        { "@value": "Indicate that unlimited transfers are permitted", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Transbordos ilimitados", "@language": "es" },
+        { "@value": "Unlimited transfers allowed", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#WheelchairAccessible",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "Corresponde a wheelchair_accessible con valor 1", "@language": "es" },
+        {
+          "@value": "Corresponds to a wheelchair_accessible column being 1",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://vocab.gtfs.org/terms#WheelchairBoardingStatus"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que el vehÃ­culo usado en este viaje es accesible para, al menos, un pasajero en silla de ruedas, o indica que la parada especÃ­fica estÃ¡ habilitada para sillas de ruedas, que algunos viajes desde esta parada son accesibles para silla de ruedas y si esta parada tiene una estaciÃ³n matriz, que hay alguna ruta accesible desde el exterior de la estaciÃ³n hasta la parada.",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicates that the vehicle being used on this particular trip can accommodate at least one rider in a wheelchair, or identifies that wheelchair boardings are possible from the specified stop, some trips at this stop are accessible by wheelchair and if this stop has a parentStation, there exists some accessible path from outside the station to the specific stop.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Accesible para silla de ruedas", "@language": "es" },
+        { "@value": "Wheelchair accessible", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#WheelchairBoardingStatus",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A class whom's instances indicate how accessible a gtfs:Trip, gtfs:Stop or gtfs:Station is.",
+          "@language": "en"
+        },
+        {
+          "@value": "Las instancias de esta clase indican como de accesible es un gtfs:Trip, un gtfs:Stop o una gtfs:Station.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "InformaciÃ³n de accesibilidad para silla de ruedas", "@language": "es" },
+        { "@value": "Wheelchair Boarding Information", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stops_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#Zone",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Las zonas son necesarias si quiere proporcionar informaciÃ³n de tarifas usando gtfs:FareClass",
+          "@language": "es"
+        },
+        {
+          "@value": "Zones are required if you want to provide fare information using gtfs:FareClass",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Zona", "@language": "es" },
+        { "@value": "Zone", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#agency",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Enlaza a una agencia de la que este concepto es parte.",
+          "@language": "es"
+        },
+        { "@value": "links to an agency that this is part of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "agency", "@language": "en" },
+        { "@value": "empresa", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Agency" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#arrivalTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Check the original specification for special cases", "@language": "en" },
+        {
+          "@value": "Compruebe la especificaciÃ³n original para casos especiales",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#StopTime" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Arrival time", "@language": "en" },
+        { "@value": "hora de llegada", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#duration" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stop_times_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#bikesAllowed",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Bikes allowed", "@language": "en" },
+        { "@value": "bicicletas permitidas", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#block",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Identifica el bloque al que pertenece el viaje. Un bloque consta de dos o mÃ¡s viajes secuenciales realizados en el mismo vehÃ­culo, en los que un pasajero puede cambiar de viaje si simplemente permanece en el vehÃ­culo.",
+          "@language": "es"
+        },
+        {
+          "@value": "Identifies the block to which the trip within this feed belongs. A block consists of two or more sequential trips made using the same vehicle, where a passenger can transfer from one trip to the next just by staying in the vehicle.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Trip" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Block", "@language": "en" },
+        { "@value": "Bloque", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#code",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "This is the stop_code field", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A gtfs:code predicate defines the stop code for a stop.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Stop Code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stops_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#color",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A 6 character hexidecimal color (without #)", "@language": "en" },
+        {
+          "@value": "Un color expresado con 6 caracteres hexadecimales (sin #)",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Color", "@language": "en" },
+        { "@value": "color", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#comment",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A comment on the relation between the RDFS ontology and the CSV specification.",
+          "@language": "en"
+        },
+        {
+          "@value": "Un comentario entre la relaciÃ³n entre la ontologÃ­a RDFS y la especificaciÃ³n CSV.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Comentario de enlace", "@language": "es" },
+        { "@value": "Mapping comment", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#comment" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#dateAddition",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "El campo exception_type en calendar_dates.txt - 1 es cierto, 2 es falso.",
+          "@language": "es"
+        },
+        {
+          "@value": "The exception_type field in calendar_dates.txt - 1 is true, 2 is false.",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean whether to add (true) or remove (false) a date",
+          "@language": "en"
+        },
+        {
+          "@value": "Booleano que indica si el servicio se ha agregado (cierto) o suprimido (falso) en la fecha especificada",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#CalendarDateRule" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Date Addition", "@language": "en" },
+        { "@value": "incorporaciÃ³n de fecha", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#departureTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Check the original specification for special cases", "@language": "en" },
+        {
+          "@value": "Compruebe la especificaciÃ³n original para casos especiales",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#StopTime" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Departure time", "@language": "en" },
+        { "@value": "hora de salida", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#duration" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#stop_times_fields" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#destinationStop",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "Conectado a to_stop_id en transfers.txt", "@language": "es" },
+        { "@value": "Map from to_stop_id in transfers.txt", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Enlace al gtfs:Stop hacia el que va el viaje", "@language": "es" },
+        { "@value": "Link to gtfs:Stop to go to", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Destination Stop", "@language": "en" },
+        { "@value": "parada de destino", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Stop" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#destinationZone",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "La zona de destino donde una clase tarifaria se aplica",
+          "@language": "en"
+        },
+        { "@value": "The destination zone where this applies", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Destination Zone", "@language": "en" },
+        { "@value": "zona de destino", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#direction",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A binary property to indicate the direction the trip is going (e.g., outbound/inbound, center/airport)",
+          "@language": "en"
+        },
+        {
+          "@value": "Apunta a un valor binario que indica la direcciÃ³n del viaje (e.g., ida/vuelta, centro/aeropuerto)",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Direction", "@language": "en" },
+        { "@value": "direcciÃ³n", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#distanceTraveled",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica la distancia a una parada desde el primer punto del recorrido. Representa una distancia de viaje real durante la ruta en unidades expresadas como pies o kilÃ³metros. Esta informaciÃ³n permite que quien planifica el viaje determine la porciÃ³n de la forma que se debe trazar al mostrar parte de un viaje en el mapa. Los valores utilizados para gtfs:distanceTraveled se deben incrementar junto con los de gtfs:stopSequence, es decir, no se pueden usar para mostrar el recorrido inverso a lo largo de una ruta.",
+          "@language": "es"
+        },
+        {
+          "@value": "Positions a stop as a distance from the first shape point. It represents a real distance traveled along the route in units such as feet or kilometers. This information allows the trip planner to determine how much of the shape to draw when showing part of a trip on the map. The values used for gtfs:distanceTraveled must increase along with gtfs:stopSequence: they cannot be used to show reverse travel along a route.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Shape" },
+        { "@id": "http://vocab.gtfs.org/terms#StopTime" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Distance Traveled", "@language": "en" },
+        { "@value": "distancia recorrida", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#dropOffType",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica si los pasajeros se bajan en una parada como parte del horario normal o si no pueden bajar en esa parada.",
+          "@language": "es"
+        },
+        { "@value": "Which type of drop off", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Drop off type", "@language": "en" },
+        { "@value": "tipo de bajada", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#DropOffType" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#endTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Define la hora a la que el servicio cambia de frecuencia (o bien finaliza) en la primera parada del viaje.",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicates the time at which service changes to a different frequency (or ceases) at the first stop in the trip.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Frequency" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "End Time", "@language": "en" },
+        { "@value": "hora final", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#fareUrl",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "La URL de una pÃ¡gina web que permite a un usuario comprar online billetes u otros productos de transporte de esa empresa",
+          "@language": "es"
+        },
+        {
+          "@value": "The URL of a web page that allows a rider to purchase tickets or other fare instruments for that agency online",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Agency" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "URL de tarifas", "@language": "es" },
+        { "@value": "fare URL", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://developers.google.com/transit/gtfs/reference#agency_fields" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/page" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#friday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Friday", "@language": "en" },
+        { "@value": "Servicio disponible los viernes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Friday", "@language": "en" },
+        { "@value": "viernes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#headsign",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Esta propiedad apunta al texto que indica el destino del viaje a los pasajeros.",
+          "@language": "es"
+        },
+        {
+          "@value": "The gtfs:headsign property contains the text that appears on a sign that identifies the trip's destination to passengers.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Headsign", "@language": "en" },
+        { "@value": "destino del viaje", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://developers.google.com/transit/gtfs/examples/display-to-users#TripHeadsign"
+        }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#headwaySeconds",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica el perÃ­odo de tiempo (en segundos) entre salidas desde la misma parada (tiempo entre viajes) para este tipo de viaje, durante el intervalo de tiempo especificado mediante start_time y end_time.",
+          "@language": "es"
+        },
+        {
+          "@value": "Indicates the time between departures from the same stop (headway) for this trip type, during the time interval specified by gtfs:startTime and gtfs:endTime.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Frequency" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Headway Seconds", "@language": "en" },
+        { "@value": "tiempo entre viajes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#longName",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Long name given to a route", "@language": "en" },
+        { "@value": "Nombre completo de una ruta", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Route" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Long name", "@language": "en" },
+        { "@value": "nombre completo", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://developers.google.com/transit/gtfs/examples/display-to-users#RouteLongName"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/title" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#minimumTransferTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "El tiempo mÃ­nimo de transbordo cuando gtfs:transferType es gtfs:MinimumTimeTransfer.",
+          "@language": "es"
+        },
+        {
+          "@value": "The minimum transfer time when the gtfs:transferType is gtfs:MinimumTimeTransfer.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#TransferRule" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Minimum Transfer Time", "@language": "en" },
+        { "@value": "Tiempo mÃ­nimo de transbordo", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#monday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Monday", "@language": "en" },
+        { "@value": "Servicio disponible los lunes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Monday", "@language": "en" },
+        { "@value": "lunes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#originStop",
+      "http://vocab.gtfs.org/terms#comment": [
+        { "@value": "Conectado a from_stop_id en transfers.txt", "@language": "es" },
+        { "@value": "Map from from_stop_id in transfers.txt", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Enlace al gtfs:Stop desde el que empieza el viaje", "@language": "es" },
+        { "@value": "Link to gtfs:Stop to start from", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Origin Stop", "@language": "en" },
+        { "@value": "parada de origen", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Stop" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#originZone",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "La zona de origen donde una clase tarifaria se aplica",
+          "@language": "es"
+        },
+        { "@value": "The origin zone where this applies", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Origin Zone", "@language": "en" },
+        { "@value": "zona de origen", "@language": "es" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#parentStation",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Enlaza a una lÃ­nea en stop.txt donde locationType=1.",
+          "@language": "es"
+        },
+        { "@value": "Links to a row in stop.txt where locationType=1.", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "gtfs:parentStation identifica la estaciÃ³n asociada a la parada",
+          "@language": "es"
+        },
+        {
+          "@value": "gtfs:parentStation identifies the station associated with the stop",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Stop" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parent Station", "@language": "en" },
+        { "@value": "estaciÃ³n matriz", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Station" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#paymentMethod",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Campo payment_method en fare_attributes. Si es 0, use gtfs:OnBoard; si es 1, use gtfs:BeforeBoarding",
+          "@language": "es"
+        },
+        {
+          "@value": "payment_method field in fare_attributes. If 0, use gtfs:OnBoard; if 1, use gtfs:BeforeBoarding",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The payment method", "@language": "en" },
+        { "@value": "el mÃ©todo de pago", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#FareClass" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "MÃ©todo de pago", "@language": "es" },
+        { "@value": "Payment method", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#PaymentMethod" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#pickupType",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica si se recogen los pasajeros en una parada como parte del horario normal o si su recogida en dicha parada no se encuentra disponible.",
+          "@language": "es"
+        },
+        { "@value": "Which type of pickup", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Pickup type", "@language": "en" },
+        { "@value": "tipo de recogida", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#PickupType" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#pointSequence",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "El campo shape_pt_sequence asocia la latitud y longitud de un punto de recorrido con su orden de secuencia en el recorrido. Los valores para shape_pt_sequence deben ser nÃºmeros enteros positivos y crecientes conforme avanza el viaje.",
+          "@language": "es"
+        },
+        {
+          "@value": "The shape_pt_sequence field associates the latitude and longitude of a shape point with its sequence order along the shape. The values for shape_pt_sequence must be non-negative integers, and they must increase along the trip.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#ShapePoint" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Point Sequence", "@language": "en" },
+        { "@value": "secuencia de puntos", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#route",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Este viaje forma parte de esta gtfs:Route", "@language": "es" },
+        { "@value": "This thing is applicable to this gtfs:Route", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Trip" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Route", "@language": "en" },
+        { "@value": "ruta", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#FareRule" },
+        { "@id": "http://vocab.gtfs.org/terms#Route" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#routeType",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Enlaza al tipo de vehÃ­culo que opera en esta ruta", "@language": "es" },
+        { "@value": "Links to the type of vehicle operating on this route", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Route" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Route type", "@language": "en" },
+        { "@value": "tipo de ruta", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#RouteType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://developers.google.com/transit/gtfs/examples/display-to-users#RouteType"
+        }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#saturday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Saturday", "@language": "en" },
+        { "@value": "Servicio disponible los sÃ¡bados", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Saturday", "@language": "en" },
+        { "@value": "sÃ¡bado", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#service",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Cumple este gtfs:Service.", "@language": "es" },
+        { "@value": "Follows this gtfs:Service.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Service", "@language": "en" },
+        { "@value": "Servicio", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Service" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#serviceRule",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Reglas de servicio que definen un conjunto de fechas",
+          "@language": "es"
+        },
+        { "@value": "Service rules which define together a set of dates", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Service" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Service rule", "@language": "en" },
+        { "@value": "regla de servicio", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#ServiceRule" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#shape",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Un enlace al recorrido que sigue el viaje.", "@language": "es" },
+        { "@value": "a link to a shape the trip follows.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Shape", "@language": "en" },
+        { "@value": "forma del recorrido, trayecto, itinerario", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Shape" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#shapePoint",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Enlaza a gtfs:ShapePoint", "@language": "es" },
+        { "@value": "Links to a gtfs:ShapePoint", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Shape" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Shape Point", "@language": "en" },
+        { "@value": "punto de recorrido", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#ShapePoint" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#shortName",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Nombre corto dado a una ruta o viaje", "@language": "es" },
+        { "@value": "Short name given to a route or a trip", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Route" },
+        { "@id": "http://vocab.gtfs.org/terms#Trip" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Short name", "@language": "en" },
+        { "@value": "nombre corto", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://developers.google.com/transit/gtfs/examples/display-to-users#RouteShortName"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/title" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#startTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Define la hora a la que empieza el servicio con la frecuencia especificada",
+          "@language": "es"
+        },
+        {
+          "@value": "Specifies the time at which service begins with the specified frequency",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Frequency" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Start Time", "@language": "en" },
+        { "@value": "hora de inicio", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#stop",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Indica que este concepto tiene cierta parada.", "@language": "es" },
+        { "@value": "Indicates that this has a certain stop.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Stop", "@language": "en" },
+        { "@value": "parada", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Stop" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#stopSequence",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica el orden de paradas para un viaje concreto. Los valores de gtfs:stopSequence deben ser enteros no negativos, deben aumentar durante el viaje referenciado por la propiedad gtfs:trip.",
+          "@language": "es"
+        },
+        {
+          "@value": "The stopSequence property identifies the order of the stops for a particular trip. The values must increase along the gtfs:Trip referenced in the gtfs:trip property.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#StopTime" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Stop sequence", "@language": "en" },
+        { "@value": "secuencia de paradas", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#sunday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Sunday", "@language": "en" },
+        { "@value": "Servicio disponible los domingos", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Sunday", "@language": "en" },
+        { "@value": "domingos", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#textColor",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A 6 character hexidecimal color (without #) asigned to a text label.",
+          "@language": "en"
+        },
+        {
+          "@value": "Un color expresado con 6 caracteres hexadecimales (sin #) asignado a una etiqueta de texto.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Text color", "@language": "en" },
+        { "@value": "color de texto", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#thursday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Thursday", "@language": "en" },
+        { "@value": "Servicio disponible los jueves", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Thursday", "@language": "en" },
+        { "@value": "jueves", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#timeZone",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "La zona horaria donde una persona u organizaciÃ³n estÃ¡ situada.",
+          "@language": "es"
+        },
+        {
+          "@value": "The timezone where a person or organisation is located.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time zone", "@language": "en" },
+        { "@value": "zona horaria", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://en.wikipedia.org/wiki/List_of_tz_database_time_zones" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://vocab.org/transit/terms/timezone" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "prueba", "@language": "es" },
+        { "@value": "testing", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#transferExpiryTime",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "El tiempo que el billete es vÃ¡lido desde que se abandona el vehÃ­culo para hacer un transbordo",
+          "@language": "es"
+        },
+        {
+          "@value": "The time a ticket remains valid when having left the previous vehicle",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tiempo de validez para el transbordo", "@language": "es" },
+        { "@value": "Transfer Expiry Time", "@language": "en" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#transferType",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Transfer" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Transfer Type", "@language": "en" },
+        { "@value": "tipo de transbordo", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#TransferType" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#transfers",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Map to 0 to gtfs:NoTransfersAllowed, 1 to gtfs:OneTransferAllowed, 2 to gtfs:TwoTransfersAllowed and empty to gtfs:UnlimitedTransfersAllowed",
+          "@language": "en"
+        },
+        {
+          "@value": "Valor 0 si no se permite ningÃºn transbordo (gtfs:NoTransfersAllowed), 1 si se puede realizar un transbordo (gtfs:OneTransferAllowed), 2 si se pueden realizar dos transbordos (gtfs:TwoTransfersAllowed) y deje el campo vacÃ­o si se permite una cantidad ilimitada de transbordos (gtfs:UnlimitedTransfersAllowed)",
+          "@language": "es"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The validity of the ticket when transferring", "@language": "en" },
+        { "@value": "Validez del ticket para transbordos", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#FareClass" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Transfers", "@language": "en" },
+        { "@value": "transbordos", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#TransfersAllowedType" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#trip",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indica que este concepto es parte de cierto gtfs:Trip",
+          "@language": "es"
+        },
+        { "@value": "Indicates that this is part of a certain gtfs:Trip", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Trip", "@language": "en" },
+        { "@value": "viaje", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Trip" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#tuesday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Tuesday", "@language": "en" },
+        { "@value": "Servicio disponible los martes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tuesday", "@language": "en" },
+        { "@value": "martes", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#usesExactTimes",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Determina si los viajes basados en frecuencias deben estar programados de manera exacta segÃºn la informaciÃ³n especificada de tiempo entre viajes. Falso cuando exact_times es 0 (o vacÃ­o), verdadero cuando es uno 1",
+          "@language": "es"
+        },
+        {
+          "@value": "This is false when exact_times for this row is 0 or empty, true when it is 1",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Frequency" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Frequency uses exact times", "@language": "en" },
+        {
+          "@value": "Viajes basados en frecuencias programados de manera exacta",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#wednesday",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Service is available on Wednesday", "@language": "en" },
+        { "@value": "Servicio disponible los miÃ©rcoles", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Wednesday", "@language": "en" },
+        { "@value": "miÃ©rcoles", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#wheelchairAccessible",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Si wheelchair_accessible es 0, mapee a gtfs:CheckParentStation; si es 1, mapee a gtfs:WheelchairAccessible; si es 2, mapee a gtfs:NotWheelchairAccessible.",
+          "@language": "es"
+        },
+        {
+          "@value": "When wheelchair_accessible is 0, map to gtfs:CheckParentStation; if 1 map to gtfs:WheelchairAccessible; if 2 map to gtfs:NotWheelchairAccessible.",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "La parada o estaciÃ³n especÃ­fica es accesible para silla de ruedas. Si esta parada es parte de una estaciÃ³n, hay tambiÃ©n una ruta accesible desde el exterior de la estaciÃ³n hasta la parada.",
+          "@language": "es"
+        },
+        {
+          "@value": "Wheelchair boardings are possible from the specified stop or station. If this stop is part of a station, there is also a wheelchair accessible path from outside the station towards the stop.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://vocab.gtfs.org/terms#Station" },
+        { "@id": "http://vocab.gtfs.org/terms#Stop" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "accesible para silla de ruedas", "@language": "es" },
+        { "@value": "wheelchair boarding", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#WheelchairBoardingStatus" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://vocab.gtfs.org/terms#zone",
+      "http://vocab.gtfs.org/terms#comment": [
+        {
+          "@value": "Puede crear una nueva URI por zona, o simplemente referenciarla con un nÃºmero entero.",
+          "@language": "es"
+        },
+        {
+          "@value": "You can create a new URI per zone, or just keep it an integer as per your own taste.",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A gtfs:Stop defines the fare zone. Zones are required if you want to provide fare information using gtfs:FareClass.",
+          "@language": "en"
+        },
+        {
+          "@value": "Un gtfs:Stop define la zona tarifaria. Las zonas son necesarias si quiere proporcionar informaciÃ³n de tarifas usando gtfs:FareClass.",
+          "@language": "es"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Zone", "@language": "en" },
+        { "@value": "zona", "@language": "es" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://vocab.gtfs.org/terms#Zone" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+        { "@value": "inestable", "@language": "es" },
+        { "@value": "unstable", "@language": "en" }
+      ]
+    }
+  ]
+}

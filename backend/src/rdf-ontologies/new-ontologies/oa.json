@@ -1,0 +1,1050 @@
+{
+  "@id": "http://www.w3.org/ns/oa#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Robert Sanderson" }]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Paolo Ciccarese" }]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Benjamin Young" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#",
+      "http://purl.org/dc/elements/1.1/title": [{ "@value": "Web Annotation Ontology" }],
+      "http://purl.org/dc/terms/creator": [
+        { "@id": "_:c14n0" },
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n2" }
+      ],
+      "http://purl.org/dc/terms/modified": [{ "@value": "2016-11-12T21:28:11Z" }],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The Web Annotation ontology defines the terms of the Web Annotation vocabulary. Any changes to this document MUST be from a Working Group in the W3C that has established expertise in the area."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/TR/annotation-vocab/" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "2016-11-12T21:28:11Z" }],
+      "http://www.w3.org/ns/prov#wasRevisionOf": [
+        { "@id": "http://www.openannotation.org/spec/core/20130208/oa.owl" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Annotation",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The class for Web Annotations." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Annotation" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Choice",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A subClass of  as:OrderedCollection  that conveys to a consuming application that it should select one of the resources in the  as:items  list to use, rather than all of them.  This is typically used to provide a choice of resources to render to the user, based on further supplied properties.  If the consuming application cannot determine the user's preference, then it should use the first in the list."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Choice" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/activitystreams#OrderedCollection" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#CssSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A CssSelector describes a Segment of interest in a representation that conforms to the Document Object Model through the use of the CSS selector specification."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "CssSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#CssStyle",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A resource which describes styles for resources participating in the Annotation using CSS."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "CssStyle" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Style" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#DataPositionSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "DataPositionSelector describes a range of data by recording the start and end positions of the selection in the stream. Position 0 would be immediately before the first byte, position 1 would be immediately before the second byte, and so on. The start byte is thus included in the list, but the end byte is not."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "DataPositionSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Direction",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A class to encapsulate the different text directions that a textual resource might take.  It is not used directly in the Annotation Model, only its three instances."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Direction" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#FragmentSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The FragmentSelector class is used to record the segment of a representation using the IRI fragment specification defined by the representation's media type."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "FragmentSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#HttpRequestState",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The HttpRequestState class is used to record the HTTP request headers that a client SHOULD use to request the correct representation from the resource. "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "HttpRequestState" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#State" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Motivation",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Motivation" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#PreferContainedDescriptions",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Resource"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An IRI to signal the client prefers to receive full descriptions of the Annotations from a container, not just their IRIs."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "PreferContainedDescriptions" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#PreferContainedIRIs",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Resource"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An IRI to signal that the client prefers to receive only the IRIs of the Annotations from a container, not their full descriptions."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "PreferContainedIRIs" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#RangeSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Range Selector can be used to identify the beginning and the end of the selection by using other Selectors. The selection consists of everything from the beginning of the starting selector through to the beginning of the ending selector, but not including it."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "RangeSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#ResourceSelection",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of the ResourceSelection class identify part (described by an oa:Selector) of another resource (referenced with oa:hasSource), possibly from a particular representation of a resource (described by an oa:State). Please note that ResourceSelection is not used directly in the Web Annotation model, but is provided as a separate class for further application profiles to use, separate from oa:SpecificResource which has many Annotation specific features."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ResourceSelection" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Selector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A resource which describes the segment of interest in a representation of a Source resource, indicated with oa:hasSelector from the Specific Resource. This class is not used directly in the Annotation model, only its subclasses."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Selector" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#SpecificResource",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instances of the SpecificResource class identify part of another resource (referenced with oa:hasSource), a particular representation of a resource, a resource with styling hints for renders, or any combination of these, as used within an Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "SpecificResource" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#ResourceSelection" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#State",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A State describes the intended state of a resource as applied to the particular Annotation, and thus provides the information needed to retrieve the correct representation of that resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "State" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#Style",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Style describes the intended styling of a resource as applied to the particular Annotation, and thus provides the information to ensure that rendering is consistent across implementations."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Style" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#SvgSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An SvgSelector defines an area through the use of the Scalable Vector Graphics [SVG] standard. This allows the user to select a non-rectangular area of the content, such as a circle or polygon by describing the region using SVG. The SVG may be either embedded within the Annotation or referenced as an External Resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "SvgSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#TextPositionSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The TextPositionSelector describes a range of text by recording the start and end positions of the selection in the stream. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "TextPositionSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#TextQuoteSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The TextQuoteSelector describes a range of text by copying it, and including some of the text immediately before (a prefix) and after (a suffix) it to distinguish between multiple copies of the same sequence of characters."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "TextQuoteSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#TextualBody",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "TextualBody" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#TimeState",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A TimeState records the time at which the resource's state is appropriate for the Annotation, typically the time that the Annotation was created and/or a link to a persistent copy of the current version."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "TimeState" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#State" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#XPathSelector",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": " An XPathSelector is used to select elements and content within a resource that supports the Document Object Model via a specified XPath value."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "XPathSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#annotationService",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the relationship is the end point of a service that conforms to the annotation-protocol, and it may be associated with any resource.  The expectation of asserting the relationship is that the object is the preferred service for maintaining annotations about the subject resource, according to the publisher of the relationship.\n\n  This relationship is intended to be used both within Linked Data descriptions and as the  rel  type of a Link, via HTTP Link Headers rfc5988 for binary resources and in HTML <link> elements.  For more information about these, please see the Annotation Protocol specification annotation-protocol.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "annotationService" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#assessing",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to provide an assessment about the Target resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "assessing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#bodyValue",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the predicate is a plain text string to be used as the content of the body of the Annotation.  The value MUST be an  xsd:string  and that data type MUST NOT be expressed in the serialization. Note that language MUST NOT be associated with the value either as a language tag, as that is only available for  rdf:langString .\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#Annotation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "bodyValue" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#bookmarking",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to create a bookmark to the Target or part thereof."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "bookmarking" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#cachedSource",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A object of the relationship is a copy of the Source resource's representation, appropriate for the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#TimeState" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "cachedSource" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#canonical",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A object of the relationship is the canonical IRI that can always be used to deduplicate the Annotation, regardless of the current IRI used to access the representation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "canonical" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#classifying",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to that classify the Target as something."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "classifying" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#commenting",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The motivation for when the user intends to comment about the Target." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "commenting" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#describing",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to describe the Target, as opposed to a comment about them."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "describing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#editing",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to request a change or edit to the Target resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "editing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#end",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The end property is used to convey the 0-based index of the end position of a range of content."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "end" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#exact",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the predicate is a copy of the text which is being selected, after normalization."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "exact" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasBody",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the relationship is a resource that is a body of the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#Annotation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasBody" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasEndSelector",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The relationship between a RangeSelector and the Selector that describes the end position of the range. "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#RangeSelector" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasEndSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasPurpose",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The purpose served by the resource in the Annotation." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasPurpose" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Motivation" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasScope",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The scope or context in which the resource is used within the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#SpecificResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasScope" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasSelector",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the relationship is a Selector that describes the segment or region of interest within the source resource.  Please note that the domain ( oa:ResourceSelection ) is not used directly in the Web Annotation model."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#ResourceSelection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasSource",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The resource that the ResourceSelection, or its subclass SpecificResource, is refined from, or more specific than. Please note that the domain ( oa:ResourceSelection ) is not used directly in the Web Annotation model."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#ResourceSelection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasSource" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasStartSelector",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The relationship between a RangeSelector and the Selector that describes the start position of the range. "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#RangeSelector" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasStartSelector" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Selector" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasState",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The relationship between the ResourceSelection, or its subclass SpecificResource, and a State resource. Please note that the domain ( oa:ResourceSelection ) is not used directly in the Web Annotation model."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#ResourceSelection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasState" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#State" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#hasTarget",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The relationship between an Annotation and its Target." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#Annotation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hasTarget" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#highlighting",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to highlight the Target resource or segment of it."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "highlighting" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#identifying",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "identifying" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#linking",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to link to a resource related to the Target."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "linking" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#ltrDirection",
+      "@type": ["http://www.w3.org/ns/oa#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The direction of text that is read from left to right." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ltrDirection" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#moderating",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to assign some value or quality to the Target."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "moderating" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#motivatedBy",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#Annotation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "motivatedBy" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Motivation" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#prefix",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the property is a snippet of content that occurs immediately before the content which is being selected by the Selector."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "prefix" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#processingLanguage",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The object of the property is the language that should be used for textual processing algorithms when dealing with the content of the resource, including hyphenation, line breaking, which font to use for rendering and so forth.  The value must follow the recommendations of BCP47."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "processingLanguage" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#questioning",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to ask a question about the Target."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "questioning" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#refinedBy",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The relationship between a Selector and another Selector or a State and a Selector or State that should be applied to the results of the first to refine the processing of the source resource. "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "refinedBy" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#renderedVia",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A system that was used by the application that created the Annotation to render the resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#SpecificResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "renderedVia" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#replying",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to reply to a previous statement, either an Annotation or another resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "replying" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#rtlDirection",
+      "@type": ["http://www.w3.org/ns/oa#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The direction of text that is read from right to left." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "rtlDirection" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#sourceDate",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The timestamp at which the Source resource should be interpreted as being applicable to the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#TimeState" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "sourceDate" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#sourceDateEnd",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The end timestamp of the interval over which the Source resource should be interpreted as being applicable to the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#TimeState" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "sourceDateEnd" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#sourceDateStart",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The start timestamp of the interval over which the Source resource should be interpreted as being applicable to the Annotation."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#TimeState" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "sourceDateStart" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#start",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The start position in a 0-based index at which a range of content is selected from the data in the source resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "start" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#styleClass",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The name of the class used in the CSS description referenced from the Annotation that should be applied to the Specific Resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#SpecificResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "styleClass" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#styledBy",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A reference to a Stylesheet that should be used to apply styles to the Annotation rendering."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/oa#Annotation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "styledBy" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Style" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#suffix",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The snippet of text that occurs immediately after the text which is being selected."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "suffix" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#tagging",
+      "@type": ["http://www.w3.org/ns/oa#Motivation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The motivation for when the user intends to associate a tag with the Target."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "tagging" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#textDirection",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The direction of the text of the subject resource. There MUST only be one text direction associated with any given resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "textDirection" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/oa#Direction" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/oa#via",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A object of the relationship is a resource from which the source resource was retrieved by the providing system."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/oa#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "via" }]
+    }
+  ]
+}

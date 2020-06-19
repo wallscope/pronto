@@ -1,0 +1,2904 @@
+{
+  "@id": "http://www.w3.org/2002/12/cal/icaltzd#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#trigger" }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#due" }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#summary" }
+      ]
+    },
+    {
+      "@id": "_:c14n100",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment" }
+      ]
+    },
+    {
+      "@id": "_:c14n101",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#contact" }
+      ]
+    },
+    {
+      "@id": "_:c14n102",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee" }
+      ]
+    },
+    {
+      "@id": "_:c14n103",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n104",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n105",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#percentComplete" }
+      ]
+    },
+    {
+      "@id": "_:c14n106",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzname" }
+      ]
+    },
+    {
+      "@id": "_:c14n107",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#contact" }
+      ]
+    },
+    {
+      "@id": "_:c14n108",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#repeat" }
+      ]
+    },
+    {
+      "@id": "_:c14n109",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n11",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n110",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzid" }
+      ]
+    },
+    {
+      "@id": "_:c14n111",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n112",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstamp" }
+      ]
+    },
+    {
+      "@id": "_:c14n113",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#resources" }
+      ]
+    },
+    {
+      "@id": "_:c14n114",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n115",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#organizer" }
+      ]
+    },
+    {
+      "@id": "_:c14n118",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#requestStatus" }
+      ]
+    },
+    {
+      "@id": "_:c14n119",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#transp" }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#organizer" }
+      ]
+    },
+    {
+      "@id": "_:c14n120",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzoffsetto" }
+      ]
+    },
+    {
+      "@id": "_:c14n121",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n122",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#relatedTo" }
+      ]
+    },
+    {
+      "@id": "_:c14n123",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#recurrenceId" }
+      ]
+    },
+    {
+      "@id": "_:c14n124",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n125",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n126",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n127",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#duration" }
+      ]
+    },
+    {
+      "@id": "_:c14n128",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#status" }
+      ]
+    },
+    {
+      "@id": "_:c14n129",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstart" }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n130",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee" }
+      ]
+    },
+    {
+      "@id": "_:c14n131",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#recurrenceId" }
+      ]
+    },
+    {
+      "@id": "_:c14n132",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n133",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n134",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#geo" }
+      ]
+    },
+    {
+      "@id": "_:c14n135",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#url" }
+      ]
+    },
+    {
+      "@id": "_:c14n136",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n137",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n138",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstamp" }
+      ]
+    },
+    {
+      "@id": "_:c14n139",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n14",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n140",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n141",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtend" }
+      ]
+    },
+    {
+      "@id": "_:c14n142",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#uid" }
+      ]
+    },
+    {
+      "@id": "_:c14n143",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attach" }
+      ]
+    },
+    {
+      "@id": "_:c14n144",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#summary" }
+      ]
+    },
+    {
+      "@id": "_:c14n145",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#priority" }
+      ]
+    },
+    {
+      "@id": "_:c14n146",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#sequence" }
+      ]
+    },
+    {
+      "@id": "_:c14n147",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#location" }
+      ]
+    },
+    {
+      "@id": "_:c14n148",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n149",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attach" }
+      ]
+    },
+    {
+      "@id": "_:c14n150",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstamp" }
+      ]
+    },
+    {
+      "@id": "_:c14n151",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#organizer" }
+      ]
+    },
+    {
+      "@id": "_:c14n152",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstart" }
+      ]
+    },
+    {
+      "@id": "_:c14n153",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n154",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n155",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n156",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n157",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#status" }
+      ]
+    },
+    {
+      "@id": "_:c14n16",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#organizer" }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attach" }
+      ]
+    },
+    {
+      "@id": "_:c14n18",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#summary" }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment" }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DURATION" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n22",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#duration" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#created" }
+      ]
+    },
+    {
+      "@id": "_:c14n26",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#location" }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#sequence" }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#created" }
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstart" }
+      ]
+    },
+    {
+      "@id": "_:c14n30",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n31",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#url" }
+      ]
+    },
+    {
+      "@id": "_:c14n32",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n33",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n34",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#relatedTo" }
+      ]
+    },
+    {
+      "@id": "_:c14n35",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#class" }
+      ]
+    },
+    {
+      "@id": "_:c14n36",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#trigger" }
+      ]
+    },
+    {
+      "@id": "_:c14n37",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n38",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstamp" }
+      ]
+    },
+    {
+      "@id": "_:c14n39",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#categories" }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#categories" }
+      ]
+    },
+    {
+      "@id": "_:c14n40",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment" }
+      ]
+    },
+    {
+      "@id": "_:c14n41",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee" }
+      ]
+    },
+    {
+      "@id": "_:c14n42",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#contact" }
+      ]
+    },
+    {
+      "@id": "_:c14n43",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#lastModified" }
+      ]
+    },
+    {
+      "@id": "_:c14n44",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#trigger" }
+      ]
+    },
+    {
+      "@id": "_:c14n45",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#freebusy" }
+      ]
+    },
+    {
+      "@id": "_:c14n46",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#sequence" }
+      ]
+    },
+    {
+      "@id": "_:c14n47",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n48",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#requestStatus" }
+      ]
+    },
+    {
+      "@id": "_:c14n49",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#url" }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#created" }
+      ]
+    },
+    {
+      "@id": "_:c14n50",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#uid" }
+      ]
+    },
+    {
+      "@id": "_:c14n51",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n52",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n53",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#relatedTo" }
+      ]
+    },
+    {
+      "@id": "_:c14n54",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#duration" }
+      ]
+    },
+    {
+      "@id": "_:c14n55",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#url" }
+      ]
+    },
+    {
+      "@id": "_:c14n56",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n57",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n58",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#completed" }
+      ]
+    },
+    {
+      "@id": "_:c14n59",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#requestStatus" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n60",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attach" }
+      ]
+    },
+    {
+      "@id": "_:c14n61",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#recurrenceId" }
+      ]
+    },
+    {
+      "@id": "_:c14n62",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n63",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n64",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstart" }
+      ]
+    },
+    {
+      "@id": "_:c14n65",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#duration" }
+      ]
+    },
+    {
+      "@id": "_:c14n66",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee" }
+      ]
+    },
+    {
+      "@id": "_:c14n67",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzoffsetfrom" }
+      ]
+    },
+    {
+      "@id": "_:c14n68",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#geo" }
+      ]
+    },
+    {
+      "@id": "_:c14n69",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#lastModified" }
+      ]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#status" }
+      ]
+    },
+    {
+      "@id": "_:c14n70",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#class" }
+      ]
+    },
+    {
+      "@id": "_:c14n71",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee" }
+      ]
+    },
+    {
+      "@id": "_:c14n72",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n73",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n74",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n75",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n76",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#requestStatus" }
+      ]
+    },
+    {
+      "@id": "_:c14n77",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n78",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#summary" }
+      ]
+    },
+    {
+      "@id": "_:c14n79",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n8",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#class" }
+      ]
+    },
+    {
+      "@id": "_:c14n80",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n81",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment" }
+      ]
+    },
+    {
+      "@id": "_:c14n82",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzurl" }
+      ]
+    },
+    {
+      "@id": "_:c14n83",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#uid" }
+      ]
+    },
+    {
+      "@id": "_:c14n84",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#priority" }
+      ]
+    },
+    {
+      "@id": "_:c14n85",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n86",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n87",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#categories" }
+      ]
+    },
+    {
+      "@id": "_:c14n88",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#exrule" }
+      ]
+    },
+    {
+      "@id": "_:c14n89",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment" }
+      ]
+    },
+    {
+      "@id": "_:c14n9",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#resources" }
+      ]
+    },
+    {
+      "@id": "_:c14n90",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#lastModified" }
+      ]
+    },
+    {
+      "@id": "_:c14n91",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#contact" }
+      ]
+    },
+    {
+      "@id": "_:c14n92",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtend" }
+      ]
+    },
+    {
+      "@id": "_:c14n93",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" },
+            { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n94",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#recurrenceId" }
+      ]
+    },
+    {
+      "@id": "_:c14n95",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#lastModified" }
+      ]
+    },
+    {
+      "@id": "_:c14n96",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#uid" }
+      ]
+    },
+    {
+      "@id": "_:c14n98",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#rdate" }
+      ]
+    },
+    {
+      "@id": "_:c14n99",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#action" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/source",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.ietf.org/rfc/rfc2445.txt",
+      "@type": ["http://www.w3.org/2002/07/owl#Thing"]
+    },
+    {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icalSpec#valueListType",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icalSpec#valueType",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd",
+      "http://purl.org/dc/elements/1.1/source": [
+        { "@id": "http://www.ietf.org/rfc/rfc2445.txt" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Thing"],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://esw.w3.org/topic/RdfCalendar" },
+        { "@id": "http://lists.w3.org/Archives/Public/www-rdf-calendar/" },
+        { "@id": "http://www.w3.org/2002/12/cal/" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "$Id: icaltzd.rdf,v 1.6 2007/06/28 18:22:09 connolly Exp $" },
+        { "@value": "subject to change with notice to www-rdf-calendar@w3.org" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#DomainOf_rrule",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#List_of_Float",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Provide a grouping of component properties that define an alarm." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n10" },
+        { "@id": "_:c14n104" },
+        { "@id": "_:c14n108" },
+        { "@id": "_:c14n143" },
+        { "@id": "_:c14n23" },
+        { "@id": "_:c14n41" },
+        { "@id": "_:c14n44" },
+        { "@id": "_:c14n99" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_CAL-ADDRESS",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE-TIME",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DURATION",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_PERIOD",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_RECUR",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vcalendar",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "VCALENDAR" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Provide a grouping of component properties that describe an event." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Event" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n0" },
+        { "@id": "_:c14n107" },
+        { "@id": "_:c14n113" },
+        { "@id": "_:c14n115" },
+        { "@id": "_:c14n119" },
+        { "@id": "_:c14n123" },
+        { "@id": "_:c14n129" },
+        { "@id": "_:c14n13" },
+        { "@id": "_:c14n130" },
+        { "@id": "_:c14n133" },
+        { "@id": "_:c14n134" },
+        { "@id": "_:c14n135" },
+        { "@id": "_:c14n142" },
+        { "@id": "_:c14n147" },
+        { "@id": "_:c14n149" },
+        { "@id": "_:c14n15" },
+        { "@id": "_:c14n150" },
+        { "@id": "_:c14n157" },
+        { "@id": "_:c14n24" },
+        { "@id": "_:c14n34" },
+        { "@id": "_:c14n46" },
+        { "@id": "_:c14n48" },
+        { "@id": "_:c14n65" },
+        { "@id": "_:c14n69" },
+        { "@id": "_:c14n70" },
+        { "@id": "_:c14n75" },
+        { "@id": "_:c14n78" },
+        { "@id": "_:c14n84" },
+        { "@id": "_:c14n87" },
+        { "@id": "_:c14n89" },
+        { "@id": "_:c14n92" },
+        { "@id": "_:c14n98" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vfreebusy",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Provide a grouping of component properties that describe either a request for free/busy time, describe a response to a request for free/busy time or describe a published set of busy time."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n118" },
+        { "@id": "_:c14n12" },
+        { "@id": "_:c14n141" },
+        { "@id": "_:c14n19" },
+        { "@id": "_:c14n38" },
+        { "@id": "_:c14n42" },
+        { "@id": "_:c14n45" },
+        { "@id": "_:c14n49" },
+        { "@id": "_:c14n54" },
+        { "@id": "_:c14n64" },
+        { "@id": "_:c14n66" },
+        { "@id": "_:c14n83" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vjournal",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Provide a grouping of component properties that describe a journal entry."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n101" },
+        { "@id": "_:c14n103" },
+        { "@id": "_:c14n11" },
+        { "@id": "_:c14n112" },
+        { "@id": "_:c14n122" },
+        { "@id": "_:c14n144" },
+        { "@id": "_:c14n146" },
+        { "@id": "_:c14n151" },
+        { "@id": "_:c14n17" },
+        { "@id": "_:c14n20" },
+        { "@id": "_:c14n29" },
+        { "@id": "_:c14n35" },
+        { "@id": "_:c14n39" },
+        { "@id": "_:c14n50" },
+        { "@id": "_:c14n55" },
+        { "@id": "_:c14n57" },
+        { "@id": "_:c14n59" },
+        { "@id": "_:c14n61" },
+        { "@id": "_:c14n7" },
+        { "@id": "_:c14n71" },
+        { "@id": "_:c14n81" },
+        { "@id": "_:c14n88" },
+        { "@id": "_:c14n90" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Provide a grouping of component properties that defines a time zone." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n100" },
+        { "@id": "_:c14n106" },
+        { "@id": "_:c14n109" },
+        { "@id": "_:c14n110" },
+        { "@id": "_:c14n120" },
+        { "@id": "_:c14n152" },
+        { "@id": "_:c14n22" },
+        { "@id": "_:c14n37" },
+        { "@id": "_:c14n43" },
+        { "@id": "_:c14n67" },
+        { "@id": "_:c14n82" },
+        { "@id": "_:c14n94" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Provide a grouping of calendar properties that describe a to-do." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "To-do" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n102" },
+        { "@id": "_:c14n105" },
+        { "@id": "_:c14n127" },
+        { "@id": "_:c14n128" },
+        { "@id": "_:c14n131" },
+        { "@id": "_:c14n136" },
+        { "@id": "_:c14n138" },
+        { "@id": "_:c14n145" },
+        { "@id": "_:c14n148" },
+        { "@id": "_:c14n156" },
+        { "@id": "_:c14n16" },
+        { "@id": "_:c14n18" },
+        { "@id": "_:c14n26" },
+        { "@id": "_:c14n28" },
+        { "@id": "_:c14n3" },
+        { "@id": "_:c14n31" },
+        { "@id": "_:c14n36" },
+        { "@id": "_:c14n4" },
+        { "@id": "_:c14n40" },
+        { "@id": "_:c14n5" },
+        { "@id": "_:c14n53" },
+        { "@id": "_:c14n56" },
+        { "@id": "_:c14n58" },
+        { "@id": "_:c14n60" },
+        { "@id": "_:c14n68" },
+        { "@id": "_:c14n76" },
+        { "@id": "_:c14n8" },
+        { "@id": "_:c14n85" },
+        { "@id": "_:c14n9" },
+        { "@id": "_:c14n91" },
+        { "@id": "_:c14n95" },
+        { "@id": "_:c14n96" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#X-",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This class of property provides a framework for defining non-standard properties."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#action",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the action to be invoked when an alarm is triggered."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n14" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#altrep",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "To specify an alternate text representation for the property value." }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#attach",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property provides the capability to associate a document object with a calendar component."
+        },
+        { "@value": "\n\t    default value type: URI" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n30" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "URI" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#attendee",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property defines an \"Attendee\" within a calendar component." },
+        { "@value": "\n\t    value type: CAL-ADDRESS" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n139" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "attendee" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_CAL-ADDRESS" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "CAL-ADDRESS" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#byday",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYDAY" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#byhour",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYHOUR" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#byminute",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYMINUTE" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#bymonth",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYMONTH" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#bysecond",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYSECOND" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#bysetpos",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYSETPOS" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#byweekno",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYWEEKNO" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#byyearday",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BYYEARDAY" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#calAddress",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#calscale",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the calendar scale used for the calendar information specified in the iCalendar object."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#categories",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "This property defines the categories for a calendar component." },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n32" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#class",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the access classification for a calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n126" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#cn",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the common name to be associated with the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#comment",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies non-processing information intended to provide a comment to the calendar user."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n154" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#completed",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the date and time that a to-do was actually completed."
+        },
+        { "@value": "\n\t    value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE-TIME" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#component",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#contact",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property is used to represent contact information or alternately a reference to contact information associated with the calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n121" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#count",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "COUNT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#created",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system."
+        },
+        { "@value": "\n\t    value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n153" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE-TIME" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#cutype",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "To specify the type of calendar user specified by the property." }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#dateTime",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#daylight",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "DAYLIGHT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#delegatedFrom",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the calendar users that have delegated their participation to the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#delegatedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the calendar users to whom the calendar user specified by the property has delegated participation."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#description",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property provides a more complete description of the calendar component, than that provided by the \"SUMMARY\" property."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n140" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#dir",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify reference to a directory entry associated with the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtend",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the date and time that a calendar component ends."
+        },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n155" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "end" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property indicates the date/time that the instance of the iCalendar object was created."
+        },
+        { "@value": "\n\t    value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n111" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE-TIME" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#dtstart",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "This property specifies when the calendar component begins." },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n125" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "start" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#due",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the date and time that a to-do is expected to be completed."
+        },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#duration",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property specifies a positive duration of time." },
+        { "@value": "\n\t    value type: DURATION" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n77" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DURATION" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DURATION" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#encoding",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "To specify an alternate inline encoding for the property value." }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#exdate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the list of date/time exceptions for a recurring calendar component."
+        },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#DomainOf_rrule" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#exrule",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines a rule or repeating pattern for an exception to a recurrence set."
+        },
+        { "@value": "\n\t    value type: RECUR" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n137" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_RECUR" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "RECUR" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#fbtype",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "To specify the free or busy time type." }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#fmttype",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "To specify the content type of a referenced object." }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#freebusy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property defines one or more free or busy time intervals." },
+        { "@value": "\n\t    value type: PERIOD" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n80" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_PERIOD" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "PERIOD" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#freq",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "FREQ" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#geo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies information related to the global position for the activity specified by a calendar component."
+        },
+        { "@value": "\n\t    value type: list of FLOAT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n79" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#List_of_Float" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueListType": [{ "@value": "FLOAT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#interval",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "INTERVAL" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#language",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the language for text values in a property or property parameter."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#lastModified",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system."
+        },
+        { "@value": "\n\t    value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n6" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_DATE-TIME" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#location",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property defines the intended venue for the activity defined by a calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n114" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "location" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#member",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the group or list membership of the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#method",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the iCalendar object method associated with the calendar object."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#organizer",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property defines the organizer for a calendar component." },
+        { "@value": "\n\t    value type: CAL-ADDRESS" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n21" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_CAL-ADDRESS" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "CAL-ADDRESS" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#partstat",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the participation status for the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#percentComplete",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer."
+        },
+        { "@value": "\n\t    value type: INTEGER" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtodo" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "INTEGER" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#priority",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property defines the relative priority for a calendar component." },
+        { "@value": "\n\t    value type: INTEGER" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n93" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "INTEGER" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#prodid",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the identifier for the product that created the iCalendar object."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#range",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the effective range of recurrence instances from the instance specified by the recurrence identifier specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#rdate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "This property defines the list of date/times for a recurrence set." },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n62" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#recurrenceId",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property is used in conjunction with the \"UID\" and \"SEQUENCE\" property to identify a specific instance of a recurring \"VEVENT\", \"VTODO\" or \"VJOURNAL\" calendar component. The property value is the effective value of the \"DTSTART\" property of the recurrence instance."
+        },
+        { "@value": "\n\t    default value type: DATE-TIME" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#DomainOf_rrule" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DATE-TIME" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#related",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the relationship of the alarm trigger with respect to the start or end of the calendar component."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#relatedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property is used to represent a relationship or reference between one calendar component and another."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n72" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#reltype",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the type of hierarchical relationship associated with the calendar component specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#repeat",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the number of time the alarm should be repeated, after the initial trigger."
+        },
+        { "@value": "\n\t    value type: INTEGER" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Valarm" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "INTEGER" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#requestStatus",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the status code returned for a scheduling request."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n73" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#resources",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the equipment or resources anticipated for an activity specified by a calendar entity.."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n124" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#role",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the participation role for the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#rrule",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions."
+        },
+        { "@value": "\n\t    value type: RECUR" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n86" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Value_RECUR" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "RECUR" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#rsvp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify whether there is an expectation of a favor of a reply from the calendar user specified by the property value."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#sentBy",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "To specify the calendar user that is acting on behalf of the calendar user specified by the property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#sequence",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the revision sequence number of the calendar component within a sequence of revisions."
+        },
+        { "@value": "\n\t    value type: integer" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n63" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "integer" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#standard",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "STANDARD" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#status",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the overall status or confirmation for the calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n47" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#summary",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines a short summary or subject for the calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n51" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "summary" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#label" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#transp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines whether an event is transparent or not to busy time searches."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vevent" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#trigger",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "This property specifies when an alarm will trigger." },
+        { "@value": "\n\t    default value type: DURATION" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n74" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n2" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "DURATION" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzid",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the text value that uniquely identifies the \"VTIMEZONE\" calendar component."
+        },
+        {
+          "@value": "To specify the identifier for the time zone definition for a time component in the property value."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzname",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the customary designation for a time zone description."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzoffsetfrom",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the offset which is in use prior to this time zone observance."
+        },
+        { "@value": "\n\t    value type: UTC-OFFSET" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n132" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "UTC-OFFSET" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzoffsetto",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the offset which is in use in this time zone observance."
+        },
+        { "@value": "\n\t    value type: UTC-OFFSET" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2002/12/cal/icaltzd#Vtimezone" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "UTC-OFFSET" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#tzurl",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself."
+        },
+        { "@value": "\n\t    value type: URI" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n33" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "URI" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#uid",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines the persistent, globally unique identifier for the calendar component."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n52" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#until",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "UNTIL" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#url",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property defines a Uniform Resource Locator (URL) associated with the iCalendar object."
+        },
+        { "@value": "\n\t    value type: URI" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n27" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "see also" }],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "URI" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#version",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property specifies the identifier corresponding to the highest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object."
+        },
+        { "@value": "\n\t    value type: TEXT" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/12/cal/icalSpec#valueType": [{ "@value": "TEXT" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/12/cal/icaltzd#wkst",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "WKST" }]
+    }
+  ]
+}

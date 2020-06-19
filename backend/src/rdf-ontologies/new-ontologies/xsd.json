@@ -1,0 +1,642 @@
+{
+  "@id": "http://www.w3.org/2001/XMLSchema#",
+  "@graph": [
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#ENTITIES",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    ENTITIES represents the ENTITIES attribute type from [XML]. The Â·value\n    spaceÂ· of ENTITIES is the set of finite, non-zero-length sequences of\n    Â·ENTITYÂ· values that have been declared as unparsed entities in a document\n    type definition. The Â·lexical spaceÂ· of ENTITIES is the set of\n    space-separated lists of tokens, of which each token is in the Â·lexical\n    spaceÂ· of ENTITY. The Â·item typeÂ· of ENTITIES is ENTITY. ENTITIES is\n    derived from Â·anySimpleTypeÂ· in two steps: an anonymous list type is\n    defined, whose Â·item typeÂ· is ENTITY; this is the Â·base typeÂ· of ENTITIES,\n    which restricts its value space to lists with at least one item.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ENTITIES" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anySimpleType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#ENTITY",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     ENTITY represents the ENTITY attribute type from [XML]. The Â·value spaceÂ·\n     of ENTITY is the set of all strings that Â·matchÂ· the NCName production in\n     [Namespaces in XML] and have been declared as an unparsed entity in a\n     document type definition. The Â·lexical spaceÂ· of ENTITY is the set of all\n     strings that Â·matchÂ· the NCName production in [Namespaces in XML]. The\n     Â·base typeÂ· of ENTITY is NCName.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ENTITY" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#NCName" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#ID",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     ID represents the ID attribute type from [XML]. The Â·value spaceÂ· of ID is\n     the set of all strings that Â·matchÂ· the NCName production in [Namespaces\n     in XML]. The Â·lexical spaceÂ· of ID is the set of all strings that Â·matchÂ·\n     the NCName production in [Namespaces in XML]. The Â·base typeÂ· of ID is\n     NCName.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ID" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#NCName" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#IDREF",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    IDREF represents the IDREF attribute type from [XML]. The Â·value spaceÂ· of\n    IDREF is the set of all strings that Â·matchÂ· the NCName production in\n    [Namespaces in XML]. The Â·lexical spaceÂ· of IDREF is the set of strings\n    that Â·matchÂ· the NCName production in [Namespaces in XML]. The Â·base typeÂ·\n    of IDREF is NCName.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "IDREF" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#NCName" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#IDREFS",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    IDREFS represents the IDREFS attribute type from [XML]. The Â·value spaceÂ·\n    of IDREFS is the set of finite, non-zero-length sequences of IDREFs. The\n    Â·lexical spaceÂ· of IDREFS is the set of space-separated lists of tokens, of\n    which each token is in the Â·lexical spaceÂ· of IDREF. The Â·item typeÂ· of\n    IDREFS is IDREF. IDREFS is derived from Â·anySimpleTypeÂ· in two steps: an\n    anonymous list type is defined, whose Â·item typeÂ· is IDREF; this is the\n    Â·base typeÂ· of IDREFS, which restricts its value space to lists with at\n    least one item.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "IDREFS" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anySimpleType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#NCName",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     NCName represents XML \"non-colonized\" Names. The Â·value spaceÂ· of NCName\n     is the set of all strings which Â·matchÂ· the NCName production of\n     [Namespaces in XML]. The Â·lexical spaceÂ· of NCName is the set of all\n     strings which Â·matchÂ· the NCName production of [Namespaces in XML]. The\n     Â·base typeÂ· of NCName is Name.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "NCName" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#Name" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#NMTOKEN",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     NMTOKEN represents the NMTOKEN attribute type from [XML]. The Â·value\n     spaceÂ· of NMTOKEN is the set of tokens that Â·matchÂ· the Nmtoken production\n     in [XML]. The Â·lexical spaceÂ· of NMTOKEN is the set of strings that\n     Â·matchÂ· the Nmtoken production in [XML]. The Â·base typeÂ· of NMTOKEN is\n     token.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "NMTOKEN" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#token" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#NMTOKENS",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    NMTOKENS represents the NMTOKENS attribute type from [XML]. The Â·value\n    spaceÂ· of NMTOKENS is the set of finite, non-zero-length sequences of\n    Â·NMTOKENÂ·s. The Â·lexical spaceÂ· of NMTOKENS is the set of space-separated\n    lists of tokens, of which each token is in the Â·lexical spaceÂ· of NMTOKEN.\n    The Â·item typeÂ· of NMTOKENS is NMTOKEN. NMTOKENS is derived from\n    Â·anySimpleTypeÂ· in two steps: an anonymous list type is defined, whose\n    Â·item typeÂ· is NMTOKEN; this is the Â·base typeÂ· of NMTOKENS, which\n    restricts its value space to lists with at least one item.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "NMTOKENS" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anySimpleType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#NOTATION",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    NOTATION represents the NOTATION attribute type from [XML]. The Â·value\n    spaceÂ· of NOTATION is the set of QNames of notations declared in the\n    current schema. The Â·lexical spaceÂ· of NOTATION is the set of all names of\n    notations declared in the current schema (in the form of QNames).\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "NOTATION" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#Name",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    Name represents XML Names. The Â·value spaceÂ· of Name is the set of all\n    strings which Â·matchÂ· the Name production of [XML]. The Â·lexical spaceÂ· of\n    Name is the set of all strings which Â·matchÂ· the Name production of [XML].\n    The Â·base typeÂ· of Name is token.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Name" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#token" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#QName",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    QName represents XML qualified names. The Â·value spaceÂ· of QName is the set\n    of tuples {namespace name, local part}, where namespace name is an anyURI\n    and local part is an NCName. The Â·lexical spaceÂ· of QName is the set of\n    strings that Â·matchÂ· the QName production of [Namespaces in XML].\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "QName" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    anyAtomicType is a special Â·restrictionÂ· of anySimpleType. The Â·valueÂ· and\n    Â·lexical spacesÂ· of anyAtomicType are the unions of the Â·valueÂ· and\n    Â·lexical spacesÂ· of all the Â·primitiveÂ· datatypes, and anyAtomicType is\n    their Â·base typeÂ·.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "anySimpleType" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#anySimpleType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    The definition of anySimpleType is a special Â·restrictionÂ· of anyType. The\n    Â·lexical spaceÂ· of anySimpleType is the set of all sequences of Unicode\n    characters, and its Â·value spaceÂ· includes all Â·atomic valuesÂ· and all\n    finite-length lists of zero or more Â·atomic valuesÂ·.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "anySimpleType" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyType",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n    The root of the [XML Schema 1.1] datatype heirarchy.\n  " }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "anyType" }]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    anyURI represents an Internationalized Resource Identifier Reference\n    (IRI). An anyURI value can be absolute or relative, and may have an\n    optional fragment identifier (i.e., it may be an IRI Reference). This\n    type should be used when the value fulfills the role of an IRI, as\n    defined in [RFC 3987] or its successor(s) in the IETF Standards Track.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "anyURI" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#base64Binary",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    base64Binary represents arbitrary Base64-encoded binary data. For\n    base64Binary data the entire binary stream is encoded using the Base64\n    Encoding defined in [RFC 3548], which is derived from the encoding\n    described in [RFC 2045].\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "base64Binary" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n    boolean represents the values of two-valued logic.\n  " }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "boolean" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#byte",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    byte is Â·derivedÂ· from short by setting the value of Â·maxInclusiveÂ· to be\n    127 and Â·minInclusiveÂ· to be -128. The Â·base typeÂ· of byte is short.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "byte" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#short" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#date",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    date represents top-open intervals of exactly one day in length on the\n    timelines of dateTime, beginning on the beginning moment of each day, up to\n    but not including the beginning moment of the next day). For non-timezoned\n    values, the top-open intervals disjointly cover the non-timezoned timeline,\n    one per day. For timezoned values, the intervals begin at every minute and\n    therefore overlap.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "date" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    dateTime represents instants of time, optionally marked with a particular\n    time zone offset. Values representing the same instant but having different\n    time zone offsets are equal but not identical.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "dateTime" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    The dateTimeStamp datatype is Â·derivedÂ· from dateTime by giving the value\n    required to its explicitTimezone facet. The result is that all values of\n    dateTimeStamp are required to have explicit time zone offsets and the\n    datatype is totally ordered.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "dateTimeStamp" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#dayTimeDuration",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     dayTimeDuration is a datatype Â·derivedÂ· from duration by restricting its\n     Â·lexical representationsÂ· to instances of dayTimeDurationLexicalRep. The\n     Â·value spaceÂ· of dayTimeDuration is therefore that of duration restricted\n     to those whose Â·monthsÂ· property is 0. This results in a duration datatype\n     which is totally ordered.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "dayTimeDuration" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#duration" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    decimal represents a subset of the real numbers, which can be represented\n    by decimal numerals. The Â·value spaceÂ· of decimal is the set of numbers\n    that can be obtained by dividing an integer by a non-negative power of ten,\n    i.e., expressible as i / 10n where i and n are integers and n â¥ 0.\n    Precision is not reflected in this value space; the number 2.0 is not\n    distinct from the number 2.00. The order relation on decimal is the order\n    relation on real numbers, restricted to this subset.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "decimal" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    The double datatype is patterned after the IEEE double-precision 64-bit\n    floating point datatype [IEEE 754-2008]. Each floating point datatype has a\n    value space that is a subset of the rational numbers. Floating point\n    numbers are often used to approximate arbitrary real numbers.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "double" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#duration",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    duration is a datatype that represents durations of time. The concept of\n    duration being captured is drawn from those of [ISO 8601], specifically\n    durations without fixed endpoints. For example, \"15 days\" (whose most\n    common lexical representation in duration is \"'P15D'\") is a duration value;\n    \"15 days beginning 12 July 1995\" and \"15 days ending 12 July 1995\" are not\n    duration values. duration can provide addition and subtraction operations\n    between duration values and between duration/dateTime value pairs, and can\n    be the result of subtracting dateTime values. However, only addition to\n    dateTime is required for XML Schema processing and is defined in the\n    function Â·dateTimePlusDurationÂ·.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "duration" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    The float datatype is patterned after the IEEE single-precision 32-bit\n    floating point datatype [IEEE 754-2008]. Its value space is a subset of the\n    rational numbers. Floating point numbers are often used to approximate\n    arbitrary real numbers.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "float" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#gDay",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    gDay represents whole days within an arbitrary monthâdays that recur at the\n    same point in each (Gregorian) month. This datatype is used to represent a\n    specific day of the month. To indicate, for example, that an employee gets\n    a paycheck on the 15th of each month. (Obviously, days beyond 28 cannot\n    occur in all months; they are nonetheless permitted, up to 31.)\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "gDay" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#gMonth",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    gMonth represents whole (Gregorian) months within an arbitrary yearâmonths\n    that recur at the same point in each year. It might be used, for example,\n    to say what month annual Thanksgiving celebrations fall in different\n    countries (--11 in the United States, --10 in Canada, and possibly other\n    months in other countries).\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "gMonth" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#gMonthDay",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    gMonthDay represents whole calendar days that recur at the same point in\n    each calendar year, or that occur in some arbitrary calendar year.\n    (Obviously, days beyond 28 cannot occur in all Februaries; 29 is\n    nonetheless permitted.)\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "gMonthDay" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#gYear",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n    gYear represents Gregorian calendar years.\n  " }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "gYear" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#gYearMonth",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    gYearMonth represents specific whole Gregorian months in specific Gregorian years.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "gYearMonth" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#hexBinary",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n    hexBinary represents arbitrary hex-encoded binary data. \n  " }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hexBinary" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#int",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      int is Â·derivedÂ· from long by setting the value of Â·maxInclusiveÂ· to be\n      2147483647 and Â·minInclusiveÂ· to be -2147483648. The Â·base typeÂ· of int\n      is long.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "int" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#long" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     integer is Â·derivedÂ· from decimal by fixing the value of Â·fractionDigitsÂ·\n     to be 0 and disallowing the trailing decimal point. This results in the\n     standard mathematical concept of the integer numbers. The Â·value spaceÂ· of\n     integer is the infinite set {...,-2,-1,0,1,2,...}. The Â·base typeÂ· of\n     integer is decimal.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "integer" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#language",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    language represents formal natural language identifiers, as defined by [BCP\n    47] (currently represented by [RFC 4646] and [RFC 4647]) or its\n    successor(s). The Â·value spaceÂ· and Â·lexical spaceÂ· of language are the set\n    of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "language" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#token" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#long",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     long is Â·derivedÂ· from integer by setting the value of Â·maxInclusiveÂ· to\n     be 9223372036854775807 and Â·minInclusiveÂ· to be -9223372036854775808. The\n     Â·base typeÂ· of long is integer.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "long" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#negativeInteger",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     negativeInteger is Â·derivedÂ· from nonPositiveInteger by setting the value\n     of Â·maxInclusiveÂ· to be -1. This results in the standard mathematical\n     concept of the negative integers. The Â·value spaceÂ· of negativeInteger is\n     the infinite set {...,-2,-1}. The Â·base typeÂ· of negativeInteger is\n     nonPositiveInteger.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "negativeInteger" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonPositiveInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     nonNegativeInteger is Â·derivedÂ· from integer by setting the value of\n     Â·minInclusiveÂ· to be 0. This results in the standard mathematical concept\n     of the non-negative integers. The Â·value spaceÂ· of nonNegativeInteger is\n     the infinite set {0,1,2,...}. The Â·base typeÂ· of nonNegativeInteger is\n     integer.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "nonNegativeInteger" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#nonPositiveInteger",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    nonPositiveInteger is Â·derivedÂ· from integer by setting the value of\n    Â·maxInclusiveÂ· to be 0. This results in the standard mathematical concept\n    of the non-positive integers. The Â·value spaceÂ· of nonPositiveInteger is\n    the infinite set {...,-2,-1,0}. The Â·base typeÂ· of nonPositiveInteger is\n    integer.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "nonPositiveInteger" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#normalizedString",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    normalizedString represents white space normalized strings. The Â·value\n    spaceÂ· of normalizedString is the set of strings that do not contain the\n    carriage return (#xD), line feed (#xA) nor tab (#x9) characters. The\n    Â·lexical spaceÂ· of normalizedString is the set of strings that do not\n    contain the carriage return (#xD), line feed (#xA) nor tab (#x9)\n    characters. The Â·base typeÂ· of normalizedString is string.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "normalizedString" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     positiveInteger is Â·derivedÂ· from nonNegativeInteger by setting the value\n     of Â·minInclusiveÂ· to be 1. This results in the standard mathematical\n     concept of the positive integer numbers. The Â·value spaceÂ· of\n     positiveInteger is the infinite set {1,2,...}. The Â·base typeÂ· of\n     positiveInteger is nonNegativeInteger.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "positiveInteger" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#short",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    short is Â·derivedÂ· from int by setting the value of Â·maxInclusiveÂ· to be\n    32767 and Â·minInclusiveÂ· to be -32768. The Â·base typeÂ· of short is int.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "short" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#int" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n    The string datatype represents character strings in XML.\n  " }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "string" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#time",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    time represents instants of time that recur at the same point in each\n    calendar day, or that occur in some arbitrary calendar day.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "time" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyAtomicType" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#token",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     token represents tokenized strings. The Â·value spaceÂ· of token is the set\n     of strings that do not contain the carriage return (#xD), line feed (#xA)\n     nor tab (#x9) characters, that have no leading or trailing spaces (#x20)\n     and that have no internal sequences of two or more spaces. The Â·lexical\n     spaceÂ· of token is the set of strings that do not contain the carriage\n     return (#xD), line feed (#xA) nor tab (#x9) characters, that have no\n     leading or trailing spaces (#x20) and that have no internal sequences of\n     two or more spaces. The Â·base typeÂ· of token is normalizedString.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "token" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#normalizedString" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#unsignedByte",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      nsignedByte is Â·derivedÂ· from unsignedShort by setting the value of\n      Â·maxInclusiveÂ· to be 255. The Â·base typeÂ· of unsignedByte is\n      unsignedShort.\n    "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "unsignedByte" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#unsignedShort" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#unsignedInt",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n    unsignedInt is Â·derivedÂ· from unsignedLong by setting the value of\n    Â·maxInclusiveÂ· to be 4294967295. The Â·base typeÂ· of unsignedInt is\n    unsignedLong.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "unsignedInt" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#unsignedLong" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#unsignedLong",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     unsignedLong is Â·derivedÂ· from nonNegativeInteger by setting the value of\n     Â·maxInclusiveÂ· to be 18446744073709551615. The Â·base typeÂ· of unsignedLong\n     is nonNegativeInteger.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "unsignedLong" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#unsignedShort",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n       unsignedShort is Â·derivedÂ· from unsignedInt by setting the value of\n       Â·maxInclusiveÂ· to be 65535. The Â·base typeÂ· of unsignedShort is\n       unsignedInt.\n    "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "unsignedShort" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#unsignedInt" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#yearMonthDuration",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n     yearMonthDuration is a datatype Â·derivedÂ· from duration by restricting its\n     Â·lexical representationsÂ· to instances of yearMonthDurationLexicalRep. The\n     Â·value spaceÂ· of yearMonthDuration is therefore that of duration\n     restricted to those whose Â·secondsÂ· property is 0. This results in a\n     duration datatype which is totally ordered.\n  "
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "yearMonthDuration" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#duration" }
+      ]
+    }
+  ]
+}

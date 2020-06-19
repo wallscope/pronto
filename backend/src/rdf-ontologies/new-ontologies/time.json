@@ -1,0 +1,3190 @@
+{
+  "@id": "http://www.w3.org/2006/time#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" },
+            { "@id": "http://www.w3.org/2006/time#Duration" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#months" }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#month" }
+      ]
+    },
+    {
+      "@id": "_:c14n11",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#second" }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "http://www.w3.org/2001/XMLSchema#pattern": [
+        {
+          "@value": "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#timeZone" }
+      ]
+    },
+    {
+      "@id": "_:c14n14",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#days" }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#weeks" }
+      ]
+    },
+    {
+      "@id": "_:c14n16",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#days" }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "http://www.w3.org/2001/XMLSchema#pattern": [
+        { "@value": "--(0[1-9]|1[0-9]|20)(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" }
+      ]
+    },
+    {
+      "@id": "_:c14n18",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#minutes" }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#seconds" }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hasTRS" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "http://www.w3.org/2001/XMLSchema#pattern": [
+        { "@value": "---(0[1-9]|[1-9][0-9])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hours" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#years" }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hours" }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#minute" }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hour" }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#minute" }
+      ]
+    },
+    {
+      "@id": "_:c14n31",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#dayOfWeek" }
+      ]
+    },
+    {
+      "@id": "_:c14n32",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#hasValue": [
+        { "@id": "http://www.w3.org/2006/time#unitMonth" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#unitType" }
+      ]
+    },
+    {
+      "@id": "_:c14n33",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hours" }
+      ]
+    },
+    {
+      "@id": "_:c14n34",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#hasValue": [
+        { "@id": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hasTRS" }
+      ]
+    },
+    {
+      "@id": "_:c14n35",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#minutes" }
+      ]
+    },
+    {
+      "@id": "_:c14n36",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#days" }
+      ]
+    },
+    {
+      "@id": "_:c14n37",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        { "@list": [{ "@id": "_:c14n60" }, { "@id": "_:c14n8" }] }
+      ]
+    },
+    {
+      "@id": "_:c14n39",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#dayOfYear" }
+      ]
+    },
+    {
+      "@id": "_:c14n40",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#second" }
+      ]
+    },
+    {
+      "@id": "_:c14n41",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#weeks" }
+      ]
+    },
+    {
+      "@id": "_:c14n42",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#seconds" }
+      ]
+    },
+    {
+      "@id": "_:c14n43",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#month" }
+      ]
+    },
+    {
+      "@id": "_:c14n44",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hour" }
+      ]
+    },
+    {
+      "@id": "_:c14n45",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#unitType" }
+      ]
+    },
+    {
+      "@id": "_:c14n47",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#year" }
+      ]
+    },
+    {
+      "@id": "_:c14n49",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#monthOfYear" }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#seconds" }
+      ]
+    },
+    {
+      "@id": "_:c14n50",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#months" }
+      ]
+    },
+    {
+      "@id": "_:c14n51",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#numericDuration" }
+      ]
+    },
+    {
+      "@id": "_:c14n52",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#week" }
+      ]
+    },
+    {
+      "@id": "_:c14n53",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#hasValue": [
+        { "@id": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hasTRS" }
+      ]
+    },
+    {
+      "@id": "_:c14n55",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#gDay" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#day" }
+      ]
+    },
+    {
+      "@id": "_:c14n57",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#minutes" }
+      ]
+    },
+    {
+      "@id": "_:c14n58",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#gMonth" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#month" }
+      ]
+    },
+    {
+      "@id": "_:c14n59",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#hasTRS" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#year" }
+      ]
+    },
+    {
+      "@id": "_:c14n60",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#numericPosition" }
+      ]
+    },
+    {
+      "@id": "_:c14n61",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#months" }
+      ]
+    },
+    {
+      "@id": "_:c14n62",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#gYear" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#year" }
+      ]
+    },
+    {
+      "@id": "_:c14n63",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#week" }
+      ]
+    },
+    {
+      "@id": "_:c14n64",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#day" }
+      ]
+    },
+    {
+      "@id": "_:c14n65",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#unitType" }
+      ]
+    },
+    {
+      "@id": "_:c14n66",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#hasValue": [{ "@value": "--01" }],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#month" }
+      ]
+    },
+    {
+      "@id": "_:c14n67",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#weeks" }
+      ]
+    },
+    {
+      "@id": "_:c14n68",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#hasValue": [
+        { "@id": "http://www.w3.org/2006/time#unitMonth" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#unitType" }
+      ]
+    },
+    {
+      "@id": "_:c14n69",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2006/time#TemporalPosition" },
+            { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#years" }
+      ]
+    },
+    {
+      "@id": "_:c14n70",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#years" }
+      ]
+    },
+    {
+      "@id": "_:c14n8",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#nominalPosition" }
+      ]
+    },
+    {
+      "@id": "_:c14n9",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2006/time#day" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time",
+      "http://purl.org/dc/terms/contributor": [
+        { "@id": "mailto:chris.little@metoffice.gov.uk" }
+      ],
+      "http://purl.org/dc/terms/created": [
+        { "@value": "2006-09-27", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/creator": [
+        { "@id": "http://orcid.org/0000-0002-3884-3420" },
+        { "@id": "https://en.wikipedia.org/wiki/Jerry_Hobbs" },
+        { "@id": "mailto:panfeng66@gmail.com" }
+      ],
+      "http://purl.org/dc/terms/isVersionOf": [{ "@id": "http://www.w3.org/TR/owl-time" }],
+      "http://purl.org/dc/terms/license": [
+        { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        { "@value": "2017-04-06", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/rights": [
+        {
+          "@value": "Copyright Â© 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply.",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "OWL-Time", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://dx.doi.org/10.3233/SW-150187" },
+        {
+          "@id": "http://www.semantic-web-journal.net/content/time-ontology-extended-non-gregorian-calendar-applications"
+        },
+        { "@id": "http://www.w3.org/TR/owl-time" }
+      ],
+      "http://www.w3.org/2002/07/owl#priorVersion": [
+        { "@id": "http://www.w3.org/2006/time#2006" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionIRI": [
+        { "@id": "http://www.w3.org/2006/time#2016" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#changeNote": [
+        {
+          "@value": "2016-06-15 - initial update of OWL-Time - modified to support arbitrary temporal reference systems. "
+        },
+        {
+          "@value": "2016-12-20 - adjust range of time:timeZone to time:TimeZone, moved up from the tzont ontology.  "
+        },
+        {
+          "@value": "2016-12-20 - restore time:Year and time:January which were present in the 2006 version of the ontology, but now marked \"deprecated\". "
+        },
+        {
+          "@value": "2017-02 - intervalIn, intervalDisjoint, monthOfYear added; TemporalUnit subclass of TemporalDuration"
+        },
+        {
+          "@value": "2017-04-06 - hasTime, hasXSDDuration added; Number removed; all duration elements changed to xsd:decimal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#historyNote": [
+        {
+          "@value": "Update of OWL-Time ontology, extended to support general temporal reference systems. \n\nOntology engineering by Simon J D Cox",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#DateTimeDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of date and time structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of year, month, day properties restricted to corresponding XML Schema types xsd:gYear, xsd:gMonth and xsd:gDay, respectively.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Date-Time description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" },
+        { "@id": "_:c14n53" },
+        { "@id": "_:c14n55" },
+        { "@id": "_:c14n58" },
+        { "@id": "_:c14n62" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Description of date and time structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of year, month, day properties restricted to corresponding XML Schema types xsd:gYear, xsd:gMonth and xsd:gDay, respectively.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#DateTimeInterval",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "DateTimeInterval is a subclass of ProperInterval, defined using the multi-element DateTimeDescription.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Date-time interval", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "DateTimeInterval is a subclass of ProperInterval, defined using the multi-element DateTimeDescription.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": ":DateTimeInterval can only be used for an interval whose limits coincide with a date-time element aligned to the calendar and timezone indicated. For example, while both have a duration of one day, the 24-hour interval beginning at midnight at the beginning of 8 May in Central Europe can be expressed as a :DateTimeInterval, but the 24-hour interval starting at 1:30pm cannot.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#DayOfWeek",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The day of week", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Day of week", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#changeNote": [
+        {
+          "@value": "Remove enumeration from definition, in order to allow other days to be used when required in other calendars. \nNOTE: existing days are still present as members of the class, but the class membership is now open. \n\nIn the original OWL-Time the following constraint appeared: \n  owl:oneOf (\n      time:Monday\n      time:Tuesday\n      time:Wednesday\n      time:Thursday\n      time:Friday\n      time:Saturday\n      time:Sunday\n    ) ;",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "The day of week", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Membership of the class :DayOfWeek is open, to allow for alternative week lengths and different day names.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Duration",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Duration of a temporal extent expressed as a number scaled by a temporal unit",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalDuration" },
+        { "@id": "_:c14n51" },
+        { "@id": "_:c14n65" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Duration of a temporal extent expressed as a number scaled by a temporal unit",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Alternative to time:DurationDescription to support description of a temporal duration other than using a calendar/clock system.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#DurationDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of each of the numeric properties is restricted to xsd:decimal",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Duration description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" },
+        { "@id": "_:c14n16" },
+        { "@id": "_:c14n24" },
+        { "@id": "_:c14n25" },
+        { "@id": "_:c14n34" },
+        { "@id": "_:c14n41" },
+        { "@id": "_:c14n42" },
+        { "@id": "_:c14n50" },
+        { "@id": "_:c14n57" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of each of the numeric properties is restricted to xsd:decimal",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "In the Gregorian calendar the length of the month is not fixed. Therefore, a value like \"2.5 months\" cannot be exactly compared with a similar duration expressed in terms of weeks or days.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Friday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Friday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Freitag", "@language": "de" },
+        { "@value": "Friday", "@language": "en" },
+        { "@value": "PiÄtek", "@language": "pl" },
+        { "@value": "Sexta-feira", "@language": "pt" },
+        { "@value": "Vendredi", "@language": "fr" },
+        { "@value": "VenerdÃ¬", "@language": "it" },
+        { "@value": "Viernes", "@language": "es" },
+        { "@value": "Vrijdag", "@language": "nl" },
+        { "@value": "ÐÑÑÐ½Ð¸ÑÐ°", "@language": "ru" },
+        { "@value": "Ø§ÙØ¬ÙØ¹Ø©", "@language": "ar" },
+        { "@value": "ææäº", "@language": "zh" },
+        { "@value": "éææ¥", "@language": "ja" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of date and time structured with separate values for the various elements of a calendar-clock system",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Generalized date-time description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalPosition" },
+        { "@id": "_:c14n13" },
+        { "@id": "_:c14n28" },
+        { "@id": "_:c14n29" },
+        { "@id": "_:c14n31" },
+        { "@id": "_:c14n39" },
+        { "@id": "_:c14n40" },
+        { "@id": "_:c14n43" },
+        { "@id": "_:c14n45" },
+        { "@id": "_:c14n49" },
+        { "@id": "_:c14n52" },
+        { "@id": "_:c14n6" },
+        { "@id": "_:c14n64" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Description of date and time structured with separate values for the various elements of a calendar-clock system",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Some combinations of properties are redundant - for example, within a specified :year if :dayOfYear is provided then :day and :month can be computed, and vice versa. Individual values should be consistent with each other and the calendar, indicated through the value of the :hasTRS property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#GeneralDurationDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Generalized duration description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalDuration" },
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n15" },
+        { "@id": "_:c14n18" },
+        { "@id": "_:c14n19" },
+        { "@id": "_:c14n33" },
+        { "@id": "_:c14n36" },
+        { "@id": "_:c14n59" },
+        { "@id": "_:c14n7" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "The extent of a time duration expressed as a GeneralDurationDescription depends on the Temporal Reference System. In some calendars the length of the week or month is not constant within the year. Therefore, a value like \"2.5 months\" may not necessarily be exactly compared with a similar duration expressed in terms of weeks or days. When non-earth-based calendars are considered even more care must be taken in comparing durations.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Instant",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A temporal entity with zero extent or duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time instant", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "A temporal entity with zero extent or duration", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Interval",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A temporal entity with an extent or duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time interval", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "A temporal entity with an extent or duration", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#January",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class",
+        "http://www.w3.org/2002/07/owl#DeprecatedClass"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "January" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#DateTimeDescription" },
+        { "@id": "_:c14n32" },
+        { "@id": "_:c14n66" }
+      ],
+      "http://www.w3.org/2002/07/owl#deprecated": [
+        { "@value": "true", "@type": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#historyNote": [
+        {
+          "@value": "This class was present in the 2006 version of OWL-Time. It was presented as an example of how DateTimeDescription could be specialized, but does not belong in the revised ontology. "
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Monday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Monday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Lundi", "@language": "fr" },
+        { "@value": "LunedÃ¬", "@language": "it" },
+        { "@value": "Lunes", "@language": "es" },
+        { "@value": "Maandag", "@language": "nl" },
+        { "@value": "Monday", "@language": "en" },
+        { "@value": "Montag", "@language": "de" },
+        { "@value": "PoniedziaÅek", "@language": "pl" },
+        { "@value": "Segunda-feira", "@language": "pt" },
+        { "@value": "ÐÐ¾Ð½ÐµÐ´ÐµÐ»ÑÐ½Ð¸Ðº", "@language": "ru" },
+        { "@value": "Ø§ÙØ§Ø«ÙÙÙ", "@language": "ar" },
+        { "@value": "ææä¸", "@language": "zh" },
+        { "@value": "æææ¥", "@language": "ja" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#MonthOfYear",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The month of the year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Month of year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#DateTimeDescription" },
+        { "@id": "_:c14n10" },
+        { "@id": "_:c14n11" },
+        { "@id": "_:c14n27" },
+        { "@id": "_:c14n44" },
+        { "@id": "_:c14n47" },
+        { "@id": "_:c14n63" },
+        { "@id": "_:c14n68" },
+        { "@id": "_:c14n9" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "The month of the year", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#editorialNote": [
+        {
+          "@value": "Feature at risk - added in 2017 revision, and not yet widely used. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Membership of the class :MonthOfYear is open, to allow for alternative annual calendars and different month names.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#ProperInterval",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Proper interval", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#Interval" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Saturday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Saturday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Sabato", "@language": "it" },
+        { "@value": "Samedi", "@language": "fr" },
+        { "@value": "Samstag", "@language": "de" },
+        { "@value": "Saturday", "@language": "en" },
+        { "@value": "Sobota", "@language": "pl" },
+        { "@value": "SÃ¡bado", "@language": "es" },
+        { "@value": "SÃ¡bado", "@language": "pt" },
+        { "@value": "Zaterdag", "@language": "nl" },
+        { "@value": "Ð¡ÑÐ±Ð±Ð¾ÑÐ°", "@language": "ru" },
+        { "@value": "Ø§ÙØ³Ø¨Øª", "@language": "ar" },
+        { "@value": "åææ¥", "@language": "ja" },
+        { "@value": "ææå­", "@language": "zh" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Sunday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Sunday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Dimanche", "@language": "fr" },
+        { "@value": "Domenica", "@language": "it" },
+        { "@value": "Domingo", "@language": "es" },
+        { "@value": "Domingo", "@language": "pt" },
+        { "@value": "Niedziela", "@language": "pl" },
+        { "@value": "Sonntag", "@language": "de" },
+        { "@value": "Sunday", "@language": "en" },
+        { "@value": "Zondag", "@language": "nl" },
+        { "@value": "ÐÐ¾ÑÐºÑÐµÑÐµÐ½ÑÐµ", "@language": "ru" },
+        { "@value": "Ø§ÙØ£Ø­Ø¯ (ÙÙÙ)", "@language": "ar" },
+        { "@value": "æ¥ææ¥", "@language": "ja" },
+        { "@value": "æææ¥", "@language": "zh" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TRS",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system. \n\nThis is a stub class, representing the set of all temporal reference systems.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal Reference System", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system. \n\nThis is a stub class, representing the set of all temporal reference systems.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "A taxonomy of temporal reference systems is provided in ISO 19108:2002 [ISO19108], including (a) calendar + clock systems; (b) temporal coordinate systems (i.e. numeric offset from an epoch); (c) temporal ordinal reference systems (i.e. ordered sequence of named intervals, not necessarily of equal duration).",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TemporalDuration",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Time extent; duration of a time interval separate from its particular start position",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Time extent; duration of a time interval separate from its particular start position",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A temporal interval or instant.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal entity", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2006/time#Instant" },
+            { "@id": "http://www.w3.org/2006/time#Interval" }
+          ]
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "A temporal interval or instant.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TemporalPosition",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A position on a time-line", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [{ "@id": "_:c14n2" }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "A position on a time-line", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TemporalUnit",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal unit", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalDuration" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#changeNote": [
+        {
+          "@value": "Remove enumeration from definition, in order to allow other units to be used when required in other coordinate systems. \nNOTE: existing units are still present as members of the class, but the class membership is now open. \n\nIn the original OWL-Time the following constraint appeared: \n  owl:oneOf (\n      time:unitSecond\n      time:unitMinute\n      time:unitHour\n      time:unitDay\n      time:unitWeek\n      time:unitMonth\n      time:unitYear\n    ) ;",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Membership of the class TemporalUnit is open, to allow for other temporal units used in some technical applications (e.g. millions of years, Baha'i month).",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Thursday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Thursday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Czwartek", "@language": "pl" },
+        { "@value": "Donderdag", "@language": "nl" },
+        { "@value": "Donnerstag", "@language": "de" },
+        { "@value": "GiovedÃ¬", "@language": "it" },
+        { "@value": "Jeudi", "@language": "fr" },
+        { "@value": "Jueves", "@language": "es" },
+        { "@value": "Quinta-feira", "@language": "pt" },
+        { "@value": "Thursday", "@language": "en" },
+        { "@value": "Ð§ÐµÑÐ²ÐµÑÐ³", "@language": "ru" },
+        { "@value": "Ø§ÙØ®ÙÙØ³", "@language": "ar" },
+        { "@value": "ææå", "@language": "zh" },
+        { "@value": "æ¨ææ¥", "@language": "ja" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TimePosition",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#TemporalPosition" },
+        { "@id": "_:c14n37" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#TimeZone",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Time Zone specifies the amount by which the local time is offset from UTC. \n\tA time zone is usually denoted geographically (e.g. Australian Eastern Daylight Time), with a constant value in a given region. \nThe region where it applies and the offset from UTC are specified by a locally recognised governing authority.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time Zone", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A Time Zone specifies the amount by which the local time is offset from UTC. \n\tA time zone is usually denoted geographically (e.g. Australian Eastern Daylight Time), with a constant value in a given region. \nThe region where it applies and the offset from UTC are specified by a locally recognised governing authority.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#historyNote": [
+        {
+          "@value": "In the original 2006 version of OWL-Time, the TimeZone class, with several properties corresponding to a specific model of time-zones, was defined in a separate namespace \"http://www.w3.org/2006/timezone#\". \n\nIn the current version a class with same local name is put into the main OWL-Time namespace, removing the dependency on the external namespace. \n\nAn alignment axiom \n\ttzont:TimeZone rdfs:subClassOf time:TimeZone . \nallows data encoded according to the previous version to be consistent with the updated ontology. "
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "A designated timezone is associated with a geographic region. However, for a particular region the offset from UTC often varies seasonally, and the dates of the changes may vary from year to year. The timezone designation usually changes for the different seasons (e.g. Australian Eastern Standard Time vs. Australian Eastern Daylight Time). Furthermore, the offset for a timezone may change over longer timescales, though its designation might not.  \n\nDetailed guidance about working with time zones is given in http://www.w3.org/TR/timezone/ .",
+          "@language": "en"
+        },
+        {
+          "@value": "An ontology for time zone descriptions was described in [owl-time-20060927] and provided as RDF in a separate namespace tzont:. However, that ontology was incomplete in scope, and the example datasets were selective. Furthermore, since the use of a class from an external ontology as the range of an ObjectProperty in OWL-Time creates a dependency, reference to the time zone class has been replaced with the 'stub' class in the normative part of this version of OWL-Time.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#scopeNote": [
+        {
+          "@value": "In this implementation TimeZone has no properties defined. It should be thought of as an 'abstract' superclass of all specific timezone implementations."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Tuesday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tuesday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Dienstag", "@language": "de" },
+        { "@value": "Dinsdag", "@language": "nl" },
+        { "@value": "Mardi", "@language": "fr" },
+        { "@value": "MartedÃ¬", "@language": "it" },
+        { "@value": "Martes", "@language": "es" },
+        { "@value": "TerÃ§a-feira", "@language": "pt" },
+        { "@value": "Tuesday", "@language": "en" },
+        { "@value": "Wtorek", "@language": "pl" },
+        { "@value": "ÐÑÐ¾ÑÐ½Ð¸Ðº", "@language": "ru" },
+        { "@value": "Ø§ÙØ«ÙØ§Ø«Ø§Ø¡", "@language": "ar" },
+        { "@value": "ææäº", "@language": "zh" },
+        { "@value": "ç«ææ¥", "@language": "ja" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Wednesday",
+      "@type": ["http://www.w3.org/2006/time#DayOfWeek"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Wednesday", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "MercoledÃ¬", "@language": "it" },
+        { "@value": "Mercredi", "@language": "fr" },
+        { "@value": "Mittwoch", "@language": "de" },
+        { "@value": "MiÃ©rcoles", "@language": "es" },
+        { "@value": "Quarta-feira", "@language": "pt" },
+        { "@value": "Wednesday", "@language": "en" },
+        { "@value": "Woensdag", "@language": "nl" },
+        { "@value": "Åroda", "@language": "pl" },
+        { "@value": "Ð¡ÑÐµÐ´Ð°", "@language": "ru" },
+        { "@value": "Ø§ÙØ£Ø±Ø¨Ø¹Ø§Ø¡", "@language": "ar" },
+        { "@value": "ææä¸", "@language": "zh" },
+        { "@value": "æ°´ææ¥", "@language": "ja" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#Year",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class",
+        "http://www.w3.org/2002/07/owl#DeprecatedClass"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "Year duration" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Year", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2006/time#DurationDescription" },
+        { "@id": "_:c14n14" },
+        { "@id": "_:c14n23" },
+        { "@id": "_:c14n35" },
+        { "@id": "_:c14n5" },
+        { "@id": "_:c14n61" },
+        { "@id": "_:c14n67" },
+        { "@id": "_:c14n70" }
+      ],
+      "http://www.w3.org/2002/07/owl#deprecated": [
+        { "@value": "true", "@type": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [{ "@value": "Year duration" }],
+      "http://www.w3.org/2004/02/skos/core#historyNote": [
+        {
+          "@value": "Year was proposed in the 2006 version of OWL-Time as an example of how DurationDescription could be specialized to allow for a duration to be restricted to a number of years. \n\nIt is deprecated in this edition of OWL-Time. "
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Anno", "@language": "it" },
+        { "@value": "AnnÃ©e (calendrier)", "@language": "fr" },
+        { "@value": "Ano", "@language": "pt" },
+        { "@value": "AÃ±o", "@language": "es" },
+        { "@value": "Jaar", "@language": "nl" },
+        { "@value": "Jahr", "@language": "de" },
+        { "@value": "Rok", "@language": "pl" },
+        { "@value": "Year", "@language": "en" },
+        { "@value": "ÐÐ¾Ð´", "@language": "ru" },
+        { "@value": "Ø³ÙØ©", "@language": "ar" },
+        { "@value": "å¹´", "@language": "ja" },
+        { "@value": "å¹´", "@language": "zh" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#after",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Gives directionality to time. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "after", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#before" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Gives directionality to time. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#before",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Gives directionality to time. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, \"before\" can be considered to be basic to instants and derived for intervals.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "before", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#after" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Gives directionality to time. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, \"before\" can be considered to be basic to instants and derived for intervals.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#day",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Day position in a calendar-clock system.\n\nThe range of this property is not specified, so can be replaced by any specific representation of a calendar day from any calendar. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "day", "@language": "en" }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Day position in a calendar-clock system.\n\nThe range of this property is not specified, so can be replaced by any specific representation of a calendar day from any calendar. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#dayOfWeek",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The day of week, whose value is a member of the class time:DayOfWeek",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "day of week", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#DayOfWeek" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The day of week, whose value is a member of the class time:DayOfWeek",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#dayOfYear",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The number of the day within the year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "day of year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "The number of the day within the year", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#days",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in days",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "days duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in days",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#generalDay",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Day of month - formulated as a text string with a pattern constraint to reproduce the same lexical form as gDay, except that values up to 99 are permitted, in order to support calendars with more than 31 days in a month. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Generalized day", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDatatype": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#withRestrictions": [{ "@list": [{ "@id": "_:c14n21" }] }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Day of month - formulated as a text string with a pattern constraint to reproduce the same lexical form as gDay, except that values up to 99 are permitted, in order to support calendars with more than 31 days in a month. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#generalMonth",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Month of year - formulated as a text string with a pattern constraint to reproduce the same lexical form as gMonth, except that values up to 20 are permitted, in order to support calendars with more than 12 months in the year. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Generalized month", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDatatype": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#withRestrictions": [{ "@list": [{ "@id": "_:c14n17" }] }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Month of year - formulated as a text string with a pattern constraint to reproduce the same lexical form as gMonth, except that values up to 20 are permitted, in order to support calendars with more than 12 months in the year. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#generalYear",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Generalized year", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDatatype": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#withRestrictions": [{ "@list": [{ "@id": "_:c14n12" }] }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. \nNote that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Beginning of a temporal entity", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has beginning", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#hasTime" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Beginning of a temporal entity.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasDateTimeDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Value of DateTimeInterval expressed as a structured value. The beginning and end of the interval coincide with the limits of the shortest element in the description.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#DateTimeInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has Date-Time description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Value of DateTimeInterval expressed as a structured value. The beginning and end of the interval coincide with the limits of the shortest element in the description.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasDuration",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Duration of a temporal entity, expressed as a scaled value or nominal value",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#Duration" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#hasTemporalDuration" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Duration of a temporal entity, event or activity, or thing, expressed as a scaled value",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasDurationDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Duration of a temporal entity, expressed using a structured description",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has duration description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#hasTemporalDuration" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Duration of a temporal entity, expressed using a structured description",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "End of a temporal entity.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has end", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#hasTime" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "End of a temporal entity.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasTRS",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#FunctionalProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The temporal reference system used by a temporal position or extent description. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n69" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal reference system used", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TRS" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The temporal reference system used by a temporal position or extent description. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasTemporalDuration",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Duration of a temporal entity.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has temporal duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalDuration" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Duration of a temporal entity.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Supports the association of a temporal entity (instant or interval) to any thing",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has time", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Supports the association of a temporal entity (instant or interval) to any thing",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#editorialNote": [
+        {
+          "@value": "Feature at risk - added in 2017 revision, and not yet widely used. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hasXSDDuration",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Extent of a temporal entity, expressed using xsd:duration",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TemporalEntity" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has XSD duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#duration" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Extent of a temporal entity, expressed using xsd:duration",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#editorialNote": [
+        {
+          "@value": "Feature at risk - added in 2017 revision, and not yet widely used. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hour",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Hour position in a calendar-clock system.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "hour", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Hour position in a calendar-clock system.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#hours",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in hours",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "hours duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in hours",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inDateTime",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Position of an instant, expressed using a structured description",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in date-time description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#inTemporalPosition" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Position of an instant, expressed using a structured description",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inTemporalPosition",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Position of a time instant", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Temporal position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalPosition" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Position of a time instant", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inTimePosition",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Position of an instant, expressed as a temporal coordinate or nominal value",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Time position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TimePosition" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#inTemporalPosition" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Position of a time instant expressed as a TimePosition",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inXSDDate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Position of an instant, expressed using xsd:date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in XSD date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Position of an instant, expressed using xsd:date", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Position of an instant, expressed using xsd:dateTime", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in XSD Date-Time", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ],
+      "http://www.w3.org/2002/07/owl#deprecated": [
+        { "@value": "true", "@type": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Position of an instant, expressed using xsd:dateTime", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "The property :inXSDDateTime is replaced by :inXSDDateTimeStamp which makes the time-zone field mandatory.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Position of an instant, expressed using xsd:dateTimeStamp",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in XSD Date-Time-Stamp", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Position of an instant, expressed using xsd:dateTimeStamp",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inXSDgYear",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Position of an instant, expressed using xsd:gYear", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in XSD g-Year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#gYear" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Position of an instant, expressed using xsd:gYear", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inXSDgYearMonth",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Position of an instant, expressed using xsd:gYearMonth",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in XSD g-YearMonth", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#gYearMonth" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Position of an instant, expressed using xsd:gYearMonth",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#inside",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An instant that falls inside the interval. It is not intended to include beginnings and ends of intervals.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Interval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has time instant inside", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#Instant" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "An instant that falls inside the interval. It is not intended to include beginnings and ends of intervals.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalAfter",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalAfter another proper interval T2, then the beginning of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval after", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#after" },
+        { "@id": "http://www.w3.org/2006/time#intervalDisjoint" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalBefore" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalAfter another proper interval T2, then the beginning of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalBefore",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalBefore another proper interval T2, then the end of T1 is before the beginning of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval before", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#before" },
+        { "@id": "http://www.w3.org/2006/time#intervalDisjoint" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalAfter" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalBefore another proper interval T2, then the end of T1 is before the beginning of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalContains",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalContains another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval contains", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalDuring" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalContains another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalDisjoint",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalDisjoint another proper interval T2, then the beginning of T1 is after the end of T2, or the end of T1 is before the beginning of T2, i.e. the intervals do not overlap in any way, but their ordering relationship is not known.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval disjoint", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalDisjoint another proper interval T2, then the beginning of T1 is after the end of T2, or the end of T1 is before the beginning of T2, i.e. the intervals do not overlap in any way, but their ordering relationship is not known.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "This interval relation is not included in the 13 basic relationships defined in Allen (1984), but is defined in (T.3) as the union of :intervalBefore v :intervalAfter . However, that is outside OWL2 expressivity, so is implemented as an explicit property, with :intervalBefore , :intervalAfter as sub-properties",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalDuring",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalDuring another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval during", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalIn" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalContains" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalDuring another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalEquals",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalEquals another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval equals", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#propertyDisjointWith": [
+        { "@id": "http://www.w3.org/2006/time#intervalIn" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalEquals another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalFinishedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalFinishedBy another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval finished by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalFinishes" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalFinishedBy another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalFinishes",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalFinishes another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval finishes", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalIn" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalFinishedBy" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalFinishes another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalIn another proper interval T2, then the beginning of T1 is after the beginning of T2 or is coincident with the beginning of T2, and the end of T1 is before the end of T2, or is coincident with the end of T2, except that end of T1 may not be coincident with the end of T2 if the beginning of T1 is coincident with the beginning of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval in", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#propertyDisjointWith": [
+        { "@id": "http://www.w3.org/2006/time#intervalEquals" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalIn another proper interval T2, then the beginning of T1 is after the beginning of T2 or is coincident with the beginning of T2, and the end of T1 is before the end of T2, or is coincident with the end of T2, except that end of T1 may not be coincident with the end of T2 if the beginning of T1 is coincident with the beginning of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "This interval relation is not included in the 13 basic relationships defined in Allen (1984), but is referred to as 'an important relationship' in Allen and Ferguson (1997). It is the disjoint union of :intervalStarts v :intervalDuring v :intervalFinishes . However, that is outside OWL2 expressivity, so is implemented as an explicit property, with :intervalStarts , :intervalDuring , :intervalFinishes as sub-properties",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalMeets",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalMeets another proper interval T2, then the end of T1 is coincident with the beginning of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval meets", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalMetBy" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalMeets another proper interval T2, then the end of T1 is coincident with the beginning of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalMetBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalMetBy another proper interval T2, then the beginning of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval met by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalMeets" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalMetBy another proper interval T2, then the beginning of T1 is coincident with the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalOverlappedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalOverlappedBy another proper interval T2, then the beginning of T1 is after the beginning of T2, the beginning of T1 is before the end of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval overlapped by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalOverlaps" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalOverlappedBy another proper interval T2, then the beginning of T1 is after the beginning of T2, the beginning of T1 is before the end of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalOverlaps",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalOverlaps another proper interval T2, then the beginning of T1 is before the beginning of T2, the end of T1 is after the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval overlaps", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalOverlappedBy" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalOverlaps another proper interval T2, then the beginning of T1 is before the beginning of T2, the end of T1 is after the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalStartedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalStarted another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval started by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalStarts" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalStarted another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is after the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#intervalStarts",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If a proper interval T1 is intervalStarts another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "interval starts", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#ProperInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalIn" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/2006/time#intervalStartedBy" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "If a proper interval T1 is intervalStarts another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is before the end of T2.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#minute",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Minute position in a calendar-clock system.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "minute", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Minute position in a calendar-clock system.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#minutes",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length, or element of, a temporal extent expressed in minutes",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "minutes", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "length, or element of, a temporal extent expressed in minutes",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#month",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Month position in a calendar-clock system.\n\nThe range of this property is not specified, so can be replaced by any specific representation of a calendar month from any calendar. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "month", "@language": "en" }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Month position in a calendar-clock system.\n\nThe range of this property is not specified, so can be replaced by any specific representation of a calendar month from any calendar. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#monthOfYear",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The month of the year, whose value is a member of the class time:MonthOfYear",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "month of year", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#MonthOfYear" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The month of the year, whose value is a member of the class time:MonthOfYear",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#editorialNote": [
+        {
+          "@value": "Feature at risk - added in 2017 revision, and not yet widely used. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#months",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in months",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "months duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in months",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#nominalPosition",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The (nominal) value indicating temporal position in an ordinal reference system ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TimePosition" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Name of temporal position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The (nominal) value indicating temporal position in an ordinal reference system ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#numericDuration",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Value of a temporal extent expressed as a decimal number scaled by a temporal unit",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#Duration" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Numeric value of temporal duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Value of a temporal extent expressed as a decimal number scaled by a temporal unit",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#numericPosition",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The (numeric) value indicating position within a temporal coordinate system ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#TimePosition" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Numeric value of temporal position", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The (numeric) value indicating position within a temporal coordinate system ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#second",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Second position in a calendar-clock system.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "second", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#seconds",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in seconds",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "seconds duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.bipm.org/en/publications/si-brochure/second.html" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#timeZone",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The time zone for clock elements in the temporal position",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in time zone", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TimeZone" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#historyNote": [
+        {
+          "@value": "In the original 2006 version of OWL-Time, the range of time:timeZone was a TimeZone class in a separate namespace \"http://www.w3.org/2006/timezone#\". \nAn alignment axiom \n\ttzont:TimeZone rdfs:subClassOf time:TimeZone . \nallows data encoded according to the previous version to be consistent with the updated ontology. "
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "IANA maintains a database of timezones. These are well maintained and generally considered authoritative, but individual items are not available at individual URIs, so cannot be used directly in data expressed using OWL-Time.\n\nDBPedia provides a set of resources corresponding to the IANA timezones, with a URI for each (e.g. http://dbpedia.org/resource/Australia/Eucla). The World Clock service also provides a list of time zones with the description of each available as an individual webpage with a convenient individual URI (e.g. https://www.timeanddate.com/time/zones/acwst). These or other, similar, resources might be used as a value of the time:timeZone property."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitDay",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Day (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Tag", "@language": "de" },
+        { "@value": "dag", "@language": "nl" },
+        { "@value": "day", "@language": "en" },
+        { "@value": "dia", "@language": "pt" },
+        { "@value": "doba", "@language": "pl" },
+        { "@value": "dÃ­a", "@language": "es" },
+        { "@value": "giorno", "@language": "it" },
+        { "@value": "jour", "@language": "fr" },
+        { "@value": "ÙÙÙØ§Ù ÙØ§", "@language": "ar" },
+        { "@value": "ããæ¥", "@language": "jp" },
+        { "@value": "ä¸å¤©", "@language": "zh" },
+        { "@value": "ì¸ì  ê°", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitHour",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Hour (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Stunde", "@language": "de" },
+        { "@value": "godzina", "@language": "pl" },
+        { "@value": "heure", "@language": "fr" },
+        { "@value": "hora", "@language": "es" },
+        { "@value": "hora", "@language": "pt" },
+        { "@value": "hour", "@language": "en" },
+        { "@value": "ora", "@language": "it" },
+        { "@value": "uur", "@language": "nl" },
+        { "@value": "Ð¾Ð´Ð¸Ð½ ÑÐ°Ñ\"@ru" },
+        { "@value": "Ø³Ø§Ø¹Ø© ÙØ§Ø­Ø¯Ø©", "@language": "ar" },
+        { "@value": "ä¸å°æ", "@language": "zh" },
+        { "@value": "ä¸æé", "@language": "jp" },
+        { "@value": "í ìê°", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitMinute",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Minute (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Minute", "@language": "de" },
+        { "@value": "minuta", "@language": "pl" },
+        { "@value": "minute", "@language": "en" },
+        { "@value": "minute", "@language": "fr" },
+        { "@value": "minuto", "@language": "es" },
+        { "@value": "minuto", "@language": "it" },
+        { "@value": "minuto", "@language": "pt" },
+        { "@value": "minuut", "@language": "nl" },
+        { "@value": "Ð¾Ð´Ð½Ð° Ð¼Ð¸Ð½ÑÑÐ°", "@language": "ru" },
+        { "@value": "Ø¯ÙÙÙØ© ÙØ§Ø­Ø¯Ø©", "@language": "ar" },
+        { "@value": "ä¸å", "@language": "jp" },
+        { "@value": "ç­ä¸ä¸", "@language": "zh" },
+        { "@value": "ë¶", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitMonth",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Month (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "maand", "@language": "nl" },
+        { "@value": "mes", "@language": "es" },
+        { "@value": "mese", "@language": "it" },
+        { "@value": "miesiÄc", "@language": "pl" },
+        { "@value": "mois", "@language": "fr" },
+        { "@value": "monat", "@language": "de" },
+        { "@value": "month", "@language": "en" },
+        { "@value": "Ð¾Ð´Ð¸Ð½ Ð¼ÐµÑÑÑ", "@language": "ru" },
+        { "@value": "Ø´ÙØ± ÙØ§Ø­Ø¯", "@language": "ar" },
+        { "@value": "ä¸ãæ", "@language": "jp" },
+        { "@value": "ä¸åæ", "@language": "zh" },
+        { "@value": "íë¬", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitSecond",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Second (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Sekunde", "@language": "de" },
+        { "@value": "SekundÄ", "@language": "pl" },
+        { "@value": "second", "@language": "en" },
+        { "@value": "seconde", "@language": "fr" },
+        { "@value": "seconde", "@language": "nl" },
+        { "@value": "secondo", "@language": "it" },
+        { "@value": "segundo", "@language": "es" },
+        { "@value": "segundo", "@language": "pt" },
+        { "@value": "Ø«Ø§ÙÙØ© ÙØ§Ø­Ø¯Ø©", "@language": "ar" },
+        { "@value": "ä¸ç§", "@language": "jp" },
+        { "@value": "ä¸ç§", "@language": "zh" },
+        { "@value": "ì¼ì´", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The temporal unit which provides the precision of a date-time value or scale of a temporal extent",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n0" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "temporal unit type", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2006/time#TemporalUnit" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitWeek",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Week (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Woche", "@language": "de" },
+        { "@value": "semaine", "@language": "fr" },
+        { "@value": "semana", "@language": "es" },
+        { "@value": "semana", "@language": "pt" },
+        { "@value": "settimana", "@language": "it" },
+        { "@value": "tydzieÅ", "@language": "pl" },
+        { "@value": "week", "@language": "en" },
+        { "@value": "week", "@language": "nl" },
+        { "@value": "Ð¾Ð´Ð½Ð° Ð½ÐµÐ´ÐµÐ»Ñ", "@language": "ru" },
+        { "@value": "Ø³Ø¨ÙØ¹ ÙØ§Ø­Ø¯", "@language": "ar" },
+        { "@value": "ä¸å¨", "@language": "zh" },
+        { "@value": "ä¸é±é", "@language": "jp" },
+        { "@value": "ì¼ì£¼ì¼", "@language": "kr" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#unitYear",
+      "@type": ["http://www.w3.org/2006/time#TemporalUnit"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Year (unit of temporal duration)", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "1 ë", "@language": "kr" },
+        { "@value": "1å¹´", "@language": "jp" },
+        { "@value": "Jahr", "@language": "de" },
+        { "@value": "Rok", "@language": "pl" },
+        { "@value": "an", "@language": "fr" },
+        { "@value": "anno", "@language": "it" },
+        { "@value": "ano", "@language": "pt" },
+        { "@value": "jaar", "@language": "nl" },
+        { "@value": "un aÃ±o", "@language": "es" },
+        { "@value": "year", "@language": "en" },
+        { "@value": "Ð¾Ð´Ð¸Ð½ Ð³Ð¾Ð´", "@language": "ru" },
+        { "@value": "Ø³ÙØ© ÙØ§Ø­Ø¯Ø©", "@language": "ar" },
+        { "@value": "ä¸å¹´", "@language": "zh" }
+      ],
+      "http://www.w3.org/2006/time#days": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#hours": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#minutes": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#months": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#seconds": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#weeks": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ],
+      "http://www.w3.org/2006/time#years": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#week",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Week number within the year.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "week", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Weeks are numbered differently depending on the calendar in use and the local language or cultural conventions (locale). ISO-8601 specifies that the first week of the year includes at least four days, and that Monday is the first day of the week. In that system, week 1 is the week that contains the first Thursday in the year.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#weeks",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in weeks",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "weeks duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#xsdDateTime",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Value of DateTimeInterval expressed as a compact value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#DateTimeInterval" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has XSD date-time", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      ],
+      "http://www.w3.org/2002/07/owl#deprecated": [
+        { "@value": "true", "@type": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Using xsd:dateTime in this place means that the duration of the interval is implicit: it corresponds to the length of the smallest non-zero element of the date-time literal. However, this rule cannot be used for intervals whose duration is more than one rank smaller than the starting time - e.g. the first minute or second of a day, the first hour of a month, or the first day of a year. In these cases the desired interval cannot be distinguished from the interval corresponding to the next rank up. Because of this essential ambiguity, use of this property is not recommended and it is deprecated.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#year",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Year position in a calendar-clock system.\n\nThe range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDateTimeDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "year", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/2006/time#years",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "length of, or element of the length of, a temporal extent expressed in years",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2006/time#GeneralDurationDescription" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "years duration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    }
+  ]
+}

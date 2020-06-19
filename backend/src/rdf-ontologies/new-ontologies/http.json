@@ -1,0 +1,744 @@
+{
+  "@id": "http://www.w3.org/2011/http#",
+  "@graph": [
+    {
+      "@id": "http://www.w3.org/2011/http",
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A namespace for describing HTTP messages (http://www.w3.org/Protocols/rfc2616/rfc2616.html)",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/TR/HTTP-in-RDF/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "HTTP in RDF", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/TR/Content-in-RDF/" },
+        { "@id": "http://www.w3.org/WAI/intro/earl" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [
+        { "@id": "http://purl.org/dc/terms/" },
+        { "@id": "http://www.w3.org/2011/content#" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "Working Draft 29 April 2011", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Connection",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A connection used for HTTP transfer.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Connection", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#EntityHeader",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An entity header in an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Entity Header", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#GeneralHeader",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A general header in an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "General Header", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#HeaderElement",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A part of a deconstructed header value.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header Element", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#HeaderName",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A header name.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header Name", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Message",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Message", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#MessageHeader",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A header in an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Message Header", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Method",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP method used for the request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Method", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Parameter",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A parameter for a part of a header value.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parameter", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Request",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An HTTP request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Request", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#Message" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#RequestHeader",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A header in an HTTP request message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Request Header", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#Response",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An HTTP response.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Response", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#Message" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#ResponseHeader",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A header in an HTTP response message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Response Header", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#StatusCode",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The status code of an HTTP response.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Status code", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#absolutePath",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The absolute path sort of request URI.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Absolute path", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2011/http#requestURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#absoluteURI",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The absolute request URI.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Absolute URI", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2011/http#requestURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#authority",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The authority sort of request URI.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Authority", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2011/http#requestURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#body",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The entity body of an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Message" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Entity Body", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsBase64" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#connectionAuthority",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The authority of a connection used for the HTTP transfer.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Connection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Connection authority", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#elementName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The name of a header element.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#HeaderElement" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header element name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#elementValue",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The value of a header element.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#HeaderElement" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header element value", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#fieldName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The name of an HTTP header field.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Field name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#fieldValue",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The value of an HTTP header field.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Field value", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#hdrName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The name of an HTTP header.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/http#HeaderName" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#headerElements",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The deconstructed parts of an HTTP header value.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#MessageHeader" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header elements", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#headers",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The headers in an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Message" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Headers", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#httpVersion",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP version of an HTTP message.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Message" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "HTTP version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#methodName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP method name used for the HTTP request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Request" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Method name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#mthd",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP method used for the HTTP request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Request" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Method", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/http#Method" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#paramName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The name of a parameter in a part of a deconstructed HTTP header value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Parameter" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parameter name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#paramValue",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The value of a parameter in a part of a deconstructed HTTP header value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Parameter" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Parameter value", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#params",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The parameters in a part of a deconstructed HTTP header value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#HeaderElement" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Header parameters", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#reasonPhrase",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The reason phrase (status text) of an HTTP response.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Response" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Reason phrase", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#requestURI",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The request URI of an HTTP request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Request" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Request URI", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#requests",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP requests made via a connection.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Connection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Requests", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#resp",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The HTTP response sent in answer to an HTTP request.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Request" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Response", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/http#Response" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#sc",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The status code of an HTTP response.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Response" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Status code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/http#StatusCode" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#statusCodeNumber",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The status code number.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#StatusCode" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Status code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#int" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/identifier" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/http#statusCodeValue",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The status code value of an HTTP response.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/http#Response" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ietf.org/rfc/rfc2616.txt" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Status code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    }
+  ]
+}

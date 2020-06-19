@@ -1,0 +1,125 @@
+{
+  "@id": "http://purl.org/rss/1.0/",
+  "@graph": [
+    {
+      "@id": "http://purl.org/rss/1.0/channel",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An RSS information channel." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Channel" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/description",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A short text description of the subject." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Description" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/elements/1.1/description" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/image",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "An RSS image." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Image" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/item",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "An RSS item." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Item" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/items",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Points to a list of rss:item elements that are members of the subject channel."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Items" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/link",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The URL to which an HTML rendering of the subject will link." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Link" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/elements/1.1/identifier" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/name",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The text input field's (variable) name." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Name" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/textinput",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "An RSS text input." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Text Input" }]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/title",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A descriptive title for the channel." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Title" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/elements/1.1/title" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/rss/1.0/url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/rss/1.0/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "URL" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/elements/1.1/identifier" }
+      ]
+    }
+  ]
+}

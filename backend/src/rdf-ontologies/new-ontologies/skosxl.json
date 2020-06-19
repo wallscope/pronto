@@ -1,0 +1,215 @@
+{
+  "@id": "http://www.w3.org/2008/05/skos-xl#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#literalForm" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl",
+      "http://purl.org/dc/terms/contributor": [
+        { "@value": "Participants in W3C's Semantic Web Deployment Working Group." }
+      ],
+      "http://purl.org/dc/terms/creator": [
+        { "@value": "Alistair Miles" },
+        { "@value": "Sean Bechhofer" }
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "An RDF vocabulary extending SKOS and allowing the description and linking of lexical entities.",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        { "@value": "SKOS XL Vocabulary", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2008/05/skos" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [
+        { "@id": "http://www.w3.org/2004/02/skos/core" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#Label",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Label", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [{ "@id": "_:c14n0" }],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Collection" },
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" },
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "A special class of lexical entities.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#altLabel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "alternative label", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#altLabel" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The property skosxl:altLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:altLabel.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If C skosxl:hiddenLabel L and L skosxl:literalForm V, then C skos:hiddenLabel V.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "hidden label", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#hiddenLabel" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The property skosxl:hiddenLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:hiddenLabel.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#labelRelation",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "http://www.w3.org/2002/07/owl#SymmetricProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "label relation", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The property skosxl:labelRelation is used for representing binary ('direct') relations between instances of the class skosxl:Label.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#scopeNote": [
+        {
+          "@value": "skosxl:labelRelation is not intended to be used directly, but rather as the basis for a design pattern which can be refined for more specific labeling scenarios.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#literalForm",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.",
+          "@language": "en"
+        },
+        {
+          "@value": "The range of skosxl:literalForm is the class of RDF plain literals.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "literal form", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The property skosxl:literalForm is used to give the literal form of an skosxl:Label.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#prefLabel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "preferred label", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#prefLabel" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The property skosxl:prefLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:prefLabel.",
+          "@language": "en"
+        }
+      ]
+    }
+  ]
+}

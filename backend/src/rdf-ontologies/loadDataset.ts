@@ -7,7 +7,7 @@ function buildPath(prefix: string) {
 }
 
 export async function importNqFromPrefix(prefix: string) {
-  const path = join(__dirname, './ontologies', `${prefix}.nq`);
+  const path = join(__dirname, './new-ontologies', `${prefix}.json`);
   return await fs.readFile(path, { encoding: 'binary' });
 }
 

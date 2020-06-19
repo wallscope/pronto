@@ -1,0 +1,1754 @@
+{
+  "@id": "http://www.opengis.net/ont/geosparql#",
+  "@graph": [
+    {
+      "@id": "http://www.opengis.net/ont/geosparql",
+      "http://purl.org/dc/elements/1.1/creator": [{ "@value": "Open Geospatial Consortium" }],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2012-04-30", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        { "@value": "An RDF/OWL vocabulary for representing spatial information" }
+      ],
+      "http://purl.org/dc/elements/1.1/source": [
+        { "@value": "OGC GeoSPARQL â A Geographic Query Language for RDF Data OGC 11-052r5" },
+        { "@id": "http://www.opengis.net/doc/IS/geosparql/1.0" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.opengis.net/def/function/ogc-geosparql/1.0" },
+        { "@id": "http://www.opengis.net/def/rule/ogc-geosparql/1.0" },
+        { "@id": "http://www.opengis.net/doc/IS/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [
+        { "@id": "http://purl.org/dc/elements/1.1/" },
+        { "@id": "http://www.opengis.net/ont/gml" },
+        { "@id": "http://www.opengis.net/ont/sf" },
+        { "@id": "http://www.w3.org/2004/02/skos/core" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "OGC GeoSPARQL 1.0" }]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#Feature",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Feature", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Feature", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#Geometry",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Geometry", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Feature" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Geometry", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#SpatialObject",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "SpatialObject", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "SpatialObject", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        { "@value": "\n      The GML serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n      The GML serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "asGML", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#gmlLiteral" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.opengis.net/ont/geosparql#hasSerialization" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "\n      The GML serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "asGML", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        { "@value": "\n      The WKT serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "\n      The WKT serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "asWKT", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#wktLiteral" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.opengis.net/ont/geosparql#hasSerialization" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "\n      The WKT serialization of a geometry\n    ", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "asWKT", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "coordinateDimension", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "coordinateDimension", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Feature" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "defaultGeometry", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.opengis.net/ont/geosparql#hasGeometry" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "defaultGeometry", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#dimension",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "dimension", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "dimension", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehContains",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contains", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "contains", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehCoveredBy",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "coveredBy", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "coveredBy", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehCovers",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "covers", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "covers", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehDisjoint",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disjoint", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "disjoint", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehEquals",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "equals", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "equals", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehInside",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "inside", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "inside", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehMeet",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "meet", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "meet", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#ehOverlap",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "overlap", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "overlap", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      A GML serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      A GML serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "GML Literal", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      A GML serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "GML Literal", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      A spatial representation for a given feature.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      A spatial representation for a given feature.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Feature" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "hasGeometry", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      A spatial representation for a given feature.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "hasGeometry", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Connects a geometry object with its text-based serialization.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Connects a geometry object with its text-based serialization.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has serialization", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Connects a geometry object with its text-based serialization.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "has serialization", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#isEmpty",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "isEmpty", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "isEmpty", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#isSimple",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "isSimple", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "isSimple", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8dc",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disconnected", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "disconnected", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ec",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "externally connected", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "externally connected", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8eq",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "equals", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "equals", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ntpp",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "non-tangential proper part", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "non-tangential proper part", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ntppi",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "non-tangential proper part inverse", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "non-tangential proper part inverse", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8po",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "partially overlapping", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "partially overlapping", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8tpp",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "tangential proper part", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "tangential proper part", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8tppi",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "tangential proper part inverse", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "tangential proper part inverse", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contains", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "contains", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfCrosses",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "crosses", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "crosses", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfDisjoint",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disjoint", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "disjoint", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfEquals",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "equals", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "equals", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfIntersects",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "intersects", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "intersects", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfOverlaps",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "overlaps", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "overlaps", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfTouches",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "touches", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "touches", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "within", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.opengis.net/ont/geosparql#SpatialObject" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "within", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#spatialDimension",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.opengis.net/ont/geosparql#Geometry" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "spatialDimension", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "spatialDimension", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "http://purl.org/dc/elements/1.1/contributor": [{ "@value": "Matthew Perry" }],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@value": "OGC GeoSPARQL 1.0 Standard Working Group" }
+      ],
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2011-06-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        {
+          "@value": "\n      A Well-known Text serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "\n      A Well-known Text serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.opengis.net/ont/geosparql" },
+        { "@id": "http://www.opengis.net/spec/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Well-known Text Literal", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "\n      A Well-known Text serialization of a geometry object.\n    ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        { "@value": "Well-known Text Literal", "@language": "en" }
+      ]
+    }
+  ]
+}

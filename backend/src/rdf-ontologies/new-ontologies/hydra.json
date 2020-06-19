@@ -1,0 +1,1022 @@
+{
+  "@id": "http://www.w3.org/ns/hydra/core#",
+  "@graph": [
+    {
+      "@id": "http://www.w3.org/ns/hydra/core",
+      "http://creativecommons.org/ns#attributionName": [
+        { "@value": "Hydra W3C Community Group" }
+      ],
+      "http://creativecommons.org/ns#attributionURL": [{ "@id": "http://www.hydra-cg.com/" }],
+      "http://creativecommons.org/ns#license": [
+        { "@id": "http://creativecommons.org/licenses/by/4.0/" }
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients."
+        }
+      ],
+      "http://purl.org/dc/terms/publisher": [{ "@value": "Hydra W3C Community Group" }],
+      "http://purl.org/dc/terms/rights": [
+        {
+          "@value": "Copyright Â© 2012-2014 the Contributors to the Hydra Core Vocabulary Specification"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "hydra" }],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A lightweight vocabulary for hypermedia-driven Web APIs" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "The Hydra Core Vocabulary" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The Hydra API documentation class" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ApiDocumentation" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#BasicRepresentation",
+      "@type": ["http://www.w3.org/ns/hydra/core#VariableRepresentation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A representation that serializes just the lexical form of a variable value, but omits language and type information."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "BasicRepresentation" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Class",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/ns/hydra/core#Resource"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The class of Hydra classes. Hydra classes and their instances are dereferenceable resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Hydra Class" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Collection",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A collection holding references to a number of related resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Collection" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Error",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A runtime error, used to report information beyond the returned status code."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Error" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Status" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#ExplicitRepresentation",
+      "@type": ["http://www.w3.org/ns/hydra/core#VariableRepresentation"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A representation that serializes a variable value including its language and type information and thus differentiating between IRIs and literals."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ExplicitRepresentation" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#IriTemplate",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The class of IRI templates." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "IRI Template" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A mapping from an IRI template variable to a property." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "IriTemplateMapping" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Link",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The class of properties representing links." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Link" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Operation",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "An operation." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Operation" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#PartialCollectionView",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A PartialCollectionView describes a partial view of a Collection. Multiple PartialCollectionViews can be connected with the the next/previous properties to allow a client to retrieve all members of the collection."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "PartialCollectionView" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Resource",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The class of dereferenceable resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Hydra Resource" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Rfc6570Template",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An IRI template as defined by RFC6570." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "RFC6570 IRI template" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://tools.ietf.org/html/rfc6570" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#Status",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Additional information about a status code that might be returned." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Status code description" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A property known to be supported by a Hydra class." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Supported Property" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#TemplatedLink",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "A templated link." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Templated Link" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#VariableRepresentation",
+      "@type": ["http://www.w3.org/ns/hydra/core#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A representation specifies how to serialize variable values into strings."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "VariableRepresentation" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#apiDocumentation",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A link to the API documentation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "apiDocumentation" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#collection",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Collections somehow related to this resource." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "collection" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Collection" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#description",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Link" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Status" },
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" },
+        { "@id": "http://www.w3.org/ns/hydra/core#TemplatedLink" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "A description." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "description" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#comment" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#entrypoint",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A link to main entry point of the Web API" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "entrypoint" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#expects",
+      "http://schema.org/rangeIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The information expected by the Web API." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "expects" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#expectsHeader",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Specification of the header expected by the operation." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "expects header" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#first",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The first resource of an interlinked set of resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "first" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#freetextQuery",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A property representing a freetext query." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "freetext query" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#last",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The last resource of an interlinked set of resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "last" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#limit",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Instructs to limit set only to N elements." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "take" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#manages",
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Semantics of each member provided by the collection." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Collection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "manages" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#mapping",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A variable-to-property mapping of the IRI template." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplate" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "mapping" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#member",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A member of the collection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Collection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "member" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#method",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "The HTTP method." }],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "method" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#next",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The resource following the current instance in an interlinked set of resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "next" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#object",
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "The object." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "object" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#offset",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Instructs to skip N elements of the set." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "skip" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#operation",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An operation supported by the Hydra resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "operation" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#pageIndex",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Instructs to provide a specific page of the collection at a given index."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "page index" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/hydra/core#pageReference" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#pageReference",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Instructs to provide a specific page reference of the collection." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "page reference" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#possibleStatus",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A status that might be returned by the Web API (other statuses should be expected and properly handled as well)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "possible status" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Status" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#previous",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The resource preceding the current instance in an interlinked set of resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "previous" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#property",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping" },
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "A property" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "property" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#readable",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "True if the client can retrieve the property's value, false otherwise." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "readable" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#required",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping" },
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "True if the property is required, false otherwise." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "required" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#returns",
+      "http://schema.org/rangeIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The information returned by the Web API on success" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "returns" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#returnsHeader",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Name of the header returned by the operation." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "returns header" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#search",
+      "@type": ["http://www.w3.org/ns/hydra/core#TemplatedLink"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A IRI template that can be used to query a collection." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "search" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplate" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#statusCode",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "The HTTP status code" }],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Status" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "status code" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#subject",
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "The subject." }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "subject" }],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#supportedClass",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A class known to be supported by the Web API" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "supported classes" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#supportedOperation",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Link" },
+        { "@id": "http://www.w3.org/ns/hydra/core#TemplatedLink" }
+      ],
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An operation supported by instances of the specific Hydra class or the target of the Hydra link"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "supported operation" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#supportedProperty",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The properties known to be supported by a Hydra class" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "supported properties" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#template",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A templated string with placeholders. The literal's datatype indicates the template syntax; if not specified, hydra:Rfc6570Template is assumed."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplate" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "template" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Rfc6570Template" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Rfc6570Template" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#title",
+      "http://schema.org/domainIncludes": [
+        { "@id": "http://www.w3.org/ns/hydra/core#ApiDocumentation" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Class" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Link" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Operation" },
+        { "@id": "http://www.w3.org/ns/hydra/core#Status" },
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" },
+        { "@id": "http://www.w3.org/ns/hydra/core#TemplatedLink" }
+      ],
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A title, often used along with a description." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "title" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#label" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#totalItems",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The total number of items referenced by a collection." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Collection" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "total items" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#variable",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An IRI template variable" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "variable" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#variableRepresentation",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The representation format to use when expanding the IRI template." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#IriTemplateMapping" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "variable representation" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#VariableRepresentation" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#view",
+      "@type": ["http://www.w3.org/ns/hydra/core#Link"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A specific view of a resource." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "view" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/hydra/core#Resource" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/hydra/core#writeable",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "True if the client can change the property's value, false otherwise." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/hydra/core#SupportedProperty" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/hydra/core" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "writeable" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ],
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [{ "@value": "testing" }]
+    }
+  ]
+}

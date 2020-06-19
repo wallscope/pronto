@@ -1,0 +1,257 @@
+{
+  "@id": "http://www.w3.org/ns/rdfa#",
+  "@graph": [
+    {
+      "@id": "http://www.ivan-herman.net/foaf#me",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.ivan-herman.net/foaf" }
+      ],
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@id": "mailto:ivan@w3.org" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Ivan Herman" }],
+      "http://xmlns.com/foaf/0.1/title": [{ "@value": "Semantic Web Activity Lead" }],
+      "http://xmlns.com/foaf/0.1/workplaceHomepage": [{ "@id": "http://www.w3.org" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#",
+      "http://purl.org/dc/terms/creator": [{ "@id": "http://www.ivan-herman.net/foaf#me" }],
+      "http://purl.org/dc/terms/date": [{ "@value": "2013-01-18" }],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFaÂ 1.1 processing behavior."
+        }
+      ],
+      "http://purl.org/dc/terms/publisher": [{ "@id": "http://www.w3.org/data#W3C" }],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/TR/rdfa-core/#s_initialcontexts" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "$Date: 2013-03-11 07:54:23 $" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#DocumentError",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#Error" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#Error",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "is the class for all error conditions" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#PGClass" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#Info",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "is the class for all informations" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#PGClass" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#PGClass",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "is the top level class of the hierarchy" }
+      ],
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#Pattern",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "Class to identify an (RDF) resource whose properties are to be copied to another resource"
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#PrefixMapping",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "is the class for prefix mappings" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#PrefixOrTermMapping" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#PrefixOrTermMapping",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "is the top level class for prefix or term mappings" }
+      ],
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#PrefixRedefinition",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "warning; to be used when a prefix, either from the initial context or inherited from an ancestor node, is redefined in an element"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#Warning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#TermMapping",
+      "http://purl.org/dc/terms/description": [{ "@value": "is the class for term mappings" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#PrefixOrTermMapping" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#UnresolvedCURIE",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "warning; to be used when a CURIE prefix fails to be resolved" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#Warning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#UnresolvedTerm",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "warning; to be used when a Term fails to be resolved" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#Warning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#VocabReferenceError",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "warning; to be used when the value of a @vocab attribute cannot be dereferenced, hence the vocabulary expansion cannot be completed"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#Warning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#Warning",
+      "http://purl.org/dc/terms/description": [{ "@value": "is the class for all warnings" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/rdfa#PGClass" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#context",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error"
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/rdfa#PGClass" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#copy",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "identifies the resource (i.e., pattern) whose properties and values should be copied to replace the current triple (retaining the subject of the triple)."
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#prefix",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN"
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/rdfa#PrefixMapping" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#term",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "defines a term mapping for a URI; the value is supposed to be a NMTOKEN" }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/rdfa#TermMapping" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#uri",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI"
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/rdfa#PrefixOrTermMapping" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#usesVocabulary",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "provides a relationship between the host document and a vocabulary\n\tdefined using the @vocab facility of RDFa1.1"
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/rdfa#vocabulary",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'."
+        }
+      ],
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ]
+    }
+  ]
+}
