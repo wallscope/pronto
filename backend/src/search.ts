@@ -10,8 +10,12 @@ const prepareData = (ontology: {
 }) => {
   return ontology['@graph'].map((obj: any) => ({
     ontology: ontology['@id'],
-    label: obj['http://www.w3.org/2000/01/rdf-schema#label'] as Array<object> | undefined,
-    comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as Array<object> | undefined,
+    label: obj?.['http://www.w3.org/2000/01/rdf-schema#label'] as
+      | Array<{ '@value': string; '@language'?: string }>
+      | undefined,
+    comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as
+      | Array<{ '@value': string; '@language'?: string }>
+      | undefined,
     ...obj,
   }));
 };
@@ -101,7 +105,7 @@ export const search = (searchType: 'predicate' | 'type', searchWord: string) => 
           // },
         ],
       },
-      { limit: 10 },
+      { limit: 100 },
     )
     .map(result => result.item);
 };
