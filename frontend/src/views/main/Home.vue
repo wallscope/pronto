@@ -81,7 +81,7 @@ import { Vue, Component } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store, Quad_Object } from 'n3';
 import Paginate from 'vuejs-paginate';
-import { OntologyResult } from '@/types';
+import { OntologyResult, resultPrefixes } from '@/types';
 import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
 
@@ -106,20 +106,13 @@ export default class Home extends Vue {
     type: '',
   };
   results: Array<OntologyResult> = [];
-  parser = new Parser();
-  quadstore = new Store();
 
-  get sortedResults() {
-    return [...this.results].sort(({ source }) =>
-      source === 'http://www.w3.org/2000/01/rdf-schema#label' ? 1 : 0,
-    );
-  }
   get slicedResults() {
     const chunkSize = 20;
     const R: OntologyResult[][] = [];
 
-    for (let i = 0; i < this.sortedResults.length; i += chunkSize) {
-      R.push(this.sortedResults.slice(i, i + chunkSize));
+    for (let i = 0; i < this.results.length; i += chunkSize) {
+      R.push(this.results.slice(i, i + chunkSize));
     }
     return R;
   }
@@ -149,46 +142,28 @@ export default class Home extends Vue {
         this.$toasted.show('no result');
         return;
       }
-      const quads = this.parser.parse(data);
-      // Reset store and add quads
-      this.quadstore.deleteGraph('');
-      this.quadstore.addQuads(quads);
 
-      // Get all unique resources (predicates or classes)
-      const resources = this.quadstore.getQuads(
-        null,
-        'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
-        'http://www.w3.org/2000/01/rdf-schema#Resource',
-        null,
-      );
-
-      // For each resource, define explicitely uri, label, comment, definition, and source
-      this.results = resources.map(({ subject, object }) => {
-        const label = this.quadstore
-          .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#label', null)
-          .find(l => (l as any).language === 'en' || (l as any).language === '');
-        const comment = this.quadstore
-          .getObjects(subject.value, 'http://www.w3.org/2000/01/rdf-schema#comment', null)
-          .find(l => (l as any).language === 'en' || (l as any).language === '');
-        const source = this.quadstore.getObjects(
-          subject.value,
-          'http://purl.org/dc/terms/source',
-          null,
-        );
-        const definition = this.quadstore.getObjects(
-          subject.value,
-          'http://www.w3.org/2004/02/skos/core#definition',
-          null,
-        );
-        const rest = this.quadstore.getQuads(subject.value, null, null, null);
+      this.results = data.map((entity: any) => {
+        const label = entity[resultPrefixes.label].find(
+          (lObj: { '@value': string; '@language'?: string }) => {
+            // If no language tag is specified, return the first result (should be the only one)
+            if (!lObj['@language']) return true;
+            // otherwise return the english one
+            else if (lObj['@language'] === 'en') return true;
+          },
+        )?.['@value'];
+        console.log('label', label);
 
         return {
-          uri: subject.value,
-          label: label ? label.value : '',
-          comment: comment ? comment.value : '',
-          definition: definition[0] ? definition[0].value : '',
-          source: source[0] ? source[0].value : '',
-          rest,
+          ...entity,
+          uri: entity['@id'],
+          label: label,
+          comment: entity[resultPrefixes.comment]?.[0]
+            ? entity[resultPrefixes.comment][0]['@value']
+            : '',
+          definition: entity[resultPrefixes.definition]?.[0]
+            ? entity[resultPrefixes.definition][0]['@value']
+            : '',
         };
       });
     } catch (e) {
