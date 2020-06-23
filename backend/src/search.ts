@@ -1,4 +1,3 @@
-// TODO: on startup, save and import indexes to localstorage/indexeddb
 import Fuse from 'fuse.js';
 import prefixes from './rdf-ontologies/prefixes';
 import { importNqFromPrefix } from './rdf-ontologies/loadDataset';
@@ -13,8 +12,6 @@ const prepareData = (ontology: {
     ontology: ontology['@id'],
     label: obj['http://www.w3.org/2000/01/rdf-schema#label'] as Array<object> | undefined,
     comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as Array<object> | undefined,
-    // type: obj['@type'] as Array<string>,
-    // originalObject: [obj],
     ...obj,
   }));
 };
@@ -22,6 +19,7 @@ const prepareData = (ontology: {
 const fuseOptions: Fuse.IFuseOptions<unknown> = {
   includeScore: true,
   distance: 1000,
+  useExtendedSearch: true,
   // keys to search in
   keys: [
     {
@@ -87,36 +85,25 @@ export const search = (searchType: 'predicate' | 'type', searchWord: string) => 
   if (!fuse) return;
   console.log('custom search', fuse);
 
-  // Object.values(prefixes).map((p, i) => {
-  //         if (i > 60) return { ontology: `'${p}` };
-  //         else return { ontology: `'sdfsadf` };
-  //       }),
-
-  const searchOptions:
-    | string
-    | {
-        [key: string]: string;
-      }
-    | {
-        $and?: Fuse.Expression[] | undefined;
-      }
-    | {
-        $or?: Fuse.Expression[] | undefined;
-      } = {
-    $and: [
-      { '@type': formattedSearchType },
-      { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
+  return fuse
+    .search(
       {
-        $or: [
-          { ontology: 'http://purl.org/goodrelations/v1#' },
-          { ontology: 'http://www.w3.org/ns/activitystreams#' },
-          // { ontology: 'http://dbpedia.org/ontology/' },
+        $and: [
+          { '@type': formattedSearchType },
+          { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
+          // {
+          //   $or: [
+          //     { ontology: "'http://purl.org/goodrelations/v1#" },
+          //     { ontology: "'http://www.w3.org/ns/activitystreams#" },
+          //     { ontology: "'http://dbpedia.org/ontology/" },
+          //     { ontology: "'http://schema.org/" },
+          //   ],
+          // },
         ],
       },
-    ],
-  };
-  console.log('options', searchOptions);
-  return fuse.search(searchOptions, { limit: 100 });
+      { limit: 10 },
+    )
+    .map(result => result.item);
 };
 
 // function tryParseJSON(jsonString: unknown) {
@@ -134,27 +121,3 @@ export const search = (searchType: 'predicate' | 'type', searchWord: string) => 
 
 //   return false;
 // }
-
-// // new tests
-// let globalFuse: Fuse<unknown, Fuse.IFuseOptions<unknown>> | null = null;
-
-// export const loadOntology = (ontology: unknown) => {
-//   // Check if valid json
-//   const jsonData = tryParseJSON(ontology);
-//   console.log('jsonData', jsonData);
-//   if (!jsonData) {
-//     // TODO: implement non-json ontology parsing
-//     console.log('not valid json data');
-//     return;
-//   }
-
-//   // Prepare data - Add property names without a dot to enable Fuse to search them
-//   const preparedData = jsonData.map((obj: any) => {
-//     return {
-//       ...obj,
-//       comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'],
-//       label: obj['http://www.w3.org/2000/01/rdf-schema#label'],
-//     };
-//   });
-//   globalFuse = new Fuse(preparedData, options);
-// };
