@@ -144,7 +144,7 @@ export default class Home extends Vue {
       }
 
       this.results = data.map((entity: any) => {
-        const label = entity[resultPrefixes.label].find(
+        const label = entity[resultPrefixes.label]?.find(
           (lObj: { '@value': string; '@language'?: string }) => {
             // If no language tag is specified, return the first result (should be the only one)
             if (!lObj['@language']) return true;

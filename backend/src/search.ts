@@ -20,35 +20,6 @@ const prepareData = (ontology: {
   }));
 };
 
-const fuseOptions: Fuse.IFuseOptions<unknown> = {
-  includeScore: true,
-  distance: 1000,
-  useExtendedSearch: true,
-  // keys to search in
-  keys: [
-    {
-      name: 'ontology',
-      weight: 1,
-    },
-    {
-      name: 'label.@value',
-      weight: 1,
-    },
-    {
-      name: 'comment.@value',
-      weight: 0.5,
-    },
-    {
-      name: '@id',
-      weight: 0.5,
-    },
-    {
-      name: '@type',
-      weight: 1,
-    },
-  ],
-};
-
 const mergedOntologies = async () => {
   const promises = Object.keys(prefixes).map(
     async p =>
@@ -68,11 +39,42 @@ export const prepareIndex = async () => {
   console.log('ontologies merged');
   try {
     const flatData = jsonLdOntologies.flatMap(o => prepareData(o));
-    console.log('1 data prepared', flatData[400]);
 
+    const fuseOptions: Fuse.IFuseOptions<unknown> = {
+      includeScore: true,
+      // distance: 1000,
+      shouldSort: true,
+      threshold: 0.5,
+      // ignoreLocation: true,
+      useExtendedSearch: true,
+      // keys to search in
+      keys: [
+        // {
+        //   name: 'ontology',
+        //   weight: 1,
+        // },
+        {
+          name: 'label.@value',
+          weight: 1,
+        },
+        {
+          name: 'comment.@value',
+          weight: 0.5,
+        },
+        {
+          name: '@id',
+          weight: 0.5,
+        },
+        {
+          name: '@type',
+          weight: 1,
+        },
+      ],
+    };
     // // Create the Fuse index
     const myIndex = Fuse.createIndex(
-      ['ontology', 'label.@value', 'comment.@value', '@id', '@type'],
+      // @ts-ignore
+      fuseOptions.keys.map(k => k.name),
       flatData,
     );
     console.log('index created');
@@ -97,10 +99,10 @@ export const search = (searchType: 'predicate' | 'type', searchWord: string) => 
           { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
           // {
           //   $or: [
-          //     { ontology: "'http://purl.org/goodrelations/v1#" },
-          //     { ontology: "'http://www.w3.org/ns/activitystreams#" },
+          //     // { ontology: "'http://purl.org/goodrelations/v1#" },
+          //     // { ontology: "'http://www.w3.org/ns/activitystreams#" },
           //     { ontology: "'http://dbpedia.org/ontology/" },
-          //     { ontology: "'http://schema.org/" },
+          //     // { ontology: "'http://schema.org/" },
           //   ],
           // },
         ],
@@ -109,19 +111,3 @@ export const search = (searchType: 'predicate' | 'type', searchWord: string) => 
     )
     .map(result => result.item);
 };
-
-// function tryParseJSON(jsonString: unknown) {
-//   console.log('jsonString', typeof jsonString);
-//   if (typeof jsonString !== 'string') return false;
-
-//   try {
-//     const o = JSON.parse(jsonString);
-//     if (o && typeof o === 'object') {
-//       return o;
-//     }
-//   } catch (e) {
-//     // do nothing
-//   }
-
-//   return false;
-// }
