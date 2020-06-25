@@ -9,6 +9,7 @@ const prepareData = (ontology: {
   '@graph': Array<JsonLdObj>; // ontology triples
 }) => {
   return ontology['@graph'].map((obj: any) => ({
+    ...obj,
     ontology: ontology['@id'],
     label: obj?.['http://www.w3.org/2000/01/rdf-schema#label'] as
       | Array<{ '@value': string; '@language'?: string }>
@@ -16,7 +17,6 @@ const prepareData = (ontology: {
     comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as
       | Array<{ '@value': string; '@language'?: string }>
       | undefined,
-    ...obj,
   }));
 };
 
