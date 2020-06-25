@@ -152,18 +152,20 @@ export default class Home extends Vue {
             else if (lObj['@language'] === 'en') return true;
           },
         )?.['@value'];
-        console.log('label', label);
 
         return {
           ...entity,
-          uri: entity['@id'],
-          label: label,
-          comment: entity[resultPrefixes.comment]?.[0]
-            ? entity[resultPrefixes.comment][0]['@value']
-            : '',
-          definition: entity[resultPrefixes.definition]?.[0]
-            ? entity[resultPrefixes.definition][0]['@value']
-            : '',
+          // meta is used for easier manipulation to display
+          meta: {
+            uri: entity['@id'],
+            label,
+            comment: entity[resultPrefixes.comment]?.[0]
+              ? entity[resultPrefixes.comment][0]['@value']
+              : '',
+            definition: entity[resultPrefixes.definition]?.[0]
+              ? entity[resultPrefixes.definition][0]['@value']
+              : '',
+          },
         };
       });
     } catch (e) {

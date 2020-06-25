@@ -1,19 +1,22 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(@click="navigateToResult()")
+      router-link.header.subject(:to="{  \
+        name: 'ResultDetails',  \
+        params: { id: result.meta.uri, result }, \
+      }")
         text-highlight(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-        ) {{ result.label }}
+        ) {{ result.meta.label }}
 
-      .label {{ result.uri }}
+      .label {{ result.meta.uri }}
         i.icon.clipboard.outline.link(
-          @click.stop.prevent="copyToClipboard(result.uri)",
+          @click.stop.prevent="copyToClipboard(result.meta.uri)",
           title="Copy"
         )
         a(
-          :href="result.uri", 
+          :href="result.meta.uri", 
           target="_blank"
         )
           i.icon.external.alternate.link(
@@ -22,8 +25,8 @@
       text-highlight.description(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-      ) {{ result.comment }}
-      .definition {{ result.definition }}
+      ) {{ result.meta.comment }}
+      .definition {{ result.meta.definition }}
 
 </template>
 
@@ -48,14 +51,6 @@ export default class SearchResult extends Vue {
   styleHighlight = {
     'background-color': 'rgba(204, 228, 249, 0.55)',
   };
-
-  navigateToResult() {
-    // @ts-ignore
-    this.$router.push({
-      name: 'ResultDetails',
-      params: { id: this.result.uri, result: this.result },
-    });
-  }
 }
 </script>
 
