@@ -132,6 +132,9 @@ a > i {
 }
 .preds {
   vertical-align: top;
+  min-width: 15rem !important;
+  max-width: 23rem !important;
+  overflow-wrap: anywhere;
 }
 table.ui {
   margin-bottom: 100px !important;
