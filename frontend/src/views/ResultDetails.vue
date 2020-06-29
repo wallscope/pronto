@@ -36,7 +36,7 @@
                     )
                       h4.ui.header
                         .content
-                          | {{ prefix(k) }}
+                          | {{ getPrefixShort(k) }}
                           .sub.header
                             | {{ k }}
                       
@@ -63,7 +63,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { prefixes, copyToClipboard } from '@/utils';
+import { prefixes, copyToClipboard, getPrefixShort } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -75,16 +75,13 @@ import { OntologyResult } from '@/types';
       }
     });
   },
+  methods: {
+    copyToClipboard,
+    getPrefixShort,
+  },
 })
 export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
-
-  // swap uri with prefixes
-  prefixes = Object.entries(prefixes).reduce((acc, entry) => {
-    const [key, value] = entry;
-    acc[value] = key;
-    return acc;
-  }, {} as { [root: string]: string });
 
   /** TODO: temporary getter below. Remove once fusejs dot in key problem is solved */
   get prettyResult() {
@@ -92,18 +89,6 @@ export default class ResultDetails extends Vue {
     return rest;
   }
 
-  copyToClipboard = copyToClipboard;
-  prefix(s: string) {
-    try {
-      const re = s.match(/(\/|#)(?:.(?!\/|#))+$/);
-      if (!re) return s;
-      const [root, prop] = [s.slice(0, re['index']! + 1), s.slice(re['index']! + 1)];
-      if (!this.prefixes[root]) return s;
-      return `${this.prefixes[root]}:${prop}`;
-    } catch {
-      return s;
-    }
-  }
   /** Extracts the prop from the container object and attaches a prefix */
   prettyProp(prop: any) {
     if (!prop) return;
@@ -120,7 +105,7 @@ export default class ResultDetails extends Vue {
 
     return {
       href: prettyProp,
-      value: this.prefix(prettyProp),
+      value: getPrefixShort(prettyProp),
     };
   }
 }

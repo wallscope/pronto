@@ -10,10 +10,10 @@
         :highlightStyle="styleHighlight"
         ) {{ result.meta.label }}
 
-      .label {{ result.meta.uri }}
+      .label {{ getPrefixShort(result.meta.uri) }}
         i.icon.clipboard.outline.link(
           @click.stop.prevent="copyToClipboard(result.meta.uri)",
-          title="Copy"
+          :title="`Copy ${result.meta.uri}`"
         )
         a(
           :href="result.meta.uri", 
@@ -34,7 +34,7 @@
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
 import { OntologyResult } from '@/types';
-import { copyToClipboard } from '@/utils';
+import { copyToClipboard, getPrefixShort } from '@/utils';
 
 @Component({
   components: {
@@ -42,6 +42,7 @@ import { copyToClipboard } from '@/utils';
   },
   methods: {
     copyToClipboard,
+    getPrefixShort,
   },
 })
 export default class SearchResult extends Vue {
