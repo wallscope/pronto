@@ -1,0 +1,1647 @@
+{
+  "@id": "http://id.loc.gov/ontologies/bflc/",
+  "@graph": [
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesNumbering",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series numbering"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Sequential designation or numbering used in the bf:title field for a work."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/relief",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/Relief"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relief term specified on a cartographic resource"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Relief"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2019-05-07 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/ImageBitDepth",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Image bit depth"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The number of bits used to represent each pixel in an image."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/creatorCharacteristic",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/CreatorCharacteristic"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Category to which the creators of the resource belong."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Creator characteristic"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/AppliesTo",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Applies to"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The component of a resource to which a characteristic applies."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesClassification",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series classification"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A specific organization's classification practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/MetadataLicensor",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Metadata licensor"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/Agent"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Organization that licenses the intellectual property rights to the data contained in the description."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/appliesTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AppliesTo"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "The component of a resource to which a characteristic applies."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Applies to"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/relationship",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/Relationship"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Resource and its connection to another resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Related resource and relationship"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title11MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title11MarcKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name00MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for personal name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "MARC key for X00 Names"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title10MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for Title X10"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/alternateMediumOfPerformance",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/pmo:DeclaredMedium"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Alternative to the primary declared medium of performance."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Alternate declared medium"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/indexedIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Citation to the resource where the material being described is indexed."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Indexed in"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/Relationship",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Relationship"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Resource and its connection to another resource."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title40MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title40MarcKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/Relief",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Relief"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relief term specified on a cartographic resource"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2019-05-07 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/metadataLicensor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AdminMetadata"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/MetadataLicensor"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Organization that licenses the intellectual property rights to the data contained in the description."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Metadata licensor"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/MachineModel",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Model"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/SystemRequirement"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Model of the computing device on which the resource operates."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesNumberingPeculiarities",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series numbering peculiarities"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Listing of irregularities in the report year coverage and/or numbering used in the bf:title field for a work. May also include a citation for the source of information."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/PrimaryContribution",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Primary contribution"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/Contribution"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Contribution for which the agent is the name chosen as the name part of the name and title access point."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/applicableInstitution",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/Agent"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Institutional location of a resource to which a particular piece of description applies."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Applicable institution"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name00MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for X00 Name"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/profile",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AdminMetadata"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Name of the BIBFRAME editor profile used to create or edit the description."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "LC Editor profile"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title00MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for Title X00"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/ProgrammingLanguage",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Programming language"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/SystemRequirement"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Name of the programming language associated with the data comprising the resource."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesProvider",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series provider"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Place of publication and the name of the publisher/issuing body used in the bf:title field for a work."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/primaryContributorName00MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for entry name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Primary X00 Name Match key"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesSequentialDesignation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series sequential designation"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Beginning/ending date(s) of publication and/or sequential designations used in the bf:title field for a work. May also include a citation for the source of information."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/TransliteratedTitle",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Transliterated title"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/VariantTitle"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Title transliterated from one script to another."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name10MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for X10 Name"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/target",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "End resource of a BIBFRAME structure."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Target resource"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/primaryContributorName10MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for entry name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Primary X10 Name Match key"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/Eidr",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Entertainment Identifier Registry Association ID"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/Identifier"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Universal unique identifier system for movie and television assets."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title30MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title30MarcKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesTracing",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series tracing"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A specific organization's tracing practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title00MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title00MarcKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/demographicGroup",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/DemographicGroup"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Characteristics of a group of agents."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Demographic group"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/OperatingSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Operating system"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/SystemRequirement"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Software that directly operates a system's hardware and serves as a platform for applications."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/seriesTreatment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Information concerning the treatment of a series in a resource"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series treatment"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title10MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title10MarcKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/Relation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Relation"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Connection between resources."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title30MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title30MatchKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/titleSortKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for sorting."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "titleSortKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title40MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "title40MatchKey"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/EncodingLevel",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Encoding level"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Designation of the fullness of the bibliographic description."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/DemographicGroup",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Demographic group"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Characteristics of a group of agents."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/encodingLevel",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AdminMetadata"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/EncodingLevel"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Designation of the fullness of the bibliographic description."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Encoding level"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/title11MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for title matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for Title X11"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/catalogerId",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AdminMetadata"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "ID of the cataloger who created or edited the description."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Cataloger ID"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name11MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Match key for X11 Name"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/projectedProvisionDate",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/date"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Projected date of publication of the resource."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Projected publication date"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/procInfo",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/AdminMetadata"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "System-supplied processing information for the BIBFRAME description (e.g. \"ibc update\")."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Processing Info"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesAnalysis",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series analysis"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A specific organization's analysis practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/relation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/Relation"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Connection between resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Specific relationship"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/primaryContributorName11MatchKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for entry name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Primary X11 Name Match key"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/SeriesTreatment",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Series treatment"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Technical specification relating to the encoding of series data in a resource"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-10-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/GrooveCutting",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Groove cutting"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Kind of cutting of the grooves used on a disc whose sound reproduction process involves a cutting head inscribing a modulated groove into the surface of a rotating cylinder or disc."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2018-07-12 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name10MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "MARC key for X10 Names"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/CreatorCharacteristic",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Creator characteristic"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Category to which the creators of the resource belong."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/name11MarcKey",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "String for name matching."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used with Work, Instance or Item"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "MARC key for X11 Names"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2017-02-02 (New)"
+        }
+      ]
+    },
+    {
+      "@id": "http://id.loc.gov/ontologies/bflc/",
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@value": "1.2.0"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#ontologyIRI": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc/"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#versionIRI": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc-1-2-0/"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#priorVersion": [
+        {
+          "@id": "http://id.loc.gov/ontologies/bflc-1-1-0/"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "BIBFRAME vocabulary with LC extensions"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2019-05-14T15:21:35.917-04:00"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [
+        {
+          "@id": "http://id.loc.gov/vocabulary/relators"
+        },
+        {
+          "@id": "http://id.loc.gov/ontologies/bibframe"
+        }
+      ]
+    }
+  ]
+}

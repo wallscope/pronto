@@ -1,0 +1,695 @@
+{
+  "@id": "http://www.w3.org/2007/05/powder-s#",
+  "@graph": [
+    {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    {
+      "@id": "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#base64Binary"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "@id": "http://www.w3.org/2001/XMLSchema#token"
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#Ontology"
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Ontology",
+        "http://purl.org/vocommons/voaf#Vocabulary"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "POWDER-S Vocabulary"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This file specifies the set of classes and properties used in the RDF/OWL version of POWDER documents."
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "2 June 2017"
+        }
+      ],
+      "http://purl.org/dc/terms/issued": [
+        {
+          "@value": "2009-09-01"
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        {
+          "@value": "2010-11-08"
+        },
+        {
+          "@value": "2017-06-02"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+        {
+          "@value": "wdrs"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        {
+          "@value": "http://www.w3.org/2007/05/powder-s#"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#priorVersion": [
+        {
+          "@id": "http://www.w3.org/2007/05/powder-s"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#Document",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "POWDER document",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A POWDER document.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#structure"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://www.w3.org/2002/07/owl#Ontology"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#Processor",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "POWDER processor",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A software agent able to process POWDER documents.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#powderprocessor"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://purl.org/dc/terms/Agent"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#authenticate",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "authenticate",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A pointer to a document that describes how Description Resources created by a FOAF Agent or a DC Terms Agent may be authenticated",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#discover"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#certified",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "certified",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property that takes a Boolean value to declare whether the author of the data certifies the described resource.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#certification"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#certifiedby",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "certified by",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property that links a resource to a POWDER document that certifies it.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#certification"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#data_error",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "data error",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property denoting a description of the specific error found in a given POWDER document.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#ppErrorhandling"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://www.w3.org/2007/05/powder-s#Document"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#describedby",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "described by",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An RDF property to exactly match the describedby relationship type introduced in http://www.w3.org/TR/powder-dr/#assoc-linking and formally defined in appendix D of the same document, i.e. the relationship A 'describedby' B asserts that resource B provides a description of resource A. There are no constraints on the format or representation of either A or B, neither are there any further constraints on either resource.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#semlink"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#error_code",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "error code",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property denoting the code of any error encountered by the POWDER processor.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#ppErrorhandling"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#hasIRI",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "has IRI",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property is meant to be used in OWL2 instead of wdrs:matchesregex. It denotes the string data range corresponding to a set of IRIs.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-formal/#oxRegexSemantics"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#issuedby",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "issued by",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property denotes the author of a POWDER document.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#line3"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#logo",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "logo",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Points to a graphic summary for the resources in a given class. Typically, it is a logo denoting conformance of a given (set of) resource(s) to a given set of criteria.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#line13"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#matchesregex",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "matches regular expression",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This is the key 'include' property for IRI set definitions in POWDER-S. It is necessary to take account of the POWDER Semantic Extension to process this fully. The value is a regular expression that is matched against an IRI.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-formal/#regexSemantics"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "http://www.w3.org/TR/xpath-functions/#regex-syntax"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#notknownto",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "not known to",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Property used in results returned from a POWDER Processor that has no data about the candidate resource. The value is the IRI of the processor.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#powderprocessor"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2007/05/powder-s#Processor"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#notmatchesregex",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "matches regular expression",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This is the key 'exclude' property for IRI set definitions in POWDER-S. It is necessary to take account of the POWDER Semantic Extension to process this fully. The value is a regular expression that is matched against an IRI.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-formal/#regexSemantics"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "http://www.w3.org/TR/xpath-functions/#regex-syntax"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#proc_error",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "processing error",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property denoting a description of the specific software error.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#ppErrorhandling"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://www.w3.org/2007/05/powder-s#Processor"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#sha1sum",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "SHA-1 sum",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links to a Base64-encoded binary SHA-1 hash of the described resource. May be used by POWDER Processors when assessing trustworthiness of a DR.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#certification"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#base64Binary"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#supportedby",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "supported by",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A property that links a POWDER document to some other data source that supports the descriptions provided.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#supportedBy"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#tag",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "tag",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Property linking to a free-text tag which may include spaces.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#tags"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#token"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#text",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "text that may be displayed",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property provides a summary of the descriptorset that it annotates, suitable for display to end users.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#line13"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#validfrom",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "valid from",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Provides a timestamp that a POWDER Processor may use when assessing trustworthiness of a POWDER document. Informally, a POWDER Processor should normally ignore data in the document before the given date.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#certification"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2007/05/powder-s#validuntil",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "valid until",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Provides a timestamp that a POWDER Processor may use when assessing trustworthiness of a POWDER document. Informally, a POWDER Processor should normally ignore data in the document after the given date.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www.w3.org/TR/powder-dr/#certification"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#certification"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#discover"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#line13"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#line3"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#powderprocessor"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#ppErrorhandling"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#semlink"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#structure"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#supportedBy"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-dr/#tags"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-formal/#oxRegexSemantics"
+    },
+    {
+      "@id": "http://www.w3.org/TR/powder-formal/#regexSemantics"
+    },
+    {
+      "@id": "http://www.w3.org/TR/xpath-functions/#regex-syntax"
+    }
+  ]
+}
