@@ -169,7 +169,7 @@ export default class Home extends Vue {
         };
       });
     } catch (e) {
-      this.$toasted.show(e);
+      this.$toasted.show(`${e.response.statusText}: ${e.response.data}`);
       throw e;
     } finally {
       this.loading[searchType] = false;

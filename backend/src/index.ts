@@ -2,6 +2,7 @@ require('dotenv').config();
 import restify from 'restify';
 import sqlite3 from 'sqlite3';
 import { search, prepareIndex } from './search';
+import { RequestParamError } from './utils/errors';
 
 // SETUP
 prepareIndex();
@@ -24,19 +25,19 @@ const createFeedbackTable = `
 `;
 
 // ROUTES
-server.get('/api/:queryType', async (req, res, next) => {
+server.get('/api/:searchType', async (req, res, next) => {
   try {
-    const queryType = escape(req.params.queryType);
-    if (queryType !== 'predicate' && queryType !== 'type')
-      throw Error('Search term not defined');
-    const searchQuery = escape(req.query.search);
-    if (!searchQuery) throw Error('Search term not defined');
+    const searchType = req.params.searchType;
+    if (searchType !== 'predicate' && searchType !== 'type')
+      throw new RequestParamError('Search term not defined');
+    const searchQuery = req.query.search;
+    if (!searchQuery) throw new RequestParamError('Search term not defined');
 
-    const searchRes = await search(queryType, searchQuery);
+    const searchRes = await search(searchType, searchQuery);
     res.send(searchRes);
   } catch (e) {
-    console.error('error: ', e.message);
-    res.send(500, `error: ${e}`);
+    if (e instanceof RequestParamError) res.send(400, e.message);
+    else res.send(500, e.message);
   }
   next();
 });
