@@ -10,7 +10,7 @@
         :highlightStyle="styleHighlight"
         ) {{ result.meta.label }}
 
-      .label {{ getPrefixShort(result.meta.uri) }}
+      .label(:title="result.meta.uri") {{ getPrefixShort(result.meta.uri) }}
         i.icon.clipboard.outline.link(
           @click.stop.prevent="copyToClipboard(result.meta.uri)",
           :title="`Copy ${result.meta.uri}`"
