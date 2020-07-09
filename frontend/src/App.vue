@@ -2,7 +2,7 @@
   #app
     Header
     #main
-      #nav
+      #nav(:class="navbarClass")
         router-link(to='/') Home
         |  |&nbsp
         router-link(to='/about') About
@@ -22,25 +22,31 @@
     Footer
 
 </template>
-<script>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 import VueCookieAcceptDecline from 'vue-cookie-accept-decline';
 import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 import { setOptions, bootstrap } from 'vue-gtag';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
-export default {
+@Component({
   components: {
     VueCookieAcceptDecline,
     Header,
     Footer,
   },
-  methods: {
-    async cookieClickedAccept() {
-      await bootstrap();
-    },
-  },
-};
+})
+export default class Home extends Vue {
+  get navbarClass() {
+    // Home page has different ui proportions
+    return this.$route.name === 'Home' ? 'short' : '';
+  }
+  async cookieClickedAccept() {
+    await bootstrap();
+  }
+}
 </script>
 
 <style lang="scss">
@@ -63,6 +69,9 @@ export default {
     &.router-link-exact-active {
       color: #4183c4;
     }
+  }
+  &.short {
+    width: 81.25%;
   }
 }
 #main {

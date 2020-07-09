@@ -6,3 +6,4 @@ declare module '*.vue' {
 declare module 'semantic-ui-vue';
 declare module 'vuejs-paginate';
 declare module 'vue-text-highlight';
+declare module 'vue-cookie-accept-decline';
