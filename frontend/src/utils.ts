@@ -68,7 +68,7 @@ export const prefixes = {
 };
 
 /** Create an object that has URIs as keys and short prefix as value */
-const invertedPrefixes = Object.entries(prefixes).reduce((acc, entry) => {
+export const invertedPrefixes = Object.entries(prefixes).reduce((acc, entry) => {
   const [key, value] = entry;
   acc[value] = key;
   return acc;
