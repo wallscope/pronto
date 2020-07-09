@@ -1,0 +1,275 @@
+{
+  "@id": "http://www.opengis.net/def/function/geosparql/",
+  "@graph": [
+    {
+      "@id": "http://defs.opengis.net/elda-common/ogc-def/resource.ttl?uri=http://www.opengis.net/def/function/geosparql/",
+      "http://purl.org/linked-data/api/vocab#definition": [
+        {
+          "@id": "http://defs.opengis.net/elda-common/ogc-def/resource.ttl?uri=http://www.opengis.net/def/function/geosparql/"
+        }
+      ],
+      "http://purl.org/linked-data/api/vocab#extendedMetadataVersion": [
+        {
+          "@id": "http://defs.opengis.net/elda-common/ogc-def/resource.ttl?_metadata=all&uri=http://www.opengis.net/def/function/geosparql/"
+        }
+      ],
+      "@type": [
+        "http://purl.org/linked-data/api/vocab#ItemEndpoint",
+        "http://purl.org/linked-data/api/vocab#Page"
+      ],
+      "http://xmlns.com/foaf/0.1/primaryTopic": [
+        { "@id": "http://www.opengis.net/def/function/geosparql/" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql",
+      "http://www.opengis.net/def/metamodel/ogc-na/collectionView": [
+        { "@id": "http://www.opengis.net/def/function/geosparql/" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/",
+      "http://purl.org/dc/elements/1.1/source": [
+        { "@id": "http://www.opengis.net/doc/geosparql/1.0" }
+      ],
+      "@type": ["http://www.w3.org/2004/02/skos/core#Collection"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "GeoSPARQL Functions\t" }],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.opengis.net/doc/geosparql/1.0" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#member": [
+        { "@id": "http://www.opengis.net/def/function/geosparql/boundary" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/buffer" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/convexHull" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/difference" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/distance" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehContains" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehCoveredBy" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehCovers" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehDisjoint" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehEquals" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehInside" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehMeet" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/ehOverlap" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/envelope" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/getSRID" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/intersection" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8dc" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8ec" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8eq" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8ntpp" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8ntppi" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8po" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8tpp" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/rcc8tppi" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/relate" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfContains" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfCrosses" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfDisjoint" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfEquals" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfIntersects" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfOverlaps" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfTouches" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/sfWithin" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/symDifference" },
+        { "@id": "http://www.opengis.net/def/function/geosparql/union" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [{ "@value": "GeoSPARQL Functions\t" }],
+      "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
+        {
+          "@id": "http://defs.opengis.net/elda-common/ogc-def/resource.ttl?uri=http://www.opengis.net/def/function/geosparql/"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/boundary",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "boundary", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/buffer",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "buffer", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/convexHull",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "convex hull", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/difference",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "difference", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/distance",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "distance", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehContains",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contains", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehCoveredBy",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "covered by", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehCovers",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "covers", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehDisjoint",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disjoint", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehEquals",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "equals", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehInside",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "inside", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehMeet",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "meet", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/ehOverlap",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "overlap", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/envelope",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "envelope", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/getSRID",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "getSRID", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/intersection",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "intersection", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8dc",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disconnected", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8ec",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "externally connected", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8eq",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "equals", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8ntpp",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "non-tangential proper part", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8ntppi",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "non-tangential proper part inverse", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8po",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "partially overlapping", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8tpp",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "tangential proper part", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/rcc8tppi",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "tangential proper part inverse", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/relate",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "relate", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfContains",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contains", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfCrosses",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "crosses", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfDisjoint",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disjoint", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfEquals",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "equals", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfIntersects",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "intersects", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfOverlaps",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "overlaps", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfTouches",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "touches", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/sfWithin",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "within", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/symDifference",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "symmetric difference", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.opengis.net/def/function/geosparql/union",
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "union", "@language": "en" }]
+    }
+  ]
+}

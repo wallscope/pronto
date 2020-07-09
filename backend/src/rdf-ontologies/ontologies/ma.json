@@ -1,0 +1,1191 @@
+{
+  "@id": "http://www.w3.org/ns/ma-ont#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" },
+            { "@id": "_:c14n7" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" },
+            { "@id": "_:c14n4" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#complementOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Image" }
+      ]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#complementOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Image" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/date",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#Thing",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont",
+      "http://purl.org/dc/elements/1.1/date": [
+        { "@value": "2013-03-20", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group."
+        },
+        {
+          "@value": "THE CONTENT OF THIS MA-ONT.RDF AND DERIVED MA-ONT.TTL FILES PREVAIL OVER THE SPECIFICATION."
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [
+        { "@id": "http://dublincore.org/2008/01/14/dcelements.rdf" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "R36" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Agent",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A person or organisation contributing to the media resource." }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Collection" },
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" },
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" },
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" },
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#AudioTrack",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Track" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#DataTrack" },
+        { "@id": "http://www.w3.org/ns/ma-ont#VideoTrack" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Collection",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Any group of media resource e.g. a series." }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" },
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" },
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" },
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#DataTrack",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Ancillary data track e.g. captioning  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Track" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#VideoTrack" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Image",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A still image / thumbnail / key frame related to the media resource or being the media resource itself."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Location",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc."
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" },
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" },
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#MediaFragment",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#MediaResource",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An image or an audiovisual media resource, which can be composed of one or more fragment / track."
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" },
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Organisation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An organisation or moral agent." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Agent" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Person" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Person",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "A physical person." }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Agent" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Rating",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Information about the rating given to a media resource." }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#TargetAudience",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended."
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#Track",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A specialisation of MediaFragment for audiovisual content." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaFragment" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#VideoTrack",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Track" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#alternativeTitle",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning \"alternative\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#title" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#averageBitRate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n1" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#collectionName",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The name by which a collection (e.g. series) is known." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Collection" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#copyright",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'copyright.copyright' in the Ontology for Media Resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#createdIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A subproperty of 'hasRelatedLocation\" used to specify where material shooting took place."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasRelatedLocation" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isCreationLocationOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#creationDate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"creationDate\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#date" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#date",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#depictsFictionalLocation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn')."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasRelatedLocation" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isFictionalLocationDepictedIn" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#description",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'description' in the Ontology for Media Resources. This can be specialised by using sub-properties e.g. 'summary' or 'script'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#duration",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'duration' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n0" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#editDate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"editDate\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#date" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#features",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'contributor.contributor' in the Ontology for Media Resources with a 'contributor.role' meaning \"actor\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Person" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasContributor" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#playsIn" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#fragmentName",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'namedFragment.label' in the Ontology for Media Resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaFragment" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#frameHeight",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#frameRate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#frameSizeUnit",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'frameSize.unit' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#frameWidth",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasAccessConditions",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'policy' in the Ontology for Media Resources with a 'policy.type' \"access conditions\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasPolicy" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasAudioDescription",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"audio-description\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasCaptioning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasCaptioning",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"captioning\". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isCaptioningOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasChapter",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"chapter\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isChapterOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasClassification",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'targetAudience.classification' in the Ontology for Media Resources. This property is used to provide a value characterising the target audience."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasClassificationSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'targetAudience.identifier' in the Ontology for Media Resources. This is used to identify the reference sheme against which the target audience has been characterised."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasCompression",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'compression' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasContributedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasContributor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Agent" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasContributedTo" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasCopyrightOver",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasCreated",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasCreator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasContributor" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasCreated" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasFormat",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'format' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasFragment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isFragmentOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasGenre",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'genre' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasKeyword",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'keyword' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasLanguage",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'language' in the Ontology for Media Resources. The language used in the resource. A controlled vocabulary such as defined in BCP 47 SHOULD be used. This property can also be used to identify the presence of sign language (RFC 5646). By inheritance, the hasLanguage property applies indifferently at the media resource / fragment / track levels.  Best practice recommends to use to best possible level of granularity fo describe the usage of language within a media resource including at fragment and track levels."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasLocationCoordinateSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'location.coordinateSystem' in the Ontology for Media Resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasMember",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasNamedFragment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'namedFragment' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isNamedFragmentOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasPermissions",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning \"permissions\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasPolicy" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasPolicy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasPublished",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasPublisher",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'publisher' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasContributor" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasPublished" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasRating",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isRatingOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasRatingSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating.type' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasRelatedImage",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning \"related image\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Image" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasRelatedResource" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isImageRelatedTo" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasRelatedLocation",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isLocationRelatedTo" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasRelatedResource",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isRelatedTo" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasSigning",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"signing\". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isSigningOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasSource",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning \"source\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasRelatedResource" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isSourceOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasSubtitling",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"subtitling\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasCaptioning" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasTargetAudience",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'targetAudience' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#TargetAudience" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isTargetAudienceOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#hasTrack",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"track\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Track" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasFragment" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isTrackOf" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isCaptioningOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isChapterOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isCopyrightedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'copyright.identifier' in the Ontology for Media Resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Agent" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasCopyrightOver" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isCreationLocationOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isFictionalLocationDepictedIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isFragmentOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isImageRelatedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#isRelatedTo" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isLocationRelatedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isMemberOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'collection' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Collection" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#hasMember" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isNamedFragmentOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isProvidedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating.identifier' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Agent" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#provides" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isRatingOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isRelatedTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isSigningOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isSourceOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isTargetAudienceOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#isTrackOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#locationAltitude",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'location.altitude' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#locationLatitude",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'location.latitude' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#locationLongitude",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'location.longitude' in the Ontology for Media Resources."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#locationName",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'location.name' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Location" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#locator",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'locator' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#mainOriginalTitle",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning \"original\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#title" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#numberOfTracks",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#playsIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#provides",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#ratingScaleMax",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating.max' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#ratingScaleMin",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating.min' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#ratingValue",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Corresponds to 'rating.value' in the Ontology for Media Resources." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Rating" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#recordDate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"recordDate\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#date" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#releaseDate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"releaseDate\"."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#date" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#samplingRate",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#decimal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#title",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#MediaResource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ma-ont#trackName",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/ma-ont#Track" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ma-ont#fragmentName" }
+      ]
+    }
+  ]
+}

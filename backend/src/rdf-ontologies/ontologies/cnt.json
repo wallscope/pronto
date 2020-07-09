@@ -1,0 +1,373 @@
+{
+  "@id": "http://www.w3.org/2011/content#",
+  "@graph": [
+    {
+      "@id": "http://www.w3.org/2011/content",
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Representing Content in RDF as defined by http://www.w3.org/TR/Content-in-RDF/",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/TR/Content-in-RDF/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Representing Content in RDF", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/WAI/intro/earl" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [{ "@id": "http://purl.org/dc/terms/" }],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "Working Draft 29 April 2011", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#Content",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The content.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Content", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#ContentAsBase64",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The base64 encoded content (can be used for binary content).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Base64 content", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/content#Content" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#ContentAsText",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The text content (can be used for text content).", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Text content", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/content#Content" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#ContentAsXML",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The XML content (can only be used for XML-wellformed content).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML content", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2011/content#Content" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#DoctypeDecl",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The document type declaration.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Document type declaration", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#bytes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The Base64 encoded byte sequence of the content.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsBase64" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Base64 encoded byte sequence", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#base64Binary" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#characterEncoding",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The character encoding used to create a character sequence from a byte sequence or vice versa.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#Content" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Character encoding", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#chars",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The character sequence of the text content.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsText" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Character sequence", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#declaredEncoding",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The character encoding declared in the XML declaration.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML character encoding", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#doctypeName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The document type name.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#DoctypeDecl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Document type name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#dtDecl",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The document type declaration.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Document type declaration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2011/content#DoctypeDecl" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#internalSubset",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The internal document type definition subset within the document type declarations.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#DoctypeDecl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Internal DTD subset", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#leadingMisc",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The XML content preceding the document type declaration.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML leading misc", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#XMLLiteral" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#publicId",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The document type declarations's public identifier.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#DoctypeDecl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Public ID", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#rest",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The XML content following the document type declaration.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML rest", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#XMLLiteral" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#standalone",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The standalone declaration in the XML declaration.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML standalone document declaration", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#systemId",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The document type declarations's system identifier (typed: xsd:anyURI)",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#DoctypeDecl" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "System ID", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2011/content#version",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The XML version declared in the XML declaration.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2011/content#ContentAsXML" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "XML version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    }
+  ]
+}

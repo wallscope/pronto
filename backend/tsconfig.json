@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "allowJs": true,
+    "target": "ES5",
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "lib": ["ES2019"],
+    "strict": true,
+    "module": "CommonJS",
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*"]
+}

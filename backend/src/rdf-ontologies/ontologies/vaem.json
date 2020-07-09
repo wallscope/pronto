@@ -1,0 +1,1573 @@
+{
+  "@id": "http://www.linkedmodel.org/schema/vaem#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#name" }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasMetadata" }
+      ]
+    },
+    {
+      "@id": "_:c14n11",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#rdfxmlFileURL" }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#name" }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#namespacePrefix" }
+      ]
+    },
+    {
+      "@id": "_:c14n14",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GraphMetaData" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasMetadata" }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#owner" }
+      ]
+    },
+    {
+      "@id": "_:c14n16",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasIdentifier" }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Viewpoint" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasViewpoint" }
+      ]
+    },
+    {
+      "@id": "_:c14n18",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#latestPublishedVersion" }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#id" }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#url" }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Party" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasSteward" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#revision" }
+      ]
+    },
+    {
+      "@id": "_:c14n22",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Aspect" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasAspect" }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#turtleFileURL" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasLicenseType" }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#namespace" }
+      ]
+    },
+    {
+      "@id": "_:c14n26",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#description" }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GraphRole" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasGraphRole" }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasSteward" }
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Discipline" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDiscipline" }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#specificity" }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Party" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasOwner" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#intent" }
+      ]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#previousPublishedVersion" }
+      ]
+    },
+    {
+      "@id": "_:c14n8",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#filePrefix" }
+      ]
+    },
+    {
+      "@id": "_:c14n9",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Domain" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDomain" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/abstract",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "abstract" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/author",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "author" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/contributor",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "contributor" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "created" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#date" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "creator" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "description" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/modified",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "modified" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#date" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/replaces",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "replaces" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/rights",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "rights" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/subject",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "subject" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "title" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/2.0/schema/vaem",
+      "http://www.linkedmodel.org/schema/vaem#hasGraphMetadata": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GMD_VAEM" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionIRI": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem",
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Aspect",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "Aspect is used to distinguish among sets of features of a domain or subject area. The term is borrowed from \"aspect-oriented\" programming, where it is used to separate concerns. An ontology may be characterized by this dimension so as to parition features that are orthogonal. For example,  in a systems ontology there may be aspects for \"structure\", \"function\", \"behavior\" and \"interface\" or \"interoperability\". A viewpoint can be distinguished by \"aspects\". For example the \"information viewpoint\" of an application can be partitioned into separate graphs for the \"security\", \"operational\" and\"data retention\" aspects."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Aspect Dimension" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Dimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#CatalogEntry",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "VAEM Governed Object class is a placeholder for concepts that are fully defined by the voag:GovernedObject concept hierarchy for building a catalog of ontologies and graphs"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#CollectionGraph",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A \"vaem:CollectionGraph\" is a graph that aggregates other graphs using \"owl:imports\" statements"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "COLLECTION" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Collection graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ConstraintsGraph",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "A \"vaem:ConstraintsGraph\" is a graph that holds SPIN constraints" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "CONSTRAINTS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Constraints graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ControllersGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "CONTROLLERS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Controllers graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#CurationGraph",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A \"vaem:CurationGraph\" is a graph to hold metadata that is needed to describe, govern and provision another graph. A curation graph will likely use VOAG and VAEM for this purpose. The property \"vaem:curationGraph\" is used to link to the graph (or graphs) being curated"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "CURATION" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Curation graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#DataGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "DATA" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Data graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Dimension",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A dimension identifies a separation of concens that serves as a way to categorize an ontology graph. In VAEM,  the notion of \"Dimension\" is partitioned into \"Aspect\", \"Discipline\", \"Domain\" and \"Viewpoint\". "
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Domain" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Discipline",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A discipline is a specific area of work or study. Examples of disciplines in the engineering domain are electrical engineering, mechanical engineering and, in the financial domain, risk assessment, investment analysis.  In VAEM, discipline is used as a dimension for characterizing an ontology graph"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Discipline Dimension" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Dimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#DocumentationGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "DOC" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Documentation graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Domain",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A domain is a subject area of interest. Examples of domains are \"enterprise\", \"process\", \"organization\" and \"system\". In VAEM, \"Domain\" is used as a dimension for characterizing an ontology graph"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Domain Dimension" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Dimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#FunctionsGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "FUNCTIONS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Functions graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#GMD_VAEM",
+      "http://purl.org/dc/terms/abstract": [
+        {
+          "@value": "VAEM stands for \"Vocabulary for Attaching Essential Metadata\". What VAEM regards as essential metadata is data about dates and times, confidentiality, and other characterisitic qualifiers of the ontology, but also references to where a ontology is documented and where to find ontology registration for governance, attribution and provenance. VAEM makes use of some properties from the DC terms vocabulary using the namespace prefix \"dct\". VAEM is OWL-DL compliant."
+        }
+      ],
+      "http://purl.org/dc/terms/created": [
+        { "@value": "2011-04-20", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        { "@value": "2014-07-26", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/title": [{ "@value": "VAEM Version 2.0 Metadata" }],
+      "http://www.linkedmodel.org/schema/vaem#description": [
+        {
+          "@value": "VAEM stands for \"Vocabulary for Attaching Essential Metadata\". What VAEM regards as essential metadata is data about dates and times, confidentiality, and other characterisitic qualifiers of the ontology, but also references to where a ontology is documented and where to find ontology registration for governance, attribution and provenance. VAEM makes use of some properties from the DC terms vocabulary using the namespace prefix \"dct\". VAEM is OWL-DL compliant."
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#hasGraphRole": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#SchemaGraph" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#hasOwner": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#TopQuadrant" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#hasSteward": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#TopQuadrant" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#intent": [
+        {
+          "@value": "The purpose of VAEM is to provide, by import, a foundation for commonly needed resources for metadata on an ontology."
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#latestPublishedVersion": [
+        {
+          "@value": "http://www.linkedmodel.org/doc/2014/SCHEMA_vaem-v2.0",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#logo": [
+        {
+          "@value": "http://linkedmodel.org/lib/lm/images/logos/TopBraid-RDM-Graph-Logo.png",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#name": [{ "@value": "VAEM" }],
+      "http://www.linkedmodel.org/schema/vaem#namespace": [
+        {
+          "@value": "http://www.linkedmodel.org/schema/vaem#",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#namespacePrefix": [{ "@value": "vaem" }],
+      "http://www.linkedmodel.org/schema/vaem#owner": [{ "@value": "TopQuadrant, Inc." }],
+      "http://www.linkedmodel.org/schema/vaem#previousPublishedVersion": [
+        {
+          "@value": "http://linkedmodel.org/doc/vaem/1.2/",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#rdfxmlFileURL": [
+        {
+          "@value": "http://www.linkedmodel.org/2.0/schema/SCHEMA_vaem-v2.0.rdf",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#revision": [{ "@value": "2.0" }],
+      "http://www.linkedmodel.org/schema/vaem#title": [
+        { "@value": "Vocabulary for Attaching Essential Metadata (VAEM) - Version 2.0" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#turtleFileURL": [
+        {
+          "@value": "http://www.linkedmodel.org/2.0/schema/SCHEMA_vaem-v2.0.ttl",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#usesNonImportedResource": [
+        { "@id": "http://purl.org/dc/terms/abstract" },
+        { "@id": "http://purl.org/dc/terms/author" },
+        { "@id": "http://purl.org/dc/terms/created" },
+        { "@id": "http://purl.org/dc/terms/modified" },
+        { "@id": "http://purl.org/dc/terms/title" },
+        { "@id": "http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US" }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#withAttributionTo": [
+        {
+          "@value": "VAEM is issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to TopQuadrant, Inc."
+        }
+      ],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphMetaData"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "VAEM Schema Version 2.0 Metadata" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#GraphMetaData",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "\"vaem:GraphMetaData\" defines basic metadata for the registration and publishing of a graph.  For specificaiton of governance the vocabulary \"VOAG\" may be used."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Graph Metadata" }],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://voag.linkedmodel.org/vocab/voag" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n10" },
+        { "@id": "_:c14n11" },
+        { "@id": "_:c14n12" },
+        { "@id": "_:c14n13" },
+        { "@id": "_:c14n14" },
+        { "@id": "_:c14n15" },
+        { "@id": "_:c14n16" },
+        { "@id": "_:c14n17" },
+        { "@id": "_:c14n18" },
+        { "@id": "_:c14n20" },
+        { "@id": "_:c14n21" },
+        { "@id": "_:c14n22" },
+        { "@id": "_:c14n23" },
+        { "@id": "_:c14n24" },
+        { "@id": "_:c14n25" },
+        { "@id": "_:c14n26" },
+        { "@id": "_:c14n27" },
+        { "@id": "_:c14n28" },
+        { "@id": "_:c14n3" },
+        { "@id": "_:c14n4" },
+        { "@id": "_:c14n5" },
+        { "@id": "_:c14n6" },
+        { "@id": "_:c14n7" },
+        { "@id": "_:c14n9" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#GraphRole",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "GraphRole is used to characterize how a graph of resources participates in an ontology set.  For example, a graph can be a schema, vocabulary, dataset, script, or ruleset"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Graph role" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n0" },
+        { "@id": "_:c14n8" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#LinkSetGraph",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A \"vaem:LinkSetGraph\" is a graph that holds statements that specify links between resources"
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "LINKSET" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Link Set graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#MappingGraph",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A graph that specifies a transformation of a graph into another graph or graphs. Invariably this is a SPINMap graph using SPARQL Rules (SPIN) to express the transforms."
+        }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "MAPPINGS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Mapping graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Party",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A \"Party\" is a generalization for an actor that may be realized as a person, organizaiton or named role."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Party" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n19" },
+        { "@id": "_:c14n2" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ProxyGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "PROXY" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Proxy graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#RulesGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "RULES" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Rules Graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#SchemaGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "SCHEMA" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Schema graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ScriptGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "SCRIPT" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Script graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#TopQuadrant",
+      "http://www.linkedmodel.org/schema/vaem#name": [{ "@value": "TopQuadrant, Inc." }],
+      "http://www.linkedmodel.org/schema/vaem#url": [
+        {
+          "@value": "http:/www.topquadrant.com",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      ],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#Party"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "TopQuadrant" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#TransformsGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "TRANSFORMS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Transforms graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ViewGraph",
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "VIEWS" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "View graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#Viewpoint",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "Viewpoint is used to denote how a set of resources, or an individual resource, is relevant to a context of use. The term \"viewpoint\" is adopted from the ISO RM-ODP specifications and its more recent use in enterprise architecture descriptions. The RM-ODP introducesd the concept of viewpoint to describe a system from a particular set of concerns. RM-ODP defines five viewpoints. Together they provide a complete description of a system: enterprise viewpoint, information viewpoint, computational viewpoint, engineering viewpoint, and technology viewpoint.  In VAEM, \"Viewpoint\" is used as a dimension for characterizing an ontology graph.  The viewpoints of an ontology may not always correpsond directly to those of a system but the idea of describing a subject area of interest from distinct viewpoints is still relevant. A viewpoint can be further distinguished by \"aspects\". For example the \"information viewpoint\" of an application can be partitioned into separate graphs for the \"security\", \"operational\" and\"data retention\" aspects."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "ViewpointDimension" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#Dimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#VocabularyGraph",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "An RDF/OWL Graph that is a controlled set of instances." }
+      ],
+      "http://www.linkedmodel.org/schema/vaem#filePrefix": [{ "@value": "VOCAB" }],
+      "@type": ["http://www.linkedmodel.org/schema/vaem#GraphRole"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Vocabulary graph" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#abbreviation",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:abbreviation\" provides a common way to define a commonly used abbreviation on a resource"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "abbreviation" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#acronym",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:acronym\" provides a common way to define a commonly used abbreviation on a resource"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "acronym" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#comment",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "An annotation property that can be freely used on any kind of resource. The range of the property is \"xsd:string\""
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "definition" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#date",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:date\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp. The property is also the parent of all dates so that queries can be made for any date on an ontology"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "date" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#dateCreated",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:dateCreated\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#description",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "description" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#filePrefix",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:filePrefix\" is for specifying a preferred file prefix for a graph. For example a schema graph may be given the file prefix \"SCHEMA\" followed by an underscore \"_\"."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "file prefix" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasAspect",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasAspect\" is used to distinguish among sets of features of a domain or subject area. The term is borrowed from \"aspect-oriented\" programming, where it is used to separate concerns. An ontology may be characterized by this dimension so as to parition features that are orthogonal. For example,  in a systems ontology we can distinguish aspects for \"structure\", \"function\", \"behavior\" and \"interface\".  The property is an \"rdf:Property\" to allow both scalar and object values"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has aspect " }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasDimension",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasDimension\" is used categorize an ontology.  In VAEM, the property is used to characterize an ontology graph."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has dimension" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasDiscipline",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasDiscipline\" is used to indicate relevance of a set of resources, or a resource itself, to a specific discipline of work or study. Examples of disciplines in the engineering domain are electrical engineering, mechanical engineering and, in the financial domain, risk assessment, investment analysis.  In VAEM, the property is used as a dimension for characterizing an ontology graph.  The property is an \"rdf:Property\" to allow both scalar and object values"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has discipline" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasDomain",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasDomain\" is used to specify how  a set of resources, or an individual resource is grounded in a domain, that is, a subject area of interest. Examples of domains are \"enterprise\", \"process\", \"organization\" and \"system\". In VAEM, the property is used as a dimension for characterizing an ontology graph. The property is an \"rdf:Property\" to allow both scalar and object values"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has domain" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasGraphMetadata",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GraphMetaData" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasGraphRole",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"lms:hasGraphRole\" is used to characterize how a resource participates in an ontology set.  The property is used to specify the role that a graph plays, for example, an ontology graph can be a schema, vocabulary, dataset, script, or ruleset"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has graph role" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GraphRole" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasIdentifier",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaemhasIdentifier\" is intended for general use as a means to specifiy a unique reference to something. This is an object property that is a sub-property of \"vame:id\""
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has identifier" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasLicenseType",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasLicenseType\" points to an entry in the VOAG ontology for licenses"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has license type", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasMetadata",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"hasMetadata\" is used to reference a metadata information structure."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has metadata" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasOwner",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has owner" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasSteward",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "A property that is used to refer to a \"Steward\", that is, the party or role that is responsible for maintaining an asset, in the case of VAEM, an ontology graph."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has steward" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#hasViewpoint",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:hasViewpoint\" is used to denote how a set of resources, or an individual resource, is relevant to a context of use. The term \"viewpoint\" is adopted from the ISO RM-ODP specifications and its more recent use in enterprise architecture descriptions.  In VAEM, the property is used as a dimension for characterizing an ontology graph.  The property is an \"rdf:Property\" to allow both scalar and object values"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has viewpoint" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#hasDimension" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#id",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:id\" is intended for general use as a means to specifiy an identifier. The type of this property is intentionally set to \"rdf:Property\" so that use of the property can allow both object and scaler values.  For this reason, the property is rangeless"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "id" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#idString",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:idString\" is intended for general use as a means to specifiy a unique reference to something. This is a data property with a string range and is a sub-property of \"vame:id\""
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#intent",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:intent\" is used to outline  a statement of purpose. This typically expresses one or more desired outcomes"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "intent" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#isElaboratedIn",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "An annotation used to reference a graph that elaborates (adds properties and axioms to) a resource"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "isDefinedBy" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#lastUpdated",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:lastUpdated\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#latestPublishedVersion",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:latestPublishedVersion\"is a URL to documentation for the latest version of a graph."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "latest published version" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#logo",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:logo\" is a reference to an image that is used for publishing the ontology\""
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#name",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:name\" is intended for general use. In many cases \"rdfs:label\" could be used give names to resources. In the case where compliance with a specific naming rule is needed,  \"vaem:name\" allows  a resource to carry a name that is used in more specific contexts."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "name" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#namespace",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:namespace\" is the onotlogy URI with which a graph is primarily associated. The intent is to allow multiple graphs to define statements for resources in the same Ontology namespace. For example, a foundation level graph with the base URI of \"http://www.somesite.com/1.0/schema/OurOntology\"  may define general  concepts for \"OurOntology\". Another graph with the base URI \"http://www.somesite.com/1.0/schema/level2/OurOntology\"  may add more specific details to the same \"OurOntology\". Each of these two graphs would carry the same value for \"vaem:namespace\", that is, \"http://www.somesite.com/schema/OurOntology\".    In other words, an ontology URI is the URI associated with the resources of a controlled namespace. On the other hand the graph URIs (the base URIs) identify the graphs that hold resources that make up an ontology"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "namespace" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#namespacePrefix",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:namespacePrefix\" specifes a short handle or label for the URI of an Ontology.  Multiple graphs can define statements for resources in the same Ontololgy namespace. For example, a foundation level graph with the base URI of \"http://www.somesite.com/1.0/schema/OurOntology\"  may define general  concepts for \"OurOntology\". Another graph with the base URI \"http://www.somesite.com/1.0/schema/level2/OurOntology\"  may add more specific details to the same \"OurOntology\". Each of these two graphs would carry the same value for \"vaem:namespacePrefix\", for this example, perhaps, \"ourOntology\""
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "namespace prefix" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#ownedBy",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:ownedBy\" is a general property that in some cases could have scalar values or may refer to some concept of \"Party\".  For this reason, the  type of this property is set as \"rdf:Property\" and the property is rangeless. There are two sub-properties of \"vaem:ownedBy\", namely \"vaem:owner\" for string values and \"vaem:owningParty\" for referencing a party.  Ownership applies to those ontologies that are proprietary"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#owner",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "owner" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#owningParty",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:owningParty\" is used to refer to some concept of \"Party\" and is a sub-property of \"vaem:ownedBy\""
+        }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#previousPublishedVersion",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:previousPublishedVersion\"is a URL to documentation for the previous version of a graph."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "previous published version" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#rationale",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "A description of a justification for some other assertion or value" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "rationale" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#rdfxmlFileURL",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:rdfxmlFileURL\" is used to provide a link to the location of the ontology's RDF/XML file"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "RDF/XML file URL" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#reifiableBy",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "To express how statements in a model can be reifiable, this property is used to explicitly associate a property with a user-defined sub-class of \"rdf:Statement\". A recommended way of using this is to declare the properties that share the same reification constructs as sub-properties of a parent property that carries the \"vaem:reifiableBy\" property. The parent property should be of type \"rdf:Property\" so that it can have both datatype and object properties as sub-properties. By this means use and transformations of a model can be understood through a fully specified metamodel. \"vaem:reifiableBy\" is rangeless in order to comply with OWL DL semantics. Its range would have been rdfs:Class in order to refer to \"rdf:Statement\" sub-classes"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "reifiable by" }]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#releaseDate",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:releaseDate\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "release date" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#date" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#revision",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:revision\" is a property intended for general use as the name implies."
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "revision" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#specificity",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:specificity\" is intended to specify the level of detail of an ontology.  The values that can be set for this property are restriced to an integer from 1 to 5. An ontology at level 1 has concepts of more general applicability than one at level 5. By having graphs at different levels of specificity it is possible to support greater modularity for selective imports"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "specificity" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#title",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "title" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#todo",
+      "http://purl.org/dc/terms/description": [
+        { "@value": "As it name implies, a way to attach an annotation about a \"todo\" task" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "todo" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#turtleFileURL",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:turtleFileURL\" is used to provide a link to the location of the ontology's turtle file"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "turtle file URL" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#url",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:url\" is intended for general use as the name implies.  The range of the property is set as an XSD URI"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "url" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#usesNonImportedResource",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:usesNonImportedResource\" is used to express dependencies on resources from graphs that are not imported"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "uses non-imported resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://www.linkedmodel.org/schema/vaem#withAttributionTo",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The property \"vaem:withAttributionTo\" is an annotation property that is either used to hold either a string or a reference to an instance of \"voag:Attribution\", from the VOAG ontology"
+        }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.linkedmodel.org/2.0/schema/vaem" },
+        { "@id": "http://www.linkedmodel.org/schema/vaem" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "with attribution to" }]
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.linkedmodel.org/schema/vaem#hasGraphMetadata": [
+        { "@id": "http://www.linkedmodel.org/schema/vaem#GMD_VAEM" }
+      ]
+    }
+  ]
+}

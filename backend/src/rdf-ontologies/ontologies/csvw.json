@@ -1,0 +1,1917 @@
+{
+  "@id": "http://www.w3.org/ns/csvw#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n14",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n16",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Row" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Datatype" },
+            { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Transformation" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#Transformation" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" },
+            { "@id": "http://www.w3.org/ns/csvw#Row" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#ForeignKey" },
+            { "@id": "http://www.w3.org/ns/csvw#TableReference" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#NumericFormat" },
+            { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n30",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n31",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n8",
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/csvw#TableGroup" },
+            { "@id": "http://www.w3.org/ns/csvw#Table" },
+            { "@id": "http://www.w3.org/ns/csvw#Schema" },
+            { "@id": "http://www.w3.org/ns/csvw#Column" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#",
+      "http://purl.org/dc/terms/date": [
+        { "@value": "2017-06-06", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "This document describes the RDFS vocabulary description used in the Metadata Vocabulary for Tabular Data [[tabular-metadata]] along with the default JSON-LD Context.",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        { "@value": "CSVW Namespace Vocabulary Terms", "@language": "en" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/TR/tabular-metadata" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [{ "@id": "http://www.w3.org/ns/prov" }],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@id": "https://github.com/w3c/csvw/commit/fcc9db20ba4de10e41e964eee1b5d01defa4c664"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Cell",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Cell represents a cell at the intersection of a Row and a Column within a Table.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Cell", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Column",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Column represents a vertical arrangement of Cells within a Table.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Column Description", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Datatype",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Describes facets of a datatype.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Datatype", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Dialect",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Dialect Description provides hints to parsers about how to parse a linked file.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Dialect Description", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Direction",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The class of table/text directions.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Direction", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#ForeignKey",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Describes relationships between Columns in one or more Tables.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Foreign Key Definition", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#JSON",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A literal containing JSON.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "JSON", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#NumericFormat",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If the datatype is a numeric type, the format property indicates the expected format for that number. Its value must be either a single string or an object with one or more properties.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Numeric Format", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Row",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Row represents a horizontal arrangement of cells within a Table.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Row", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Schema",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Schema is a definition of a tabular format that may be common to multiple tables.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Schema", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Table",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An annotated table is a table that is annotated with additional metadata.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Annotated Table", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#TableGroup",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Group of Tables comprises a set of Annotated Tables and a set of annotations that relate to those Tables.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Group of Tables", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#TableReference",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An object property that identifies a referenced table and a set of referenced columns within that table.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Table Reference", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#Transformation",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Transformation Definition is a definition of how tabular data can be transformed into another format.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Transformation Definition", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#aboutUrl",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A URI template property that MAY be used to indicate what a cell contains information about.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n14" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "about URL", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#uriTemplate" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#auto",
+      "@type": ["http://www.w3.org/ns/csvw#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates whether the tables in the group should be displayed based on the first character in the table that has a specific direction.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "auto", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#base",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single string: a term defined in the default context representing a built-in datatype URL, as listed above.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "base", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#column",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An array property of column descriptions as described in section 5.6 Columns.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Schema" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "column", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Column" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#columnReference",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A column reference property that holds either a single reference to a column description object within this schema, or an array of references. These form the referencing columns for the foreign key definition.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n28" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "column reference", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#commentPrefix",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that sets the comment prefix flag to the single provided value, which MUST be a string.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "comment prefix", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#csvEncodedTabularData",
+      "@type": ["http://www.w3.org/ns/prov#Role"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Describes the role of a CSV file in the tabular data mapping.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "CSV Encoded Tabular Data", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#datatype",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An object property that contains either a single string that is the main datatype of the values of the cell or a datatype description object. If the value of this property is a string, it MUST be one of the built-in datatypes defined in section 5.11.1 Built-in Datatypes or an absolute URL; if it is an object then it describes a more specialised datatype.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n3" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "datatype", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n20" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#decimalChar",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string whose value is used to represent a decimal point within the number.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#NumericFormat" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "decimal character", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#default",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property holding a single string that is used to create a default value for the cell in cases where the original string value is an empty string.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n2" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "default", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#delimiter",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that sets the delimiter flag to the single provided value, which MUST be a string.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "delimiter", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#describes",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "From IANA describes: The relationship A 'describes' B asserts that resource A provides a description of resource B. There are no constraints on the format or representation of either A or B, neither are there any further constraints on either resource.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Row" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "describes", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#dialect",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An object property that provides a single dialect description. If provided, dialect provides hints to processors about how to parse the referenced files to create tabular data models for the tables in the group.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n4" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "dialect", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#doubleQuote",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property that, if `true`, sets the escape character flag to `\"`.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "double quote", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#encoding",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that sets the encoding flag to the single provided string value, which MUST be a defined in [[encoding]]. The default is \"utf-8\".",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "encoding", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#foreignKey",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For a Table: a list of foreign keys on the table.\n\nFor a Schema: an array property of foreign key definitions that define how the values from specified columns within this table link to rows within this table or other tables.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n0" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "foreign key", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#ForeignKey" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#format",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains either a single string or an object that defines the format of a value of this type, used when parsing a string value as described in Parsing Cells in [[tabular-data-model]].",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "format", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#groupChar",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string whose value is used to group digits within the number.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#NumericFormat" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "group character", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n29" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#header",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property that, if `true`, sets the header row count flag to `1`, and if `false` to `0`, unless headerRowCount is provided, in which case the value provided for the header property is ignored.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "header", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#headerRowCount",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An numeric atomic property that sets the header row count flag to the single provided value, which must be a non-negative integer.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "header row count", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#inherit",
+      "@type": ["http://www.w3.org/ns/csvw#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For `textDirection`, indicates that the direction is inherited from the `tableDirection` annotation of the `table`.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "inherit", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#lang",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property giving a single string language code as defined by [[BCP47]].",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n31" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "language", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#length",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The exact length of the value of the cell.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "length", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#lineTerminators",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that sets the line terminators flag to either an array containing the single provided string value, or the provided array.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "line terminators", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#ltr",
+      "@type": ["http://www.w3.org/ns/csvw#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates whether the tables in the group should be displayed with the first column on the right.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "left to right", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#maxExclusive",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single number that is the maximum valid value (exclusive).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "max exclusive", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#maxInclusive",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single number that is the maximum valid value (inclusive).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "max inclusive", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#maxLength",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A numeric atomic property that contains a single integer that is the maximum length of the value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "max length", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#minExclusive",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single number that is the minimum valid value (exclusive).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "min exclusive", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#minInclusive",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single number that is the minimum valid value (inclusive).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "min inclusive", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#minLength",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that contains a single integer that is the minimum length of the value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Datatype" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "min length", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#name",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that gives a single canonical name for the column. The value of this property becomes the name annotation for the described column.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Column" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "name", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#note",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An array property that provides an array of objects representing arbitrary annotations on the annotated tabular data model.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n15" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "note", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#null",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property giving the string or strings used for null values within the data. If the string value of the cell is equal to any one of these values, the cell value is `null`.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n8" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "null", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#ordered",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property taking a single value which indicates whether a list that is the value of the cell is ordered (if `true`) or unordered (if `false`).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n6" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ordered", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#pattern",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A regular expression string, in the syntax and interpreted as defined by [[ECMASCRIPT]].",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#NumericFormat" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "pattern", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#primaryKey",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For Schema: A column reference property that holds either a single reference to a column description object or an array of references.\n\nFor Row: a possibly empty list of cells whose values together provide a unique identifier for this row. This is similar to the name of a column.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n19" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "primary key", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#propertyUrl",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An URI template property that MAY be used to create a URI for a property if the table is mapped to another format. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n10" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "property URL", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#uriTemplate" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#quoteChar",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that sets the quote character flag to the single provided value, which must be a string or `null`.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "quote char", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#reference",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An object property that identifies a **referenced table** and a set of **referenced columns** within that table.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#ForeignKey" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "reference", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#TableReference" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#referencedRow",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A possibly empty list of pairs of a foreign key and a row in a table within the same group of tables.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Row" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "referenced rows", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#required",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property taking a single value which indicates whether the cell must have a non-null value. The default is `false`. ",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n25" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "required", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#resource",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A link property holding a URL that is the identifier for a specific table that is being referenced.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#TableReference" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "resource", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#row",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relates a Table to each Row output.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Table" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "row", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Row" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#member" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#rowTitle",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A column reference property that holds either a single reference to a column description object or an array of references.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Schema" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "row titles", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#rownum",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The position of the row amongst the rows of the Annotated Tabl, starting from 1",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "row number", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#rtl",
+      "@type": ["http://www.w3.org/ns/csvw#Direction"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates whether the tables in the group should be displayed with the first column on the left.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "right to left", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#schemaReference",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A link property holding a URL that is the identifier for a schema that is being referenced.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#TableReference" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "schema reference", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#scriptFormat",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A link property giving the single URL for the format that is used by the script or template.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Transformation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "script format", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#separator",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that MUST have a single string value that is the character used to separate items in the string value of the cell.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n16" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "separator", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#skipBlankRows",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An boolean atomic property that sets the `skip blank rows` flag to the single provided boolean value.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "skip blank rows", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#skipColumns",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An numeric atomic property that sets the `skip columns` flag to the single provided numeric value, which MUST be a non-negative integer.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "skip columns", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#skipInitialSpace",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property that, if `true`, sets the trim flag to \"start\". If `false`, to `false`.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "skip initial space", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#skipRows",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An numeric atomic property that sets the `skip rows` flag to the single provided numeric value, which MUST be a non-negative integer.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "skip rows", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#source",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A single string atomic property that provides, if specified, the format to which the tabular data should be transformed prior to the transformation using the script or template.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Transformation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "source", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#suppressOutput",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property. If `true`, suppresses any output that would be generated when converting a table or cells within a column.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n1" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "suppress output", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#table",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relates an Table group to annotated tables.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#TableGroup" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "table", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Table" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#member" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#tableDirection",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "One of `rtl`, `ltr` or `auto`. Indicates whether the tables in the group should be displayed with the first column on the right, on the left, or based on the first character in the table that has a specific direction.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n30" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "table direction", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Direction" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#tableSchema",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An object property that provides a single schema description as described in section 5.5 Schemas, used as the default for all the tables in the group",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n12" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "table schema", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Schema" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#tabularMetadata",
+      "@type": ["http://www.w3.org/ns/prov#Role"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Describes the role of a Metadata file in the tabular data mapping.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Tabular Metadata", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#targetFormat",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A link property giving the single URL for the format that will be created through the transformation.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Transformation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "target format", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#textDirection",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that must have a single value that is one of `rtl` or `ltr` (the default).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n17" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "text direction", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Direction" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#title",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For a Transformation A natural language property that describes the format that will be generated from the transformation.\n\nFor a Column: A natural language property that provides possible alternative names for the column.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n27" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "title", "@language": "en" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#transformations",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An array property of transformation definitions that provide mechanisms to transform the tabular data into other formats.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n21" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "transformations", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#Transformation" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#trim",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An atomic property that, if the boolean `true`, sets the trim flag to `true` and if the boolean `false` to `false`. If the value provided is a string, sets the trim flag to the provided value, which must be one of \"true\", \"false\", \"start\" or \"end\".",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Dialect" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "trim", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#uriTemplate",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "uri template", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For a Table: This link property gives the single URL of the CSV file that the table is held in, relative to the location of the metadata document.\n\nFor a Transformation: A link property giving the single URL of the file that the script or template is held in, relative to the location of the metadata document.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n24" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "url", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#anyURI" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#valueUrl",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An URI template property that is used to map the values of cells into URLs.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n5" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "valueUrl", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/csvw#uriTemplate" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/csvw#virtual",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A boolean atomic property taking a single value which indicates whether the column is a virtual column not present in the original source",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/csvw#Column" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/csvw#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "virtual", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#boolean" }
+      ]
+    }
+  ]
+}

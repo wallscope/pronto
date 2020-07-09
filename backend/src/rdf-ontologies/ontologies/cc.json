@@ -1,0 +1,466 @@
+{
+  "@id": "http://creativecommons.org/ns#",
+  "@graph": [
+    {
+      "@id": "http://creativecommons.org/ns#Attribution",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "credit be given to\n\t\t    copyright holder and/or author",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Attribution", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#CommercialUse",
+      "@type": ["http://creativecommons.org/ns#Prohibition"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "exercising rights for\n\t\t    commercial purposes",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Commercial Use", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Copyleft",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "derivative and\n\t\t    combined works must be licensed under specified\n\t\t    terms, similar to those on the original\n\t\t    work",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Copyleft", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#DerivativeWorks",
+      "@type": ["http://creativecommons.org/ns#Permission"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "distribution of\n\t\t    derivative works", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Derivative Works", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Distribution",
+      "@type": ["http://creativecommons.org/ns#Permission"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "distribution, public\n\t\t    display, and publicly performance",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Distribution", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#HighIncomeNationUse",
+      "@type": ["http://creativecommons.org/ns#Prohibition"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "use in a\n\t\t    non-developing country", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "High Income Nation Use", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Jurisdiction",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "the legal jurisdiction\n\t\t    of a license", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Jurisdiction", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#LesserCopyleft",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "derivative works must\n\t\t    be licensed under specified terms, with at least\n\t\t    the same conditions as the original work;\n\t\t    combinations with the work may be licensed under\n\t\t    different terms",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Lesser Copyleft", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#License",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "a set of\n\t\t    requests/permissions to users of a Work, e.g. a\n\t\t    copyright license, the public domain, information\n\t\t    for distributors",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "License", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/dc/terms/LicenseDocument" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Notice",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "copyright and license\n\t\t    notices be kept intact",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Notice", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Permission",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "an action that may or\n\t\t    may not be allowed or desired",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Permission", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Prohibition",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "something you may be\n\t\t    asked not to do", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Prohibition", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Reproduction",
+      "@type": ["http://creativecommons.org/ns#Permission"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "making multiple\n\t\t    copies", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Reproduction", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Requirement",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "an action that may or\n\t\t    may not be requested of you",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Requirement", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#ShareAlike",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "derivative works be\n\t\t    licensed under the same terms or compatible terms\n\t\t    as the original work",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Share Alike", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Sharing",
+      "@type": ["http://creativecommons.org/ns#Permission"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "permits commercial\n\t\t    derivatives, but only non-commercial\n\t\t    distribution",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Sharing", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#SourceCode",
+      "@type": ["http://creativecommons.org/ns#Requirement"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "source code (the\n\t\t    preferred form for making modifications) must be\n\t\t    provided when exercising some rights granted by\n\t\t    the license.",
+          "@language": "en-us"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Source Code", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#Work",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "a potentially\n\t\t    copyrightable work", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Work", "@language": "en-us" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#attributionName",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#attributionURL",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#deprecatedOn",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "deprecated\n\t\t  on", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema-datatypes#date" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#jurisdiction",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "jurisdiction", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://creativecommons.org/ns#Jurisdiction" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#legalcode",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#license",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has\n\t\t  license", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/license" }
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        { "@id": "http://www.w3.org/1999/xhtml/vocab#license" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#morePermissions",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/relation" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#permits",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "permits", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://creativecommons.org/ns#Permission" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#prohibits",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "prohibits", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://creativecommons.org/ns#Prohibition" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#requires",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "requires", "@language": "en-us" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://creativecommons.org/ns#Requirement" }
+      ]
+    },
+    {
+      "@id": "http://creativecommons.org/ns#useGuidelines",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/relation" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Attribution",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Attribution" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/CommercialUse",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#CommercialUse" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/DerivativeWorks",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#DerivativeWorks" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Distribution",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Distribution" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/License",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#License" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Notice",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Notice" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Permission",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Permission" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Prohibition",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Prohibition" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Reproduction",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Reproduction" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Requirement",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Requirement" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/ShareAlike",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#ShareAlike" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/SourceCode",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#SourceCode" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/Work",
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://creativecommons.org/ns#Work" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/license",
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://creativecommons.org/ns#license" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/permits",
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://creativecommons.org/ns#permits" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/prohibits",
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://creativecommons.org/ns#prohibits" }
+      ]
+    },
+    {
+      "@id": "http://web.resource.org/cc/requires",
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://creativecommons.org/ns#requires" }
+      ]
+    }
+  ]
+}

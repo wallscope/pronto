@@ -4,8 +4,8 @@
       .row
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
-          h1 {{ result.label }}
-          p {{ result.uri }}
+          h1 {{ result.meta.label }}
+          p {{ result.meta.uri }}
             i.icon.clipboard.outline.link(
               @click.stop.prevent="copyToClipboard(result.uri)",
               title="Copy"
@@ -24,31 +24,30 @@
                 th Predicate
                 th Object
             tbody
-              template(v-for="[k, vArr] in Object.entries(groupedResults)")
-                tr
-                  td.preds(:rowspan="vArr.length")
-                    h4.ui.header
-                      .content
-                        | {{ prefix(k) }}
-                        .sub.header
-                          | {{ k }}
-                  td
-                    a(
-                      v-html="prettyProp(vArr[0])",
-                      :title="vArr[0]",
-                      :href="vArr[0]",
-                      target="_blank"
+              template(v-for="[k, v] in Object.entries(prettyResult)")
+                template(
+                  v-if="Array.isArray(v)"
+                  v-for="(v2, vIdx) in v"
+                )
+                  tr
+                    td.preds(
+                      v-if="vIdx === 0"
+                      :rowspan="v.length"
                     )
+                      h4.ui.header
+                        .content
+                          | {{ getPrefixShort(k) }}
+                          .sub.header
+                            | {{ k }}
+                      
+                    td.result-cell
+                      a(
+                        v-html="prettyProp(v2).value",
+                        :title="prettyProp(v2).href",
+                        :href="prettyProp(v2).href",
+                        target="_blank"
+                      )
 
-                  
-                tr(v-for="(obj, idx) in vArr", v-if="idx > 0")
-                  td.result-cell
-                    a(
-                      v-html="prettyProp(obj)", 
-                      :title="obj",
-                      :href="obj",
-                      target="_blank"
-                    )
                   
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
           .ui.animated.button(
@@ -64,7 +63,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { prefixes, copyToClipboard } from '@/utils';
+import { prefixes, copyToClipboard, getPrefixShort } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -76,44 +75,38 @@ import { OntologyResult } from '@/types';
       }
     });
   },
+  methods: {
+    copyToClipboard,
+    getPrefixShort,
+  },
 })
 export default class ResultDetails extends Vue {
   @Prop({ required: true }) result!: OntologyResult;
 
-  // swap uri with prefixes
-  prefixes = Object.entries(prefixes).reduce((acc, entry) => {
-    const [key, value] = entry;
-    acc[value] = key;
-    return acc;
-  }, {} as { [root: string]: string });
-
-  get groupedResults() {
-    return this.result.rest.reduce((prev, curr) => {
-      if (!prev[curr.predicate.id]) prev[curr.predicate.id] = [];
-      prev[curr.predicate.id] = [...prev[curr.predicate.id], curr.object.id];
-      return prev;
-    }, {} as { [key: string]: Array<string> });
+  /** TODO: temporary getter below. Remove once fusejs dot in key problem is solved */
+  get prettyResult() {
+    const { label, comment, ...rest } = this.result;
+    return rest;
   }
 
-  copyToClipboard = copyToClipboard;
-  prefix(s: string) {
-    try {
-      const re = s.match(/(\/|#)(?:.(?!\/|#))+$/);
-      if (!re) return s;
-      const [root, prop] = [s.slice(0, re['index']! + 1), s.slice(re['index']! + 1)];
-      if (!this.prefixes[root]) return s;
-      return `${this.prefixes[root]}:${prop}`;
-    } catch {
-      return s;
+  /** Extracts the prop from the container object and attaches a prefix */
+  prettyProp(prop: any) {
+    if (!prop) return;
+    let prettyProp;
+    if (prop.constructor === Object && !!prop['@id']) {
+      prettyProp = prop['@id'];
+    } else if (prop.constructor === Object && !!prop['@value'] && !!prop['@language']) {
+      prettyProp = `${prop['@value']}@${prop['@language']}`;
+    } else if (prop.constructor === Object && !!prop['@value']) {
+      prettyProp = prop['@value'];
+    } else {
+      prettyProp = prop;
     }
-  }
-  prettyProp(prop: string) {
-    if (prop.indexOf('@') > 0) {
-      const s = prop.split('@');
-      // TODO: DB only contains data in English. Include `<span>lang:${s[1]}</span>` when adding more languages
-      return s[0].slice(1, -1);
-    }
-    return this.prefix(prop);
+
+    return {
+      href: prettyProp,
+      value: getPrefixShort(prettyProp),
+    };
   }
 }
 </script>
@@ -124,6 +117,9 @@ a > i {
 }
 .preds {
   vertical-align: top;
+  min-width: 15rem !important;
+  max-width: 23rem !important;
+  overflow-wrap: anywhere;
 }
 table.ui {
   margin-bottom: 100px !important;

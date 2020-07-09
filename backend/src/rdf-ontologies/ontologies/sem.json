@@ -1,0 +1,909 @@
+{
+  "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/",
+  "@graph": [
+    {
+      "@id": "http://linkedevents.org/ontology/Event",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://linkedevents.org/ontology/" }
+      ]
+    },
+    {
+      "@id": "http://linkedevents.org/ontology/atTime",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://linkedevents.org/ontology/" }
+      ]
+    },
+    {
+      "@id": "http://linkedevents.org/ontology/inSpace",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://linkedevents.org/ontology/" }
+      ]
+    },
+    {
+      "@id": "http://linkedevents.org/ontology/involved",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://linkedevents.org/ontology/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/NET/c4dm/event.owl#Event",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/NET/c4dm/event.owl#Factor",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/NET/c4dm/event.owl#Product",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/NET/c4dm/event.owl#sub_event",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Event",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/dcmitype/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/PhysicalObject",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/dcmitype/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/elements/1.1/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/Agent",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/AgentClass",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/Location",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/PhysicalResource",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://purl.org/dc/terms/" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Actor",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.\n"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Actor" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Authority" },
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Core" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#broadMatch": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting" },
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://purl.org/dc/terms/Agent" },
+        { "@id": "http://purl.org/dc/terms/AgentClass" },
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic" },
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent" },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor"
+        },
+        { "@id": "http://xmlns.com/foaf/0.1/Agent" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/ActorType",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "EventType contains all resources that are used to classify Actors, e.g. person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Actor type" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Authority",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Authorities are entities that state SEM properties. Their nature is not specified. They can symbolize people, organizations, sources of information, etc."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Authority" }]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Constraint",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The SEM Constraint class contains instances of properties that have a constrained (i.e. not universal) validity. This includes time dependent validity (Temporary), validity in the guise of a specific role (Role), or validity according to a given Authority (View)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Constraint" }]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Core",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The SEM Core class contains all entities that make up the context of an event: Events, Actors, Places, Times. This class is meant to be extended for each application domain."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Core" }]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Event",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Event" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Core" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#broadMatch": [
+        { "@id": "http://linkedevents.org/ontology/Event" },
+        { "@id": "http://purl.org/NET/c4dm/event.owl#Event" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://purl.org/dc/dcmitype/Event" },
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Situation" },
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant" },
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Process" },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event"
+        }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/EventType",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "EventType contains all resources that are used to classify Events, e.g. meeting."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Event type" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Object",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Objects are passive, inanimate Actors." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Object" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Actor" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#broadMatch": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting" },
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Object" },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E19.Physical_Object"
+        },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#narrowMatch": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#Factor" },
+        { "@id": "http://purl.org/NET/c4dm/event.owl#Product" },
+        { "@id": "http://purl.org/dc/dcmitype/PhysicalObject" },
+        { "@id": "http://purl.org/dc/terms/PhysicalResource" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Place",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Place" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Core" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://purl.org/dc/terms/Location" },
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized" },
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea" },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#narrowMatch": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion" },
+        { "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/PlaceType",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "EventType contains all resources that are used to classify Places, e.g. river."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Place type" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Role",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Roles are properties with a subspecified function or position indicated by a RoleType in the scope of an Event. For example, the sem:hasActor property can be subspecified with the RoleType attacker, to denote that the type of participation of the Actor in the scope of the Event is \"attacker\". The sem:hasPlace property can be subspecified with the RoleType origin, to denote that within the scope of the Event it is the origin."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Role" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Constraint" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#relatedMatch": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Role" },
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region" },
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#IntentionalProcess" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/RoleType",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "EventType contains all resources that are used to classify Roles, e.g. receiver."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Role type" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Temporary",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Temporaries are properties that only hold during a certain Time, which is either indicated with the sem:hasTime property to an instance of sem:Time, or with the sem:hasTimeStamp property to some timestamp(s)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Temporary" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Constraint" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Time",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Time" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Core" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#broadMatch": [
+        { "@id": "http://www.w3.org/2006/timeTemporalEntity" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/TimeType",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "EventType contains all resources that are used to classify Time, e.g. century."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Time type" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The SEM Type class contains all types of Core instances. These can be either individuals of classes themselves. This class is meant to be extended for each application domain."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Type" }],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#AbstractRegion" },
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type"
+        }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/View",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Views are properties that only hold according to a certain Authority." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "View" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Constraint" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/accordingTo",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "According to is used to state which Authority sais that a property constrained by the View Constraint is true."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/View" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "according to" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Authority" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/actorType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Has actor type is used to assign a type to an actor." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Actor" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has actor type" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/ActorType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Event properties connect Events to other SEM Core entities." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "event property" }]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Has event type is used to assign a type to an event." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Event" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has event type" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/EventType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasActor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has actor is used to state which Actors or Objects participate in an Event."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has Actor" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Actor" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://linkedevents.org/ontology/involved" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#narrowMatch": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/agent" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has begin timestamp" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEarliestBeginTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has earliest begin timestamp is used to indicate the earliest possible starting time of an uncertain time interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has earliest begin timestamp" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEarliestEndTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has earliest end timestamp is used to indicate the earliest possible ending time of an uncertain time interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has earliest end timestamp" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has end timestamp is used to indicate the end of a time interval. Omitting the hasEndTimeStamp while stating a hasBeginTimeStamp is interpreted as an open ended interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has end timestamp" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasLatestBeginTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has latest begin timestamp is used to indicate the latest possible starting time of an uncertain time interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has latest begin timestamp" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasLatestEndTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has latest end timestamp is used to indicate the latest possible ending time of an uncertain time interval."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has latest end timestamp" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasPlace",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has Place" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Place" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/place" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#narrowMatch": [
+        { "@id": "http://linkedevents.org/ontology/inSpace" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasSubEvent",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Event" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has subevent" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Event" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/subEventOf" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://purl.org/NET/c4dm/event.owl#sub_event" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasSubType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has sub type is used to state that a type falls under another type. This is a generic aggregation relation that is used to generalize over various hierarchical relations that can exist between types."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has subtype" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/subTypeOf" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTime",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has Time" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Time" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#broadMatch": [
+        { "@id": "http://linkedevents.org/ontology/atTime" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has timestamp is used to put time indicators on any individual. It is the most common way to state when an Event took place. There are subproperties of hasTimeStamp to represent time intervals and uncertain time intervals. If the exact moment is not known, but it is necessary to specify a certain time, use hasTime instead. All of these properties are also used to indicate the time at which a property under the Temporary Constraint is valid."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has timestamp" }],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/time" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/placeType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Has place type is used to assign a type to a place." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Place" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has place type" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/PlaceType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/roleType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Has role type is used to assign a role type to a Role property constraint. This role is a subspecification of the eventProperty which it constrains. For example, if an Event hasActor an Actor and this property is given a Role Constraint, then roleType can be used to assign a role to the participation of the Actor in the Event indicated by hasActor."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Role" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has role type" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/RoleType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/subEventOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Inverse property of hasSubEvent" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "subevent of" }]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/subTypeOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The inverse property of hasSubType." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "subtype of" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/timeType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Has time type is used to assign a type to a time individual." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Time" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has time type" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/TimeType" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type" }
+      ]
+    },
+    {
+      "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/type",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Type is the super property of the properties that are used to indicate the type of a Core instance, eventType, actorType, placeType, timeType; and of roleType. Types can be both classes and individuals, cf. OWL 2 punning."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "type property" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://semanticweb.cs.vu.nl/2009/11/sem/Type" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#closeMatch": [
+        { "@id": "http://purl.org/dc/elements/1.1/type" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#relatedMatch": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/quality" }
+      ]
+    },
+    {
+      "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/" }
+      ]
+    },
+    {
+      "@id": "http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/" }
+      ]
+    },
+    {
+      "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Role",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/" }
+      ]
+    },
+    {
+      "@id": "http://sw.opencyc.org/2009/04/07/concept/en/Situation",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/" }
+      ]
+    },
+    {
+      "@id": "http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://sw.opencyc.org/2009/04/07/concept/en/" }
+      ]
+    },
+    {
+      "@id": "http://www.kulttuurisampo.fi/ebkr/agent",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/" }
+      ]
+    },
+    {
+      "@id": "http://www.kulttuurisampo.fi/ebkr/place",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/" }
+      ]
+    },
+    {
+      "@id": "http://www.kulttuurisampo.fi/ebkr/quality",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/" }
+      ]
+    },
+    {
+      "@id": "http://www.kulttuurisampo.fi/ebkr/time",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.kulttuurisampo.fi/ebkr/" }
+      ]
+    },
+    {
+      "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#AbstractRegion",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" }
+      ]
+    },
+    {
+      "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" }
+      ]
+    },
+    {
+      "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" }
+      ]
+    },
+    {
+      "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" }
+      ]
+    },
+    {
+      "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" }
+      ]
+    },
+    {
+      "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#" }
+      ]
+    },
+    {
+      "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#" }
+      ]
+    },
+    {
+      "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#IntentionalProcess",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#" }
+      ]
+    },
+    {
+      "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Object",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#" }
+      ]
+    },
+    {
+      "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#Process",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.ontologyportal.org/translations/SUMO.owl.txt#" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2006/timeTemporalEntity",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/2006/time" }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E19.Physical_Object",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#"
+        }
+      ]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/Agent",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://xmlns.com/foaf/0.1/" }
+      ]
+    }
+  ]
+}

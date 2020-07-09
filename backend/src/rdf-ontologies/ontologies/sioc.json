@@ -1,0 +1,2208 @@
+{
+  "@id": "http://rdfs.org/sioc/ns#",
+  "@graph": [
+    {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/references",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/subject",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#",
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. \r\nThis information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels.",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        { "@value": "SIOC Core Ontology Namespace", "@language": "en" }
+      ],
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Ontology",
+        "http://www.w3.org/2002/07/owl#Thing"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [{ "@id": "http://rdfs.org/sioc/spec" }],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "Revision: 1.36" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Community",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Community is a high-level concept that defines an online community and what it consists of.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Community", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Container",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An area in which content Items are contained.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Container", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Forum",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A discussion area on which Posts or entries are made.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Forum", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Item",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An Item is something which can be in a Container.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Item", "@language": "en" }],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#Space" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Post",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An article or message that can be posted to a Forum.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Post", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://xmlns.com/foaf/0.1/Document" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Role",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Role", "@language": "en" }],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" },
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Space" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Site",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Site", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://rdfs.org/sioc/ns#Space" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Space",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Space", "@language": "en" }],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Thread",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A container for a series of threaded discussion Posts or Items.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Thread", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#User",
+      "@type": ["http://www.w3.org/2002/07/owl#DeprecatedClass"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "UserAccount is now preferred. This is a deprecated class for a User in an online community site.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "User", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/OnlineAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" },
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#Space" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentClass": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#UserAccount",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A user account in an online community site.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "User Account", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/OnlineAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" },
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#Space" },
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#Usergroup",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Usergroup", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#disjointWith": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" },
+        { "@id": "http://rdfs.org/sioc/ns#Item" },
+        { "@id": "http://rdfs.org/sioc/ns#Role" },
+        { "@id": "http://rdfs.org/sioc/ns#Space" },
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#about",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "about", "@language": "en" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#account_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "account of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://xmlns.com/foaf/0.1/Agent" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/account" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#addressed_to",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Refers to who (e.g. a UserAccount, e-mail address, etc.) a particular Item is addressed to.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "addressed to", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#administrator_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Site that the UserAccount is an administrator of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "administrator of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Site" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_administrator" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#attachment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The URI of a file attached to an Item.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "attachment", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#avatar",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An image or depiction used to represent this UserAccount.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "avatar", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/depiction" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#container_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An Item that this Container contains.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "container of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/hasPart" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_container" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#content",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The content of the Item in plain text format.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "content", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#content_encoded",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The encoded content of the Post, contained in CDATA areas.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "content encoded", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use content:encoded from the RSS 1.0 content module instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#created_at",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "When this was created, in ISO 8601 format.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "created at", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:created from the Dublin Core ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#creator_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A resource that the UserAccount is a creator of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "creator of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_creator" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#delivered_at",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "When this was delivered, in ISO 8601 format.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "delivered at", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#description",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The content of the Post.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "description", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use sioc:content or other methods (AtomOwl, content:encoded from RSS 1.0, etc.) instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#discussion_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The Item that this discussion is about.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "discussion of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_discussion" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#earlier_version",
+      "@type": ["http://www.w3.org/2002/07/owl#TransitiveProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links to a previous (older) revision of this Item or Post.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "earlier version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#later_version" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#email",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An electronic mail address of the UserAccount.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "email", "@language": "en" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#email_sha1",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An electronic mail address of the UserAccount, encoded using SHA1.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "email sha1", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#embeds_knowledge",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This links Items to embedded statements, facts and structured content.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "embeds knowledge", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/03/trix/rdfg-1/Graph" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#feed",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A feed (e.g. RSS, Atom, etc.) pertaining to this resource (e.g. for a Forum, Site, UserAccount, etc.).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "feed", "@language": "en" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#first_name",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "First (real) name of this User. Synonyms include given name or christian name.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "first name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use foaf:name or foaf:firstName from the FOAF vocabulary instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#follows",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "follows", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#function_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that has this Role.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Role" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "function of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_function" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#generator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A URI for the application used to generate this Item.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "generator", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#group_of",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "group of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_group" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "This property has been renamed. Use sioc:usergroup_of instead." }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_administrator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that is an administrator of this Site.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Site" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has administrator", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#administrator_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_container",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The Container to which this Item belongs.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has container", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/partOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#container_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_creator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "This is the UserAccount that made this resource.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has creator", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#creator_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_discussion",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A discussion that is related to this Item. The discussion can be anything, for example, a sioc:Forum or sioc:Thread, a sioct:WikiArticle or simply a foaf:Document.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has discussion", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#discussion_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_function",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Role that this UserAccount has.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has function", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Role" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#function_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_group",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has group", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#group_of" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "This property has been renamed. Use sioc:has_usergroup instead." }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_host",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The Site that hosts this Container.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has host", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Site" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_space" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [{ "@id": "http://rdfs.org/sioc/ns#host_of" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_member",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that is a member of this Usergroup.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has member", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#member_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_moderator",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that is a moderator of this Forum.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Forum" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has moderator", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#moderator_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_modifier",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A UserAccount that modified this resource (e.g. Item, Container, Space).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has modifier", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#modifier_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_owner",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that this resource is owned by.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has owner", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#owner_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_parent",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A Container or Forum that this Container or Forum is a child of.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has parent", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/partOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#parent_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_part",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An resource that is a part of this subject.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has part", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#part_of" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:hasPart from the Dublin Core ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_reply",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Points to an Item or Post that is a reply or response to this Item or Post.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has reply", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#related_to" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#reply_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_scope",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A resource that this Role applies to.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Role" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has scope", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#scope_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_space",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A data Space which this resource is a part of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has space", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Space" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/partOf" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#space_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_subscriber",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A UserAccount that is subscribed to this Container.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has subscriber", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://rdfs.org/sioc/ns#feed" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#subscriber_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#has_usergroup",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Points to a Usergroup that has certain access to this Space.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Space" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has usergroup", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#usergroup_of" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#host_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Container that is hosted on this Site.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Site" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "host of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#space_of" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_host" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#id",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "id", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#ip_address",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The IP address used when creating this Item, UserAccount, etc. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ip address", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#last_activity_date",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The date and time of the last activity associated with a SIOC concept instance, and expressed in ISO 8601 format. This could be due to a reply Post or Comment, a modification to an Item, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "last activity date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/date" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#last_item_date",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "last item date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/date" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#last_name",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Last (real) name of this user. Synonyms include surname or family name.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "last name", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use foaf:name or foaf:surname from the FOAF vocabulary instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#last_reply_date",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "last reply date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/date" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#later_version",
+      "@type": ["http://www.w3.org/2002/07/owl#TransitiveProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links to a later (newer) revision of this Item or Post.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "later version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#earlier_version" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#latest_version",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Links to the latest revision of this Item or Post.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "latest version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://rdfs.org/sioc/ns#Item" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#likes",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Used to indicate some form of endorsement by a UserAccount or Agent of an Item, Container, Space, UserAccount, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "likes", "@language": "en" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#link",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A URI of a document which contains this SIOC object.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "link", "@language": "en" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#links_to",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links extracted from hyperlinks within a SIOC concept, e.g. Post or Site.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "links to", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/references" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#member_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Usergroup that this UserAccount is a member of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "member of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_member" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#mentions",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Refers to a UserAccount that a particular Item mentions.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "mentions", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#moderator_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Forum that a UserAccount is a moderator of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "moderator of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Forum" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_moderator" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#modified_at",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "When this was modified, in ISO 8601 format.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "modified at", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:modified from the Dublin Core ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#modifier_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A resource that this UserAccount has modified.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "modifier of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_modifier" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#name",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "name", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#next_by_date",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Next Item or Post in a given Container sorted by date.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "next by date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#previous_by_date" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#next_version",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Links to the next revision of this Item or Post.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "next version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#later_version" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#previous_version" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#note",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A note associated with this resource, for example, if it has been edited by a UserAccount.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "note", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#num_authors",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The number of unique authors (UserAccounts and unregistered posters) who have contributed to this Item, Thread, Post, etc.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "num authors", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#num_items",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The number of Posts (or Items) in a Forum (or a Container).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "num items", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#num_replies",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The number of replies that this Item, Thread, Post, etc. has. Useful for when the reply structure is absent.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "num replies", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#num_threads",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The number of Threads (AKA discussion topics) in a Forum.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Forum" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "num threads", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#num_views",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The number of times this Item, Thread, UserAccount profile, etc. has been viewed.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "num views", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#owner_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A resource owned by a particular UserAccount, for example, a weblog or image gallery.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "owner of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_owner" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#parent_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A child Container or Forum that this Container or Forum is a parent of.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "parent of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/hasPart" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_parent" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#part_of",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A resource that the subject is a part of.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "part of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_part" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:isPartOf from the Dublin Core ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#previous_by_date",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Previous Item or Post in a given Container sorted by date.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "previous by date", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#next_by_date" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#previous_version",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Links to the previous revision of this Item or Post.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "previous version", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#earlier_version" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#next_version" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#read_at",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "When this was read, in ISO 8601 format.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "read at", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#reference",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links either created explicitly or extracted implicitly on the HTML level from the Post.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "reference", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [{ "@value": "Renamed to sioc:links_to." }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#related_to",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Related resources for this resource, e.g. for Posts, perhaps determined implicitly from topics or references.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "related to", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#reply_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Links to an Item or Post which this Item or Post is a reply to.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "reply of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/sioc/ns#related_to" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_reply" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#respond_to",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For the reply-to address set in email messages, IMs, etc. The property name was chosen to avoid confusion with has_reply/reply_of (the reply graph).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "respond to", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#scope_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Role that has a scope of this resource.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "scope of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Role" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_scope" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#shared_by",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "For shared Items where there is a certain creator_of and an intermediary who shares or forwards it (e.g. as a sibling Item).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "shared by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://rdfs.org/sioc/ns#sibling" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#sibling",
+      "@type": ["http://www.w3.org/2002/07/owl#SymmetricProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An Item may have a sibling or a twin that exists in a different Container, but the siblings may differ in some small way (for example, language, category, etc.). The sibling of this Item should be self-describing (that is, it should contain all available information).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Item" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "sibling", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://rdfs.org/sioc/ns#Item" }]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#space_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A resource which belongs to this data Space.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Space" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "space of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/hasPart" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_space" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#subject",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Keyword(s) describing subject of the Post.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "subject", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#subscriber_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Container that a UserAccount is subscribed to.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#UserAccount" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "subscriber of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Container" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://rdfs.org/sioc/ns#feed" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_subscriber" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#title",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "http://www.w3.org/2002/07/owl#DeprecatedProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Post" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "title", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "This property is deprecated. Use dcterms:title from the Dublin Core ontology instead."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#topic",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "topic", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/terms/subject" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/ns#usergroup_of",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Space that the Usergroup has access to.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/sioc/ns#Usergroup" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdfs.org/sioc/ns#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "usergroup of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/sioc/ns#Space" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdfs.org/sioc/ns#has_usergroup" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/sioc/spec",
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "SIOC Core Ontology Specification" }
+      ]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/Agent",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/Document",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/OnlineAccount",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/account",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/depiction",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    }
+  ]
+}

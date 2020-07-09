@@ -1,0 +1,768 @@
+{
+  "@id": "http://lexvo.org/ontology#",
+  "@graph": [
+    {
+      "@id": "http://lexvo.org/ontology",
+      "http://purl.org/dc/terms/contributor": [
+        { "@id": "http://data.semanticweb.org/person/bernard-vatant" }
+      ],
+      "http://purl.org/dc/terms/creator": [{ "@id": "http://www.demelo.org/gdm/#GDM" }],
+      "http://purl.org/dc/terms/modified": [{ "@value": "2019-01-16", "@type": "xsd:date" }],
+      "http://purl.org/dc/terms/subject": [{ "@id": "http://dbpedia.org/resource/Language" }],
+      "@type": ["http://www.w3.org/2002/07/owl#Ontology"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [{ "@value": "Lexvo.org Ontology" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Lexvo.org Ontology", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [{ "@id": "http://www.lexvo.org/" }],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "Lexvo.org Ontology Version 0.24 (2019-01-16)", "@language": "en" }
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://www.lexvo.org/" }]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#CJKRadical",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A CJK character radical.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "radical", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://en.wikipedia.org/wiki/Radical_%28Chinese_character%29" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "CJK radicals are slightly more abstract than characters, because the same radical can be manifested as different\n    characters, e.g. radical 4 can take the form of 'ä¸¿', 'ä¹', or 'ä¹'.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#Character",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An abstract character as defined by the Unicode Standard,\n  Version 5, in Chapter 3.4.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "character", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        { "@id": "http://purl.org/linguistics/gold/Character" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "The same abstract character may be rendered in different forms, depending on the language and on typeface characters.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#GeographicRegion",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Geographic regions on Earth or elsewhere.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "geographic region", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#Language",
+      "http://lexvo.org/ontology#somewhatSameAs": [
+        { "@id": "http://www.lingvoj.org/ontology#Lingvo" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Groups of human language variants that are or were spoken, written, or signed at some point in time.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "language", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://en.wikipedia.org/wiki/Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://purl.org/dc/terms/LinguisticSystem" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "This definition includes languages, particular language variants (e.g. dialects), and larger groups of language \n    variants (e.g. macrolanguages and language families), as the distinction between them is largely conventional.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#Script",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A writing system considered abstractly, i.e. independent\n    of language-specific variations.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "script", "@language": "en" }]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#Term",
+      "http://lexvo.org/ontology#nearlySameAs": [
+        { "@id": "http://lexonto.ontoware.org/lmf#FormRepresentation" }
+      ],
+      "http://lexvo.org/ontology#subClassOf": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A term in a specific language.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "term", "@language": "en" }]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#broader",
+      "http://lexvo.org/ontology#somewhatSameAs": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#broader" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of having a broader, more generic concept.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "broader", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#narrower" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Similar to skos:broader but domain and range are not restricted to skos:Concept instances.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#characterRadical",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a CJK character being conventionally\n    associated with a CJK character radical.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Character" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "translation", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#CJKRadical" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#containsCharacter",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a term containing a specific character.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Term" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contains character", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Character" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#evokes",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property of conceptually evoking some object.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "evokes", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#evokes" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#hasCharacterComponent",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a character being composed of another character.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Character" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "character component", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Character" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        { "@value": "Especially for CJK characters.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#hasMember",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property of having a member.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has member", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#memberOf" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        { "@value": "For instance for geographic regions.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#inScript",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a document being written in a specific script,\n    or a language being written or having being written in a specific script by a considerable\n    group of language users.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in script", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Script" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#involvedIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of being involved in something, e.g. for semantic participants' involvement in a semantic frame.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "involved in", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#involves" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#involves",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of involving some entity, e.g. for semantic participants involved in a semantic frame.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "involves", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#involvedIn" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#isFocusOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is focus of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/focus" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "The isFocusOf relates an entity to relevant SKOS concepts \n    that are conceptualizations of the same entity. This is the inverse of the\n    standard foaf:focus property, which connects a SKOS concept to a relevant\n    non-conceptualized entity.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso15924Alphacode",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Script" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 15924 alphabetic code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://unicode.org/iso15924/" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso639P1Code",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 639-1 code", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://psi.oasis-open.org/iso/639/#code-a2" },
+        { "@id": "http://www.lingvoj.org/ontology#iso1" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso639P2BCode",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 639-2 Bibliographical code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.loc.gov/standards/iso639-2/" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://psi.oasis-open.org/iso/639/#code-a3b" },
+        { "@id": "http://www.lingvoj.org/ontology#iso2b" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso639P2TCode",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 639-2 Terminological code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.loc.gov/standards/iso639-2/" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://psi.oasis-open.org/iso/639/#code-a3t" },
+        { "@id": "http://www.lingvoj.org/ontology#iso2t" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso639P3Code",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 639-3 code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.sil.org/ISO639-3/" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://www.lingvoj.org/ontology#iso3" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#iso639P5Code",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "ISO 639-5 code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.loc.gov/standards/iso639-5/" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#label",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If C lvont:Label L and L skosxl:literalForm V, then X rdfs:label V.",
+          "@language": "en"
+        },
+        {
+          "@value": "the semiotic property of possessing a natural language label (as opposed to artificial identifiers), e.g. the city of Paris is lexicalized in Italian using the Italian term \"Parigi\".",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has label", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#representedBy" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#means" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "This property is more general than skosxl:prefLabel and skosxl:altLabel, as it does not make any normative claims about which labels are preferred. It merely describes\n    the fact that a certain label can be used to refer to something.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#language",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a resource being mainly encoded in a specific language.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in language", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://purl.org/dc/elements/1.1/language" },
+        { "@id": "http://purl.org/dc/terms/language" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#lexicalCategory",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A lexical category that a term can be used in.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "lexical category", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": " For example, the English term \"score\" can be used as a noun and as a verb.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#marcCode",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "MARC 21 / USMARC code", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [{ "@id": "http://www.loc.gov/marc/" }]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#means",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "the semiotic property of a natural language word meaning something, i.e. a\n    relationship between words and resources that they represent (or represented) to a considerable number of humans",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "means", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#represents" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [{ "@id": "http://lexvo.org/ontology#label" }]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#memberOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property of being a member of a group.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "member of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#hasMember" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        { "@value": "For instance for geographic regions.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#narrower",
+      "http://lexvo.org/ontology#somewhatSameAs": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#narrower" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of having a narrower, less generic concept.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "narrower", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#broader" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Similar to skos:narrower but domain and range are not restricted to skos:Concept instances.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#nearlySameAs",
+      "http://lexvo.org/ontology#somewhatSameAs": [
+        { "@id": "http://www.w3.org/2002/07/owl#sameAs" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#SymmetricProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of being at least nearly the same as something else. For instance,\n    the geographical area comprising the island of Malta is nearly the same as the island of Malta.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "nearly same as", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#somewhatSameAs" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#nonRadicalStrokes",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a character conventionally being\n    written with a specific number strokes, excluding the strokes of its radical.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Character" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "non-radical strokes", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        { "@value": "Especially for CJK characters.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#representedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "represented by", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#represents" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#represents",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "the semiotic property of semantically representing something, i.e. a\n    relationship between words and other signs and resources that they represent (or represented) to a considerable number of humans",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "represents", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#scriptFor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a script being used for a particular language by\n   a considerable of language users (but not necessarily the majority of all language users).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://lexvo.org/ontology#Script" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "script for", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Language" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#usesScript" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#somewhatSameAs",
+      "http://lexvo.org/ontology#somewhatSameAs": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#broadMatch" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#SymmetricProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of being at least somewhat the same as something else. For instance,\n    the City of Los Angeles is somewhat the same as the Greater Los Angeles area.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "somewhat same as", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#strength",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The strength of an rdf:Statement, given is a value in [0,1].",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "strength", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#strictlySameAs",
+      "@type": ["http://www.w3.org/2002/07/owl#SymmetricProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of genuine identity in the Leibnizian sense.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "same as", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#nearlySameAs" }
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        { "@id": "http://www.w3.org/2002/07/owl#sameAs" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#translation",
+      "http://lexvo.org/ontology#nearlySameAs": [
+        { "@id": "http://purl.org/linguistics/gold/translation" }
+      ],
+      "@type": ["http://www.w3.org/2002/07/owl#SymmetricProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "translational equivalence between words and other signs\n    and resources that they represent to or represented to a considerable number of humans",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "translation", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        {
+          "@value": "Domain and range are usually Term objects, however string literals are acceptable as well for the range.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#usedIn",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of an object\n    (e.g., a language, writing system, or a specific element or aspect of a language or writing system)\n    being used somewhat extensively in a particular geographical region \n    at some point in time.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "used in", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#GeographicRegion" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#usesScript",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The property of a language being written or having being written in a specific \n    script by a considerable group of language users.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "uses script", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://lexvo.org/ontology#Script" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://lexvo.org/ontology#scriptFor" }
+      ]
+    },
+    {
+      "@id": "http://lexvo.org/ontology#variant",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The property of being a variant of another resource.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "variant", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#note": [
+        { "@value": "Especially for terms and characters.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2002/07/owl#sameAs",
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#nearlySameAs" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#somewhatSameAs" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#nearlySameAs" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#altLabel",
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#label" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/2008/05/skos-xl#prefLabel",
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://lexvo.org/ontology#label" }
+      ]
+    }
+  ]
+}

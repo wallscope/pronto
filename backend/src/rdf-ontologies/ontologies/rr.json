@@ -1,0 +1,900 @@
+{
+  "@id": "http://www.w3.org/ns/r2rml#",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/r2rml#PredicateMap" },
+            { "@id": "_:c14n37" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#child" }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        { "@list": [{ "@id": "http://www.w3.org/ns/r2rml#ObjectMap" }, { "@id": "_:c14n33" }] }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#predicate" }
+      ],
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#language" }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/r2rml#BlankNode" },
+            { "@id": "http://www.w3.org/ns/r2rml#IRI" },
+            { "@id": "http://www.w3.org/ns/r2rml#Literal" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/ns/r2rml#SubjectMap" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#subjectMap" }
+      ],
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#object" }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#parent" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#child" }
+      ]
+    },
+    {
+      "@id": "_:c14n22",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#parent" }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#object" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/ns/r2rml#PredicateMap" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#predicateMap" }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        { "@list": [{ "@id": "http://www.w3.org/ns/r2rml#GraphMap" }, { "@id": "_:c14n7" }] }
+      ]
+    },
+    {
+      "@id": "_:c14n26",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/ns/r2rml#ObjectMap" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#objectMap" }
+      ],
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/ns/r2rml#LogicalTable" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#logicalTable" }
+      ],
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#intersectionOf": [
+        {
+          "@list": [{ "@id": "http://www.w3.org/ns/r2rml#SubjectMap" }, { "@id": "_:c14n35" }]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/r2rml#PredicateObjectMap" },
+            { "@id": "http://www.w3.org/ns/r2rml#SubjectMap" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n32",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/r2rml#ObjectMap" },
+            { "@id": "http://www.w3.org/ns/r2rml#RefObjectMap" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "_:c14n33",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#column" }
+      ]
+    },
+    {
+      "@id": "_:c14n35",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#column" }
+      ]
+    },
+    {
+      "@id": "_:c14n37",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#column" }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#class" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onClass": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Datatype" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#datatype" }
+      ]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+        { "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onDataRange": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/r2rml#template" }
+      ]
+    },
+    {
+      "@id": "http://boris.villazon.terrazas.name",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Boris Villazon-Terrazas" }]
+    },
+    {
+      "@id": "http://richard.cyganiak.de/foaf.rdf#cygri",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Richard Cyganiak" }]
+    },
+    {
+      "@id": "http://www.w3.org/",
+      "http://www.linkedmodel.org/schema/vaem#acronym": [{ "@value": "W3C" }],
+      "@type": ["http://xmlns.com/foaf/0.1/Organization"],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "The World Wide Web Consortium (W3C)", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/People/Ivan/",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Ivan Herman" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#",
+      "http://creativecommons.org/ns#license": [
+        { "@id": "http://creativecommons.org/licenses/by/3.0/" }
+      ],
+      "http://purl.org/dc/elements/1.1/contributor": [
+        { "@id": "http://boris.villazon.terrazas.name" },
+        { "@id": "http://www.w3.org/People/Ivan/" }
+      ],
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@id": "http://richard.cyganiak.de/foaf.rdf#cygri" }
+      ],
+      "http://purl.org/dc/elements/1.1/description": [
+        { "@value": "RDB to RDF Mapping Language - Vocabulary", "@language": "en" }
+      ],
+      "http://purl.org/dc/elements/1.1/issued": [
+        { "@value": "2012-01-24", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/modified": [
+        { "@value": "2012-07-16", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/elements/1.1/publisher": [{ "@id": "http://www.w3.org/" }],
+      "http://purl.org/dc/elements/1.1/title": [
+        { "@value": "R2RML vocabulary", "@language": "en" }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "rr" }],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        { "@value": "http://www.w3.org/ns/r2rml#" }
+      ],
+      "@type": [
+        "http://purl.org/vocommons/voaf#Vocabulary",
+        "http://www.w3.org/2002/07/owl#Ontology"
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#BaseTableOrView",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/r2rml#LogicalTable" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#BlankNode",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Denotes a blank node, used with termType", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#GraphMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a graph map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#IRI",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Denotes an IRI, used with termpType.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#Join",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a join condition.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n20" },
+        { "@id": "_:c14n21" },
+        { "@id": "_:c14n22" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#Literal",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Denotes a Literal, used with termType.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#LogicalTable",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a logical table.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#ObjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents an object map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" },
+        { "@id": "_:c14n13" },
+        { "@id": "_:c14n2" },
+        { "@id": "_:c14n23" },
+        { "@id": "_:c14n6" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#PredicateMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a predicate map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" },
+        { "@id": "_:c14n12" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#PredicateObjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a predicate-object map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n24" },
+        { "@id": "_:c14n26" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#R2RMLView",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/r2rml#LogicalTable" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#RefObjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Denotes a reference to an object map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#SQL2008",
+      "@type": ["http://www.w3.org/2002/07/owl#NamedIndividual"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Core SQL 2008", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#SubjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a subject map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" },
+        { "@id": "_:c14n5" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#TermMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A function that generates an RDF term from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Term Map", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#TriplesMap",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Represents a triples map.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2002/07/owl#Thing" },
+        { "@id": "_:c14n19" },
+        { "@id": "_:c14n27" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#child",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Names a column in the child table of a join.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#Join" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#class",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The subject value generated for a logical table row will be asserted as an instance of this RDFS class.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#SubjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#column",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Name of a column in the logical table. When generating RDF triples from a logical table row, value from the specified column is used as the subject, predicate, or object (based upon the specific domain).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#constant",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#datatype",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies the datatype of the object component for the generated triple from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#ObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Datatype" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#defaultGraph",
+      "@type": ["http://www.w3.org/2002/07/owl#NamedIndividual"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Denotes a default graph", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#graph",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An IRI reference for use as the graph name of all triples generated with the GraphMap.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n25" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#graphMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n3" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#GraphMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#inverseExpression",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An expression that allows, at query processing time, use of index-based access to the the (underlying) relational tables, instead of simply retrieving the table rows first and then applying a filter. This property is useful for retrieval based on conditions involving subject, predicate, or object generated from logical table column(s) and involves some transformation.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#joinCondition",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies the join condition for joining the child logical table with the parent logical table of the foreign key constraint.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#RefObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#Join" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#language",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specified the language for the object component for the generated triple from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#ObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#logicalTable",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Definition of logical table to be mapped.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TriplesMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#LogicalTable" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#object",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies the object for the generated triple from the logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n10" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#objectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An ObjectMap element to generate the object component of the (predicate, object) pair from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#PredicateObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n32" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#parent",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Names a column in the parent table of a join.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#Join" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#parentTriplesMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#RefObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#TriplesMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#predicate",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Specifies the predicate for the generated triple from the logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n0" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#predicateMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#PredicateObjectMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#PredicateMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#predicateObjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A PredicateObjectMap element to generate (predicate, object) pair from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#PredicateObjectMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#sqlQuery",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A valid SQL query.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#R2RMLView" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#sqlVersion",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An identifier for a SQL version.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#R2RMLView" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#subject",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An IRI reference for use as subject for all the RDF triples generated from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n29" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#subjectMap",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A SubjectMap element to generate a subject from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TriplesMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/ns/r2rml#SubjectMap" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#tableName",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Schema-qualified name of a table or view.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#BaseTableOrView" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#template",
+      "@type": ["http://www.w3.org/2002/07/owl#DatatypeProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A template (format string) to specify how to generate a value for a subject, predicate, or object, using one or more columns from a logical table row.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/r2rml#termType",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/ns/r2rml#TermMap" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "_:c14n15" }]
+    }
+  ]
+}

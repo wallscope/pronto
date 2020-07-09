@@ -1,0 +1,1734 @@
+{
+  "@id": "http://www.w3.org/ns/ssn/",
+  "@graph": [
+    {
+      "@id": "_:c14n0",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sample" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasSample" }
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sensor" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isObservedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n10",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/System" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasSubSystem" }
+      ]
+    },
+    {
+      "@id": "_:c14n11",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isResultOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n12",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/actsOnProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n13",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Result" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n14",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Deployment" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasDeployment" }
+      ]
+    },
+    {
+      "@id": "_:c14n15",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Observation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n26" }]
+    },
+    {
+      "@id": "_:c14n16",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/System" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/implementedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n17",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Stimulus" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/wasOriginatedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n18",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n19",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/implements" }
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n20",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n21",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeBySampler" }
+      ]
+    },
+    {
+      "@id": "_:c14n22",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sensor" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeBySensor" }
+      ]
+    },
+    {
+      "@id": "_:c14n23",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Output" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasOutput" }
+      ]
+    },
+    {
+      "@id": "_:c14n24",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/sosa/observedProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n25",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Result" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n26",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/wasOriginatedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n27",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/implements" }
+      ]
+    },
+    {
+      "@id": "_:c14n28",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sampling" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeSampling" }
+      ]
+    },
+    {
+      "@id": "_:c14n29",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Observation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n24" }]
+    },
+    {
+      "@id": "_:c14n30",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n87" }]
+    },
+    {
+      "@id": "_:c14n31",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n90" }]
+    },
+    {
+      "@id": "_:c14n32",
+      "@type": ["http://xmlns.com/foaf/0.1/Agent"],
+      "http://xmlns.com/foaf/0.1/name": [
+        { "@value": "W3C/OGC Spatial Data on the Web Working Group", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "_:c14n33",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasSubSystem" }
+      ]
+    },
+    {
+      "@id": "_:c14n34",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/resultTime" }
+      ]
+    },
+    {
+      "@id": "_:c14n35",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/resultTime" }
+      ]
+    },
+    {
+      "@id": "_:c14n36",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n38",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeByActuator" }
+      ]
+    },
+    {
+      "@id": "_:c14n39",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n40",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Platform" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isHostedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n41",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/observedProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n42",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sample" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n43",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n45",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Platform" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform" }
+      ]
+    },
+    {
+      "@id": "_:c14n46",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/System" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hosts" }
+      ]
+    },
+    {
+      "@id": "_:c14n47",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Actuation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isActedOnBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n48",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/wasOriginatedBy" }
+      ]
+    },
+    {
+      "@id": "_:c14n49",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Observation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeObservation" }
+      ]
+    },
+    {
+      "@id": "_:c14n5",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Stimulus" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n80" }]
+    },
+    {
+      "@id": "_:c14n50",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/implements" }
+      ]
+    },
+    {
+      "@id": "_:c14n51",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/usedProcedure" }
+      ]
+    },
+    {
+      "@id": "_:c14n53",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sampling" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isResultOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n54",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Actuator" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeByActuator" }
+      ]
+    },
+    {
+      "@id": "_:c14n55",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/ActuatableProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/actsOnProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n56",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/ActuatableProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/forProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n57",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/usedProcedure" }
+      ]
+    },
+    {
+      "@id": "_:c14n58",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Property" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n59",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/ObservableProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/isProxyFor" }
+      ]
+    },
+    {
+      "@id": "_:c14n6",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Input" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/hasInput" }
+      ]
+    },
+    {
+      "@id": "_:c14n60",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest" }
+      ]
+    },
+    {
+      "@id": "_:c14n61",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Property" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/forProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n62",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/phenomenonTime" }
+      ]
+    },
+    {
+      "@id": "_:c14n63",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/System" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n33" }]
+    },
+    {
+      "@id": "_:c14n64",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/usedProcedure" }
+      ]
+    },
+    {
+      "@id": "_:c14n65",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Stimulus" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/detects" }
+      ]
+    },
+    {
+      "@id": "_:c14n66",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sensor" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n76" }]
+    },
+    {
+      "@id": "_:c14n67",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n69",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Procedure" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n89" }]
+    },
+    {
+      "@id": "_:c14n7",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/hasResult" }
+      ]
+    },
+    {
+      "@id": "_:c14n70",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeBySensor" }
+      ]
+    },
+    {
+      "@id": "_:c14n71",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Actuation" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeActuation" }
+      ]
+    },
+    {
+      "@id": "_:c14n72",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#cardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/resultTime" }
+      ]
+    },
+    {
+      "@id": "_:c14n73",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isSampleOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n74",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isSampleOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n75",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/ObservableProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/observedProperty" }
+      ]
+    },
+    {
+      "@id": "_:c14n76",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/detects" }
+      ]
+    },
+    {
+      "@id": "_:c14n77",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [{ "@id": "_:c14n88" }]
+    },
+    {
+      "@id": "_:c14n78",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/implements" }
+      ]
+    },
+    {
+      "@id": "_:c14n79",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/Sampler" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/madeBySampler" }
+      ]
+    },
+    {
+      "@id": "_:c14n8",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/System" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/deployedSystem" }
+      ]
+    },
+    {
+      "@id": "_:c14n80",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/isProxyFor" }
+      ]
+    },
+    {
+      "@id": "_:c14n81",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#minCardinality": [
+        { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/isResultOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n82",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/ssn/Deployment" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/inDeployment" }
+      ]
+    },
+    {
+      "@id": "_:c14n83",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/ssn/isPropertyOf" }
+      ]
+    },
+    {
+      "@id": "_:c14n87",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasInput" }
+      ]
+    },
+    {
+      "@id": "_:c14n88",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasInput" }
+      ]
+    },
+    {
+      "@id": "_:c14n89",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasOutput" }
+      ]
+    },
+    {
+      "@id": "_:c14n9",
+      "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
+      "http://www.w3.org/2002/07/owl#allValuesFrom": [
+        { "@id": "http://www.w3.org/ns/sosa/ObservableProperty" }
+      ],
+      "http://www.w3.org/2002/07/owl#onProperty": [
+        { "@id": "http://www.w3.org/ns/sosa/observes" }
+      ]
+    },
+    {
+      "@id": "_:c14n90",
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasOutput" }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/license",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/rights",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://purl.org/vocommons/voaf#Vocabulary",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#definition",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#example",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/ActuatableProperty",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ssn/Property" },
+        { "@id": "_:c14n47" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Actuation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n12" },
+        { "@id": "_:c14n13" },
+        { "@id": "_:c14n35" },
+        { "@id": "_:c14n38" },
+        { "@id": "_:c14n4" },
+        { "@id": "_:c14n54" },
+        { "@id": "_:c14n55" },
+        { "@id": "_:c14n60" },
+        { "@id": "_:c14n64" },
+        { "@id": "_:c14n67" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Actuator",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ssn/System" },
+        { "@id": "_:c14n27" },
+        { "@id": "_:c14n56" },
+        { "@id": "_:c14n71" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n0" },
+        { "@id": "_:c14n39" },
+        { "@id": "_:c14n58" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/ObservableProperty",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ssn/Property" },
+        { "@id": "_:c14n1" },
+        { "@id": "_:c14n29" },
+        { "@id": "_:c14n5" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Observation",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n17" },
+        { "@id": "_:c14n18" },
+        { "@id": "_:c14n22" },
+        { "@id": "_:c14n25" },
+        { "@id": "_:c14n34" },
+        { "@id": "_:c14n36" },
+        { "@id": "_:c14n41" },
+        { "@id": "_:c14n43" },
+        { "@id": "_:c14n48" },
+        { "@id": "_:c14n51" },
+        { "@id": "_:c14n62" },
+        { "@id": "_:c14n70" },
+        { "@id": "_:c14n75" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Platform",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n46" },
+        { "@id": "_:c14n82" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Procedure",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n16" },
+        { "@id": "_:c14n23" },
+        { "@id": "_:c14n6" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Result",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [{ "@id": "_:c14n11" }]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Sample",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest" },
+        { "@id": "http://www.w3.org/ns/sosa/Result" },
+        { "@id": "_:c14n53" },
+        { "@id": "_:c14n73" },
+        { "@id": "_:c14n74" },
+        { "@id": "_:c14n81" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Sampler",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ssn/System" },
+        { "@id": "_:c14n19" },
+        { "@id": "_:c14n28" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Sampling",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n2" },
+        { "@id": "_:c14n20" },
+        { "@id": "_:c14n21" },
+        { "@id": "_:c14n42" },
+        { "@id": "_:c14n57" },
+        { "@id": "_:c14n7" },
+        { "@id": "_:c14n72" },
+        { "@id": "_:c14n79" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/Sensor",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/ns/ssn/System" },
+        { "@id": "_:c14n49" },
+        { "@id": "_:c14n65" },
+        { "@id": "_:c14n78" },
+        { "@id": "_:c14n9" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasSample",
+      "@type": ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasSimpleResult",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/ssn/inDeployment" },
+            { "@id": "http://www.w3.org/ns/ssn/deployedSystem" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isActedOnBy",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+      "@type": ["http://www.w3.org/2002/07/owl#FunctionalProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeActuation",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/ssn/forProperty" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/sosa/" }
+      ],
+      "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/sosa/madeBySampler" },
+            { "@id": "http://www.w3.org/ns/ssn/implements" }
+          ]
+        },
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/sosa/madeByActuator" },
+            { "@id": "http://www.w3.org/ns/ssn/implements" }
+          ]
+        },
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/ns/sosa/madeBySensor" },
+            { "@id": "http://www.w3.org/ns/ssn/implements" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/",
+      "http://purl.org/dc/terms/created": [
+        { "@value": "2017-04-17", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/creator": [{ "@id": "_:c14n32" }],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/dc/terms/license": [
+        { "@id": "http://www.opengeospatial.org/ogc/Software" },
+        { "@id": "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" }
+      ],
+      "http://purl.org/dc/terms/rights": [{ "@value": "Copyright 2017 W3C/OGC." }],
+      "http://purl.org/dc/terms/title": [
+        { "@value": "Semantic Sensor Network Ontology", "@language": "en" }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "ssn" }],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        { "@value": "http://www.w3.org/ns/ssn/" }
+      ],
+      "@type": [
+        "http://purl.org/vocommons/voaf#Vocabulary",
+        "http://www.w3.org/2002/07/owl#Ontology"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology" }
+      ],
+      "http://www.w3.org/2002/07/owl#imports": [{ "@id": "http://www.w3.org/ns/sosa/" }],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        {
+          "@value": "New modular version of the SSN ontology. \n\nThis ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology. \n\nIn particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology. ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/Deployment",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Deployment", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n45" },
+        { "@id": "_:c14n61" },
+        { "@id": "_:c14n8" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/Input",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Any information that is provided to a Procedure for its use.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Input", "@language": "en" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n30" },
+        { "@id": "_:c14n77" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Any information that is provided to a Procedure for its use.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/Output",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Any information that is reported from a Procedure.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Output", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n31" },
+        { "@id": "_:c14n69" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Any information that is reported from a Procedure.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/Property",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Property", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [{ "@id": "_:c14n83" }],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/Stimulus",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Stimulus", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n15" },
+        { "@id": "_:c14n59" },
+        { "@id": "_:c14n66" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/System",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "System", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "_:c14n10" },
+        { "@id": "_:c14n14" },
+        { "@id": "_:c14n40" },
+        { "@id": "_:c14n50" },
+        { "@id": "_:c14n63" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between a Deployment and the Platform on which the Systems are deployed.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "deployed on platform", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/inDeployment" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between a Deployment and the Platform on which the Systems are deployed.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/deployedSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relation between a Deployment and a deployed System.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "deployed system", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasDeployment" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Relation between a Deployment and a deployed System.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/detects",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "detects", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/forProperty",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A relation between some aspect of an entity and a Property.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "for property", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A relation between some aspect of an entity and a Property.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/hasDeployment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between a System and a Deployment, recording that the System is deployed in that Deployment.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has deployment", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/deployedSystem" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between a System and a Deployment, recording that the System is deployed in that Deployment.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relation between a Procedure and an Input to it.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has input", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Relation between a Procedure and an Input to it.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relation between a Procedure and an Output of it.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has output", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Relation between a Procedure and an Output of it.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/hasProperty",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between an entity and a Property of that entity.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has property", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/isPropertyOf" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between an entity and a Property of that entity.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/hasSubSystem",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Relation between a System and its component parts.", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has subsystem", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        { "@value": "Relation between a System and its component parts.", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "implemented by", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/implements" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "implements", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/implementedBy" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/inDeployment",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "in deployment", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, a relation between a buoy and a deployment of several Sensors.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/isPropertyOf",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between a Property and the entity it belongs to.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is property of", "@language": "en" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://www.w3.org/ns/ssn/hasProperty" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between a Property and the entity it belongs to.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/isProxyFor",
+      "@type": ["http://www.w3.org/2002/07/owl#ObjectProperty"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "is proxy for", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#example": [
+        {
+          "@value": "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/ssn/wasOriginatedBy",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#FunctionalProperty",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Relation between an Observation and the Stimulus that originated it.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://www.w3.org/ns/ssn/" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "was originated by", "@language": "en" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#definition": [
+        {
+          "@value": "Relation between an Observation and the Stimulus that originated it.",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/Agent",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": ["http://www.w3.org/2002/07/owl#AnnotationProperty"]
+    }
+  ]
+}

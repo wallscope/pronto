@@ -1,0 +1,609 @@
+{
+  "@id": "http://rdfs.org/ns/void#",
+  "@graph": [
+    {
+      "@id": "http://rdfs.org/ns/void#Dataset",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A set of RDF triples that are published, maintained or aggregated by a single provider."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "dataset" }]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#DatasetDescription",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "dataset description" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://xmlns.com/foaf/0.1/Document" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#Linkset",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A collection of RDF links between two void:Datasets." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "linkset" }],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#TechnicalFeature",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A technical feature of a void:Dataset, such as a supported RDF serialization format."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "technical feature" }]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#class",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#FunctionalProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The rdfs:Class that is the rdf:type of all entities in a class-based partition."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "class" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Class" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#classPartition",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "class partition" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/ns/void#subset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#classes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "classes" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#dataDump",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "An RDF dump, partial or complete, of a void:Dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Data Dump" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#distinctObjects",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "distinct objects" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#distinctSubjects",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "distinct subjects" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#documents",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "number of documents" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#entities",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The total number of entities that are described in a void:Dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "number of entities" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#exampleResource",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "example resource of dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#feature",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "feature" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#TechnicalFeature" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#inDataset",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Points to the void:Dataset that a document is a part of." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://xmlns.com/foaf/0.1/Document" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "in dataset" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#linkPredicate",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Linkset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "a link predicate" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#objectsTarget",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#FunctionalProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The dataset describing the objects of the triples contained in the Linkset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Linkset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Objects Target" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/ns/void#target" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#openSearchDescription",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An OpenSearch description document for a free-text search service over a void:Dataset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "open search description" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://xmlns.com/foaf/0.1/Document" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#properties",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "number of properties" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#property",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#FunctionalProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The rdf:Property that is the predicate of all triples in a property-based partition."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "property" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#propertyPartition",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A subset of a void:Dataset that contains only the triples of a certain rdf:Property."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "property partition" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/ns/void#subset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#rootResource",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "root resource" }]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#sparqlEndpoint",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has a SPARQL endpoint at" }]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#subjectsTarget",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#FunctionalProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The dataset describing the subjects of triples contained in the Linkset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Linkset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Subjects Target" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdfs.org/ns/void#target" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#subset",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "has subset" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#target",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "One of the two datasets linked by the Linkset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Linkset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "Target" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#triples",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The total number of triples contained in a void:Dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "number of triples" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#integer" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#uriLookupEndpoint",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Defines a simple URI look-up protocol for accessing a dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has an URI look-up endpoint at" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#uriRegexPattern",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "Defines a regular expression pattern matching URIs in the dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "has URI regular expression pattern" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#uriSpace",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A URI that is a common string prefix of all the entity URIs in a void:Dataset."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "URI space" }],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Literal" }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/ns/void#vocabulary",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A vocabulary that is used in the dataset." }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdfs.org/ns/void#Dataset" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [{ "@value": "vocabulary" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void",
+      "http://purl.org/dc/elements/1.1/creator": [
+        { "@id": "http://vocab.deri.ie/void#Michael%20Hausenblas" },
+        { "@id": "http://vocab.deri.ie/void#cygri" },
+        { "@id": "http://vocab.deri.ie/void#junzha" },
+        { "@id": "http://vocab.deri.ie/void#keiale" }
+      ],
+      "http://purl.org/dc/terms/created": [
+        { "@value": "2010-01-26", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@value": "The Vocabulary of Interlinked Datasets (VoID) is an RDF Schema vocabulary for expressing metadata about RDF datasets. It is intended as a bridge between the publishers and users of RDF data, with applications ranging from data discovery to cataloging and archiving of datasets. This document provides a formal definition of the new RDF classes and properties introduced for VoID. It is a companion to the main specification document for VoID, <em><a href=\"http://www.w3.org/TR/void/\">Describing Linked Datasets with the VoID Vocabulary</a></em>."
+        }
+      ],
+      "http://purl.org/dc/terms/modified": [
+        { "@value": "2011-03-06", "@type": "http://www.w3.org/2001/XMLSchema#date" }
+      ],
+      "http://purl.org/dc/terms/partOf": [{ "@id": "http://vocab.deri.ie" }],
+      "http://purl.org/dc/terms/publisher": [
+        {
+          "@value": "http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway"
+        }
+      ],
+      "http://purl.org/dc/terms/status": [
+        { "@id": "http://purl.org/adms/status/UnderDevelopment" }
+      ],
+      "http://purl.org/dc/terms/title": [
+        { "@value": "Vocabulary of Interlinked Datasets (VoID)" }
+      ],
+      "http://purl.org/dc/terms/type": [{ "@id": "http://purl.org/adms/assettype/Ontology" }],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "void" }],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        { "@value": "http://rdfs.org/ns/void#" }
+      ],
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Ontology",
+        "http://www.w3.org/ns/adms#SemanticAsset"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://vocab.deri.ie/void.html" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#Department%20of%20Zoology%2C%20University%20of%20Oxford",
+      "@type": ["http://purl.org/dc/terms/Agent"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://www.zoo.ox.ac.uk/" }],
+      "http://xmlns.com/foaf/0.1/member": [{ "@id": "http://vocab.deri.ie/void#junzha" }],
+      "http://xmlns.com/foaf/0.1/name": [
+        { "@value": "Department of Zoology, University of Oxford" }
+      ]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway",
+      "@type": ["http://purl.org/dc/terms/Agent"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://www.deri.ie/" }],
+      "http://xmlns.com/foaf/0.1/member": [{ "@id": "http://vocab.deri.ie/void#cygri" }],
+      "http://xmlns.com/foaf/0.1/name": [
+        { "@value": "Digital Enterprise Research Institute, NUI Galway" }
+      ]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#LiDRC",
+      "@type": ["http://purl.org/dc/terms/Agent"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://linkeddata.deri.ie/" }],
+      "http://xmlns.com/foaf/0.1/member": [
+        { "@id": "http://vocab.deri.ie/void#Michael%20Hausenblas" }
+      ],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "LiDRC" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#Michael%20Hausenblas",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://sw-app.org/about.html" }],
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@id": "mailto:michael.hausenblas@deri.org" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Michael Hausenblas" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#Talis",
+      "@type": ["http://purl.org/dc/terms/Agent"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://www.talis.com/" }],
+      "http://xmlns.com/foaf/0.1/member": [{ "@id": "http://vocab.deri.ie/void#keiale" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Talis" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#cygri",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://richard.cyganiak.de/" }],
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@id": "mailto:richard.cyganiak@deri.org" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Richard Cyganiak" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#junzha",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://users.ox.ac.uk/~zool0770/" }],
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@id": "mailto:jun.zhao@zoo.ox.ac.uk" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Jun Zhao" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#keiale",
+      "@type": ["http://xmlns.com/foaf/0.1/Person"],
+      "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://kwijibo.talis.com/" }],
+      "http://xmlns.com/foaf/0.1/mbox": [{ "@id": "mailto:Keith.Alexander@talis.com" }],
+      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Keith Alexander" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#rdf",
+      "http://purl.org/dc/terms/FileFormat": [{ "@id": "http://vocab.deri.ie/void.ttl" }],
+      "@type": ["http://www.w3.org/ns/adms#SemanticDistribution"],
+      "http://www.w3.org/ns/adms#accessURL": [{ "@value": "http://vocab.deri.ie/void.rdf" }],
+      "http://www.w3.org/ns/adms#status": [{ "@id": "http://purl.org/adms/status/Completed" }]
+    },
+    {
+      "@id": "http://vocab.deri.ie/void#ttl",
+      "http://purl.org/dc/terms/FileFormat": [{ "@id": "http://vocab.deri.ie/void.ttl" }],
+      "@type": ["http://www.w3.org/ns/adms#SemanticDistribution"],
+      "http://www.w3.org/ns/adms#accessURL": [{ "@value": "http://vocab.deri.ie/void.ttl" }],
+      "http://www.w3.org/ns/adms#status": [{ "@id": "http://purl.org/adms/status/Completed" }]
+    }
+  ]
+}

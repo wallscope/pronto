@@ -1,0 +1,916 @@
+{
+  "@id": "http://rdf-vocabulary.ddialliance.org/xkos#",
+  "@graph": [
+    {
+      "@id": "_:c14n2",
+      "@type": ["http://www.w3.org/2002/07/owl#Class"],
+      "http://www.w3.org/2002/07/owl#unionOf": [
+        {
+          "@list": [
+            { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" },
+            { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos",
+      "http://creativecommons.org/ns#license": [
+        { "@id": "http://creativecommons.org/licenses/by/4.0/" }
+      ],
+      "http://purl.org/dc/elements/1.1/contributor": [
+        { "@value": "Daniel Gillman" },
+        { "@value": "Jannik Jensen" },
+        { "@value": "R.T.A.M. Grim" },
+        { "@value": "Richard Cyganiak" },
+        { "@value": "Thomas Bosch" },
+        { "@value": "Wendy L. Thomas" },
+        { "@value": "Yves Jaques" }
+      ],
+      "http://purl.org/dc/elements/1.1/creator": [{ "@value": "Franck Cotton" }],
+      "http://purl.org/dc/elements/1.1/rights": [
+        { "@value": "Copyright Â© 2016 The DDI Alliance" }
+      ],
+      "http://purl.org/dc/elements/1.1/title": [
+        {
+          "@value": "XKOS : une extension de SKOS pour la reprÃ©sentation des nomenclatures statistiques",
+          "@language": "fr"
+        },
+        {
+          "@value": "XKOS: an SKOS extension for representing statistical classifications",
+          "@language": "en"
+        }
+      ],
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": [{ "@value": "xkos" }],
+      "http://purl.org/vocab/vann/preferredNamespaceUri": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#" }
+      ],
+      "http://purl.org/vocommons/voaf#classNumber": [
+        { "@value": "4", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "http://purl.org/vocommons/voaf#extends": [
+        { "@id": "http://www.w3.org/2004/02/skos/core" }
+      ],
+      "http://purl.org/vocommons/voaf#propertyNumber": [
+        { "@value": "40", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+      ],
+      "@type": [
+        "http://purl.org/vocommons/voaf#Vocabulary",
+        "http://www.w3.org/2002/07/owl#Ontology"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Cette ontologie est basÃ©e sur le travail commencÃ© Ã  Dagstuhl Schloss en septembre 2011",
+          "@language": "fr"
+        },
+        {
+          "@value": "This ontology is based on work initiated at Dagstuhl Schloss in September 2011",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2002/07/owl#versionInfo": [
+        { "@value": "Version 1.0.1 - 2014-11-26" },
+        { "@value": "Version 1.0.2 - 2016-03-15" },
+        { "@value": "Version 1.0.3 - 2016-03-15" },
+        { "@value": "Version 1.1 - 2016-03-20" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Classification level", "@language": "en" },
+        { "@value": "Niveau de nomenclature", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Collection" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ConceptAssociation",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Association de concepts", "@language": "fr" },
+        { "@value": "Concept association", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#Correspondence",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Correspondance", "@language": "fr" },
+        { "@value": "Correspondence", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ExplanatoryNote",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class",
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Explanatory note", "@language": "en" },
+        { "@value": "Note explicative", "@language": "fr" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "additional content", "@language": "en" },
+        { "@value": "contenu limite", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#after",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "after", "@language": "en" },
+        { "@value": "aprÃ¨s", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#temporal" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#before",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "avant", "@language": "fr" },
+        { "@value": "before", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#temporal" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#belongsTo",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "appartient Ã ", "@language": "fr" },
+        { "@value": "belongs to", "@language": "en" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#caseLaw",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "case law", "@language": "en" },
+        { "@value": "jurisprudence", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#note" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#causal",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "en relation causale", "@language": "fr" },
+        { "@value": "has causal", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#related" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#causedBy",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "caused by", "@language": "en" },
+        { "@value": "est causÃ© par", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#causal" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#causes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "causes", "@language": "en" },
+        { "@value": "est la cause de", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#causal" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "classified under", "@language": "en" },
+        { "@value": "classÃ© sous", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#compares",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#Correspondence" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "compare", "@language": "fr" },
+        { "@value": "compares", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#coreContentNote",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "contenu central", "@language": "fr" },
+        { "@value": "core content", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#covers",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [{ "@id": "_:c14n2" }],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "couvre", "@language": "fr" },
+        { "@value": "covers", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#coversExhaustively",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "couvre exhaustivement", "@language": "fr" },
+        { "@value": "covers exhaustively", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#covers" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#coversMutuallyExclusively",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "couvre sans recouvrement", "@language": "fr" },
+        { "@value": "covers mutually exclusively", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#covers" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#depth",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "depth", "@language": "en" },
+        { "@value": "profondeur", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#disjoint",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "disjoint de", "@language": "fr" },
+        { "@value": "disjoint from", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#related" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#exclusionNote",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "exclusions", "@language": "en" },
+        { "@value": "exclusions", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#scopeNote" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#follows",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "follows", "@language": "en" },
+        { "@value": "suit", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#generalizes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "generalizes", "@language": "en" },
+        { "@value": "gÃ©nÃ©ralise", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#narrower" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://purl.org/iso25964/skos-thes#narrowerGeneric" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#specializes" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#hasPart",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "a pour partie", "@language": "fr" },
+        { "@value": "has part", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#narrower" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://purl.org/iso25964/skos-thes#narrowerPartitive" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#isPartOf" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://purl.org/dc/terms/hasPart" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#inclusionNote",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "inclusions", "@language": "en" },
+        { "@value": "inclusions", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#scopeNote" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#isPartOf",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "est une partie de", "@language": "fr" },
+        { "@value": "is a part of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#broader" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://purl.org/iso25964/skos-thes#broaderPartitive" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#hasPart" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://purl.org/dc/terms/isPartOf" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#levels",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "level list", "@language": "en" },
+        { "@value": "liste des niveaux", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#madeOf",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#Correspondence" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "comprend", "@language": "fr" },
+        { "@value": "made of", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ConceptAssociation" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#maxLength",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2008/05/skos-xl#Label" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "longueur maximale", "@language": "fr" },
+        { "@value": "maximum length", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#next",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "immediate successor in the sequence", "@language": "en" },
+        { "@value": "successeur immÃ©diat dans la sÃ©quence" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "next", "@language": "en" },
+        { "@value": "suivant", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#succeeds" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#notationPattern",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "code pattern", "@language": "en" },
+        { "@value": "gabarit de code", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#numberOfLevels",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "nombre de niveaux", "@language": "fr" },
+        { "@value": "number of levels", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#organizedBy",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ClassificationLevel" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "organisÃ© en", "@language": "fr" },
+        { "@value": "organized by", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#plainText",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "This property is expected to store plain text literals, without HTML or XML markup.",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ExplanatoryNote" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "plain text", "@language": "en" },
+        { "@value": "texte brut", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#precedes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "predecessor in the sequence", "@language": "en" },
+        { "@value": "prÃ©dÃ©cesseur dans la sÃ©quence", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "precedes", "@language": "en" },
+        { "@value": "prÃ©cÃ¨de", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#sequential" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#previous",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "immediate predecessor in the sequence", "@language": "en" },
+        { "@value": "prÃ©dÃ©cesseur immÃ©diat dans la sÃ©quence", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "previous", "@language": "en" },
+        { "@value": "prÃ©cÃ©dent", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#precedes" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#sequential",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "en relation sÃ©quentielle", "@language": "fr" },
+        { "@value": "has sequential", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#related" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#sourceConcept",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ConceptAssociation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "concept source", "@language": "fr" },
+        { "@value": "source concept", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#specializes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "specializes", "@language": "en" },
+        { "@value": "spÃ©cialise", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#broader" }
+      ],
+      "http://www.w3.org/2002/07/owl#equivalentProperty": [
+        { "@id": "http://purl.org/iso25964/skos-thes#broaderGeneric" }
+      ],
+      "http://www.w3.org/2002/07/owl#inverseOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#generalizes" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#succeeds",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "successeur dans la sÃ©quence" },
+        { "@value": "successor in the sequence", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "succeeds", "@language": "en" },
+        { "@value": "succÃ¨de Ã ", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#sequential" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#supersedes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "remplace", "@language": "fr" },
+        { "@value": "supersedes", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#follows" }
+      ],
+      "http://www.w3.org/2004/02/skos/core#exactMatch": [
+        { "@id": "http://purl.org/dc/terms/replaces" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#targetConcept",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#ConceptAssociation" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "concept cible", "@language": "fr" },
+        { "@value": "target concept", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#Concept" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#temporal",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "en relation temporelle", "@language": "fr" },
+        { "@value": "has temporal", "@language": "en" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos#sequential" }
+      ]
+    },
+    {
+      "@id": "http://rdf-vocabulary.ddialliance.org/xkos#variant",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://rdf-vocabulary.ddialliance.org/xkos" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "variant", "@language": "en" },
+        { "@value": "variante", "@language": "fr" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme" }
+      ]
+    }
+  ]
+}

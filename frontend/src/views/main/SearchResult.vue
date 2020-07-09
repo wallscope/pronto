@@ -1,19 +1,22 @@
 <<template lang="pug">
   .item
     .content
-      a.header.subject(@click="navigateToResult()")
+      router-link.header.subject(:to="{  \
+        name: 'ResultDetails',  \
+        params: { id: result.meta.uri, result }, \
+      }")
         text-highlight(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-        ) {{ result.label }}
+        ) {{ result.meta.label }}
 
-      .label {{ result.uri }}
+      .label(:title="result.meta.uri") {{ getPrefixShort(result.meta.uri) }}
         i.icon.clipboard.outline.link(
-          @click.stop.prevent="copyToClipboard(result.uri)",
-          title="Copy"
+          @click.stop.prevent="copyToClipboard(result.meta.uri)",
+          :title="`Copy ${result.meta.uri}`"
         )
         a(
-          :href="result.uri", 
+          :href="result.meta.uri", 
           target="_blank"
         )
           i.icon.external.alternate.link(
@@ -22,8 +25,8 @@
       text-highlight.description(
         :queries="searchedTerm",
         :highlightStyle="styleHighlight"
-      ) {{ result.comment }}
-      .definition {{ result.definition }}
+      ) {{ result.meta.comment }}
+      .definition {{ result.meta.definition }}
 
 </template>
 
@@ -31,7 +34,7 @@
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
 import { OntologyResult } from '@/types';
-import { copyToClipboard } from '@/utils';
+import { copyToClipboard, getPrefixShort } from '@/utils';
 
 @Component({
   components: {
@@ -39,6 +42,7 @@ import { copyToClipboard } from '@/utils';
   },
   methods: {
     copyToClipboard,
+    getPrefixShort,
   },
 })
 export default class SearchResult extends Vue {
@@ -48,14 +52,6 @@ export default class SearchResult extends Vue {
   styleHighlight = {
     'background-color': 'rgba(204, 228, 249, 0.55)',
   };
-
-  navigateToResult() {
-    // @ts-ignore
-    this.$router.push({
-      name: 'ResultDetails',
-      params: { id: this.result.uri, result: this.result },
-    });
-  }
 }
 </script>
 

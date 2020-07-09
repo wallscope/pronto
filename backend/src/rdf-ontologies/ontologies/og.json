@@ -1,0 +1,716 @@
+{
+  "@id": "http://ogp.me/ns#",
+  "@graph": [
+    {
+      "@id": "http://ogp.me/ns#audio",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A relevant audio URL for your object.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }]
+    },
+    {
+      "@id": "http://ogp.me/ns#audio:album",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] An album to which some audio belongs.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio album", "@language": "en-US" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#audio:artist",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "[DEPRECATED] An artist of some audio.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio artist", "@language": "en-US" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#audio:secure_url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A relevant, secure audio URL for your object.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio secure URL", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }]
+    },
+    {
+      "@id": "http://ogp.me/ns#audio:title",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "[DEPRECATED] A title for some audio.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio title", "@language": "en-US" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#audio:type",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The mime type of an audio file e.g., \"application/mp3\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "audio type", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#mime_type_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#country-name",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The country name of the resource e.g., \"USA\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "country name", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2006/vcard/ns#country-name" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#description",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A one to two sentence description of your object.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "description", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#comment" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#determiner",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The word to precede the object's title in a sentence (e.g., \"the\" in \"the statue of liberty\").  Valid values are \"a\", \"an\", \"the\", \"\", and \"auto\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "determiner", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#determiner_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#email",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] Email of the contact for your object.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "email", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://xmlns.com/foaf/0.1/mbox" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#fax_number",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] Fax number of the contact for your object.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "fax number", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://xmlns.com/foaf/0.1/phone" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#image",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "An image URL which should represent your object within the graph.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "image", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://xmlns.com/foaf/0.1/depiction" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#image:height",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The height of an image.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "image height", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#integer_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#image:secure_url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A secure image URL which should represent your object within the graph.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "image secure url", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://xmlns.com/foaf/0.1/depiction" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#image:type",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The mime type of an image.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "image type", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#mime_type_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#image:width",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The width of an image.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "image width", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#integer_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#isbn",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] International Standard Book Number for you object.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "International Standard Book Number", "@language": "en-US" },
+        { "@value": "isbn", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://purl.org/ontology/bibo/isbn" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#latitude",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The latitude of the resource e.g., the latitude of a company.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "latitude", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#locale",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A Unix locale in which this markup is rendered.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "locale", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#locality",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The locality of the resource e.g, \"Palo Alto\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "locality", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2006/vcard/ns#locality" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#longitude",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The longitude of the resource e.g., the longitude of a company.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "longitude", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#long" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#phone_number",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] Phone number of the contact for your object.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "phone number", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://xmlns.com/foaf/0.1/phone" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#postal-code",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The postal code of the resource e.g., \"94304\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "postal code", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2006/vcard/ns#postal-code" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#region",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The region of the resource e.g., \"CA\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "region", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2006/vcard/ns#region" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#site_name",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If your object is part of a larger web site, the name which should be displayed for the overall site. e.g., \"IMDb\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "site name", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#street-address",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] The street address of the resource e.g., \"1601 S California Ave\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "street address", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/2006/vcard/ns#street-address" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#title",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The title of the object as it should appear within the graph, e.g.,  \"The Rock\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "title", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/2000/01/rdf-schema#label" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#type",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The type of your object, e.g., \"movie\".  Depending on the type you specify, other properties may also be required.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "type", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#upc",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "[DEPRECATED] Universal Product Code for your object.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "universal product code", "@language": "en-US" },
+        { "@value": "upc", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://purl.org/goodrelations/v1#hasEAN_UCC-13" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The canonical URL of your object that will be used as its permanent ID in the graph, e.g., \"http://www.imdb.com/title/tt0117500/\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "url", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        { "@id": "http://purl.org/dc/elements/1.1/identifier" },
+        { "@id": "http://xmlns.com/foaf/0.1/homepage" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#video",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A relevant video URL for your object.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "video", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }]
+    },
+    {
+      "@id": "http://ogp.me/ns#video:height",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The height of a video.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "video height", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#integer_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#video:secure_url",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A relevant, secure video URL for your object.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "video secure URL", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [{ "@id": "http://ogp.me/ns/class#url" }]
+    },
+    {
+      "@id": "http://ogp.me/ns#video:type",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The mime type of a video e.g., \"application/x-shockwave-flash\"",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "video type", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#mime_type_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns#video:width",
+      "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "The width of a video.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "video width", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        { "@id": "http://ogp.me/ns/class#integer_str" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#boolean_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string representation of a true or false value.  The lexical space contains: \"true\", \"false\", \"1\", and \"0\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "boolean string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#date_time_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string representation of a temporal value composed of a date (year, month, day) and an optional time component (hours, minutes).  The lexical space is defined by ISO 8601.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "date/time string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#determiner_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The lexical space: \"\", \"the\", \"a\", \"an\", and \"auto\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "determiner", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ],
+      "http://www.w3.org/2002/07/owl#oneOf": [
+        {
+          "@list": [
+            { "@value": "" },
+            { "@value": "the" },
+            { "@value": "a" },
+            { "@value": "an" },
+            { "@value": "auto" }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#float_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string representation of a 64-bit signed floating point number.  Example lexical values include \"1.234\", \"-1.234\", \"1.2e3\", \"-1.2e3\", and \"7E-10\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "float string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#integer_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string representation of a 32-bit signed integer.  Example lexical values include \"1234\" and \"-123\".",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "integer string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#mime_type_str",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Valid mime type strings (e.g., \"application/mp3\").",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [{ "@id": "http://ogp.me/ns#" }],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "mime type string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#string",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        { "@value": "A string of Unicode characters.", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "Unicode string", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      ]
+    },
+    {
+      "@id": "http://ogp.me/ns/class#url",
+      "@type": ["http://www.w3.org/2000/01/rdf-schema#Datatype"],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A string of Unicode characters forming a valid URL having the http or https scheme.",
+          "@language": "en-US"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        { "@id": "http://ogp.me/ns/class#" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        { "@value": "URL", "@language": "en-US" }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        { "@id": "http://ogp.me/ns/class#string" }
+      ]
+    }
+  ]
+}
