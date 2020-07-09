@@ -36,7 +36,7 @@ export default class Feedback extends Vue {
 
     // If dismissed more than three days ago return true
     const timeDifference = +new Date() - +new Date(lastDismissed);
-    if (timeDifference > 3 * 24 * 3600 * 1000) return true;
+    if (timeDifference > 15 * 24 * 3600 * 1000) return true;
 
     this.$emit('close-feedback');
     return false;

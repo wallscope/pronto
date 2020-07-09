@@ -1,32 +1,5 @@
 <template lang="pug">
   .home
-    //- .ui.button.attached.ontology-toggle(@click="visible = !visible")
-    //-   span Ontologies 
-    //-   i.bars.icon
-    //- sui-sidebar-pushable
-    //-   sui-menu(
-    //-     is='sui-sidebar'
-    //-     :visible='visible'
-    //-     animation='overlay'
-    //-     width='thin'
-    //-     icon='labeled'
-    //-     direction="right"
-    //-     vertical
-    //-     pushable
-    //-   )
-    //-     sui-menu-item.onto-item(
-    //-       v-for="o in Object.values(ontologiesSelected)"
-    //-       @click="o.isSelected = !o.isSelected"
-    //-     )
-    //-       .ui.checkbox 
-    //-         input(
-    //-           type="checkbox" 
-    //-           :name="o.name"
-    //-           v-model="o.isSelected"
-    //-         )
-    //-         label {{ o.name }}
-
-    //-   sui-sidebar-pusher
     .ui.grid
       .thirteen.wide.column
         .ui.grid.container
@@ -47,10 +20,12 @@
                             input.prompt(
                               type='text',
                               placeholder='Search...',
-                              v-model="search['predicate']"
-                              @keyup.enter="sendQuery('predicate')"
+                              name="predicate"
+                              @input="onSearchBoxTyping"
+                              :value="search.predicate"
+                              @keyup.enter="sendQuery()"
                             )
-                            i.search.icon.link(@click.prevent="sendQuery('predicate')")
+                            i.search.icon.link(@click.prevent="sendQuery()")
 
                     .column
                       .ui.icon.header
@@ -61,11 +36,13 @@
                           .ui.icon.input(:class='{ loading: loading.type }')
                             input.prompt(
                               type='text',
-                              v-model="search['type']",
                               placeholder='Search...',
-                              @keyup.enter="sendQuery('type')"
+                              name="type"
+                              @input="onSearchBoxTyping"
+                              :value="search.type"
+                              @keyup.enter="sendQuery()"
                             )
-                            i.search.icon.link(@click="sendQuery('type')")
+                            i.search.icon.link(@click="sendQuery()")
 
           feedback(
             :isFeedbackOpen="isFeedbackOpen",
@@ -84,7 +61,7 @@
                 :key="r.uri"
               )
                 search-result(
-                  :searchedTerm="search['predicate'] || search['type']",
+                  :searchedTerm="search.predicate || search.type",
                   :result="r"
                 )
 
@@ -109,7 +86,7 @@
         .ui.celled.selection.list
           .item.onto-item(
             v-for="o in Object.values(ontologiesSelected)"
-            @click="o.isSelected = !o.isSelected"
+            @click="selectOntology(o.id)"
             :title="o.id"
           )
             .ui.checkbox
@@ -147,7 +124,6 @@ export default class Home extends Vue {
   };
   currPage = 1;
   isFeedbackOpen = false;
-  visible = true;
 
   search = {
     predicate: '',
@@ -163,12 +139,20 @@ export default class Home extends Vue {
   }, {} as { [key: string]: { id: string; name: string; isSelected: boolean } });
   results: Array<OntologyResult> = [];
 
+  get selectedOntologiesStrings() {
+    return Object.values(this.ontologiesSelected)
+      .filter(o => o.isSelected)
+      .map(o => o.id);
+  }
+  get filteredResults() {
+    return this.results.filter(r => this.selectedOntologiesStrings.includes(r.ontology));
+  }
   get slicedResults() {
     const chunkSize = 20;
     const R: OntologyResult[][] = [];
 
-    for (let i = 0; i < this.results.length; i += chunkSize) {
-      R.push(this.results.slice(i, i + chunkSize));
+    for (let i = 0; i < this.filteredResults.length; i += chunkSize) {
+      R.push(this.filteredResults.slice(i, i + chunkSize));
     }
     return R;
   }
@@ -176,14 +160,30 @@ export default class Home extends Vue {
     return this.slicedResults[this.currPage - 1];
   }
 
+  onSearchBoxTyping(evt: { target: HTMLInputElement & { name: 'predicate' | 'type' } }) {
+    const searchType = evt.target.name;
+    if (!(searchType in this.search)) {
+      throw Error('Unknown name attribute used in the search box input field');
+    }
+    // Clear the other input field
+    if (searchType === 'predicate') this.search.type = '';
+    else this.search.predicate = '';
+
+    this.search[searchType] = evt.target.value;
+  }
   paginateClick(pageNum: number) {
     this.currPage = pageNum;
+  }
+  selectOntology(id: string) {
+    this.ontologiesSelected[id].isSelected = !this.ontologiesSelected[id].isSelected;
+    if (Object.values(this.search).some(s => s.length)) this.sendQuery();
   }
   toggleAllOntologies() {
     const isAnyUnselected = Object.values(this.ontologiesSelected).some(o => !o.isSelected);
     Object.values(this.ontologiesSelected).forEach(o => (o.isSelected = isAnyUnselected));
   }
-  async sendQuery(searchType: 'predicate' | 'type') {
+  async sendQuery() {
+    const searchType = this.search.predicate.length ? 'predicate' : 'type';
     // Check for null searches
     if (!this.search[searchType]) {
       this.$toasted.show('type the keyword you want to search');
@@ -191,17 +191,12 @@ export default class Home extends Vue {
     }
 
     this.loading[searchType] = true;
-    // Clear the other input field
-    if (searchType === 'predicate') this.search['type'] = '';
-    else this.search['predicate'] = '';
 
     // Get data
     try {
       const params = {
         search: this.search[searchType],
-        ontologies: Object.values(this.ontologiesSelected)
-          .filter(o => o.isSelected)
-          .map(o => o.id),
+        ontologies: this.selectedOntologiesStrings,
       };
       const { data } = await axios.get(`api/${searchType}`, { params });
       if (!data) {
