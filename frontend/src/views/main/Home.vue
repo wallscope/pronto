@@ -241,6 +241,21 @@ export default class Home extends Vue {
 }
 </script>
 
+<style lang="scss">
+.pagination {
+  padding: 0;
+  margin-top: 1em !important;
+
+  .item {
+    padding: 0 !important;
+
+    a {
+      padding: 15px !important;
+    }
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 @media (max-width: 767px) {
   .hide-mobile {
@@ -271,10 +286,6 @@ export default class Home extends Vue {
 }
 .high-column {
   min-height: 250px;
-}
-.pagination {
-  padding: 0;
-  margin-top: 1em !important;
 }
 .results {
   margin-top: 0.2em !important;
