@@ -81,21 +81,22 @@
             )
 
       .three.wide.column
-        p Ontology selection
-        button(@click="toggleAllOntologies()") Toggle all
-        .ui.celled.selection.list
-          .item.onto-item(
-            v-for="o in Object.values(ontologiesSelected)"
-            @click="selectOntology(o.id)"
-            :title="o.id"
-          )
-            .ui.checkbox
-              input(
-                type="checkbox" 
-                :name="o.name"
-                v-model="o.isSelected"
-              )
-              label {{ o.name }}
+        .sidebar
+          p Ontology selection
+          button(@click="toggleAllOntologies()") Toggle all
+          .ui.celled.selection.list
+            .item.onto-item(
+              v-for="o in Object.values(ontologiesSelected)"
+              @click="selectOntology(o.id)"
+              :title="o.id"
+            )
+              .ui.checkbox
+                input(
+                  type="checkbox" 
+                  :name="o.name"
+                  v-model="o.isSelected"
+                )
+                label {{ o.name }}
             
 </template>
 
@@ -305,5 +306,15 @@ input::placeholder {
 }
 .feedback {
   margin-top: 5px;
+}
+.sidebar {
+  position: sticky;
+  top: 60px;
+
+  .list {
+    max-height: 90vh;
+    overflow: auto;
+    direction: rtl;
+  }
 }
 </style>
