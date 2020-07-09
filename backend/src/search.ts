@@ -49,10 +49,10 @@ export const prepareIndex = async () => {
       useExtendedSearch: true,
       // keys to search in
       keys: [
-        // {
-        //   name: 'ontology',
-        //   weight: 1,
-        // },
+        {
+          name: 'ontology',
+          weight: 0.00001,
+        },
         {
           name: 'label.@value',
           weight: 1,
@@ -67,7 +67,7 @@ export const prepareIndex = async () => {
         },
         {
           name: '@type',
-          weight: 1,
+          weight: 0.00001,
         },
       ],
     };
@@ -84,27 +84,30 @@ export const prepareIndex = async () => {
   }
 };
 
-export const search = (searchType: 'predicate' | 'type', searchWord: string) => {
+export const search = ({
+  searchType,
+  searchQuery,
+  ontologies,
+}: {
+  searchType: 'predicate' | 'type';
+  searchQuery: string;
+  ontologies: Array<string>;
+}) => {
   // "$" tells fuse what word the searched "type" needs to end with
   const formattedSearchType = searchType === 'predicate' ? 'Property$' : 'Class$';
 
   if (!fuse) return;
-  console.log('custom search', fuse);
 
   return fuse
     .search(
       {
         $and: [
           { '@type': formattedSearchType },
-          { $or: [{ 'label.@value': searchWord }, { 'comment.@value': searchWord }] },
-          // {
-          //   $or: [
-          //     // { ontology: "'http://purl.org/goodrelations/v1#" },
-          //     // { ontology: "'http://www.w3.org/ns/activitystreams#" },
-          //     { ontology: "'http://dbpedia.org/ontology/" },
-          //     // { ontology: "'http://schema.org/" },
-          //   ],
-          // },
+          { $or: [{ 'label.@value': searchQuery }, { 'comment.@value': searchQuery }] },
+          {
+            // Query only the selected ontologies
+            $or: ontologies.map(o => ({ ontology: `=${o}` })),
+          },
         ],
       },
       { limit: 100 },

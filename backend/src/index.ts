@@ -32,8 +32,11 @@ server.get('/api/:searchType', async (req, res, next) => {
       throw new RequestParamError('Search term not defined');
     const searchQuery = req.query.search;
     if (!searchQuery) throw new RequestParamError('Search term not defined');
+    const ontologies = req.query.ontologies;
+    if (!Array.isArray(ontologies) || !ontologies.length)
+      throw new RequestParamError('No ontology was selected');
 
-    const searchRes = await search(searchType, searchQuery);
+    const searchRes = await search({ searchType, searchQuery, ontologies });
     res.send(searchRes);
   } catch (e) {
     if (e instanceof RequestParamError) res.send(400, e.message);
