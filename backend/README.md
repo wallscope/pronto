@@ -1,8 +1,5 @@
 ## For local development
 
-Set an environment variable in `.env` called `TRIPLESTORE` which points to a graph DB instance
-(default is at http://192.168.36.230:5070/repositories/ontologySearcher).
-
 Run with:
 
 ```

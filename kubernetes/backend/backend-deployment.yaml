@@ -34,9 +34,6 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
-          env:
-            - name: TRIPLESTORE
-              value: http://triplestore/repositories/ontologySearcher
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always
