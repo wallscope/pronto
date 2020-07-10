@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
@@ -10,11 +10,11 @@ COPY package*.json ./
 # including the contents of the node_modules directory, switch the user to node
 USER node
 
-RUN yarn install
+RUN npm install
 
 # copy the application code with the appropriate permissions to the application directory on the container
 COPY --chown=node:node . .
 
 EXPOSE 5050
 
-CMD [ "node", "src/index.js" ]
+CMD [ "npm", "start" ]

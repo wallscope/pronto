@@ -4,23 +4,14 @@ services:
     build: "backend/"
     ports:
       - "5050:5050"
-    environment:
-      - TRIPLESTORE=http://triplestore:7200/repositories/ontologySearcher
+    restart: always
     networks:
       - pronto-net
 
   frontend:
     build:
       context: frontend/
-    networks:
-      - pronto-net
-
-  triplestore:
-    image: dhlabbasel/graphdb-free
-    ports:
-      - "127.0.0.1:5070:7200"
-    volumes:
-      - "${PWD}/triplestore/data:/graphdb/data"
+    restart: always
     networks:
       - pronto-net
 
