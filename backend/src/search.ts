@@ -44,8 +44,8 @@ export const prepareIndex = async () => {
       includeScore: true,
       // distance: 1000,
       shouldSort: true,
-      threshold: 0.5,
-      // ignoreLocation: true,
+      threshold: 0.4,
+      minMatchCharLength: 2,
       useExtendedSearch: true,
       // keys to search in
       keys: [
