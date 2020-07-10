@@ -83,7 +83,7 @@
       .three.wide.column
         .sidebar
           p Ontology selection
-          button(@click="toggleAllOntologies()") Toggle all
+          button.ui.small.compact.basic.circular.button(@click="toggleAllOntologies()") Toggle all
           .ui.celled.selection.list
             .item.onto-item(
               v-for="o in Object.values(ontologiesSelected)"
