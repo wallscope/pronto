@@ -3,6 +3,7 @@ import restify from 'restify';
 import sqlite3 from 'sqlite3';
 import { search, prepareIndex } from './search';
 import { RequestParamError } from './utils/errors';
+import prefixes from './rdf-ontologies/prefixes';
 
 // SETUP
 prepareIndex();
@@ -41,6 +42,14 @@ server.get('/api/:searchType', async (req, res, next) => {
   } catch (e) {
     if (e instanceof RequestParamError) res.send(400, e.message);
     else res.send(500, e.message);
+  }
+  next();
+});
+server.get('/api/ontology-list', async (req, res, next) => {
+  try {
+    res.send(prefixes);
+  } catch (e) {
+    res.send(500, e.message);
   }
   next();
 });

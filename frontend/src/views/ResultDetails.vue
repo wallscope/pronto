@@ -36,7 +36,7 @@
                     )
                       h4.ui.header
                         .content
-                          | {{ getPrefixShort(k) }}
+                          | {{ getPrefixShort(k, invertedPrefixes) }}
                           .sub.header
                             | {{ k }}
                       
@@ -63,7 +63,8 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { prefixes, copyToClipboard, getPrefixShort } from '@/utils';
+import ontoM from '@/store';
+import { copyToClipboard, getPrefixShort } from '@/utils';
 import { OntologyResult } from '@/types';
 
 @Component({
@@ -88,6 +89,9 @@ export default class ResultDetails extends Vue {
     const { label, comment, ...rest } = this.result;
     return rest;
   }
+  get invertedPrefixes() {
+    return ontoM.invertedPrefixes;
+  }
 
   /** Extracts the prop from the container object and attaches a prefix */
   prettyProp(prop: any) {
@@ -105,7 +109,7 @@ export default class ResultDetails extends Vue {
 
     return {
       href: prettyProp,
-      value: getPrefixShort(prettyProp),
+      value: getPrefixShort(prettyProp, this.invertedPrefixes),
     };
   }
 }

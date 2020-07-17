@@ -83,38 +83,68 @@
       .three.wide.column
         .sidebar
           p Ontology selection
-          button.ui.small.compact.basic.circular.button(@click="toggleAllOntologies()") Toggle all
+          button.ui.small.compact.basic.circular.button(@click="prefixManager.toggleAllOntologies()") Toggle all
           .ui.celled.selection.list
             .item.onto-item(
-              v-for="o in Object.values(ontologiesSelected)"
-              @click="selectOntology(o.id)"
-              :title="o.id"
+              v-for="[uri, name] in Object.entries(invertedPrefixes)"
+              @click="selectOntology(uri)"
+              :title="uri"
             )
               .ui.checkbox
                 input(
                   type="checkbox" 
-                  :name="o.name"
-                  v-model="o.isSelected"
+                  :name="name"
+                  :checked="prefixManager.ontologiesSelected[uri]"
                 )
-                label {{ o.name }}
+                label {{ name }}
             
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component, Watch } from 'vue-property-decorator';
 import axios from 'axios';
 import { Parser, Store, Quad_Object } from 'n3';
 import Paginate from 'vuejs-paginate';
+import ontoM from '@/store';
+
 import { OntologyResult, resultPrefixes } from '@/types';
-import { invertedPrefixes } from '@/utils';
 import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
+
+class PrefixManager {
+  ontologiesSelected = {} as { [uri: string]: boolean };
+
+  get selectedOntologiesStrings() {
+    return Object.entries(this.ontologiesSelected)
+      .filter(([k, v]) => v)
+      .map(([k, v]) => k);
+  }
+
+  selectOntology(id: string) {
+    this.ontologiesSelected[id] = !this.ontologiesSelected[id];
+  }
+  toggleAllOntologies() {
+    const isAnyUnselected = Object.entries(this.ontologiesSelected).some(([k, v]) => !v);
+    Object.entries(this.ontologiesSelected).forEach(
+      ([k, v]) => (this.ontologiesSelected[k] = isAnyUnselected),
+    );
+  }
+  updateOntoList(ontologies: { [uri: string]: string }) {
+    this.ontologiesSelected = Object.entries(ontologies).reduce((prev, [k, v]) => {
+      prev[k] = true;
+      return prev;
+    }, {} as { [uri: string]: boolean });
+  }
+}
 
 @Component({
   components: {
     SearchResult,
     Paginate,
     Feedback,
+  },
+  async beforeCreate() {
+    await ontoM.fetchPrefixes();
   },
 })
 export default class Home extends Vue {
@@ -130,23 +160,16 @@ export default class Home extends Vue {
     predicate: '',
     type: '',
   };
-  ontologiesSelected = Object.entries(invertedPrefixes).reduce((prev, [k, v]) => {
-    prev[k] = {
-      id: k,
-      name: v,
-      isSelected: true,
-    };
-    return prev;
-  }, {} as { [key: string]: { id: string; name: string; isSelected: boolean } });
+  prefixManager = new PrefixManager();
   results: Array<OntologyResult> = [];
 
-  get selectedOntologiesStrings() {
-    return Object.values(this.ontologiesSelected)
-      .filter(o => o.isSelected)
-      .map(o => o.id);
+  get invertedPrefixes() {
+    return ontoM.invertedPrefixes;
   }
   get filteredResults() {
-    return this.results.filter(r => this.selectedOntologiesStrings.includes(r.ontology));
+    return this.results.filter(r =>
+      this.prefixManager.selectedOntologiesStrings.includes(r.ontology),
+    );
   }
   get slicedResults() {
     const chunkSize = 20;
@@ -176,13 +199,17 @@ export default class Home extends Vue {
     this.currPage = pageNum;
   }
   selectOntology(id: string) {
-    this.ontologiesSelected[id].isSelected = !this.ontologiesSelected[id].isSelected;
-    if (Object.values(this.search).some(s => s.length)) this.sendQuery();
+    this.prefixManager.selectOntology(id);
+    // Object.values(this.search).some(s => {
+    //   console.log(s);
+    //   return s.length;
+    // });
+    if (Object.values(this.search).some(s => s.length)) {
+      this.sendQuery();
+      console.log('sending query');
+    }
   }
-  toggleAllOntologies() {
-    const isAnyUnselected = Object.values(this.ontologiesSelected).some(o => !o.isSelected);
-    Object.values(this.ontologiesSelected).forEach(o => (o.isSelected = isAnyUnselected));
-  }
+
   async sendQuery() {
     const searchType = this.search.predicate.length ? 'predicate' : 'type';
     // Check for null searches
@@ -197,7 +224,7 @@ export default class Home extends Vue {
     try {
       const params = {
         search: this.search[searchType],
-        ontologies: this.selectedOntologiesStrings,
+        ontologies: this.prefixManager.selectedOntologiesStrings,
       };
       const { data } = await axios.get(`api/${searchType}`, { params });
       if (!data) {
@@ -238,6 +265,11 @@ export default class Home extends Vue {
       this.currPage = 1;
       if (!this.isFeedbackOpen) this.isFeedbackOpen = true;
     }
+  }
+
+  @Watch('invertedPrefixes')
+  onPrefixUpdate() {
+    this.prefixManager.updateOntoList(this.invertedPrefixes);
   }
 }
 </script>

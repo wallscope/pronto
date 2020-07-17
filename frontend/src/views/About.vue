@@ -22,11 +22,13 @@
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { prefixes } from '@/utils';
+import ontoM from '@/store';
 
 @Component
 export default class About extends Vue {
-  prefixes = prefixes;
+  get prefixes() {
+    return ontoM.prefixes;
+  }
 }
 </script>
 

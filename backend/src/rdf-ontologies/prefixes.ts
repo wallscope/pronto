@@ -65,11 +65,4 @@ const prefixes = {
   xsd: 'http://www.w3.org/2001/XMLSchema#',
 };
 
-type KnownPrefixes = {
-  readonly [key in keyof typeof prefixes]: string;
-};
-interface CustomPrefixes {
-  [key: string]: string;
-}
-
-export default prefixes as KnownPrefixes & CustomPrefixes;
+export default prefixes;

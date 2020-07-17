@@ -10,7 +10,7 @@
         :highlightStyle="styleHighlight"
         ) {{ result.meta.label }}
 
-      .label(:title="result.meta.uri") {{ getPrefixShort(result.meta.uri) }}
+      .label(:title="result.meta.uri") {{ getPrefixShort(result.meta.uri, invertedPrefixes) }}
         i.icon.clipboard.outline.link(
           @click.stop.prevent="copyToClipboard(result.meta.uri)",
           :title="`Copy ${result.meta.uri}`"
@@ -33,6 +33,7 @@
 <script lang="ts">
 import { Vue, Prop, Component } from 'vue-property-decorator';
 import TextHighlight from 'vue-text-highlight';
+import ontoM from '@/store';
 import { OntologyResult } from '@/types';
 import { copyToClipboard, getPrefixShort } from '@/utils';
 
@@ -52,6 +53,10 @@ export default class SearchResult extends Vue {
   styleHighlight = {
     'background-color': 'rgba(204, 228, 249, 0.55)',
   };
+
+  get invertedPrefixes() {
+    return ontoM.invertedPrefixes;
+  }
 }
 </script>
 

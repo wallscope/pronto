@@ -38,7 +38,7 @@ import Footer from '@/components/Footer.vue';
     Footer,
   },
 })
-export default class Home extends Vue {
+export default class App extends Vue {
   get navbarClass() {
     // Home page has different ui proportions
     return this.$route.name === 'Home' ? 'short' : '';
