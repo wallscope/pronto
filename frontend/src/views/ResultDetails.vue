@@ -7,11 +7,11 @@
           h1 {{ result.meta.label }}
           p {{ result.meta.uri }}
             i.icon.clipboard.outline.link(
-              @click.stop.prevent="copyToClipboard(result.uri)",
+              @click="copyToClipboard(result.meta.uri)",
               title="Copy"
             )
             a(
-              :href="result.uri", 
+              :href="result.meta.uri", 
               target="_blank"
             )
               i.icon.external.alternate.link(
