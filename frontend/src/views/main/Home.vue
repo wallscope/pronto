@@ -240,7 +240,9 @@ export default class Home extends Vue {
           // meta is used for easier manipulation to display
           meta: {
             uri: entity['@id'],
-            label: getEnglishValue(entity[resultPrefixes.label]),
+            label: getEnglishValue(
+              entity[resultPrefixes.label] || entity[resultPrefixes.prefLabel],
+            ),
             comment: getEnglishValue(entity[resultPrefixes.comment]),
             definition: getEnglishValue(entity[resultPrefixes.definition]),
           },

@@ -11,7 +11,8 @@ const prepareData = (ontology: {
   return ontology['@graph'].map((obj: any) => ({
     ...obj,
     ontology: ontology['@id'],
-    label: obj?.['http://www.w3.org/2000/01/rdf-schema#label'] as
+    label: (obj?.['http://www.w3.org/2000/01/rdf-schema#label'] ||
+      obj?.['http://www.w3.org/2004/02/skos/core#prefLabel']) as
       | Array<{ '@value': string; '@language'?: string }>
       | undefined,
     comment: obj['http://www.w3.org/2000/01/rdf-schema#comment'] as
