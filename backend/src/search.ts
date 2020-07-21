@@ -94,7 +94,7 @@ export const search = ({
   ontologies: Array<string>;
 }) => {
   // "$" tells fuse what word the searched "type" needs to end with
-  const formattedSearchType = searchType === 'predicate' ? 'Property$' : 'Class$';
+  const formattedSearchType = searchType === 'predicate' ? 'Property$' : '!Property$';
 
   if (!fuse) return;
 
