@@ -1,4 +1,3 @@
-require('dotenv').config();
 import restify from 'restify';
 import sqlite3 from 'sqlite3';
 import { search, prepareIndex } from './search';

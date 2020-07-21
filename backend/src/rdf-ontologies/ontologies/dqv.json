@@ -1,9 +1,8 @@
 {
   "@id": "http://www.w3.org/ns/dqv#",
   "@graph": [
-    { "@id": "_:c14n0", "http://xmlns.com/foaf/0.1/name": [{ "@value": "Antoine Isaac" }] },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Antoine Isaac" }] },
     {
-      "@id": "_:c14n1",
       "@type": ["http://www.w3.org/2002/07/owl#Restriction"],
       "http://www.w3.org/2002/07/owl#hasValue": [
         { "@id": "http://www.w3.org/ns/dqv#qualityAssessment" }
@@ -12,17 +11,11 @@
         { "@id": "http://www.w3.org/ns/oa#motivation" }
       ]
     },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Riccardo Albertoni" }] },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Jeremy Debattista" }] },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Christophe Guéret" }] },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Makx Dekkers" }] },
     {
-      "@id": "_:c14n10",
-      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Jeremy Debattista" }]
-    },
-    {
-      "@id": "_:c14n2",
-      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Christophe GuÃ©ret" }]
-    },
-    { "@id": "_:c14n3", "http://xmlns.com/foaf/0.1/name": [{ "@value": "Makx Dekkers" }] },
-    {
-      "@id": "_:c14n4",
       "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
         { "@id": "http://www.w3.org/ns/dqv#inDimension" }
       ],
@@ -31,35 +24,50 @@
       ]
     },
     {
-      "@id": "_:c14n5",
       "http://xmlns.com/foaf/0.1/name": [{ "@value": "Nandana Mihindukulasooriya" }]
     },
-    { "@id": "_:c14n6", "http://xmlns.com/foaf/0.1/name": [{ "@value": "Amrapali Zaveri" }] },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Amrapali Zaveri" }] },
     {
-      "@id": "_:c14n7",
       "http://www.w3.org/2002/07/owl#inverseOf": [
         { "@id": "http://www.w3.org/ns/oa#hasTarget" }
       ]
     },
-    { "@id": "_:c14n8", "http://xmlns.com/foaf/0.1/name": [{ "@value": "Deirdre Lee" }] },
-    {
-      "@id": "_:c14n9",
-      "http://xmlns.com/foaf/0.1/name": [{ "@value": "Riccardo Albertoni" }]
-    },
+    { "http://xmlns.com/foaf/0.1/name": [{ "@value": "Deirdre Lee" }] },
+    { "@id": "http://purl.org/adms/assettype/Ontology" },
+    { "@id": "http://purl.org/eis/vocab/daq#Category" },
+    { "@id": "http://purl.org/eis/vocab/daq#Dimension" },
+    { "@id": "http://purl.org/eis/vocab/daq#Metric" },
+    { "@id": "http://purl.org/eis/vocab/daq#Observation" },
+    { "@id": "http://purl.org/eis/vocab/daq#QualityGraph" },
+    { "@id": "http://purl.org/eis/vocab/daq#computedOn" },
+    { "@id": "http://purl.org/eis/vocab/daq#expectedDataType" },
+    { "@id": "http://purl.org/eis/vocab/daq#hasDimension" },
+    { "@id": "http://purl.org/eis/vocab/daq#hasMetric" },
+    { "@id": "http://purl.org/eis/vocab/daq#metric" },
+    { "@id": "http://purl.org/eis/vocab/daq#value" },
+    { "@id": "http://purl.org/linked-data/cube#DataSet" },
+    { "@id": "http://purl.org/linked-data/cube#DimensionProperty" },
+    { "@id": "http://purl.org/linked-data/cube#MeasureProperty" },
+    { "@id": "http://purl.org/linked-data/cube#Observation" },
+    { "@id": "http://purl.org/vocommons/voaf#Vocabulary" },
+    { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" },
+    { "@id": "http://www.w3.org/2000/01/rdf-schema#Class" },
+    { "@id": "http://www.w3.org/2000/01/rdf-schema#Resource" },
+    { "@id": "http://www.w3.org/2001/XMLSchema#anySimpleType" },
+    { "@id": "http://www.w3.org/2002/07/owl#Class" },
+    { "@id": "http://www.w3.org/2002/07/owl#DatatypeProperty" },
+    { "@id": "http://www.w3.org/2002/07/owl#Restriction" },
+    { "@id": "http://www.w3.org/2004/02/skos/core#Concept" },
+    { "@id": "http://www.w3.org/2004/03/trix/rdfg-1/Graph" },
+    { "@id": "http://www.w3.org/TR/vocab-dqv/" },
+    { "@id": "http://www.w3.org/data#W3C" },
     {
       "@id": "http://www.w3.org/ns/dqv",
-      "http://purl.org/dc/terms/contributor": [
-        { "@id": "_:c14n10" },
-        { "@id": "_:c14n2" },
-        { "@id": "_:c14n3" },
-        { "@id": "_:c14n5" },
-        { "@id": "_:c14n6" },
-        { "@id": "_:c14n8" }
-      ],
+      "http://purl.org/dc/terms/contributor": [{ "@id": "http://www.w3.org/ns/dqv#" }],
       "http://purl.org/dc/terms/created": [
         { "@value": "2015-12-17", "@type": "http://www.w3.org/2001/XMLSchema#date" }
       ],
-      "http://purl.org/dc/terms/creator": [{ "@id": "_:c14n0" }, { "@id": "_:c14n9" }],
+      "http://purl.org/dc/terms/creator": [{ "@id": "http://www.w3.org/ns/dqv#" }],
       "http://purl.org/dc/terms/description": [
         {
           "@value": "The Data Quality Vocabulary (DQV) is seen as an extension to DCAT to cover the quality of the data, how frequently is it updated, whether it accepts user corrections, persistence commitments etc. When used by publishers, this vocabulary will foster trust in the data amongst developers.",
@@ -82,6 +90,7 @@
       "@type": ["http://purl.org/vocommons/voaf#Vocabulary"],
       "http://xmlns.com/foaf/0.1/homepage": [{ "@id": "http://www.w3.org/TR/vocab-dqv/" }]
     },
+    { "@id": "http://www.w3.org/ns/dqv#" },
     {
       "@id": "http://www.w3.org/ns/dqv#Category",
       "@type": [
@@ -163,7 +172,7 @@
       "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
         { "@id": "http://www.w3.org/ns/oa#Annotation" }
       ],
-      "http://www.w3.org/2002/07/owl#equivalentClass": [{ "@id": "_:c14n1" }]
+      "http://www.w3.org/2002/07/owl#equivalentClass": [{ "@id": "http://www.w3.org/ns/dqv#" }]
     },
     {
       "@id": "http://www.w3.org/ns/dqv#QualityCertificate",
@@ -238,7 +247,7 @@
       "@id": "http://www.w3.org/ns/dqv#QualityMetadata",
       "http://purl.org/vocab/vann/usageNote": [
         {
-          "@value": "QualityMetadata containers do not necessary include all types of quality statements DQV can support. Implementers decide the granularity of containment. In the current version of DQV, we also leave open the choice of the containment technique. Implementers can use (RDF) graph containment. They may also use an appropriate property of their choice â for example (a subproperty of) dcterms:hasPart â to link instances of dqv:QualityMetadata with instances of other DQV classes.",
+          "@value": "QualityMetadata containers do not necessary include all types of quality statements DQV can support. Implementers decide the granularity of containment. In the current version of DQV, we also leave open the choice of the containment technique. Implementers can use (RDF) graph containment. They may also use an appropriate property of their choice — for example (a subproperty of) dcterms:hasPart — to link instances of dqv:QualityMetadata with instances of other DQV classes.",
           "@language": "en"
         }
       ],
@@ -360,7 +369,9 @@
       "http://www.w3.org/2000/01/rdf-schema#range": [
         { "@id": "http://www.w3.org/ns/dqv#QualityAnnotation" }
       ],
-      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [{ "@id": "_:c14n7" }]
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+        { "@id": "http://www.w3.org/ns/dqv#" }
+      ]
     },
     {
       "@id": "http://www.w3.org/ns/dqv#hasQualityMeasurement",
@@ -407,7 +418,10 @@
       ],
       "@type": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
       "http://www.w3.org/2000/01/rdf-schema#comment": [
-        { "@value": "Represents the category a dimension is grouped in.", "@language": "en" }
+        {
+          "@value": "Represents the category a dimension is grouped in.",
+          "@language": "en"
+        }
       ],
       "http://www.w3.org/2000/01/rdf-schema#domain": [
         { "@id": "http://www.w3.org/ns/dqv#Dimension" }
@@ -518,6 +532,12 @@
       "http://www.w3.org/2002/07/owl#equivalentProperty": [
         { "@id": "http://purl.org/eis/vocab/daq#value" }
       ]
-    }
+    },
+    { "@id": "http://www.w3.org/ns/duv#UserFeedback" },
+    { "@id": "http://www.w3.org/ns/oa#Annotation" },
+    { "@id": "http://www.w3.org/ns/oa#Motivation" },
+    { "@id": "http://www.w3.org/ns/oa#assessing" },
+    { "@id": "http://www.w3.org/ns/oa#hasTarget" },
+    { "@id": "http://www.w3.org/ns/oa#motivation" }
   ]
 }

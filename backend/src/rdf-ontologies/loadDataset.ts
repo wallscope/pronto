@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 
 export async function importNqFromPrefix(prefix: string) {
   const path = join(__dirname, './ontologies', `${prefix}.json`);
-  return await fs.readFile(path, { encoding: 'binary' });
+  return await fs.readFile(path, { encoding: 'utf8' });
 }
 
 export default {
