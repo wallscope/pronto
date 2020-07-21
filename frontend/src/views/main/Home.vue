@@ -200,14 +200,7 @@ export default class Home extends Vue {
   }
   selectOntology(id: string) {
     this.prefixManager.selectOntology(id);
-    // Object.values(this.search).some(s => {
-    //   console.log(s);
-    //   return s.length;
-    // });
-    if (Object.values(this.search).some(s => s.length)) {
-      this.sendQuery();
-      console.log('sending query');
-    }
+    if (Object.values(this.search).some(s => s.length)) this.sendQuery();
   }
 
   async sendQuery() {
@@ -232,33 +225,30 @@ export default class Home extends Vue {
         return;
       }
 
+      const getEnglishValue = (array: Array<{ '@value': string; '@language'?: string }>) => {
+        if (!Array.isArray(array)) return '';
+        return array.find(lObj => {
+          // If no language tag is specified, return the first result (should be the only one)
+          if (!lObj['@language']) return true;
+          // otherwise return the english one
+          else if (lObj['@language'] === 'en') return true;
+        })?.['@value'];
+      };
       this.results = data.map((entity: any) => {
-        const label = entity[resultPrefixes.label]?.find(
-          (lObj: { '@value': string; '@language'?: string }) => {
-            // If no language tag is specified, return the first result (should be the only one)
-            if (!lObj['@language']) return true;
-            // otherwise return the english one
-            else if (lObj['@language'] === 'en') return true;
-          },
-        )?.['@value'];
-
         return {
           ...entity,
           // meta is used for easier manipulation to display
           meta: {
             uri: entity['@id'],
-            label,
-            comment: entity[resultPrefixes.comment]?.[0]
-              ? entity[resultPrefixes.comment][0]['@value']
-              : '',
-            definition: entity[resultPrefixes.definition]?.[0]
-              ? entity[resultPrefixes.definition][0]['@value']
-              : '',
+            label: getEnglishValue(entity[resultPrefixes.label]),
+            comment: getEnglishValue(entity[resultPrefixes.comment]),
+            definition: getEnglishValue(entity[resultPrefixes.definition]),
           },
         };
       });
     } catch (e) {
-      this.$toasted.show(`${e.response.statusText}: ${e.response.data}`);
+      if (e?.response?.data)
+        this.$toasted.show(`${e.response.statusText}: ${e.response.data}`);
       throw e;
     } finally {
       this.loading[searchType] = false;
