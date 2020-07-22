@@ -112,6 +112,12 @@ import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
 
 class PrefixManager {
+  constructor(invertedPrefixes: { [uri: string]: string }) {
+    this.ontologiesSelected = Object.entries(invertedPrefixes).reduce((prev, [k, v]) => {
+      prev[k] = true;
+      return prev;
+    }, {} as { [uri: string]: boolean });
+  }
   ontologiesSelected = {} as { [uri: string]: boolean };
 
   get selectedOntologiesStrings() {
@@ -143,9 +149,6 @@ class PrefixManager {
     Paginate,
     Feedback,
   },
-  async beforeCreate() {
-    await ontoM.fetchPrefixes();
-  },
 })
 export default class Home extends Vue {
   // Style vars
@@ -160,7 +163,7 @@ export default class Home extends Vue {
     predicate: '',
     type: '',
   };
-  prefixManager = new PrefixManager();
+  prefixManager = new PrefixManager(this.invertedPrefixes);
   results: Array<OntologyResult> = [];
 
   get invertedPrefixes() {
@@ -205,6 +208,8 @@ export default class Home extends Vue {
 
   async sendQuery() {
     const searchType = this.search.predicate.length ? 'predicate' : 'type';
+    const searchKeyword = this.search[searchType];
+    this.$router.push({ query: { 'search-type': searchType, search: searchKeyword } });
     // Check for null searches
     if (!this.search[searchType]) {
       this.$toasted.show('type the keyword you want to search');
@@ -216,7 +221,7 @@ export default class Home extends Vue {
     // Get data
     try {
       const params = {
-        search: this.search[searchType],
+        search: searchKeyword,
         ontologies: this.prefixManager.selectedOntologiesStrings,
       };
       const { data } = await axios.get(`api/${searchType}`, { params });
@@ -262,6 +267,15 @@ export default class Home extends Vue {
   @Watch('invertedPrefixes')
   onPrefixUpdate() {
     this.prefixManager.updateOntoList(this.invertedPrefixes);
+  }
+
+  async mounted() {
+    await ontoM.fetchPrefixes();
+    const searchType = this.$route.query['search-type'] as 'predicate' | 'type' | undefined;
+    if (searchType) {
+      this.search[searchType] = this.$route.query.search as string;
+      this.sendQuery();
+    }
   }
 }
 </script>
