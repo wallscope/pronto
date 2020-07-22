@@ -4,14 +4,14 @@
       .row
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
         .twelve.wide.tablet.twelve.wide.computer.sixteen.wide.mobile.centered.column
-          h1 {{ result.meta.label }}
-          p {{ result.meta.uri }}
+          h1 {{ searchResult.meta.label }}
+          p {{ searchResult.meta.uri }}
             i.icon.clipboard.outline.link(
-              @click="copyToClipboard(result.meta.uri)",
+              @click="copyToClipboard(searchResult.meta.uri)",
               title="Copy"
             )
             a(
-              :href="result.meta.uri", 
+              :href="searchResult.meta.uri", 
               target="_blank"
             )
               i.icon.external.alternate.link(
@@ -52,7 +52,7 @@
         .two.wide.tablet.two.wide.computer.sixteen.wide.mobile.right.column
           .ui.animated.button(
             tabindex='0'
-            @click="$router.go(-1)"
+            @click="goToHomePage()"
           )
             .visible.content Go back
             .hidden.content
@@ -64,29 +64,26 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import ontoM from '@/store';
-import { copyToClipboard, getPrefixShort } from '@/utils';
+import { copyToClipboard, getPrefixShort, addMetaData } from '@/utils';
 import { OntologyResult } from '@/types';
+import axios from 'axios';
 
 @Component({
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      // @ts-ignore
-      if (!vm.result) {
-        vm.$router.go(-1);
-      }
-    });
-  },
   methods: {
     copyToClipboard,
     getPrefixShort,
   },
 })
 export default class ResultDetails extends Vue {
-  @Prop({ required: true }) result!: OntologyResult;
+  @Prop() result?: OntologyResult;
+  fetchedResult?: OntologyResult = { meta: { label: '' } } as OntologyResult;
 
-  /** TODO: temporary getter below. Remove once fusejs dot in key problem is solved */
+  get searchResult() {
+    return this.result || this.fetchedResult;
+  }
   get prettyResult() {
-    const { label, comment, ...rest } = this.result;
+    if (!this.searchResult) return undefined;
+    const { label, comment, ...rest } = this.searchResult;
     return rest;
   }
   get invertedPrefixes() {
@@ -111,6 +108,23 @@ export default class ResultDetails extends Vue {
       href: prettyProp,
       value: getPrefixShort(prettyProp, this.invertedPrefixes),
     };
+  }
+  goToHomePage() {
+    const { uri, ...queryStrings } = this.$route.query;
+    this.$router.push({ name: 'Home', query: queryStrings });
+  }
+
+  async mounted() {
+    // If this page is reached directly via its url, it fetches the result from the backend
+    if (!this.result) {
+      const { data } = await axios.get('/api/result/', {
+        params: {
+          'search-type': this.$route.query['search-type'],
+          uri: this.$route.query.uri,
+        },
+      });
+      this.fetchedResult = addMetaData(data)[0];
+    }
   }
 }
 </script>

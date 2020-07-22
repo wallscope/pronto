@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { OntologyResult, resultPrefixes } from '@/types';
 
 export function getPrefixShort(s: string, invertedPrefixes: { [root: string]: string }) {
   try {
@@ -10,6 +11,33 @@ export function getPrefixShort(s: string, invertedPrefixes: { [root: string]: st
   } catch {
     return s;
   }
+}
+
+const getEnglishValue = (array: Array<{ '@value': string; '@language'?: string }>) => {
+  if (!Array.isArray(array)) return '';
+  return array.find(lObj => {
+    // If no language tag is specified, return the first result (should be the only one)
+    if (!lObj['@language']) return true;
+    // otherwise return the english one
+    else if (lObj['@language'] === 'en') return true;
+  })?.['@value'];
+};
+
+export function addMetaData(results: Array<OntologyResult>) {
+  return results.map((entity: any) => {
+    return {
+      ...entity,
+      // meta is used for easier manipulation to display
+      meta: {
+        uri: entity['@id'],
+        label: getEnglishValue(
+          entity[resultPrefixes.label] || entity[resultPrefixes.prefLabel],
+        ),
+        comment: getEnglishValue(entity[resultPrefixes.comment]),
+        definition: getEnglishValue(entity[resultPrefixes.definition]),
+      },
+    };
+  });
 }
 
 export async function copyToClipboard(text: string) {

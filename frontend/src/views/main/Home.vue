@@ -110,6 +110,7 @@ import ontoM from '@/store';
 import { OntologyResult, resultPrefixes } from '@/types';
 import SearchResult from './SearchResult.vue';
 import Feedback from './Feedback.vue';
+import { addMetaData } from '@/utils';
 
 class PrefixManager {
   constructor(invertedPrefixes: { [uri: string]: string }) {
@@ -230,29 +231,7 @@ export default class Home extends Vue {
         return;
       }
 
-      const getEnglishValue = (array: Array<{ '@value': string; '@language'?: string }>) => {
-        if (!Array.isArray(array)) return '';
-        return array.find(lObj => {
-          // If no language tag is specified, return the first result (should be the only one)
-          if (!lObj['@language']) return true;
-          // otherwise return the english one
-          else if (lObj['@language'] === 'en') return true;
-        })?.['@value'];
-      };
-      this.results = data.map((entity: any) => {
-        return {
-          ...entity,
-          // meta is used for easier manipulation to display
-          meta: {
-            uri: entity['@id'],
-            label: getEnglishValue(
-              entity[resultPrefixes.label] || entity[resultPrefixes.prefLabel],
-            ),
-            comment: getEnglishValue(entity[resultPrefixes.comment]),
-            definition: getEnglishValue(entity[resultPrefixes.definition]),
-          },
-        };
-      });
+      this.results = addMetaData(data);
     } catch (e) {
       if (e?.response?.data)
         this.$toasted.show(`${e.response.statusText}: ${e.response.data}`);

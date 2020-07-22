@@ -94,10 +94,10 @@ export const search = ({
   searchQuery: string;
   ontologies: Array<string>;
 }) => {
+  if (!fuse) return;
+
   // "$" tells fuse what word the searched "type" needs to end with
   const formattedSearchType = searchType === 'predicate' ? 'Property$' : '!Property$';
-
-  if (!fuse) return;
 
   return fuse
     .search(
@@ -112,6 +112,28 @@ export const search = ({
         ],
       },
       { limit: 100 },
+    )
+    .map(result => result.item);
+};
+
+export const getFromUri = ({
+  searchType,
+  searchUri,
+}: {
+  searchType: 'predicate' | 'type';
+  searchUri: string;
+}) => {
+  if (!fuse) return;
+
+  // "$" tells fuse what word the searched "type" needs to end with
+  const formattedSearchType = searchType === 'predicate' ? 'Property$' : '!Property$';
+
+  return fuse
+    .search(
+      {
+        $and: [{ '@type': formattedSearchType }, { '@id': `=${searchUri}` }],
+      },
+      { limit: 1 },
     )
     .map(result => result.item);
 };

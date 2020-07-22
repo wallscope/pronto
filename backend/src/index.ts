@@ -1,6 +1,6 @@
 import restify from 'restify';
 import sqlite3 from 'sqlite3';
-import { search, prepareIndex } from './search';
+import { search, prepareIndex, getFromUri } from './search';
 import { RequestParamError } from './utils/errors';
 import prefixes from './rdf-ontologies/prefixes';
 
@@ -47,6 +47,20 @@ server.get('/api/:searchType', async (req, res, next) => {
 server.get('/api/ontology-list', async (req, res, next) => {
   try {
     res.send(prefixes);
+  } catch (e) {
+    res.send(500, e.message);
+  }
+  next();
+});
+server.get('/api/result/', async (req, res, next) => {
+  try {
+    if (!req.query['search-type']) throw new RequestParamError('Search type not defined');
+    if (!req.query.uri) throw new RequestParamError('URI is not defined');
+    const searchRes = await getFromUri({
+      searchType: req.query['search-type'],
+      searchUri: req.query.uri,
+    });
+    res.send(searchRes);
   } catch (e) {
     res.send(500, e.message);
   }

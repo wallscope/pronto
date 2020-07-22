@@ -3,7 +3,8 @@
     .content
       router-link.header.subject(:to="{  \
         name: 'ResultDetails',  \
-        params: { id: result.meta.uri, result }, \
+        params: { result }, \
+        query: { ...$route.query, uri: result.meta.uri } \
       }")
         text-highlight(
         :queries="searchedTerm",
