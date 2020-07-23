@@ -2,10 +2,10 @@
 version: "3.7"
 services:
   backend:
-    image: docker.pkg.github.com/wallscope/pronto/backend:2.0.0
+    image: docker.pkg.github.com/wallscope/pronto/backend:2.1.0
 
   frontend:
-    image: docker.pkg.github.com/wallscope/pronto/frontend:2.0.0
+    image: docker.pkg.github.com/wallscope/pronto/frontend:2.1.0
     build:
       target: production
     ports:
