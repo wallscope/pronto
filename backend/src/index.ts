@@ -8,6 +8,7 @@ import prefixes from './rdf-ontologies/prefixes';
 prepareIndex();
 
 const server = restify.createServer();
+server.use(restify.plugins.gzipResponse());
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser({ mapParams: false }));
 
