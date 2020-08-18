@@ -88,7 +88,7 @@
             .item.onto-item(
               v-for="[uri, name] in Object.entries(invertedPrefixes)"
               @click="selectOntology(uri)"
-              :title="uri"
+              :title="removeLastSymbol(uri)"
             )
               .ui.checkbox
                 input(
@@ -205,6 +205,13 @@ export default class Home extends Vue {
   selectOntology(id: string) {
     this.prefixManager.selectOntology(id);
     if (Object.values(this.search).some(s => s.length)) this.sendQuery();
+  }
+
+  /** This operation is needed because the browser takes the last symbol (# or /) in the title
+   * attribute text and prepends it to such text.
+   */
+  removeLastSymbol(uri: string) {
+    return uri.endsWith('/') || uri.endsWith('#') ? uri.slice(0, -1) : uri;
   }
 
   async sendQuery() {
