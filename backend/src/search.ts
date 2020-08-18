@@ -50,6 +50,7 @@ export const prepareIndex = async () => {
       useExtendedSearch: true,
       // keys to search in
       keys: [
+        // Weights with very small values are only used for filtering and should not influence the final result score
         {
           name: 'ontology',
           weight: 0.00001,
