@@ -1,5 +1,5 @@
 # Extended config for DEVELOPMENT env
-version: "3.7"
+version: "3"
 services:
   backend:
     volumes:
