@@ -5,7 +5,7 @@ import VueGtag from 'vue-gtag';
 
 import App from './App.vue';
 import router from './router';
-import { store } from './store';
+import ontoM, { store } from './store';
 import 'semantic-ui-css/semantic.min.css';
 
 Vue.config.productionTip = false;
@@ -32,4 +32,7 @@ new Vue({
   router,
   store,
   render: h => h(App),
+  async beforeCreate() {
+    await ontoM.fetchPrefixes();
+  },
 }).$mount('#app');

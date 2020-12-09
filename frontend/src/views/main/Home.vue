@@ -256,11 +256,11 @@ export default class Home extends Vue {
   }
 
   async mounted() {
-    await ontoM.fetchPrefixes();
+    if (Object.keys(ontoM.prefixes).length === 0) await ontoM.fetchPrefixes();
     const searchType = this.$route.query['search-type'] as 'predicate' | 'type' | undefined;
     if (searchType) {
       this.search[searchType] = this.$route.query.search as string;
-      this.sendQuery();
+      await this.sendQuery();
     }
   }
 }
