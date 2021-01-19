@@ -64,13 +64,7 @@ docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up --build
 
 ### Add More Ontologies to the Graph
 
-If you are running the project through Docker, you can access the database server on localhost on port `5070`.
-Import more ontologies from the **Import** tab, then from the SPARQL tab update the Lucene index running this query in the database:
-
-```
-PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-INSERT DATA { luc:myIndex luc:createIndex "true" . }
-```
+Add an ontology in JSON-LD format to `backend/src/rdf-ontologies/ontologies`.
 
 > If adding an ontology that you think will help other people, consider creating a pull request.
 
