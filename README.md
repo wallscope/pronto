@@ -62,7 +62,7 @@ docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up --build
 - sioc: http://rdfs.org/sioc/ns#
 - dcat: http://www.w3.org/ns/dcat
 
-### Add More Ontologies to the Graph
+### Add More Ontologies
 
 Add an ontology in JSON-LD format to `backend/src/rdf-ontologies/ontologies`.
 
