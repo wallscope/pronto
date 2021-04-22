@@ -1,0 +1,32 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "essential": true,
+      "image": "955621375565.dkr.ecr.eu-west-1.amazonaws.com/pronto/backend:2.0.0",
+      "name": "backend",
+      "memory": 1800,
+      "portMappings": [
+        {
+          "containerPort": 5050,
+          "hostPort": 5050
+        }
+      ]
+    },
+    {
+      "essential": true,
+      "image": "955621375565.dkr.ecr.eu-west-1.amazonaws.com/pronto/frontend:2.0.2",
+      "name": "frontend",
+      "memory": 128,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "links": ["backend"]
+    }
+  ],
+  "family": "",
+  "volumes": []
+}
